@@ -14,7 +14,7 @@ SQL mette a disposizione alcune famiglie di domini elementari, da cui si possono
 Il dominio $\text{CHARACTER}$ permette di rappresentare singoli caratteri oppure stringhe.
 La lunghezza può essere fissa o variabile, in caso di quelle variabile si esplicita la lunghezza massima, oltre a poter prevedere una specifica della famiglia dei caratteri di default (latino, cirillico etc.).
 La sintassi prevista è:$$\begin{align}  \\
-&\text{CHARACTER [varying]} [(Lunghezza)] \\
+&\text{CHARACTER [VARYING]} [(Lunghezza)] \\
 &[\text{CHARACTER SET}] NomeFamigliaCaratteri
 \end{align}$$
 #### Tipi numerici esatti
@@ -105,7 +105,7 @@ Definendo un dominio si può rendere più facile la modifica della definizione, 
 Il termine $ValoreDiDefault$ nei domini e nelle tabelle permette di specificare un valore predefinito quando viene inserito un attributo in una riga della tabella senza specificare un valore.
 In modo predefinito il valore di default risulta sempre nullo.
 La sintassi specifica è la seguente:
-$$\text{DEFAULT} \langle GenericoValore | user| NULL \rangle$$
+$$\text{DEFAULT} \langle GenericoValore | USER| NULL \rangle$$
 - $GenericoValore$ rappresenta un valore compatibile con il dominio
 - $user$ impone come valore di default l'identificativo dell/ utente che esegue il comando
 - $NULL$ corrisponde al valore di default base
