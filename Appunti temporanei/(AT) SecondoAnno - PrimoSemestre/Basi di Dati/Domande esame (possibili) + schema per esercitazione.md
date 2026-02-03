@@ -80,17 +80,8 @@ Quindi si decompone senza perdita su due sottoschemi se l'attributo comune ai du
 Il **vincolo di integrità** è una proprietà che deve essere soddisfatta dalle istanze che rappresentano informazioni corrette per l'applicazione.
 Ogni vincolo può essere visto come un predicato che assegna valori vero o falso se queste soddisfano le condizioni o no.
 #### Si definisca cosa sia una superchiave ed una superchiave minimale (o chiave).
-Una **chiave** è un insieme di attributi utilizzato per identificare univocamente le tuple di una relazione, formalmente:
-
-**Def.**: Data una relazione $R(X)$ con $K \underline{\subset} X$, l’insieme $K$ di attributi è superchiave per $R$ se $r$ non contiene due tuple distinte $t_{1}$ e $t_{2}$ con $t_{1}[K]=t_{2}[K]$.
-
-In altre parole l'insieme di istanze di attributi utilizzato come superchiave non deve contenere elementi uguali in più di una tupla.  
-Un insieme $K$ di attributi è chiave per $r$ se è una superchiave minimale di $r$ (cioè non esiste un’altra superchiave $K'$ di $r$ che sia contenuta in $K$ come sottoinsieme proprio).
-
-Poiché una relazione è un insieme di elementi distinti, si può concludere che per ogni relazione $r(X),$ l’insieme $X$ di tutti gli attributi su cui è definita è chiaramente una superchiave per essa.
-Ora i casi sono due: 
-- La **superchiave è anche chiave**, quindi si conferma l’esistenza della chiave stessa 
-- **Non è chiave**, perché contiene un’altra superchiave, quindi applicando ricorsivamente questo ragionamento si giunge, in un numero finito di passi (poiché l’insieme degli attributi è finito), ad una superchiave minimale.
+- **Superchiave:** Un insieme di attributi che identifica **univocamente** le tuple di una relazione (non esistono due tuple con gli stessi valori per questi attributi).
+- **Chiave (o Superchiave minimale):** È una superchiave "essenziale", ovvero una superchiave da cui **non è possibile rimuovere alcun attributo** senza perdere la proprietà di unicità.
 #### Si descrivano brevemente i diversi livelli di isolamento di una transazione ed il motivo per cui sono stati introdotti.
 1. **Read uncommitted (degree of isolation 0):** consente transazioni che fanno solo operazioni di lettura (quelle di modifica sono proibite) che vengono eseguite dal sistema senza bloccare in lettura i dati. 
 2. **Read committed (degree of isolation 1):** a differenza del livello precedente in cui sui dati in lettura non vi era un bloccaggio, questo livello prevede che i dati in lettura siano bloccati esclusivamente per il tempo di lettura e subito rilasciati, mentre i dati in scrittura siano rilasciati alla terminazione della transazione. 
@@ -107,13 +98,7 @@ La conoscenza di questi dati è fondamentale nel momento in cui diventa necessar
 - $\text{unfix}$: indica che la transazione ha concluso l’utilizzo della pagina, quindi decrementa il contatore di utilizzo di pagina
 - $\text{force}$: trasferisce in modo sincrono una pagina in memoria secondaria su richiesta del gestore dell’affidabilità.
 #### E' possibile creare domini complessi in SQL? Quali sono i domini che SQL mette a disposizione?
-Nella definizione delle tabelle si può fare riferimento ai domini predefiniti del linguaggio o a domini definiti dall'utente a partire da quelli predefiniti, infatti proprio da questi è possibile definirli in questa maniera:
-$$ \begin{aligned}
-&\text{CREATE DOMAIN} \ NomeDominio \ as \ TipoDiDato \\
-&\quad\quad\quad\quad\quad\quad \ [ValoreDiDefault] \\
-&\quad\quad\quad\quad\quad\quad \ [Vincolo] \\
-\end{aligned}
-$$
+Nella definizione delle tabelle si può fare riferimento ai domini predefiniti del linguaggio o a domini definiti dall'utente a partire da quelli predefiniti.
 
 I domini elementari di SQL sono:
 - **Caratteri**
@@ -130,16 +115,10 @@ Lo standard SQL-2 prevede la definizione di **Procedure**, ovvero dei brevi sott
 
 È bene sapere che lo standard SQL-2 non tratta la scrittura di procedure complesse, ma solo quelle composte da un singolo comando SQL. Questo è invece permesso in SQL-3, dove viene fornita una ricca sintassi per la definizione di procedure, integrando anche le strutture di controllo
 #### Illustrare quando è possibile utilizzare SQL statico e quando invece è necessario utilizzare SQL dinamico.
-Nel caso dell'SQL statico, si usa quando i comandi SQL sono noti a tempo di compilazione e vengono gestiti dal preprocessore, venendo ottimizzati solo una volta, e non ogni volta che il comando deve essere eseguito. Questo comporta grossi vantaggi in termini di prestazioni. L'SQL dinamico non può avvalersi della fase di preprocessamento, non essendo noti a priori i comandi da ottimizzare, quindi la costruisce a tempo di esecuzione ed è utilizzato in questi casi
+Nel caso dell'SQL statico, si usa quando i comandi SQL sono noti a tempo di compilazione e vengono gestiti dal preprocessore, venendo ottimizzati solo una volta, e non ogni volta che il comando deve essere eseguito. Questo comporta grossi vantaggi in termini di prestazioni. L'SQL dinamico non può avvalersi della fase di pre-processamento, non essendo noti a priori i comandi da ottimizzare, quindi la costruisce a tempo di esecuzione ed è utilizzato in questi casi
 #### Illustrare brevemente cosa siano: algebra relazionale, calcolo relazionale ed SQL, le loro peculiarità e la relazione che intercorre tra di essi
-L'algebra relazionale si configura come un linguaggio di tipo procedurale che si basa su una collezione di operatori definiti su relazioni, i quali producono a loro volta nuove relazioni come risultato. La sua peculiarità fondamentale risiede nella necessità di specificare esplicitamente il procedimento da seguire, ovvero la sequenza di operazioni quali selezione $\sigma$, proiezione $\pi$, ridenominazione $\rho$ e diverse forme di join $\bowtie$, per giungere alla costruzione del risultato desiderato.
+L'**Algebra Relazionale** è un linguaggio procedurale (prescrive il _come_ tramite operatori), mentre il **Calcolo Relazionale** è dichiarativo (descrive il _cosa_ tramite logica); il **Teorema di Codd** ne sancisce l'equivalenza espressiva. L'**SQL** costituisce lo standard pratico: adotta l'approccio dichiarativo del calcolo per l'interazione utente, ma viene internamente tradotto dal DBMS in piani di esecuzione algebrici per l'accesso fisico ai dati.
 
-Il calcolo relazionale costituisce una famiglia di linguaggi di interrogazione di natura dichiarativa, basati sui principi del calcolo dei predicati del primo ordine. La caratteristica distintiva del calcolo è la sua capacità di descrivere esclusivamente le proprietà del risultato cercato attraverso formule logiche, senza indicare minimamente la procedura necessaria per ottenerlo .
-
-Il linguaggio SQL, acronimo di Structured Query Language, rappresenta lo standard universale per l'interazione con le basi di dati relazionali, integrando in un'unica soluzione le funzionalità di definizione dei dati attraverso il Data Definition Language e di manipolazione e interrogazione tramite il Data Manipulation Language. La peculiarità dell'SQL è la sua impostazione dichiarativa che solleva l'utente dal compito di definire il piano di accesso fisico, delegando al sistema la ricerca della strategia ottimale
-
-La relazione che intercorre tra questi linguaggi è di natura formale e tecnologica, in quanto l'algebra relazionale e il sottoinsieme del calcolo relazionale indipendente dal dominio sono considerati linguaggi equivalenti, poiché per ogni espressione formulata nell'uno è possibile trovarne una corrispondente nell'altro che produca il medesimo insieme di dati.
-Nella pratica dei sistemi di gestione di basi di dati, l'SQL funge da interfaccia di alto livello basata sul calcolo su tuple, ma il gestore delle interrogazioni del DBMS traduce internamente ogni istruzione SQL in una rappresentazione algebrica equivalente
 #### Descrivere brevemente i difetti del calcolo relazionale su domini per i quali è stato introdotto il calcolo relazionale su tuple 
 Il calcolo relazionale su domini presenta alcuni limiti strutturali e teorici piuttosto significativi, tra i quali il principale è rappresentato dalla **dipendenza dal dominio**, una proprietà per cui il risultato di un'interrogazione può variare in base all'universo dei valori considerato per gli attributi. Questo difetto implica che alcune espressioni possano produrre risultati privi di senso pratico o addirittura infiniti qualora il dominio di riferimento sia illimitato, come accade ad esempio in una negazione che includa tutti i valori non presenti in una determinata relazione
 
