@@ -4,7 +4,7 @@ L'architettura a livelli di un DBMS garantisce l'indipendenza dei dati in due li
 - **Indipendenza logica**: consente di interagire con il livello esterno della base di dati in modo indipendente dal livello logico, per esempio come aggiungere un nuovo schema esterno senza modificare lo schema logico e perciò la sottostante organizzazione fisica dei dati
 
 Il **modello relazionale** risponde perfettamente al requisito dell'indipendenza dei dati perché introduce una netta distinzione tra il livello fisico e quello logico. A differenza dei modelli precedenti (reticolare e gerarchico), che includevano riferimenti espliciti a puntatori fisici, il modello relazionale è basato su valori e non richiede la conoscenza delle strutture fisiche per accedere ai **dati**
-#### "Descrivere brevemente cosa sono le ACID properties, a cosa servono e da dove deriva l'espressione 'ACID'" oppure "Illustrare brevemente cosa siano le proprietà ACID (spiegando anche l'acronimo) ed a quale entità/oggeto sono riferite"
+#### "Descrivere brevemente cosa sono le ACID properties, a cosa servono e da dove deriva l'espressione 'ACID'" oppure "Illustrare brevemente cosa siano le proprietà ACID (spiegando anche l'acronimo) ed a quale entità/oggeto sono riferite" oppure "Elencare le proprietà fondamentali di una transazione e descrivere brevemente ognuna di esse"
 
 Un DBMS prevede che le interazioni con la base di dati avvengano per mezzo di **transazioni**.
 Una **transazione** è una sequenza di azioni di lettura e scrittura del DB e di elaborazioni di dati in memoria temporanea, che il DBMS esegue garantendo le seguenti proprietà (ACID properties):
@@ -50,7 +50,7 @@ Nelle strutture sequenziali, un file è costituito da vari blocchi di memoria �
 Una struttura con accesso ad **hash** garantisce un accesso associativo ai dati, ovvero un tipo di accesso in cui la locazione fisica dei dati dipende dal valore assunto da un campo chiave. Questo avviene tramite specifiche funzioni hash che consentono di trasformare un attributo chiave nell'indice di un array, e quindi associare ad ogni record una posizione specifica in una struttura sequenziale. 
 
 Le strutture ad albero, denominate anche **indici**, favoriscono l'accesso in base al valore di uno o più campi, consentendo sia accessi puntuali che corrispondenti a valori con complessità logaritmica (sulla base della profondità dell’albero).
-#### Definire cosa siano RDF ed RDFS e le differenze tra di essi" oppure "Descrivere brevemente RDF e quale sia il suo linguaggio di interrogazione
+#### "Definire cosa siano RDF ed RDFS e le differenze tra di essi" oppure "Descrivere brevemente RDF e quale sia il suo linguaggio di interrogazione"
 
 **RDF (Resource Description Framework):** È un modello per rappresentare informazioni sul Web sotto forma di **triple** (soggetto, predicato, oggetto), che formano un grafo orientato. Permette di descrivere risorse in modo semplice ma non impone uno schema rigido
 
@@ -91,14 +91,10 @@ Poiché una relazione è un insieme di elementi distinti, si può concludere che
 Ora i casi sono due: 
 - La **superchiave è anche chiave**, quindi si conferma l’esistenza della chiave stessa 
 - **Non è chiave**, perché contiene un’altra superchiave, quindi applicando ricorsivamente questo ragionamento si giunge, in un numero finito di passi (poiché l’insieme degli attributi è finito), ad una superchiave minimale.
-#### Elencare le proprietà fondamentali di una transazione e descrivere brevemente ognuna di esse
-Le proprietà di una transazione sono:
-- **Atomicità**: una transazione non può essere incompleta, se una transazione fallisce i suoi effetti vengono annullati ed il database torna alla fase di consistenza precedente.
-- **Seralizzabilità**: garantita con il meccanismo del bloccaggio dei dati (record and table locking). È una gestione ottenuta mediante tecniche di programmazione concorrente in cui prima di leggere/modificare un dato, una transazione deve bloccare questo dato il lettura/scrittura.
 #### Si descrivano brevemente i diversi livelli di isolamento di una transazione ed il motivo per cui sono stati introdotti.
-1. **Read uncommitted (degree of isolation 0):** consente transazioni che fanno solo operazioni di lettura (quelle di modifica sono proibite) che vengono eseguite dal sistema senza bloccare in lettura i dati. Si rende il sistema molto più veloce, ma può accadere che una transazione legga dati modificati da un’altra transazione non ancora terminata (dati sporchi) oppure abortita in seguito, motivo per cui questo livello di isolamento può applicarsi esclusivamente su porzioni di DB utilizzate sempre e solo in lettura.
-2. **Read committed (degree of isolation 1):** a differenza del livello precedente in cui sui dati in lettura non vi era un bloccaggio, questo livello prevede che i dati in lettura siano bloccati esclusivamente per il tempo di lettura e subito rilasciati, mentre i dati in scrittura siano rilasciati alla terminazione della transazione. Questo comporta letture non ripetibili, ovvero letture successive sugli stessi dati possono dare risultati diversi perché i dati sono stati modificati da altre transazioni terminate nell’intervallo tra la prima e la seconda lettura.
-3. **Repeatable read (degree of isolation 2)**: prevede che i blocchi in lettura e scrittura non sia applicati sull’intera tabella, ma siano assegnati solo su sottoinsiemi di tuple e vengano rilasciati alla terminazione della transazione. Questa soluzione evita il problema delle letture non ripetibili, ma non quello delle letture fantasma.
+1. **Read uncommitted (degree of isolation 0):** consente transazioni che fanno solo operazioni di lettura (quelle di modifica sono proibite) che vengono eseguite dal sistema senza bloccare in lettura i dati. 
+2. **Read committed (degree of isolation 1):** a differenza del livello precedente in cui sui dati in lettura non vi era un bloccaggio, questo livello prevede che i dati in lettura siano bloccati esclusivamente per il tempo di lettura e subito rilasciati, mentre i dati in scrittura siano rilasciati alla terminazione della transazione. 
+3. **Repeatable read (degree of isolation 2)**: prevede che i blocchi in lettura e scrittura non sia applicati sull’intera tabella, ma siano assegnati solo su sottoinsiemi di tuple e vengano rilasciati alla terminazione della transazione.
 4. **Serializable (degree of isolation 3)**: le transazioni vengono serializzate in maniera sicura.
 #### Illustrare brevemente quali sono i dati gestiti dal buffer manager e come avviene la sua gestione delle richieste
 Il gestore del buffer gestisce, oltre al buffer appunto, un direttorio che per ogni pagina mantiene:
@@ -210,18 +206,9 @@ Il modello relazione dei dati (più diffuso tra tutti) permette di definire tipi
   </tbody>
 </table>
 #### Si descrivano brevemente le peculiarità e le finalità delle fasi di progettazione concettuale, logica e fisica (o formulazione simile)
-
-1. Progettazione Concettuale: La finalità di questa fase è rappresentare le specifiche informali della realtà di interesse in una **descrizione formale e completa**, ma totalmente **indipendente** dai criteri di rappresentazione del DBMS che verrà utilizzato.
-   - **Peculiarità:** Si caratterizza per un **alto livello di astrazione**. Il progettista si concentra esclusivamente sul contenuto informativo della base di dati, senza preoccuparsi delle modalità di codifica in un sistema reale né dell'efficienza dei programmi. In questa fase si utilizzano principalmente le specifiche sui dati per definire gli elementi dello schema.
-   - **Prodotto finale:** Il risultato è lo **schema concettuale**, tipicamente realizzato attraverso il **modello Entità-Relazione (E-R)**, che fornisce una visione unificata dei dati utile anche a scopo documentativo.
-
-2. Progettazione Logica: La finalità della progettazione logica è la **traduzione dello schema concettuale** nel modello di rappresentazione dei dati adottato dal DBMS a disposizione (nel caso specifico, il modello relazionale).
-   - **Peculiarità:** Sebbene sia ancora indipendente dai dettagli fisici, la rappresentazione è **concreta** poiché deve rispettare i vincoli del modello logico scelto. Non si tratta di una semplice traduzione meccanica: lo schema deve essere **ristrutturato** per semplificare la traduzione stessa (ad esempio eliminando le generalizzazioni) e per **ottimizzare le prestazioni** sulla base del carico applicativo previsto (volumi di dati e frequenza delle operazioni). In questa fase si utilizzano tecniche formali come la **normalizzazione** per verificare la qualità del risultato 
-   - **Prodotto finale:** Il risultato è lo **schema logico** (una collezione di tabelle nel modello relazionale) e la relativa documentazione dei vincoli di integrità.
-
-3. Progettazione Fisica: La finalità della progettazione fisica è il completamento dello schema logico con la specifica dei **parametri fisici di memorizzazione** per massimizzare l'efficienza del sistema.
-   - **Peculiarità:** Questa fase è **fortemente dipendente dal DBMS specifico** scelto. Il progettista deve conoscere le caratteristiche tecnologiche del sistema per definire l'organizzazione dei file e la creazione di strutture ausiliarie per l'accesso ai dati. Qui si prendono decisioni su quali indici creare per ottimizzare i tempi di risposta delle query e sulla contiguità di allocazione dei dati.
-   - **Prodotto finale:** Il risultato è lo **schema fisico**, costituito dalle definizioni effettive delle relazioni e delle strutture fisiche utilizzate con i relativi parametri di implementazione.
+- **Progettazione Concettuale:** Produce una rappresentazione formale e astratta della realtà (schema E-R), concentrandosi sui dati e rimanendo totalmente indipendente dal sistema informatico.
+- **Progettazione Logica:** Traduce e ottimizza lo schema concettuale nel modello dati del DBMS (es. tabelle relazionali), considerando i carichi di lavoro previsti (normalizzazione).
+- **Progettazione Fisica:** Implementazione dello schema logico definendo i parametri fisici di memorizzazione (es. indici, organizzazione file) specifici del DBMS scelto per massimizzare l'efficienza.
 #### Si descriva brevemente quali e quante sono le forme di ridondanza individuabili all'interno di uno modello E-R
 All'interno di uno schema Entità-Relazione, la ridondanza è definita come la presenza di informazioni che possono essere derivate, ovvero ottenute attraverso una serie di operazioni, da altri dati già esistenti nel medesimo schema. Si possono individuare sostanzialmente tre forme principali di ridondanza:
 1. La prima categoria riguarda gli attributi derivabili, occorrenza per occorrenza, da altri attributi appartenenti alla stessa entità o alla stessa associazione.
