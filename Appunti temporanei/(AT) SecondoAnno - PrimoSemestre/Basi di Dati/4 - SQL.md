@@ -380,9 +380,9 @@ Una sintassi alternativa per la specifica dei join permette di distinguere, tra 
 La sintassi proposta è la seguente:
 $$
 \begin{aligned}
-&\text{SELECT} \ AttrEspr[[\text{as}]Alias]\{,AttrEspr [[\text{as}]Alias]\} \\
-&\text{FROM} \ Tabella [[\text{as}]Alias] \\
-&\{[TipoJoin]\ \text{JOIN} \ Tabella [[\text{as}]Alias] \text{on} CondizioneDiJoin\} \\
+&\text{SELECT} \ AttrEspr[[\text{AS}]Alias]\{,AttrEspr [[\text{AS}]Alias]\} \\
+&\text{FROM} \ Tabella [[\text{AS}]Alias] \\
+&\{[TipoJoin]\ \text{JOIN} \ Tabella [[\text{AS}]Alias] \text{on} CondizioneDiJoin\} \\
 &[\text{WHERE} \  AltraCondizione]
 \end{aligned}
 $$
@@ -551,13 +551,6 @@ $$\begin{aligned}
 $$
 Quando il comando $\text{WHERE}$ non ha argomenti il comando elimina tutte le righe della tabella.
 Nel caso esista un vincolo di integrità referenziale con politica $\text{CASCADE}$, allora la cancellazione apporta anche la cancellazione di righe appartenenti ad altra tabelle
-$$\begin{aligned}
-&\text{UPDATE} \ NomeTabella \ \\
-&\quad\quad \text{set} \ Attributo =\langle Espressione \ | \ SelectSQL | \text{NULL} | \text{DEFAULT} \rangle \\ 
-&\quad\quad\quad\quad \{, Attributo =\langle Espressione \ | \ SelectSQL | \text{NULL} | \text{DEFAULT} \rangle \} \\
-&\quad\quad\quad\quad\quad [\text{WHERE} \ Condizione] \\ 
-\end{aligned}
-$$
 Se il comando non presenta la clausola $\text{WHERE}$ si presuppone che la condizione sia soddisfatta e si modificano tutte le righe 
 ### Modifica
 Il comando $\text{UPDATE}$ permette di aggiornare uno o più attributi delle righe di una tabella che soddisfano eventualmente una condizione:
