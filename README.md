@@ -14,7 +14,9 @@ Per realizzare questi appunti utilizzo i seguenti plugin:
 - **I PDF potrebbero non essere caricati subito**, se notate che comunque i file Markdown non sono modificati da tempo potreste tranquillamente seguire quelli, cercate comunque di avvisare se non ho pubblicato qualcosa che provvedo a reinserirlo.
 - Con questa repository non si intende sostituire completamente i libri di testo ma di estrarre il contenuto principale (e molte volte anche approfondimenti importanti e interessanti) di un corso. Anche se molte informazioni sono prese dai libri di testo, se possibile integrate con questi ultimi, **non do nessuna garanzia su questi appunti e non li consiglio come unica fonte di informazioni**  
 
-Per favore, nel caso troviate problemi nei file (errori di battitura, concettuali o qualunque altra cosa) **contattatemi dai link sul profilo GitHub**, vi ringrazio.
+Per favore, nel caso troviate problemi nei file (errori di battitura, concettuali o qualunque altra cosa) potreste:
+1. Fare una pull request specificando dove gli errori sono presenti e aggiustarli (consigliato)
+2. Contattarmi dai link presenti sul mio profilo e segnalare l'errori (sconsigliato perché potrei non riuscire a rispondere per tempo)
 
 Se volete fare una fork del progetto è assolutamente lecito, a condizione di essere citato almeno nel file README.md di suddetto e di avere un link a questa repository direttamente
 
