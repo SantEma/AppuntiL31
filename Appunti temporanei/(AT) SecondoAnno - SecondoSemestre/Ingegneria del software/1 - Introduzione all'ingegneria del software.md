@@ -20,4 +20,4 @@ Il fattore qualità si definisce in base ai seguenti criteri:
 - Grado d eccellenza
 - Totalità di caratteristiche di un prodotto software che si basano sulla abilità del prodotto a soddisfare i bisogni espliciti ed impliciti 
 
-Tutto questo viene
+Tutto questo approccio gerarchico viene decomposto in attributi (di solito primi) per arrivare a misure **standard** per creare software efficient, funzionali, affidabili usabili 
