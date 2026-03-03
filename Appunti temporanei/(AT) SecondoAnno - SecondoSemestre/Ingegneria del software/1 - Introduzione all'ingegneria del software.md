@@ -1,5 +1,7 @@
-L'ingegneria del software è l'approccio sistematico allo sviluppo, operatività, manutenzione e ritiro del software.
-Una definizione più formale sarebbe:
+
+> [!info] Definizione
+> L'ingegneria del software è lo sviluppo multi persone di programmi multi-versione
+
 
 
 ## Fattore costo
