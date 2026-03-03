@@ -4,6 +4,7 @@ Per definire molto facilmente l'ingegneria del software usiamo questa frase:
 > L'ingegneria del software è lo sviluppo **multi-persone** di programmi **multi-versione**
 
 L'ingegneria del software quindi è l'insieme di politiche, pratiche e strumenti necessari per rendere il codice utile per tutto il tempo necessario e consentire la collaborazione all'interno di un team.
+Quello che quindi caratterizza l'ingegneria del software è il **focus sul processo**, indipendentemente dal prodotto software. 
 Ci sono diversi fattori da considerare all'interno della produzione di un software:
 ## Fattore costo
 Il costo del software è un **costo di progettazione** e non di produzione. Il costo principalmente si basa sullo sforzo umano, il quale viene misurato in ore/giorni/mesi/anni per le $X$ persone coinvolte nel progetto.
@@ -37,3 +38,4 @@ Esistono diverse aree di specializzazione (chiamate **applicative**) dove un sof
 - Embedded systems
 
 e così via...
+### Strategia dell’ingegneria del software
