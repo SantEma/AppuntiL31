@@ -32,5 +32,5 @@ I **record**, invece, sono progettati per raggruppare dati di tipi diversi in un
 I record consentono di rappresentare oggetti complessi con più attributi e ogni campo ha un nome che migliora la leggibilità del codice e riduce gli errori, ma non possono essere facilmente manipolati come collezioni omogenee.
 ### Array e Record
 Un array di record è una sequenza di record simili fra loro, ottenendo una struttura ordinata per gestire entità complesse, consentendo di gestire una collezione di entità complesse con attributi strutturati, mantenendo una struttura ordinata.
-È possibile accedere direttamente sia al singolo record tramite indice, sia a un campo specifico all’interno di un record ed è facile aggiungere nuovi record senza modificare la struttura esistente (purché la dimensione sia sufficiente).
+È possibile accedere direttamente sia al singolo record tramite indice, sia a un campo specifico all'interno di un record ed è facile aggiungere nuovi record senza modificare la struttura esistente (purché la dimensione sia sufficiente).
 
