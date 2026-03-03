@@ -22,6 +22,9 @@ Il fattore qualità si definisce in base ai seguenti criteri:
 
 Tutto questo approccio gerarchico viene decomposto in attributi (di solito primi) per arrivare a misure **standard** per creare software efficienti, funzionali, affidabili, usabili, adatti alla manutenzione e portabili su altre piattaforme
 ## Ruolo di un "software engineer"
+Colui che gestisce un software e lavora sull'ingegneria del software è uno sviluppatore software, che nell'ambito lavorativo e aziendale diventa **ingegnerie del software**.
 
+Di seguito sono riportati tutti i sotto-campi di colui che sviluppa software:
+![[Pasted image 20260303114445.png]]
 
 
