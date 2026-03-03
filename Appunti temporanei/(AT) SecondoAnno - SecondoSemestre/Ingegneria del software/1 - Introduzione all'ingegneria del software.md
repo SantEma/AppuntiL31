@@ -4,7 +4,7 @@ Per definire molto facilmente l'ingegneria del software usiamo questa frase:
 > L'ingegneria del software è lo sviluppo **multi-persone** di programmi **multi-versione**
 
 L'ingegneria del software quindi è l'insieme di politiche, pratiche e strumenti necessari per rendere il codice utile per tutto il tempo necessario e consentire la collaborazione all'interno di un team.
-Ci sono diversi fattori da considerare all'interno 
+Ci sono diversi fattori da considerare all'interno della produzione di un software:
 ## Fattore costo
 Il costo del software è un **costo di progettazione** e non di produzione. Il costo principalmente si basa sullo sforzo umano, il quale viene misurato in ore/giorni/mesi/anni per le $X$ persone coinvolte nel progetto.
 ## Fattore tempo
@@ -18,5 +18,6 @@ Il fattore qualità si definisce in base ai seguenti criteri:
 - Aderenza allo scopo
 - Conformità alle specifiche
 - Grado d eccellenza
-- Totalità di caratteristiche di un prodotto software che si basano sulla abilità del prodotto a soddisfare i bisogni espliciti ed impliciti (un esempio vi è lo standard ISO)
+- Totalità di caratteristiche di un prodotto software che si basano sulla abilità del prodotto a soddisfare i bisogni espliciti ed impliciti 
 
+Tutto questo viene
