@@ -8,4 +8,8 @@ Diversamente da quel che si può pensare, se un progetto è già in ritardo, agg
 - La lentezza dell'**addestramento** del personale aggiuntivo
 - La comunicazione all'interno del gruppo, più basso è il numero di membri nel team e più basso sarà il carico **comunicativo intragruppo**. Aggiungendo un altra persona si avrà un livello comunicativo **quadratico**($n(n-1)/2$) tra il gruppo e il nuovo membro.
 ## Fattore qualità
-Il fattore qualità si definisce in base ai
+Il fattore qualità si definisce in base ai seguenti criteri:
+- Aderenza allo scopo
+- Conformità alle specifiche
+- Grado d eccellenza
+- Totalità di caratteristiche di un prodotto software che si basano 
