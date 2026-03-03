@@ -36,4 +36,4 @@ Esistono diverse aree di specializzazione (chiamate **applicative**) dove un sof
 - Industrial and process control  
 - Embedded systems
 
-e così via.
+e così via...
