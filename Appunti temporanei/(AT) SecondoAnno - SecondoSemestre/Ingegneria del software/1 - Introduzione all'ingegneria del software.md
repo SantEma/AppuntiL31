@@ -4,7 +4,8 @@ Il costo del software è un **costo di progettazione** e non di produzione. Il c
 ## Fattore tempo
 Il fattore tempo è detto **time to market** ed è il tempo che intercorre dall'idea iniziale al rilascio del prodotto, ed il fattore critico maggiore per alcuni progetti, poiché meno veloci si è a rilasciare un prodotto, maggiormente un competitor potrebbe anticipare l'idea.
 
-Diversamente da quel che si può pensare, se un progetto è già in ritardo, aggiungere persone crea un effetto contrario, non lo migliorerà ma andrà ancora più a rilento. Questo concetto si basa sulla **legge di Brooks**, essa basata su due principi
+Diversamente da quel che si può pensare, se un progetto è già in ritardo, aggiungere persone crea un effetto contrario, non lo migliorerà ma andrà ancora più a rilento. Questo concetto si basa sulla **legge di Brooks**, essa basata su due principi:
 - La lentezza dell'**addestramento** del personale aggiuntivo
-- La comunicazione all'interno del gruppo, quindi il carico della comunicaizone
-##
+- La comunicazione all'interno del gruppo, Più basso è il team più basso sarà il carico *comunicativo intragruppo, infatti aggiungendo un altra persona si avrà un livello comunicativo **quadratico*,$n(n-1)/2$, tra il gruppo e il nuovo membro. Inoltre aggiungere una nuova persona ad un team giù in sviluppo, richiede una fase di addestramento di quest'ultima.
+## Fattore qualità
+Il fattore qualità 
