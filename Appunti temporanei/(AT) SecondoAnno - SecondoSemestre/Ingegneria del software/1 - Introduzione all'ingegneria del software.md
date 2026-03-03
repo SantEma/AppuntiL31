@@ -1,4 +1,7 @@
-L'ingegneria del software è l'approccio sistematico allo sviluppo, operatività, manutenzione e ritiro del software
+L'ingegneria del software è l'approccio sistematico allo sviluppo, operatività, manutenzione e ritiro del software.
+Una definizione più formale sarebbe:
+
+
 ## Fattore costo
 Il costo del software è un **costo di progettazione** e non di produzione. Il costo principalmente si basa sullo sforzo umano, il quale viene misurato in ore/giorni/mesi/anni per le $X$ persone coinvolte nel progetto.
 ## Fattore tempo
@@ -14,3 +17,4 @@ Il fattore qualità si definisce in base ai seguenti criteri:
 - Grado d eccellenza
 - Totalità di caratteristiche di un prodotto software che si basano sulla abilità del prodotto a soddisfare i bisogni espliciti ed impliciti (un esempio vi è lo standard ISO)
 
+Per poter creare quindi un modello 
