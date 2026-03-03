@@ -12,4 +12,5 @@ Il fattore qualità si definisce in base ai seguenti criteri:
 - Aderenza allo scopo
 - Conformità alle specifiche
 - Grado d eccellenza
-- Totalità di caratteristiche di un prodotto software che si basano 
+- Totalità di caratteristiche di un prodotto software che si basano sulla abilità del prodotto a soddisfare i bisogni espliciti ed impliciti (un esempio vi è lo standard ISO)
+
