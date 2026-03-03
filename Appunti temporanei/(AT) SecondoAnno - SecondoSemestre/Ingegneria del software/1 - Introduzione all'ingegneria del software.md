@@ -26,5 +26,14 @@ Colui che gestisce un software e lavora sull'ingegneria del software è uno svil
 
 Di seguito sono riportati tutti i sotto-campi di colui che sviluppa software:
 ![[Pasted image 20260303114445.png]]
+## Aree applicative
+Esistono diverse aree di specializzazione (chiamate **applicative**) dove un software engineer si può specializzare, tra cui:
+- Mobile apps 
+- Web apps 
+- Information systems (ERP) 
+- Scientific computing 
+- Medical devices  
+- Industrial and process control  
+- Embedded systems
 
-
+e così via.
