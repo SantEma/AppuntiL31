@@ -1,9 +1,6 @@
 
-> [!info] Definizione
-> L'ingegneria del software è lo sviluppo multi persone di programmi multi-versione
-
-
-
+> [!quote] Definizione
+> L'ingegneria del software è lo sviluppo **multi-persone** di programmi **multi-versione**
 ## Fattore costo
 Il costo del software è un **costo di progettazione** e non di produzione. Il costo principalmente si basa sullo sforzo umano, il quale viene misurato in ore/giorni/mesi/anni per le $X$ persone coinvolte nel progetto.
 ## Fattore tempo
