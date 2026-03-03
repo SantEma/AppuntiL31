@@ -1,6 +1,6 @@
 
 Per definire molto facilmente l'ingegneria del software usiamo questa frase:
-> [!tip] Definizione
+> [!info] Definizione ingegneria del software
 > L'ingegneria del software è lo sviluppo **multi-persone** di programmi **multi-versione**
 
 L'ingegneria del software quindi è l'insieme di politiche, pratiche e strumenti necessari per rendere il codice utile per tutto il tempo necessario e consentire la collaborazione all'interno di un team.
@@ -13,7 +13,7 @@ Il fattore tempo è detto **time to market** ed è il tempo che intercorre dall'
 
 Diversamente da quel che si può pensare, se un progetto è già in ritardo, aggiungere persone crea un effetto contrario, non lo migliorerà ma andrà ancora più a rilento. Questo concetto si basa sulla **legge di Brooks**, essa basata su due principi:
 - La lentezza dell'**addestramento** del personale aggiuntivo
-- La comunicazione all'interno del gruppo, più basso è il numero di membri nel team e più basso sarà il carico **comunicativo intragruppo**. Aggiungendo un altra persona si avrà un livello comunicativo **quadratico**($n(n-1)/2$) tra il gruppo e il nuovo membro.
+- La comunicazione all'interno del gruppo, più basso è il numero di membri nel team e più basso sarà il carico **comunicativo intragruppo**. Aggiungendo un altra persona si avrà un livello comunicativo **quadratico** ($n(n-1)/2$) tra il gruppo e il nuovo membro.
 ## Fattore qualità
 Il fattore qualità si definisce in base ai seguenti criteri:
 - Aderenza allo scopo
@@ -36,5 +36,4 @@ Esistono diverse aree di specializzazione (chiamate **applicative**) dove un sof
 - Medical devices  
 - Industrial and process control  
 - Embedded systems
-
 e così via...
