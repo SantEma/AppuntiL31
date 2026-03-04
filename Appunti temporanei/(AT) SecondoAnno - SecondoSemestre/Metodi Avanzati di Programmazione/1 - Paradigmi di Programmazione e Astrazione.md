@@ -72,4 +72,5 @@ Occorre sempre bilanciare i costi dovuti all'uniformità di paradigma con i cost
 - **Applicazioni concorrenti**: sono caratterizzate dal fatto che le varie attività che compongono il sistema non hanno una natura inerentemente sequenziale, ma necessitano di meccanismi di sincronizzazione e comunicazione.
 - **Applicazioni dipendenti dal tempo**: sono influenzate da vincoli temporali riguardanti sia la velocità di esecuzione delle attività sia la necessità di sincronizzare le attività stesse.
 ## Paradigmi operazionali
-Sono caratterizzati da sequenze computazionali passo-passo
+Nei paradigmi operazionali è difficile stabilire se l’insieme dei valori calcolati operativamente è proprio l’insieme dei valori soluzione. Le tecniche di verifica e di debugging cercano di superare questo problema di programmazione e spesso ci si accontenta di stabilire che i due insiemi siano “sufficientemente vicini”, ovvero indistinguibili per la sottoclasse attesa di problemi effettivi
+### Side-effecting
