@@ -25,34 +25,34 @@ Nel senso della macchina di Turing, tutti **i linguaggi di programmazione più c
 - Un'esecuzione efficiente dei programmi scritti nel linguaggio scelto al punto precedente
 
 Per esempio il C è un linguaggio basato sul **paradigma imperativo**
-## Rapporto Paradigma-Linguaggi
+### Rapporto Paradigma-Linguaggi
 I linguaggi di programmazione sono dotati di opportuni **costrutti linguistici** che riflettono i modelli concettuali di un paradigma, al fine di facilitare l’espressione di una soluzione definita attraverso i modelli concettuali del paradigma. I linguaggi di programmazione possono supportare **più di un paradigma**.
-### Categorie di paradigmi
+#### Categorie di paradigmi
 1. Paradigmi che supportano tecniche di programmazione di basso livello (assembly)
 2. Paradigmi che supportano metodi di progettazione di algoritmi (e.g., divide-et-impera, programmazione dinamica)
 3. Paradigmi che supportano gli approcci di alto livello alla programmazione (e.g., paradigma funzionale e quello basato su regole)
-### Approccio dei paradigmi al problem solving
+#### Approccio dei paradigmi al problem solving
 I paradigmi che supportano la programmazione ad alto livello possono essere raggruppati in base al loro approccio alla soluzione dei problemi.
 - **Approccio operazionale:** descrive per passi **COME** costruire una soluzione.
 - **Approccio dimostrazionale**: è una variante del precedente che illustra la soluzione in modo operativo per esempi specifici e lascia al sistema il compito di generalizzare queste soluzione di esempi ad altri casi.
 - **Approccio definizionale**: esso stabilisce delle proprietà della soluzione in modo da vincolarla senza per questo descrivere come viene calcolata.
-#### Approccio operazionale
+##### Approccio operazionale
 Questo approccio è il pilastro della programmazione imperativa e qui il programmatore agisce come un coordinatore che impartisce ordini sequenziali. **Il focus è sul mutamento di stato del sistema (le istruzioni modificano dei valori sulla memoria) attraverso istruzioni precise**.
 Il concetto chiave di questo approccio è il programmatore controlla quel **flusso di controllo** (cicli for, istruzioni if, assegnazione di variabili).
-#### Approccio dimostrazionale
+##### Approccio dimostrazionale
 È una variante dell’operazionale, ma più “guidata dagli esempi”, come esempi concreti di input/output. Il sistema generalizza automaticamente la soluzione, quindi tipico di contesti in cui si “insegna” al sistema cosa fare (come il Machine Learning).
 Il concetto chiave è che **non scrivi l’algoritmo, mostri cosa deve fare**
-#### Approccio definizionale
+##### Approccio definizionale
 Si descrive **COSA** deve essere vero, non come ottenerlo, specificando proprietà, vincoli o relazioni. Il sistema trova autonomamente una soluzione che le soddisfi. Il concetto chiave è **che si descriva il risultato ma non il suo procedimento**
 ![[Pasted image 20260304121723.png]]
-### La scienza della programmazione
+#### La scienza della programmazione
 Chi studia questa scienza si deve occupare di diversi campi:
 - **I metodi di analisi dei problemi**, che consentono di passare da formulazioni spesso imprecise ed ambigue di un problema, a specifiche espresse in un qualche linguaggio formale
 - **Le tecniche di trasformazione dei programmi**, o tecniche di programmazione, che trasformano la specifica di un problema in un programma che lo risolve.
 - **I metodi di verifica della correttezza**, che affrontano il problema di verificare la terminazione dei programmi e la rispondenza alle specifiche date
 - **La teoria della complessità computazionale**, che studia l’efficienza delle soluzioni trovate
 - **La teoria dei linguaggi formali e traduttori**, che studia gli strumenti utilizzabili per comunicare un algoritmo ad un elaboratore.
-### Approccio multi-paradimatico
+#### Approccio multi-paradimatico
 Nessun singolo paradigma è appropriato per tutti i problemi, le applicazioni complesse necessitano l’adozione di più paradigmi di programmazione.
 Ogni singolo paradigma di programmazione è caratterizzato da:
 - Un diverso **potere di elisione**, cioè capacità di esprimere qualcosa in modo conciso (compattare per esempio il codice usando un paradigma rispetto ad un altro)
@@ -63,12 +63,13 @@ Occorre sempre bilanciare i costi dovuti all'uniformità di paradigma con i cost
 - Costi di debugging
 - Costi di variazione dovuti all'evoluzione del programma
 - Costi di esecuzione dell’applicazione (un paradigma sbagliato potrebbe portare ad un esecuzione più lenta per un codice più pesante)
-### Classificazioni di applicazioni software
-Le applicazioni software possono essere classificate rispetto alla natura degli elementi che sono di interesse primario nell'applicazione:
+#### Classificazioni di applicazioni software rispetto alla natura degli elementi
 - **Applicazioni orientate alla realizzazione di funzioni**: la complessità prevalente riguarda le funzioni da realizzare (come i programmi utilizzati dagli utenti nella quotidianità).
 - **Applicazioni orientate alla gestione dei dati**: l'aspetto prevalente è rappresentato dai dati che vengono memorizzati, ricercati e modificati, e che costituiscono il patrimonio informativo di una organizzazione.
 - **Applicazioni orientate al controllo**: la complessità prevalente del sistema riguarda il controllo delle attività che si sincronizzano e cooperano durante l’evoluzione del sistema.
-#### Classificazioni di applicazioni software rispettoal flusso di esecuzione delle attività
+#### Classificazioni di applicazioni software rispetto al flusso di esecuzione delle attività
 - **Applicazioni sequenziali**: sono caratterizzate da un unico flusso di controllo che governa l’evoluzione dell’applicazione. Queste sono le applicazioni più tradizionali, e vengono spesso adottate come riferimento per i metodi e le tecniche di base per la progettazione.
 - **Applicazioni concorrenti**: sono caratterizzate dal fatto che le varie attività che compongono il sistema non hanno una natura inerentemente sequenziale, ma necessitano di meccanismi di sincronizzazione e comunicazione.
 - **Applicazioni dipendenti dal tempo**: sono influenzate da vincoli temporali riguardanti sia la velocità di esecuzione delle attività sia la necessità di sincronizzare le attività stesse.
+## Paradigmi operazionali
+Sono caratterizzati da sequenze computazionali passo-passo
