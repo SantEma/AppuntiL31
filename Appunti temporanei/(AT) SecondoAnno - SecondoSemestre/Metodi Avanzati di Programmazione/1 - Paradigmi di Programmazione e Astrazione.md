@@ -52,3 +52,23 @@ Chi studia questa scienza si deve occupare di diversi campi:
 - **I metodi di verifica della correttezza**, che affrontano il problema di verificare la terminazione dei programmi e la rispondenza alle specifiche date
 - **La teoria della complessità computazionale**, che studia l’efficienza delle soluzioni trovate
 - **La teoria dei linguaggi formali e traduttori**, che studia gli strumenti utilizzabili per comunicare un algoritmo ad un elaboratore.
+### Approccio multi-paradimatico
+Nessun singolo paradigma è appropriato per tutti i problemi, le applicazioni complesse necessitano l’adozione di più paradigmi di programmazione.
+Ogni singolo paradigma di programmazione è caratterizzato da:
+- Un diverso **potere di elisione**, cioè capacità di esprimere qualcosa in modo conciso (compattare per esempio il codice usando un paradigma rispetto ad un altro)
+- Una diversa **invarianza rispetto ai cambiamenti** apportati nella strategia di soluzione di un problema (stesso paradigma per modifiche successive)
+
+Occorre sempre bilanciare i costi dovuti all'uniformità di paradigma con i costi determinati dall'uso di diversi paradigmi per un medesimo problema. I costi che si riscontrano sono:
+- Costi iniziali di apprendimento (il programmatore deve essere formato)
+- Costi di debugging
+- Costi di variazione dovuti all'evoluzione del programma
+- Costi di esecuzione dell’applicazione (un paradigma sbagliato potrebbe portare ad un esecuzione più lenta per un codice più pesante)
+### Classificazioni di applicazioni software
+Le applicazioni software possono essere classificate rispetto alla natura degli elementi che sono di interesse primario nell'applicazione:
+- **Applicazioni orientate alla realizzazione di funzioni**: la complessità prevalente riguarda le funzioni da realizzare (come i programmi utilizzati dagli utenti nella quotidianità).
+- **Applicazioni orientate alla gestione dei dati**: l'aspetto prevalente è rappresentato dai dati che vengono memorizzati, ricercati e modificati, e che costituiscono il patrimonio informativo di una organizzazione.
+- **Applicazioni orientate al controllo**: la complessità prevalente del sistema riguarda il controllo delle attività che si sincronizzano e cooperano durante l’evoluzione del sistema.
+#### Classificazioni di applicazioni software rispettoal flusso di esecuzione delle attività
+- **Applicazioni sequenziali**: sono caratterizzate da un unico flusso di controllo che governa l’evoluzione dell’applicazione. Queste sono le applicazioni più tradizionali, e vengono spesso adottate come riferimento per i metodi e le tecniche di base per la progettazione.
+- **Applicazioni concorrenti**: sono caratterizzate dal fatto che le varie attività che compongono il sistema non hanno una natura inerentemente sequenziale, ma necessitano di meccanismi di sincronizzazione e comunicazione.
+- **Applicazioni dipendenti dal tempo**: sono influenzate da vincoli temporali riguardanti sia la velocità di esecuzione delle attività sia la necessità di sincronizzare le attività stesse.
