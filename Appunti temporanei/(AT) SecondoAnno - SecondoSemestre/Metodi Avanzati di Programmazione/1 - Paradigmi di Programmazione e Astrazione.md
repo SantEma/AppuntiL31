@@ -86,8 +86,21 @@ Per ognuno dei paradigmi visti precedentemente possiamo distinguere due versioni
 - **Sequenziale**: il flusso di controllo è unico
 - **Concorrente o parallelo**: più flussi di controllo sono ammessi.
 ## Astrazione nella progettazione
-L'astrazione, in ambito scientifico, significa cambiare la rappresentazione di un problema, "trascinando via" un concetto, una idea, un principio da una realtà concreta.
+> [!info] Definizione di astrazione
+> L'astrazione, in ambito scientifico, significa cambiare la rappresentazione di un problema, "trascinando via" un concetto, una idea, un principio da una realtà concreta.
+
 L’obiettivo del cambio di rappresentazione è quello di concentrarsi su aspetti rilevanti dimenticando gli elementi secondari
 
 Non si tratta di omettere parti della rappresentazione di un problema, ma di riformulare lo stesso concentrando l’attenzione su idee generali piuttosto che su manifestazioni specifiche di quelle idee, tenendo conto della prospettiva di un osservatore.
 ![[Pasted image 20260304130450.png]]
+L’astrazione si focalizza sulle caratteristiche essenziali di un oggetto, rispetto alla prospettiva di colui che osserva.
+### Astrazione: processo o entità
+Il termine astrazione sotto-intende
+- **Un processo**: l’estrazione delle informazioni essenziali e rilevanti per un particolare scopo, ignorando il resto dell’informazione
+- **Una entità**: una descrizione semplificata di un sistema che enfatizza alcuni dei dettagli o proprietà trascurandone altri
+
+Entrambe le viste sono valide e di fatto necessarie.
+
+Si suppone che si voglia controllare il traffico aereo, avremo due tipologie di dettagli:
+- Dettagli **essenziali**: posizione del velivolo, velocità, etc.
+- Dettagli **irrilevanti**: colore, nomi dei passeggeri, etc.
