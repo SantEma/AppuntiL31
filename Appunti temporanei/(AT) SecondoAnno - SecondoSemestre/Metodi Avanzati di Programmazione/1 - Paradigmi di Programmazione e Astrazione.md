@@ -16,3 +16,11 @@ Questi modelli concettuali “strutturano” il pensiero in quanto determinano l
 Un paradigma cambia fondamentalmente il modo in cui guardiamo ai problemi incontrati nel passato, ci deve dare un nuovo schema per pensare ai problemi futuri e cambia le nostre priorità, le nostre idee su quanto merita attenzione e su cosa sia importante, cambiando effettivamente punto di vista
 
 Un nuovo paradigma è spesso **introdotto per risolvere un particolare problema**, ma si rivela poi adatto per altri. Per un problema degli anni 60, ci si è accorti che nessun paradigma esistente non era effettivamente utilizzabile ed è stato inventato il **paradigma ad oggetti (object oriented)**
+
+Nel senso della macchina di Turing, tutti **i linguaggi di programmazione più comuni sono universali**, tuttavia ogni linguaggio di programmazione si basa, o meglio supporta, un particolare paradigma, fornendo:
+- Le primitive di quel paradigma
+- I metodi di composizione di quel paradigma
+- Un linguaggio utente appropriato che rende chiari i programmi scritti secondo quel paradigma
+- Un'esecuzione efficiente dei programmi scritti nel linguaggio scelto al punto precedente
+
+Per esempio il C è un linguaggio basato sul **paradigma imperativo**
