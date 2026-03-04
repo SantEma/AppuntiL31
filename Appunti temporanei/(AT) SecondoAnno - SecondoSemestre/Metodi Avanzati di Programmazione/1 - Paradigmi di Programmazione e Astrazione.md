@@ -24,3 +24,5 @@ Nel senso della macchina di Turing, tutti **i linguaggi di programmazione più c
 - Un'esecuzione efficiente dei programmi scritti nel linguaggio scelto al punto precedente
 
 Per esempio il C è un linguaggio basato sul **paradigma imperativo**
+## Rapporto Paradigma-Linguaggi
+I linguaggi di programmazione sono dotati di opportuni **costrutti linguistici** che riflettono i modelli concettuali di un paradigma, al fine di facilitare l’espressione di una soluzione definita attraverso i modelli concettuali del paradigma. I linguaggi di programmazione possono supportare **più di un paradigma**.
