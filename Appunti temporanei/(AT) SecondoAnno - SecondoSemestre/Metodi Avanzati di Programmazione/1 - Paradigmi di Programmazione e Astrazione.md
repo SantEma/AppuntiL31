@@ -76,7 +76,7 @@ Nei paradigmi operazionali è difficile stabilire se l’insieme dei valori calc
 ### Side-effecting
 I paradigmi operazionali si distinguono in:
 - **Side-effecting**: procedono modificando ripetutamente la loro rappresentazione dei dati (le variabili sono legate a locazioni di memoria), come il C
-- **Non-side-effecting**: procedono creando continuamente nuovi dati. Questi paradigmi includono quelli che tradizionalmente sono detti **funzionali** (si da ad una funzione dei valori e lei produce un risultato, non modificando valori esistenti ma calcolandone altri creando copie eventuali). Sono utilizzati molto nella programmazione concorrenziale, se due o più processi accedono allo stesso set di dati è possibile copiarli e modificarli singolarmente 
+- **Non-side-effecting**: procedono creando continuamente nuovi dati. Questi paradigmi includono quelli che tradizionalmente sono detti **funzionali** (si da ad una funzione dei valori e lei produce un risultato, non modificando valori esistenti ma calcolandone altri creando copie eventuali). Sono utilizzati molto nella programmazione concorrenziale, se due o più processi accedono allo stesso set di dati è possibile copiarli e modificarli singolarmente piuttosto che avere un accesso multiplo su un singolo set
 
 I paradigmi operazionali “side-effecting” si distinguono in:
 - Imperativi
