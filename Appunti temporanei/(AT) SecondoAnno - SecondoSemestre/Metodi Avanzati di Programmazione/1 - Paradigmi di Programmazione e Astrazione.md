@@ -44,3 +44,4 @@ Il concetto chiave di questo approccio è il programmatore controlla quel **flus
 Il concetto chiave è che **non scrivi l’algoritmo, mostri cosa deve fare**
 #### Approccio definizionale
 Si descrive **COSA** deve essere vero, non come ottenerlo, specificando proprietà, vincoli o relazioni. Il sistema trova autonomamente una soluzione che le soddisfi. Il concetto chiave è **che si descriva il risultato ma non il suo procedimento**
+![[Pasted image 20260304121723.png]]
