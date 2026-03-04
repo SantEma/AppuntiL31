@@ -1,4 +1,3 @@
-
 Per definire molto facilmente l'ingegneria del software usiamo questa frase:
 > [!info] Definizione ingegneria del software
 > L'ingegneria del software è lo sviluppo **multi-persone** di programmi **multi-versione**
