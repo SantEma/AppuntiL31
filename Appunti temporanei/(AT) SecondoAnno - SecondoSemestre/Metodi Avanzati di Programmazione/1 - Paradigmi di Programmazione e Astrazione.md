@@ -45,3 +45,10 @@ Il concetto chiave è che **non scrivi l’algoritmo, mostri cosa deve fare**
 #### Approccio definizionale
 Si descrive **COSA** deve essere vero, non come ottenerlo, specificando proprietà, vincoli o relazioni. Il sistema trova autonomamente una soluzione che le soddisfi. Il concetto chiave è **che si descriva il risultato ma non il suo procedimento**
 ![[Pasted image 20260304121723.png]]
+### La scienza della programmazione
+Chi studia questa scienza si deve occupare di diversi campi:
+- **I metodi di analisi dei problemi**, che consentono di passare da formulazioni spesso imprecise ed ambigue di un problema, a specifiche espresse in un qualche linguaggio formale
+- **Le tecniche di trasformazione dei programmi**, o tecniche di programmazione, che trasformano la specifica di un problema in un programma che lo risolve.
+- **I metodi di verifica della correttezza**, che affrontano il problema di verificare la terminazione dei programmi e la rispondenza alle specifiche date
+- **La teoria della complessità computazionale**, che studia l’efficienza delle soluzioni trovate
+- **La teoria dei linguaggi formali e traduttori**, che studia gli strumenti utilizzabili per comunicare un algoritmo ad un elaboratore.
