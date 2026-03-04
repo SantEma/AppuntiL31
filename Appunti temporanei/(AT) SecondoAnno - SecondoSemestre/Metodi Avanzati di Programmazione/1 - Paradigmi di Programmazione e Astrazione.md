@@ -76,8 +76,18 @@ Nei paradigmi operazionali è difficile stabilire se l’insieme dei valori calc
 ### Side-effecting
 I paradigmi operazionali si distinguono in:
 - **Side-effecting**: procedono modificando ripetutamente la loro rappresentazione dei dati (le variabili sono legate a locazioni di memoria), come il C
-- **Non-side-effecting**: procedono creando continuamente nuovi dati. Questi paradigmi includono quelli che tradizionalmente sono detti **funzionali** (si da ad una funzione dei valori e lei produce un risultato, non modificando valori esistenti ma calcolandone altri creando copie eventuali). Sono utilizzati molto nella programmazione concorrenziale, se due o più processi accedono allo stesso set di dati è possibile copiarli e modificarli singolarmente piuttosto che avere un accesso multiplo su un singolo set
+- **Non-side-effecting**: procedono creando continuamente nuovi dati. Questi paradigmi includono quelli che tradizionalmente sono detti **funzionali** (si da ad una funzione dei valori e lei produce un risultato, non modificando valori esistenti ma calcolandone altri creando copie eventuali). Una volta allocato in memoria, un dato non può più essere modificato. Una "funzione pura" prende in input dei valori e ne restituisce di nuovi, senza mai intaccare gli originali né alterare lo stato esterno.
 
 I paradigmi operazionali “side-effecting” si distinguono in:
 - Imperativi
 - Orientati agli oggetti
+### Sequenziale vs Concorrente
+Per ognuno dei paradigmi visti precedentemente possiamo distinguere due versioni:
+- **Sequenziale**: il flusso di controllo è unico
+- **Concorrente o parallelo**: più flussi di controllo sono ammessi.
+## Astrazione nella progettazione
+L'astrazione, in ambito scientifico, significa cambiare la rappresentazione di un problema, "trascinando via" un concetto, una idea, un principio da una realtà concreta.
+L’obiettivo del cambio di rappresentazione è quello di concentrarsi su aspetti rilevanti dimenticando gli elementi secondari
+
+Non si tratta di omettere parti della rappresentazione di un problema, ma di riformulare lo stesso concentrando l’attenzione su idee generali piuttosto che su manifestazioni specifiche di quelle idee, tenendo conto della prospettiva di un osservatore.
+![[Pasted image 20260304130450.png]]
