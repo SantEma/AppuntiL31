@@ -187,10 +187,15 @@ La combinazione del **principio dell’astrazione dati con la tecnica dell’inc
 3. Le operazioni lecite, che ovviamente devono avere accesso alla informazione sulla rappresentazione del dato, vanno impacchettate con la rappresentazione del dato stesso
 > [!example] Esempio di unione di astrazione dati e incapsulamento
 > ![[Pasted image 20260305114849.png]]
-
-
-
 ### Astrazione dati vs Astrazione funzionale
-[da finire]
+L’astrazione dati **ricalca ed estende** quella funzionale.
+Attualmente la possibilità di effettuare astrazioni di dati è considerata importante almeno quanto quella di definire nuovi operatori con astrazioni funzionali, l'esperienza ha infatti dimostrato che la scelta delle strutture di dati è il primo passo sostanziale per un buon risultato dell’attività di programmazione.
+
+Quindi:
+- L’astrazione funzionale stimola gli sforzi per evidenziare operazioni ricorrenti o comunque ben caratterizzate all'interno della soluzione di un dato problema. 
+- L’astrazione di dati stimola in più gli sforzi per individuare le organizzazione dei dati più consone alla soluzione del problema.
+
+La progettazione da **function centered** diventa una **data centered**.
+L'isolamento però di questi due moduli non può essere totale, quindi si va ad utilizzare la specifica
 ### I punti di vista dell'astrazione
 [da finire]
