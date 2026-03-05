@@ -106,3 +106,17 @@ Si suppone che si voglia controllare il traffico aereo, avremo due tipologie di 
 
 Nel quotidiano il principio di astrazione è costantemente applicato ogni qualvolta utilizziamo uno strumento senza per questo sapere come è realizzato.
 
+## Astrazione e software
+Similmente, nella programmazione l’astrazione allude alla distinzione che si fa tra
+- **Cosa** (what) fa un pezzo di codice
+- **Come** (how) esso è implementato
+
+Per l’utente l’essenziale è cosa fa il codice mentre non è interessato ai dettagli della implementazione.
+[da finire]
+### Astrazione funzionale
+L’astrazione funzionale si riferisce alla progettazione del software, e in particolare alla possibilità di specificare un modulo software che trasforma dei dati di input in dati di output nascondendo i dettagli algoritmici della trasformazione.
+
+Il modulo software deve trasformare un input in un output, cioè deve calcolare una funzione, senza che sia visibili al fruitore del modulo i vari dettagli della trasformazione, lasciandogli conoscere soltanto le corrette convenzioni di chiamata (**specifica sintattica**) e cosa fa il modulo (**specifica semantica**)
+
+> [!example] Esempio: modulo che realizza un operatore per il calcolo del fattoriale
+> ![[Pasted image 20260305111630.png]]
