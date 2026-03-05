@@ -114,7 +114,9 @@ Similmente, nella programmazione l’astrazione allude alla distinzione che si f
 Per l’utente l’essenziale è cosa fa il codice mentre non è interessato ai dettagli della implementazione.
 [da finire]
 ### Astrazione funzionale
-L’astrazione funzionale si riferisce alla progettazione del software, e in particolare alla possibilità di specificare un modulo software che trasforma dei dati di input in dati di output nascondendo i dettagli algoritmici della trasformazione.
+
+> [!info] Definizione
+> L’astrazione funzionale si riferisce alla progettazione del software, e in particolare alla possibilità di specificare un modulo software che trasforma dei dati di input in dati di output nascondendo i dettagli algoritmici della trasformazione.
 
 Il modulo software deve trasformare un input in un output, cioè deve calcolare una funzione, senza che sia visibili al fruitore del modulo i vari dettagli della trasformazione, lasciandogli conoscere soltanto le corrette convenzioni di chiamata (**specifica sintattica**) e cosa fa il modulo (**specifica semantica**)
 
@@ -129,6 +131,43 @@ Il modulo software deve trasformare un input in un output, cioè deve calcolare 
 > Queste specifiche semantiche sono dette **assiomatiche**
 > ![[Pasted image 20260305112003.png]]
 
-## Stepwise refinement
-L’astrazione funzionale si è affermata pienamente solo quando emerse una metodologia che mirava a costruire i programmi **progredendo dal generale al particolare**, ossia quella del **stepwise refinement**
+#### Stepwise refinement
+L’astrazione funzionale si è affermata pienamente solo quando emerse una metodologia che mirava a costruire i programmi **progredendo dal generale al particolare**, ossia quella del **stepwise refinement**.
+Si caratterizza secondo i seguente passi:
+1. Decomponi il compito $P$ in sotto-compiti $P_{1} , P_{2} , \dots, P_{n}$
+2. Ipotizza di disporre di moduli $M_{1} , M_{2} \dots M_{n}$ che effettuano le trasformazioni richieste rispettivamente da $P_{1} , P_{2} , \dots, P_{n}$
+3. Componi un modulo $M$ che assolve al compito $P$ usando i moduli $M_{1} , M_{2} \dots M_{n}$
+4. Applica ricorsivamente la metodologia ai sotto-compiti$P_{1} , P_{2} , \dots, P_{n}$ al fine di definire la realizzazione di $M_{1} , M_{2} \dots M_{n}$ fino a quando non si ottengono sotto-compiti considerati elementari (o non ulteriormente decomponibili).
 
+> [!example] Esempio della casa
+> ![[Pasted image 20260305113329.png]]
+
+Secondo la metodologia di stepwise refinement, il programmatore è libero di assumere l’esistenza di qualsiasi modulo (detto **stub**, lett. matrice di qualcosa) che si può applicare al particolare sotto-compito e di cui fornisce una specifica, salvo dover poi specificare come quel modulo va realizzato. 
+#### Limiti dell’astrazione funzionale
+L'astrazione funzionale ha diversi limiti:
+- I dettagli relativi alla rappresentazione dei dati di input e output devono essere conosciuti da chi poi andrà a realizzare il modulo (ad esempio un modulo che rimuove i duplicati in un elenco deve sapere se questo è realizzato con un array, un file, etc.)
+- La rappresentazione è solitamente condivisa tra diversi moduli, per cui i cambiamenti apportati alla rappresentazione dei dati in input/output a un modulo si possono ripercuotere su molti altri moduli.
+
+> [!example] Esempio di limite
+> ![[Pasted image 20260305113057.png]]
+
+L’astrazione funzionale non permette quindi di sviluppare soluzioni **invarianti ai cambiamenti nei dati** (sono invarianti solo ai cambiamenti nei processi di trasformazione che operano), rendendo quindi difficoltosa la manutenzione delle soluzioni progettate e quindi inappropriata per lo sviluppo di soluzioni a problemi complessi.
+### Astrazione dati
+Per poter risolvere al problema precedente si è inventata l'astrazione dati.
+
+> [!info] Definizione
+> Alla base dell'**astrazione dati** c’è il principio che non si può accedere direttamente alla rappresentazione di un dato, qualunque esso sia, ma solo attraverso un insieme di operazioni considerate lecite.
+
+Questo porta ad un vantaggio non indifferente, ossia un cambiamento nella rappresentazione del dato si ripercuote solo sulle operazioni lecite, che potrebbero subire delle modifiche, mentre non inficerà il codice che utilizza il dato astratto.
+
+> [!example] Riprendiamo il caso di prima nei limiti dell'astrazione dati
+> ![[Pasted image 20260305113634.png]]
+> 
+### Information hiding
+Tutte le astrazioni seguono il principio dell'**information hiding**, ossia l'occultamento dei dettagli del processo di trasformazione (**non si dice come farlo**).
+Il principio dell’astrazione dati identifica nella rappresentazione del dato l’informazione da nascondere.
+### Incapsulamento
+L'incapsulamento (**encapsulation**) è una tecnica di progettazione consistente nell'impacchettare (o “racchiudere in capsule”) una collezione di entità, creandone una barriera concettuale
+Come l’astrazione, l’incapsulamento sotto-intende: 
+- **Un processo**: l’impacchettamento
+- **Una entità**: il «pacchetto» ottenuto 
