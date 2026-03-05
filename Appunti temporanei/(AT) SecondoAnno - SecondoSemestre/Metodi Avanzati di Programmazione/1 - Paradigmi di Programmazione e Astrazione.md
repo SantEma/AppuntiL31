@@ -187,3 +187,10 @@ La combinazione del **principio dell’astrazione dati con la tecnica dell’inc
 3. Le operazioni lecite, che ovviamente devono avere accesso alla informazione sulla rappresentazione del dato, vanno impacchettate con la rappresentazione del dato stesso
 > [!example] Esempio di unione di astrazione dati e incapsulamento
 > ![[Pasted image 20260305114849.png]]
+
+
+
+### Astrazione dati vs Astrazione funzionale
+[da finire]
+### I punti di vista dell'astrazione
+[da finire]
