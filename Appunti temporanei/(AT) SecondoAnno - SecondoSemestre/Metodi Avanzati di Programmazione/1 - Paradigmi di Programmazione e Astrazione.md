@@ -162,10 +162,10 @@ Questo porta ad un vantaggio non indifferente, ossia un cambiamento nella rappre
 > [!example] Riprendiamo il caso di prima nei limiti dell'astrazione dati
 > ![[Pasted image 20260305113634.png]]
 > 
-### Information hiding
+#### Information hiding
 Tutte le astrazioni seguono il principio dell'**information hiding**, ossia l'occultamento dei dettagli del processo di trasformazione (**non si dice come farlo**).
 Il principio dell’astrazione dati identifica nella rappresentazione del dato l’informazione da nascondere.
-### Incapsulamento
+#### Incapsulamento
 L'incapsulamento (**encapsulation**) è una tecnica di progettazione consistente nell'impacchettare (o “racchiudere in capsule”) una collezione di entità, creandone una barriera concettuale
 Come l’astrazione, l’incapsulamento sotto-intende: 
 - **Un processo**: l’impacchettamento
@@ -187,7 +187,7 @@ La combinazione del **principio dell’astrazione dati con la tecnica dell’inc
 3. Le operazioni lecite, che ovviamente devono avere accesso alla informazione sulla rappresentazione del dato, vanno impacchettate con la rappresentazione del dato stesso
 > [!example] Esempio di unione di astrazione dati e incapsulamento
 > ![[Pasted image 20260305114849.png]]
-### Astrazione dati vs Astrazione funzionale
+#### Astrazione dati vs Astrazione funzionale
 L’astrazione dati **ricalca ed estende** quella funzionale.
 Attualmente la possibilità di effettuare astrazioni di dati è considerata importante almeno quanto quella di definire nuovi operatori con astrazioni funzionali, l'esperienza ha infatti dimostrato che la scelta delle strutture di dati è il primo passo sostanziale per un buon risultato dell’attività di programmazione.
 
@@ -198,4 +198,13 @@ Quindi:
 La progettazione da **function centered** diventa una **data centered**.
 L'isolamento però di questi due moduli non può essere totale, quindi si va ad utilizzare la specifica
 ### I punti di vista dell'astrazione
-[da finire]
+In generale, le astrazioni supportano la separazione dei diversi interessi di 
+-  **Utenti**: interessati a cosa si astrae (what) 
+- **Implementatori**: interessati a come (how) si realizza 
+Per questa ragione una definizione di astrazione ha sempre due componenti:
+- **Specifica** 
+- **Realizzazione**
+Per descrivere una specifica occorre ricorrere a dei linguaggi di specifica, che sono diversi dai linguaggi usati per descrivere le realizzazione delle astrazioni.
+#### Specifica sintattica e semantica
+
+#### Specifiche per l'astrazione dati
