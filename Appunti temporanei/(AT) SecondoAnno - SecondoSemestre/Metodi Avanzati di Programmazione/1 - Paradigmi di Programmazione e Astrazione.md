@@ -208,3 +208,4 @@ Per descrivere una specifica occorre ricorrere a dei linguaggi di specifica, che
 #### Specifica sintattica e semantica
 
 #### Specifiche per l'astrazione dati
+[da finire]
