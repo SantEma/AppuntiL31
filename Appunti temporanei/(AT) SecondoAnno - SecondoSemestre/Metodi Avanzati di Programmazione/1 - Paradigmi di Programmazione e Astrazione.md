@@ -105,3 +105,4 @@ Si suppone che si voglia controllare il traffico aereo, avremo due tipologie di 
 - Dettagli **irrilevanti**: colore, nomi dei passeggeri, etc.
 
 Nel quotidiano il principio di astrazione è costantemente applicato ogni qualvolta utilizziamo uno strumento senza per questo sapere come è realizzato.
+
