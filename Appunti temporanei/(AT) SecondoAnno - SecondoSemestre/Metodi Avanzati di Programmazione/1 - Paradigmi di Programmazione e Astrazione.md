@@ -131,3 +131,4 @@ Il modulo software deve trasformare un input in un output, cioè deve calcolare 
 
 ## Stepwise refinement
 L’astrazione funzionale si è affermata pienamente solo quando emerse una metodologia che mirava a costruire i programmi **progredendo dal generale al particolare**, ossia quella del **stepwise refinement**
+
