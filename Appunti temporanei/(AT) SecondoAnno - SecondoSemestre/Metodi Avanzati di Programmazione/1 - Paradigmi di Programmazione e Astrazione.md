@@ -129,4 +129,5 @@ Il modulo software deve trasformare un input in un output, cioè deve calcolare 
 > Queste specifiche semantiche sono dette **assiomatiche**
 > ![[Pasted image 20260305112003.png]]
 
-
+## Stepwise refinement
+L’astrazione funzionale si è affermata pienamente solo quando emerse una metodologia che mirava a costruire i programmi **progredendo dal generale al particolare**, ossia quella del **stepwise refinement**
