@@ -175,7 +175,7 @@ Come l’astrazione, l’incapsulamento sotto-intende:
 > - Una libreria incapsula diverse funzioni
 > - Un oggetto incapsula un dato e un insieme di operazioni sul dato
 
-L’incapsulamento non dice come devono essere le [inserire], che potranno essere
+L’incapsulamento non dice come devono essere i contenuti della capsula, che potranno essere
 - **Trasparenti**: permettendo di vedere tutto ciò che è stato impacchettato
 - **Traslucide**: permettendo di vedere in modo parziale il contenuto
 - **Opache**: nascondendo tutto il contenuto del pacchetto
