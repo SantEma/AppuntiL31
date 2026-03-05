@@ -153,8 +153,7 @@ L'astrazione funzionale ha diversi limiti:
 
 L’astrazione funzionale non permette quindi di sviluppare soluzioni **invarianti ai cambiamenti nei dati** (sono invarianti solo ai cambiamenti nei processi di trasformazione che operano), rendendo quindi difficoltosa la manutenzione delle soluzioni progettate e quindi inappropriata per lo sviluppo di soluzioni a problemi complessi.
 ### Astrazione dati
-Per poter risolvere al problema precedente si è inventata l'astrazione dati.
-
+Per poter risolvere il problema precedente si è inventata l'astrazione dati.
 > [!info] Definizione
 > Alla base dell'**astrazione dati** c’è il principio che non si può accedere direttamente alla rappresentazione di un dato, qualunque esso sia, ma solo attraverso un insieme di operazioni considerate lecite.
 
@@ -170,4 +169,21 @@ Il principio dell’astrazione dati identifica nella rappresentazione del dato l
 L'incapsulamento (**encapsulation**) è una tecnica di progettazione consistente nell'impacchettare (o “racchiudere in capsule”) una collezione di entità, creandone una barriera concettuale
 Come l’astrazione, l’incapsulamento sotto-intende: 
 - **Un processo**: l’impacchettamento
-- **Una entità**: il «pacchetto» ottenuto 
+- **Una entità**: il "pacchetto" ottenuto 
+> [!example] Alcuni esempi di incapsulamento
+> - Una procedura impacchetta diversi comandi
+> - Una libreria incapsula diverse funzioni
+> - Un oggetto incapsula un dato e un insieme di operazioni sul dato
+
+L’incapsulamento non dice come devono essere le [inserire], che potranno essere
+- **Trasparenti**: permettendo di vedere tutto ciò che è stato impacchettato
+- **Traslucide**: permettendo di vedere in modo parziale il contenuto
+- **Opache**: nascondendo tutto il contenuto del pacchetto
+In C++ ad esempio sono le funzioni precedute da  `private` o `public`
+
+La combinazione del **principio dell’astrazione dati con la tecnica dell’incapsulamento** suggerisce che:
+1. La rappresentazione del dato va nascosta all'interno dell'incapsulamento
+2. L’accesso al dato deve passare solo attraverso operazioni lecite
+3. Le operazioni lecite, che ovviamente devono avere accesso alla informazione sulla rappresentazione del dato, vanno impacchettate con la rappresentazione del dato stesso
+> [!example] Esempio di unione di astrazione dati e incapsulamento
+> ![[Pasted image 20260305114849.png]]
