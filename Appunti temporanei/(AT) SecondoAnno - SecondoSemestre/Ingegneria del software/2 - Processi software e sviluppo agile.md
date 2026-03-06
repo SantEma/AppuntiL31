@@ -26,3 +26,4 @@ Questo processo riduce complessivamente il rischio di trovarsi un software che n
 [da finire] va bene in certi ambiti dove i requisiti sono ben definiti
 #### Sviluppo agile
 [da finire]  Quello per chi lavora in ufficio di un PA praticamente
+
