@@ -19,3 +19,10 @@ Anche conosciuto come incrementale, a spirale, evolutivo, si suddivide il proget
 - Le iterazioni messe in produzione sono dette **release** con la tecnica di **time boxing**, ossia rilasciate a intervalli di tempo regolari
 ![[Pasted image 20260306100621.png]]
 Questo processo riduce complessivamente il rischio di trovarsi un software che non rispetti le specifiche, poichè si da una versione con il minimo utilizzabile e poi di espanderlo con il tempo
+### Altri metodi
+#### Sviluppo ad hoc (build and fix)
+[da finire] Quello dei coglioni che facciamo noi
+#### Sviluppo pianificato (plan-driven)
+[da finire] va bene in certi ambiti dove i requisiti sono ben definiti
+#### Sviluppo agile
+[da finire]  Quello per chi lavora in ufficio di un PA praticamente
