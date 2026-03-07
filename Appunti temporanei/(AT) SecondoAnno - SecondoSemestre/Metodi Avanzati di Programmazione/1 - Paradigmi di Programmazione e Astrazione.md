@@ -40,7 +40,7 @@ I paradigmi che supportano la programmazione ad alto livello possono essere ragg
 Questo approccio è il pilastro della programmazione imperativa e qui il programmatore agisce come un coordinatore che impartisce ordini sequenziali. **Il focus è sul mutamento di stato del sistema (le istruzioni modificano dei valori sulla memoria) attraverso istruzioni precise**.
 Il concetto chiave di questo approccio è il programmatore controlla quel **flusso di controllo** (cicli for, istruzioni if, assegnazione di variabili).
 ##### Approccio dimostrazionale
-È una variante dell’operazionale, ma più “guidata dagli esempi”, come esempi concreti di input/output. Il sistema generalizza automaticamente la soluzione, quindi tipico di contesti in cui si “insegna” al sistema cosa fare (come il Machine Learning).
+È una variante dell’operazionale, ma più “guidata dagli esempi”, come quelli di input/output. Il sistema generalizza automaticamente la soluzione, quindi tipico di contesti in cui si “insegna” al sistema cosa fare (come il Machine Learning).
 Il concetto chiave è che **non scrivi l’algoritmo, mostri cosa deve fare**
 ##### Approccio definizionale
 Si descrive **COSA** deve essere vero, non come ottenerlo, specificando proprietà, vincoli o relazioni. Il sistema trova autonomamente una soluzione che le soddisfi. Il concetto chiave è **che si descriva il risultato ma non il suo procedimento**
