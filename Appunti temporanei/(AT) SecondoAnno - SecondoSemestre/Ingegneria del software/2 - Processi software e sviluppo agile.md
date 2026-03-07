@@ -34,7 +34,7 @@ Questo stile ha diversi problemi:
 Anche conosciuto come incrementale, a spirale, evolutivo, si suddivide il progetto in base a sottoinsiemi di funzionalità (iterazioni):
 - L’inizio delle iterazioni è preceduto da una fase esplorativa. Il **project manager** decide che operazioni eseguire nell'iterazione 1 e cosa nell'iterazione 2.
 - Ogni iterazione produce codice (**build**) testato e integrato nel sistema complessivo
-- Le iterazioni messe in produzione sono dette **release** con la tecnica di **time boxing**, ossia rilasciate a intervalli di tempo regolari
+- Le iterazioni messe in produzione sono dette **release** con la tecnica di **time boxing**, ossia rilasciate a intervalli di tempo regolari. Questo ci aiuta ad avere un ritmo costante, senza dover aspettare tempo indeterminato per rilasciare l'intero prodotto.
 ![[Pasted image 20260306100621.png]]
 Quindi ripetiamo tutte le attività tecniche fino ad una certo punto in cui non andiamo ad eseguire nuovamente di nuovo tutte le attività tecniche di un altro tipo, così per ogni iterazione.
 Questo processo riduce complessivamente il rischio di trovarsi un software che non rispetti le specifiche, poichè si da una versione con il minimo utilizzabile e poi di espanderlo con il tempo
