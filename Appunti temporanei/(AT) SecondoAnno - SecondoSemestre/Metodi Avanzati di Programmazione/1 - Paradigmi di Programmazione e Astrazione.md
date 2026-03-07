@@ -238,3 +238,28 @@ Una specifica assiomatica si compone rigorosamente di due parti:
 	- Associa una funzione logica a ogni nome di operatore, esplicitando due vincoli (o condizioni) fondamentali:
 	    - **Precondizione:** Definisce quando l'operatore è effettivamente applicabile (i requisiti sui dati di partenza).
 	    - **Postcondizione:** Stabilisce la relazione esatta che lega gli argomenti di input al risultato finale prodotto
+##### Limitazioni delle specifiche assiomatiche
+Il metodo di specifica assiomatica è rigorosamente preciso nella sua definizione sintattica, ma si rivela spesso informale nella sua parte semantica, ricorrendo a volte al linguaggio naturale per descrivere i comportamenti.    
+A causa di questa informalità, non consente di caratterizzare un tipo astratto in maniera totalmente precisa.
+I difetti principali riguardano l'impossibilità di definire esattamente l'insieme dei valori generabili tramite l'applicazione degli operatori e l'incapacità di stabilire quando due diverse sequenze di operatori producono il medesimo valore finale.
+Per superare queste limitazioni, si ricorre alle specifiche algebriche.
+#### Specifiche algebriche
+Le specifiche algebriche poggiano sui fondamenti dell'algebra, allontanandosi dalla logica.
+Questo approccio definisce un dato astratto come un'**algebra eterogenea**, ovvero una collezione composta da insiemi diversi sui quali agiscono diverse operazioni.
+Questo concetto si contrappone all'algebra tradizionale, detta omogenea, che si basa su un unico insieme abbinato a diverse operazioni (come l'insieme dei numeri interi $\mathbb{Z}$ con le operazioni di addizione e moltiplicazione).
+
+Una specifica algebrica è divisa rigidamente in tre componenti:
+1. **Specifica sintattica:** Elenca esplicitamente i nomi del tipo, tutte le sue operazioni e il tipo associato agli argomenti di tali operazioni. Nel caso in cui un'operazione funga da funzione, ne viene indicato anche il codominio (range).
+2. **Specifica semantica:** È costituita da un insieme di equazioni algebriche. Queste equazioni descrivono in modo rigoroso le proprietà delle operazioni, mantenendosi totalmente indipendenti da quella che sarà la reale rappresentazione dei dati in memoria.
+3. **Specifica di restrizione:** Definisce le varie condizioni che devono essere obbligatoriamente soddisfatte prima dell'applicazione delle operazioni oppure al loro termine. (Alcune metodologie scelgono di accorpare queste restrizioni direttamente all'interno delle specifiche semantiche).
+
+Un aspetto molto potente delle specifiche algebriche è la semplicità  del loro linguaggio, specialmente se confrontato con i normali linguaggi di programmazione procedurale.
+L'intero linguaggio di specifica poggia su sole cinque primitive basilari:    
+1. La composizione funzionale.
+2. La relazione di eguaglianza.
+3. La costante booleana `true`.
+4. La costante booleana `false`.
+5. La disponibilità di un numero illimitato di variabili libere.
+
+Inoltre, per comodità, si assumono già come predefiniti i valori booleani, i valori interi e la funzione condizionale `if then else`.    
+Quest'ultima funzione è descrivibile dalle equazioni matematiche `if then else (true, q, r) = q` e `if then else (false, q, r) = r`. Essendo fondamentale, viene comunemente scritta e utilizzata come un operatore infisso nella forma `if p then q else r`.
