@@ -135,7 +135,7 @@ Il modulo software deve trasformare un input in un output, cioè deve calcolare 
 L’astrazione funzionale si è affermata pienamente solo quando emerse una metodologia che mirava a costruire i programmi **progredendo dal generale al particolare**, ossia quella del **stepwise refinement**.
 Si caratterizza secondo i seguente passi:
 1. Decomponi il compito $P$ in sotto-compiti $P_{1} , P_{2} , \dots, P_{n}$
-2. Ipotizza di disporre di moduli $M_{1} , M_{2} \dots M_{n}$ che effettuano le trasformazioni richieste rispettivamente da $P_{1} , P_{2} , \dots, P_{n}$
+2. Ipotizza di disporre di moduli $M_{1} , M_{2} \dots M_{n}$ che effettuano le trasformazioni richieste rispettivamente da $P_{1} , P_{2} , \dots, P_{n}$. Tali moduli vengono specificati ma non ancora implementati.
 3. Componi un modulo $M$ che assolve al compito $P$ usando i moduli $M_{1} , M_{2} \dots M_{n}$
 4. Applica ricorsivamente la metodologia ai sotto-compiti$P_{1} , P_{2} , \dots, P_{n}$ al fine di definire la realizzazione di $M_{1} , M_{2} \dots M_{n}$ fino a quando non si ottengono sotto-compiti considerati elementari (o non ulteriormente decomponibili).
 
