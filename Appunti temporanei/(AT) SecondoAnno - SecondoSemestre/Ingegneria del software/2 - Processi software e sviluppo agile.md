@@ -3,7 +3,6 @@
 > Un **processo software** descrive quali sono le attività che concorrono a sviluppare un prodotto software e come le attività sono collegate tra loro
 
 Si assume che, se il processo stesso sia di una certa qualità, allora anche il software sia qualitativamente valido
-
 ## Stili di processo
 ### A cascata (waterfall)
 Questo stile di processo suddivide il progetto in base alle attività tecniche (con delle che fasi coincidono con le attività), e si passa ad una fase successiva solo se si completa l’attività e si supera il punto di controllo.
