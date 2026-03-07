@@ -184,6 +184,7 @@ La combinazione del **principio dell’astrazione dati con la tecnica dell’inc
 3. Le operazioni lecite, che ovviamente devono avere accesso alla informazione sulla rappresentazione del dato, vanno impacchettate con la rappresentazione del dato stesso
 > [!example] Esempio di unione di astrazione dati e incapsulamento
 > ![[Pasted image 20260305114849.png]]
+> ![[Pasted image 20260307112433.png]]
 #### Astrazione dati vs Astrazione funzionale
 L’astrazione dati **ricalca ed estende** quella funzionale.
 Attualmente la possibilità di effettuare astrazioni di dati è considerata importante almeno quanto quella di definire nuovi operatori con astrazioni funzionali, l'esperienza ha infatti dimostrato che la scelta delle strutture di dati è il primo passo sostanziale per un buon risultato dell’attività di programmazione.
@@ -193,7 +194,7 @@ Quindi:
 - L’astrazione di dati stimola in più gli sforzi per individuare le organizzazione dei dati più consone alla soluzione del problema.
 
 La progettazione da **function centered** diventa una **data centered**.
-L'isolamento però di questi due moduli non può essere totale, quindi si va ad utilizzare la specifica
+L'isolamento però di questi due moduli non può essere totale, quindi si va ad utilizzare la **specifica**
 ### I punti di vista dell'astrazione
 In generale, le astrazioni supportano la separazione dei diversi interessi di 
 -  **Utenti**: interessati a cosa si astrae (what) 
@@ -203,6 +204,10 @@ Per questa ragione una definizione di astrazione ha sempre due componenti:
 - **Realizzazione**
 Per descrivere una specifica occorre ricorrere a dei linguaggi di specifica, che sono diversi dai linguaggi usati per descrivere le realizzazione delle astrazioni.
 #### Specifica sintattica e semantica
+
+> [!info] Definizione di specifica
+> La specifica, o contratto, descrive come si può interagire con un dato astratto
+
 
 #### Specifiche per l'astrazione dati
 [da finire]
