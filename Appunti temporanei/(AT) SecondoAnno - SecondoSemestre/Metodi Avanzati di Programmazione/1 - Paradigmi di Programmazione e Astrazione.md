@@ -195,7 +195,7 @@ Quindi:
 
 La progettazione da **function centered** diventa una **data centered**.
 L'isolamento però di questi due moduli non può essere totale, quindi si va ad utilizzare la **specifica**
-### I punti di vista dell'astrazione
+## I punti di vista dell'astrazione
 In generale, le astrazioni supportano la separazione dei diversi interessi di 
 -  **Utenti**: interessati a cosa si astrae (what) 
 - **Implementatori**: interessati a come (how) si realizza 
@@ -203,6 +203,7 @@ Per questa ragione una definizione di astrazione ha sempre due componenti:
 - **Specifica** 
 - **Realizzazione**
 Per descrivere una specifica occorre ricorrere a dei linguaggi di specifica, che sono diversi dai linguaggi usati per descrivere le realizzazione delle astrazioni.
+### Astrazione funzionale
 #### Specifica sintattica e semantica
 > [!info] Definizione di specifica
 > La specifica, o contratto, descrive come si può interagire con un dato astratto
@@ -210,7 +211,30 @@ Per descrivere una specifica occorre ricorrere a dei linguaggi di specifica, che
 A sua volta, la specifica si divide in due livelli:    
 - **Specifica Sintattica:** Stabilisce quali identificatori (nomi) sono associati all'astrazione.
 - **Specifica Semantica:** Definisce esattamente il risultato della computazione inclusa nell'astrazione.
-    
+#### Parametrizzazione di un'astrazione
+L'efficacia di un'astrazione migliora grazie all'uso di parametri, che facilitano la comunicazione con l'ambiente esterno.    
+Quando avviene la chiamata di un'astrazione, ogni parametro formale viene associato al rispettivo argomento. Questo avviene tramite due possibili meccanismi:
+- **Meccanismi di copia:** Eseguono una copia fisica del valore da passare.        
+- **Meccanismi definizionali:** Creano un legame diretto tra il parametro formale e la definizione stessa dell'argomento passato.
+### Astrazione dati
+Anche il dato astratto è costituito da una specifica e da una realizzazione.    
+   - La **specifica** descrive il nuovo dato e tutti gli operatori che è possibile applicargli. 
+   - La **realizzazione** definisce come questo nuovo dato e i relativi operatori si appoggiano ai dati e operatori già disponibili a livello inferiore.
 
-#### Specifiche per l'astrazione dati
-[da finire]
+Chi programma utilizzando i nuovi dati deve conoscerne perfettamente la specifica, ma può ignorare del tutto le tecniche usate per la realizzazione.    
+I linguaggi di specifica per i dati astratti si dividono in due filoni principali:
+- **Specifiche Assiomatiche:** Usano un linguaggio logico-matematico basato su asserzioni.
+- **Specifiche Algebriche:** Usano il linguaggio dell'algebra per definire equazioni tra gli operatori del dato.
+#### Specifiche assiomatiche
+Le **specifiche assiomatiche** servono a formalizzare un tipo di dato astratto utilizzando la notazione logico-matematica delle asserzioni.
+
+Una specifica assiomatica si compone rigorosamente di due parti:
+1. **Specifica Sintattica (Signature)**: Questa parte fornisce l'interfaccia formale del dato astratto, definendo:
+	- L'elenco dei nomi dei domini e delle operazioni specifiche previste per quel tipo di dato.
+	- I domini di partenza (input) e i domini di arrivo (output) per ogni singolo nome di operatore.
+
+2. **Specifica Semantica**: Questa parte definisce il comportamento e il significato delle operazioni:
+	- Associa un insieme matematico preciso a ogni nome di tipo che è stato introdotto nella specifica sintattica.
+	- Associa una funzione logica a ogni nome di operatore, esplicitando due vincoli (o condizioni) fondamentali:
+	    - **Precondizione:** Definisce quando l'operatore è effettivamente applicabile (i requisiti sui dati di partenza).
+	    - **Postcondizione:** Stabilisce la relazione esatta che lega gli argomenti di input al risultato finale prodotto
