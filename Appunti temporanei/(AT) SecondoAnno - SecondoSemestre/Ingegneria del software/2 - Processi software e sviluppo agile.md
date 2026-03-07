@@ -40,12 +40,9 @@ Quindi ripetiamo tutte le attività tecniche fino ad una certo punto in cui non 
 Questo processo riduce complessivamente il rischio di trovarsi un software che non rispetti le specifiche, poichè si da una versione con il minimo utilizzabile e poi di espanderlo con il tempo
 ### Altri metodi
 Tra lo stile a waterfall e lo stile a spirale, esistono delle strade di mezzo:
-- **Sviluppo ad hoc**: Basato sul build and fix, ed è il peggior metodo di utilizzo per lo sviluppo di un progetto software a livello ingegneristico, poiché è privo di documentazione e l'approccio utilizzato non è ripetibile e si può trasferire ad altri dipendenti solamente con un apprendistato sulla conoscenza del codice stesso.
-  Utilizzato a livello amichevole e non permette crescita. Nel caso di start-up che vanno a gonfie vele bisogna passare da questo stile di sviluppo ad un altro.
-- **Sviluppo pianificato**: Lo sviluppo pianificato va bene nel caso i requisiti sono stati definiti a monte e non sono modificabili nel tempo. Imposto dal progettista o dai datori.
-  Lo stile di processo utilizzato è quello a cascata. 
-- **Sviluppo agile**:  Questo sviluppo è ottimo in caso il progetto ha grandi margini di crescita ed è soggetto a grandi cambiamenti nel corso d'opera.
-  La documentazione è basata sull'interlocuzione tra persone dirette, senza l'utilizzo di una documentazione scritta. Un esempio dello sviluppo agile è **Scrum**.
+- **Sviluppo ad hoc**: Basato sul build and fix, ed è il peggior metodo di utilizzo per lo sviluppo di un progetto software a livello ingegneristico, poiché è privo di documentazione e l'approccio utilizzato non è ripetibile e si può trasferire ad altri dipendenti solamente con un apprendistato sulla conoscenza del codice stesso. Utilizzato a livello amichevole e non permette crescita.
+- **Sviluppo pianificato**: Lo sviluppo pianificato va bene nel caso i requisiti sono stati definiti a monte e non sono modificabili nel tempo. Imposto dal progettista o dai datori. Lo stile di processo utilizzato è quello a cascata. 
+- **Sviluppo agile**: Questo sviluppo è ottimo in caso il progetto ha grandi margini di crescita ed è soggetto a grandi cambiamenti nel corso d'opera. La documentazione è basata sull'interlocuzione tra persone dirette, senza l'utilizzo di una documentazione scritta. Un esempio dello sviluppo agile è **Scrum**.
 
 **Nessuno di questi stili è migliore dell'altro**, dipende tutto dal progetto che bisogna costruire e dal team presente all'interno.
 ## I 12 principi del Manifesto Agile

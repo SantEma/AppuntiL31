@@ -109,8 +109,7 @@ Similmente, nella programmazione l’astrazione allude alla distinzione che si f
 - **Cosa** (what) fa un pezzo di codice
 - **Come** (how) esso è implementato
 
-Per l’utente l’essenziale è cosa fa il codice mentre non è interessato ai dettagli della implementazione.
-[da finire]
+Per l’utente l’essenziale è cosa fa il codice, mentre non è interessato ai dettagli della implementazione.
 ### Astrazione funzionale
 > [!info] Definizione
 > L’astrazione funzionale si riferisce alla progettazione del software, e in particolare alla possibilità di specificare un modulo software che trasforma dei dati di input in dati di output nascondendo i dettagli algoritmici della trasformazione.
@@ -163,7 +162,7 @@ Questo porta ad un vantaggio non indifferente, ossia un cambiamento nella rappre
 Tutte le astrazioni seguono il principio dell'**information hiding**, ossia l'occultamento dei dettagli del processo di trasformazione (**non si dice come farlo**).
 Il principio dell’astrazione dati identifica nella rappresentazione del dato l’informazione da nascondere.
 #### Incapsulamento
-L'incapsulamento (**encapsulation**) è una tecnica di progettazione consistente nell'impacchettare (o “racchiudere in capsule”) una collezione di entità, creandone una barriera concettuale
+L'incapsulamento (**encapsulation**) è una tecnica di progettazione consistente nell'impacchettare (o "racchiudere in capsule") una collezione di entità, creandone una barriera concettuale
 Come l’astrazione, l’incapsulamento sotto-intende: 
 - **Un processo**: l’impacchettamento
 - **Una entità**: il "pacchetto" ottenuto 
@@ -174,8 +173,8 @@ Come l’astrazione, l’incapsulamento sotto-intende:
 
 L’incapsulamento non dice come devono essere i contenuti della capsula, che potranno essere
 - **Trasparenti**: permettendo di vedere tutto ciò che è stato impacchettato
-- **Traslucide**: permettendo di vedere in modo parziale il contenuto
-- **Opache**: nascondendo tutto il contenuto del pacchetto
+- **Traslucidi**: permettendo di vedere in modo parziale il contenuto
+- **Opachi**: nascondendo tutto il contenuto del pacchetto
 In C++ ad esempio sono le funzioni precedute da  `private` o `public`
 
 La combinazione del **principio dell’astrazione dati con la tecnica dell’incapsulamento** suggerisce che:
