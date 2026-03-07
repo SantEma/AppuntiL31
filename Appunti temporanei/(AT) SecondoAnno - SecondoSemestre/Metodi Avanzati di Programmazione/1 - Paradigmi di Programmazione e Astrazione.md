@@ -72,6 +72,7 @@ Occorre sempre bilanciare i costi dovuti all'uniformità di paradigma con i cost
 - **Applicazioni concorrenti**: sono caratterizzate dal fatto che le varie attività che compongono il sistema non hanno una natura inerentemente sequenziale, ma necessitano di meccanismi di sincronizzazione e comunicazione.
 - **Applicazioni dipendenti dal tempo**: sono influenzate da vincoli temporali riguardanti sia la velocità di esecuzione delle attività sia la necessità di sincronizzare le attività stesse.
 ## Paradigmi operazionali
+I paradigmi operazionali si basano su sequenze computazionali calcolate passo dopo passo.
 Nei paradigmi operazionali è difficile stabilire se l’insieme dei valori calcolati operativamente è proprio l’insieme dei valori soluzione. Le tecniche di verifica e di debugging cercano di superare questo problema di programmazione e spesso ci si accontenta di stabilire che i due insiemi siano “sufficientemente vicini”, ovvero indistinguibili per la sottoclasse attesa di problemi effettivi
 ### Side-effecting
 I paradigmi operazionali si distinguono in:
@@ -94,18 +95,15 @@ Non si tratta di omettere parti della rappresentazione di un problema, ma di rif
 ![[Pasted image 20260304130450.png]]
 L’astrazione si focalizza sulle caratteristiche essenziali di un oggetto, rispetto alla prospettiva di colui che osserva.
 ### Astrazione: processo o entità
-Il termine astrazione sotto-intende
+Il termine astrazione sotto-intende due concetti distinti, entrambi validi e ugualmente necessari:
 - **Un processo**: l’estrazione delle informazioni essenziali e rilevanti per un particolare scopo, ignorando il resto dell’informazione
 - **Una entità**: una descrizione semplificata di un sistema che enfatizza alcuni dei dettagli o proprietà trascurandone altri
-
 Entrambe le viste sono valide e di fatto necessarie.
 
 Si suppone che si voglia controllare il traffico aereo, avremo due tipologie di dettagli:
 - Dettagli **essenziali**: posizione del velivolo, velocità, etc.
 - Dettagli **irrilevanti**: colore, nomi dei passeggeri, etc.
-
 Nel quotidiano il principio di astrazione è costantemente applicato ogni qualvolta utilizziamo uno strumento senza per questo sapere come è realizzato.
-
 ## Astrazione e software
 Similmente, nella programmazione l’astrazione allude alla distinzione che si fa tra
 - **Cosa** (what) fa un pezzo di codice
@@ -114,7 +112,6 @@ Similmente, nella programmazione l’astrazione allude alla distinzione che si f
 Per l’utente l’essenziale è cosa fa il codice mentre non è interessato ai dettagli della implementazione.
 [da finire]
 ### Astrazione funzionale
-
 > [!info] Definizione
 > L’astrazione funzionale si riferisce alla progettazione del software, e in particolare alla possibilità di specificare un modulo software che trasforma dei dati di input in dati di output nascondendo i dettagli algoritmici della trasformazione.
 
