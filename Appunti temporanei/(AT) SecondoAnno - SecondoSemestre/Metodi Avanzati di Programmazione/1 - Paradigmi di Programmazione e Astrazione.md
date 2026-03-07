@@ -204,10 +204,13 @@ Per questa ragione una definizione di astrazione ha sempre due componenti:
 - **Realizzazione**
 Per descrivere una specifica occorre ricorrere a dei linguaggi di specifica, che sono diversi dai linguaggi usati per descrivere le realizzazione delle astrazioni.
 #### Specifica sintattica e semantica
-
 > [!info] Definizione di specifica
 > La specifica, o contratto, descrive come si può interagire con un dato astratto
 
+A sua volta, la specifica si divide in due livelli:    
+- **Specifica Sintattica:** Stabilisce quali identificatori (nomi) sono associati all'astrazione.
+- **Specifica Semantica:** Definisce esattamente il risultato della computazione inclusa nell'astrazione.
+    
 
 #### Specifiche per l'astrazione dati
 [da finire]
