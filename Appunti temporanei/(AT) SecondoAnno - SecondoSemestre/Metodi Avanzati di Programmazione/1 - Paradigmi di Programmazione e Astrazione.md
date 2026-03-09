@@ -291,4 +291,21 @@ Il comportamento di una astrazione dati può essere specificata riportando il va
 > [!example] Costruttori della Pila
 > ![[Pasted image 20260309091947.png]]
 #### Osservazioni binarie
+Tutte le osservazioni viste finora sono **unarie**, nel senso che esse osservano un singolo valore del dato astratto. Spesso è necessario disporre di osservazioni più complesse. Per confrontare due valori è necessario osservare due istanze del dato astratto. Questo complica la specifica, perché il valore dell’osservazione dev’essere definito per tutte le **combinazioni di costruttori** possibili per i valori astratti che si devono confrontare
+
+> [!example] Osservazione binaria sulla Pila
+> ![[Pasted image 20260309104248.png]]
+> ![[Pasted image 20260309104301.png]]
+
 #### La scelta dei costruttori
+Talvolta, l’applicazione della metodologia per la sintesi di specifiche algebriche può comportare delle difficoltà riguardo al discernimento di cosa è costruttore e cosa operazione.
+
+Nello scegliere i costruttori adotteremo il **criterio di minimalità**, cioè l’insieme dei costruttori dev’essere il più piccolo insieme di operatori necessario a costruire tutti i possibili valori per un certo dato astratto
+
+### Astrazione di controllo
+L’astrazione di controllo si riferisce alla possibilità di specificare un modulo software che esegue delle operazioni in un ordine, nascondendo i dettagli su come il mantenimento dell’ordine è ottenuto
+
+In sostanza:
+- Il modulo software deve essere parametrizzato rispetto alle operazioni da eseguire
+- Il modulo software è associato a un controllo di sequenza (**control flow**)
+- I dettagli di come il controllo di sequenza è garantito non sono visibili al consumatore (fruitore) del modulo
