@@ -93,7 +93,7 @@ Per ognuno dei paradigmi visti precedentemente possiamo distinguere due versioni
 L’obiettivo del cambio di rappresentazione è quello di concentrarsi su aspetti rilevanti dimenticando gli elementi secondari.
 Non si tratta di omettere parti della rappresentazione di un problema, ma di riformulare lo stesso concentrando l’attenzione su idee generali piuttosto che su manifestazioni specifiche di quelle idee, tenendo conto della prospettiva di un osservatore.
 
-> [!examoke]
+> [!example] Esempio di astrazione
 > ![[Pasted image 20260304130450.png]]
 
 L’astrazione si focalizza sulle caratteristiche essenziali di un oggetto, rispetto alla prospettiva di colui che osserva.
@@ -107,7 +107,7 @@ Si suppone che si voglia controllare il traffico aereo, avremo due tipologie di 
 - Dettagli **essenziali**: posizione del velivolo, velocità, etc.
 - Dettagli **irrilevanti**: colore, nomi dei passeggeri, etc.
 Nel quotidiano il principio di astrazione è costantemente applicato ogni qualvolta utilizziamo uno strumento senza per questo sapere come è realizzato.
-## Astrazione e software
+## Astrazione nel software
 Similmente, nella programmazione l’astrazione allude alla distinzione che si fa tra
 - **Cosa** (what) fa un pezzo di codice
 - **Come** (how) esso è implementato
