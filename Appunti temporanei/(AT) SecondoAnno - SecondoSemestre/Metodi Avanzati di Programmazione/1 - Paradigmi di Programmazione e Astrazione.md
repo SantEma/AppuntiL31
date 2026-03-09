@@ -317,12 +317,14 @@ Tutte queste realizzazioni (iterative o ricorsive) sono corrette rispetto alla s
 Nella programmazione sequenziale l’ordine di esecuzione delle istruzioni è **totale**, mentre nella programmazione concorrente/parallela l’ordine di esecuzione può essere **parziale**
 
 > [!example] L'astrazione di controllo
-> Contents
+> ![[Pasted image 20260309112025.png]]
 
-I linguaggi di specifica utilizzati per l’astrazione di controllo si basano sulla definizione di relazioni di precedenza fra istruzioni che permettono di stabilire sia ordinamenti totali che ordinamenti parziali.
+I linguaggi di specifica utilizzati per l’astrazione di controllo si basano sulla definizione di **relazioni di precedenza** fra istruzioni che permettono di stabilire sia ordinamenti totali che ordinamenti parziali.
 
-La combinazione dell’astrazione dati con l’astrazione di controllo permette di sviluppare soluzioni software invarianti non solo al cambiamento della realizzazione dei dati ma anche al cambiamento dei meccanismi di visita del dato astratto. 
+La combinazione dell’astrazione dati con l’astrazione di controllo permette di sviluppare soluzioni software **invarianti** non solo al cambiamento della realizzazione dei dati ma anche al cambiamento dei meccanismi di visita del dato astratto. 
 
 Ciò risulta molto utile poiché l’iterazione su collezioni di dati è un compito comune e ripetitivo e l’evidenza empirica indica che spesso si commettono errori nella inizializzazione dell’iterazione e nella scrittura delle condizioni di stop
 
 
+> [!example] Esempio completo di astrazione di controllo
+> ![[Pasted image 20260309112056.png]]
