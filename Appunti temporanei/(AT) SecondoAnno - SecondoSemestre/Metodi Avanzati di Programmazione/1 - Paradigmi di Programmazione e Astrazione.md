@@ -252,7 +252,7 @@ Una specifica algebrica è divisa rigidamente in tre componenti:
 2. **Specifica semantica:** È costituita da un insieme di equazioni algebriche. Queste equazioni descrivono in modo rigoroso le proprietà delle operazioni, mantenendosi totalmente indipendenti da quella che sarà la reale rappresentazione dei dati in memoria.
 3. **Specifica di restrizione:** Definisce le varie condizioni che devono essere obbligatoriamente soddisfatte prima dell'applicazione delle operazioni oppure al loro termine. (Alcune metodologie scelgono di accorpare queste restrizioni direttamente all'interno delle specifiche semantiche).
 
-Un aspetto molto potente delle specifiche algebriche è la semplicità  del loro linguaggio, specialmente se confrontato con i normali linguaggi di programmazione procedurale.
+Un aspetto molto potente delle specifiche algebriche è la semplicità del loro linguaggio, specialmente se confrontato con i normali linguaggi di programmazione procedurale.
 L'intero linguaggio di specifica poggia su sole cinque primitive basilari:    
 1. La composizione funzionale.
 2. La relazione di eguaglianza.
