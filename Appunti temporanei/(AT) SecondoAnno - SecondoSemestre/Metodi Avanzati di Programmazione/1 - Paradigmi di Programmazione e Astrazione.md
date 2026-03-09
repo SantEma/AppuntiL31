@@ -277,3 +277,9 @@ La specifica **algebrica** non si concentra sul funzionamento, ma sulla struttur
 - Le specifiche semantiche si diranno **incomplete** se non permetteranno di derivare tutte le verità (equazioni) desiderate dell’algebra specificata. 
 - Le specifiche semantiche si diranno **inconsistenti** (o contraddittorie) se permetteranno di derivare delle equazioni indesiderate, cioè considerate false. 
 - Le specifiche semantiche si diranno **ridondanti** se alcune delle equazioni sono ricavabili dalle altre
+### Costruttori e osservazioni
+Scrivere delle specifiche semantiche complete, consistenti e non ridondanti può non essere un compito semplice. Per questo conviene introdurre una metodologia, che si basa sulla distinzione degli operatori di un dato astratto in:
+- **Costruttori**, che creano o istanziano il dato astratto
+- **Osservazioni**, che ritrovano informazioni sul dato astratto 
+
+Il comportamento di una astrazione dati può essere specificata riportando il valore di ciascuna osservazione applicata a ciascun costruttore. Questa informazione è organizzata in modo naturale in una matrice, con i costruttori lungo una dimensione e le osservazioni lungo l’altra.
