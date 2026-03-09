@@ -272,4 +272,8 @@ L'error nelle specifiche algebriche va ad inserire equazioni che non possono ess
 Le specifiche **ossiomatiche** si avvicinano al paradigma imperativo, concentrandosi sullo stato del sistema
 
 La specifica **algebrica** non si concentra sul funzionamento, ma sulla struttura dati. È una struttura dichiarativa e legata alle proprietà. In pratica, stiamo definendo un Tipo di Dato Astratto come se fosse un sistema di equazioni matematiche.
-#### 
+#### Indicazioni importanti
+- Nelle specifiche semantiche è importante indicare l’insieme minimale di equazioni (dette **assiomi**) a partire dalle quali possiamo derivare tutte le altre. 
+- Le specifiche semantiche si diranno **incomplete** se non permetteranno di derivare tutte le verità (equazioni) desiderate dell’algebra specificata. 
+- Le specifiche semantiche si diranno **inconsistenti** (o contraddittorie) se permetteranno di derivare delle equazioni indesiderate, cioè considerate false. 
+- Le specifiche semantiche si diranno **ridondanti** se alcune delle equazioni sono ricavabili dalle altre
