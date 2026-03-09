@@ -314,8 +314,15 @@ Un modulo che ha in input un’espressione e un comando e itera l’esecuzione d
 ![[Pasted image 20260309110943.png]]
 Tutte queste realizzazioni (iterative o ricorsive) sono corrette rispetto alla semantica dell’astrazione di controllo while. All’utente del modulo non importa sapere quale delle realizzazioni è stata adottata.
 
+Nella programmazione sequenziale l’ordine di esecuzione delle istruzioni è **totale**, mentre nella programmazione concorrente/parallela l’ordine di esecuzione può essere **parziale**
 
+> [!example] L'astrazione di controllo
+> Contents
 
+I linguaggi di specifica utilizzati per l’astrazione di controllo si basano sulla definizione di relazioni di precedenza fra istruzioni che permettono di stabilire sia ordinamenti totali che ordinamenti parziali.
 
+La combinazione dell’astrazione dati con l’astrazione di controllo permette di sviluppare soluzioni software invarianti non solo al cambiamento della realizzazione dei dati ma anche al cambiamento dei meccanismi di visita del dato astratto. 
+
+Ciò risulta molto utile poiché l’iterazione su collezioni di dati è un compito comune e ripetitivo e l’evidenza empirica indica che spesso si commettono errori nella inizializzazione dell’iterazione e nella scrittura delle condizioni di stop
 
 
