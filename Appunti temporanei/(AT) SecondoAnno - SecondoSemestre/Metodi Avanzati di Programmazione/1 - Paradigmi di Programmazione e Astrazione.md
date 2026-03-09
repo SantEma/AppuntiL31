@@ -307,3 +307,15 @@ In sostanza:
 - Il modulo software deve essere parametrizzato rispetto alle operazioni da eseguire
 - Il modulo software è associato a un controllo di sequenza (**control flow**)
 - I dettagli di come il controllo di sequenza è garantito non sono visibili al consumatore (fruitore) del modulo
+
+> [!example] Modulo while()
+Un modulo che ha in input un’espressione e un comando e itera l’esecuzione del comando fintanto che l’espressione è vera, è un modulo che implementa il costrutto di controllo while(), sappiamo benissimo che l'implementazione del while è un implementazione **nascosta**.
+![[Pasted image 20260309110932.png]]
+![[Pasted image 20260309110943.png]]
+Tutte queste realizzazioni (iterative o ricorsive) sono corrette rispetto alla semantica dell’astrazione di controllo while. All’utente del modulo non importa sapere quale delle realizzazioni è stata adottata.
+
+
+
+
+
+
