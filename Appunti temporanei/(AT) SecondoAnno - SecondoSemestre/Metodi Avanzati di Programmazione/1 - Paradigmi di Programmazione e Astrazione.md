@@ -263,15 +263,19 @@ L'intero linguaggio di specifica poggia su sole cinque primitive basilari:
 Inoltre, per comodità, si assumono già come predefiniti i valori booleani, i valori interi e la funzione condizionale `if then else`.    
 Quest'ultima funzione è descrivibile dalle equazioni matematiche `if then else (true, q, r) = q` e `if then else (false, q, r) = r`. Essendo fondamentale, viene comunemente scritta e utilizzata come un operatore infisso nella forma `if p then q else r`.
 
-#### Specifica algebrica di una Pila
-![[Pasted image 20260309085120.png]]
-![[Pasted image 20260309085129.png]]
-![[Pasted image 20260309085141.png]]
-L'error nelle specifiche algebriche va ad inserire equazioni che non possono essere utilizzate (gestiscono quindi delle restrizioni)
+> [!info] I tre pilastri della specifica algebrica
+> ![[Pasted image 20260309092216.png]]
 #### Ossiomatica vs Algebrica
 Le specifiche **ossiomatiche** si avvicinano al paradigma imperativo, concentrandosi sullo stato del sistema
 
 La specifica **algebrica** non si concentra sul funzionamento, ma sulla struttura dati. È una struttura dichiarativa e legata alle proprietà. In pratica, stiamo definendo un Tipo di Dato Astratto come se fosse un sistema di equazioni matematiche.
+#### Specifica algebrica di una Pila
+> [!example] Specifica algebrica di una Pila
+> 
+![[Pasted image 20260309085120.png]]
+![[Pasted image 20260309085129.png]]
+![[Pasted image 20260309085141.png]]
+L'error nelle specifiche algebriche va ad inserire equazioni che non possono essere utilizzate (gestiscono quindi delle restrizioni)
 #### Indicazioni importanti
 - Nelle specifiche semantiche è importante indicare l’insieme minimale di equazioni (dette **assiomi**) a partire dalle quali possiamo derivare tutte le altre. 
 - Le specifiche semantiche si diranno **incomplete** se non permetteranno di derivare tutte le verità (equazioni) desiderate dell’algebra specificata. 
@@ -283,3 +287,8 @@ Scrivere delle specifiche semantiche complete, consistenti e non ridondanti può
 - **Osservazioni**, che ritrovano informazioni sul dato astratto 
 
 Il comportamento di una astrazione dati può essere specificata riportando il valore di ciascuna osservazione applicata a ciascun costruttore. Questa informazione è organizzata in modo naturale in una matrice, con i costruttori lungo una dimensione e le osservazioni lungo l’altra.
+
+> [!example] Costruttori della Pila
+> ![[Pasted image 20260309091947.png]]
+#### Osservazioni binarie
+#### La scelta dei costruttori
