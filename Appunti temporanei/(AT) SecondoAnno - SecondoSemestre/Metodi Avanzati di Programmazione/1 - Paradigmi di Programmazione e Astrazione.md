@@ -296,12 +296,10 @@ Tutte le osservazioni viste finora sono **unarie**, nel senso che esse osservano
 > [!example] Osservazione binaria sulla Pila
 > ![[Pasted image 20260309104248.png]]
 > ![[Pasted image 20260309104301.png]]
-
 #### La scelta dei costruttori
 Talvolta, l’applicazione della metodologia per la sintesi di specifiche algebriche può comportare delle difficoltà riguardo al discernimento di cosa è costruttore e cosa operazione.
 
 Nello scegliere i costruttori adotteremo il **criterio di minimalità**, cioè l’insieme dei costruttori dev’essere il più piccolo insieme di operatori necessario a costruire tutti i possibili valori per un certo dato astratto
-
 ### Astrazione di controllo
 L’astrazione di controllo si riferisce alla possibilità di specificare un modulo software che esegue delle operazioni in un ordine, nascondendo i dettagli su come il mantenimento dell’ordine è ottenuto
 
