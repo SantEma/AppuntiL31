@@ -325,3 +325,5 @@ La combinazione dell’astrazione dati con l’astrazione di controllo permette 
 Ciò risulta molto utile poiché l’iterazione su collezioni di dati è un compito comune e ripetitivo e l’evidenza empirica indica che spesso si commettono errori nella inizializzazione dell’iterazione e nella scrittura delle condizioni di stop
 > [!example] Esempio completo di astrazione di controllo
 > ![[Pasted image 20260309112056.png]]
+## ATTENZIONE
+Alcuni esempi sono stati omessi poichè troppo lunghi, nel caso li si vogliano visionare si possono trovare nel file [[1.1 - (Slide) Paradigmi di programmazione e astrazione.pdf]]
