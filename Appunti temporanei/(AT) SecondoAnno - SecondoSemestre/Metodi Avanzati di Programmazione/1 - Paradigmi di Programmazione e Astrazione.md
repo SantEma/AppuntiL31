@@ -323,7 +323,5 @@ I linguaggi di specifica utilizzati per l’astrazione di controllo si basano su
 La combinazione dell’astrazione dati con l’astrazione di controllo permette di sviluppare soluzioni software **invarianti** non solo al cambiamento della realizzazione dei dati ma anche al **cambiamento dei meccanismi di visita del dato astratto**. 
 
 Ciò risulta molto utile poiché l’iterazione su collezioni di dati è un compito comune e ripetitivo e l’evidenza empirica indica che spesso si commettono errori nella inizializzazione dell’iterazione e nella scrittura delle condizioni di stop
-
-
 > [!example] Esempio completo di astrazione di controllo
 > ![[Pasted image 20260309112056.png]]
