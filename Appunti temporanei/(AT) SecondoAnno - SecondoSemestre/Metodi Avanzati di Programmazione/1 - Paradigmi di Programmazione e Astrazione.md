@@ -262,3 +262,4 @@ L'intero linguaggio di specifica poggia su sole cinque primitive basilari:
 
 Inoltre, per comodità, si assumono già come predefiniti i valori booleani, i valori interi e la funzione condizionale `if then else`.    
 Quest'ultima funzione è descrivibile dalle equazioni matematiche `if then else (true, q, r) = q` e `if then else (false, q, r) = r`. Essendo fondamentale, viene comunemente scritta e utilizzata come un operatore infisso nella forma `if p then q else r`.
+#### Ossiomatica vs Algebrica
