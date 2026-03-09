@@ -92,7 +92,10 @@ Per ognuno dei paradigmi visti precedentemente possiamo distinguere due versioni
 
 L’obiettivo del cambio di rappresentazione è quello di concentrarsi su aspetti rilevanti dimenticando gli elementi secondari.
 Non si tratta di omettere parti della rappresentazione di un problema, ma di riformulare lo stesso concentrando l’attenzione su idee generali piuttosto che su manifestazioni specifiche di quelle idee, tenendo conto della prospettiva di un osservatore.
-![[Pasted image 20260304130450.png]]
+
+> [!examoke]
+> ![[Pasted image 20260304130450.png]]
+
 L’astrazione si focalizza sulle caratteristiche essenziali di un oggetto, rispetto alla prospettiva di colui che osserva.
 ### Astrazione: processo o entità
 Il termine astrazione sotto-intende due concetti distinti, entrambi validi e ugualmente necessari:
@@ -321,7 +324,7 @@ Nella programmazione sequenziale l’ordine di esecuzione delle istruzioni è **
 
 I linguaggi di specifica utilizzati per l’astrazione di controllo si basano sulla definizione di **relazioni di precedenza** fra istruzioni che permettono di stabilire sia ordinamenti totali che ordinamenti parziali.
 
-La combinazione dell’astrazione dati con l’astrazione di controllo permette di sviluppare soluzioni software **invarianti** non solo al cambiamento della realizzazione dei dati ma anche al cambiamento dei meccanismi di visita del dato astratto. 
+La combinazione dell’astrazione dati con l’astrazione di controllo permette di sviluppare soluzioni software **invarianti** non solo al cambiamento della realizzazione dei dati ma anche al **cambiamento dei meccanismi di visita del dato astratto**. 
 
 Ciò risulta molto utile poiché l’iterazione su collezioni di dati è un compito comune e ripetitivo e l’evidenza empirica indica che spesso si commettono errori nella inizializzazione dell’iterazione e nella scrittura delle condizioni di stop
 
