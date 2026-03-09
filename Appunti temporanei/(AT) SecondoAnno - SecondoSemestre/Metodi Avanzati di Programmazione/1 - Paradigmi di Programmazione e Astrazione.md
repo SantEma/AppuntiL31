@@ -272,3 +272,4 @@ L'error nelle specifiche algebriche va ad inserire equazioni che non possono ess
 Le specifiche **ossiomatiche** si avvicinano al paradigma imperativo, concentrandosi sullo stato del sistema
 
 La specifica **algebrica** non si concentra sul funzionamento, ma sulla struttura dati. È una struttura dichiarativa e legata alle proprietà. In pratica, stiamo definendo un Tipo di Dato Astratto come se fosse un sistema di equazioni matematiche.
+#### 
