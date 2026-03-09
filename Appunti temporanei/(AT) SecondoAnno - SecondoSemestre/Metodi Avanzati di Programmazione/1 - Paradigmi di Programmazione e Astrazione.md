@@ -268,10 +268,6 @@ Quest'ultima funzione è descrivibile dalle equazioni matematiche `if then else 
 
 > [!info] I tre pilastri della specifica algebrica
 > ![[Pasted image 20260309092216.png]]
-#### Ossiomatica vs Algebrica
-Le specifiche **ossiomatiche** si avvicinano al paradigma imperativo, concentrandosi sullo stato del sistema
-
-La specifica **algebrica** non si concentra sul funzionamento, ma sulla struttura dati. È una struttura dichiarativa e legata alle proprietà. In pratica, stiamo definendo un Tipo di Dato Astratto come se fosse un sistema di equazioni matematiche.
 #### Specifica algebrica di una Pila
 > [!example] Specifica algebrica di una Pila
 > 
