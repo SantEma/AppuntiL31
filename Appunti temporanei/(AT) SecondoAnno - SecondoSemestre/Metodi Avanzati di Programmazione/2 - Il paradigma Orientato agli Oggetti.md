@@ -48,10 +48,20 @@ L'UML è un linguaggio visuale utilizzato per
 
 Essendo molto versatile può essere anche utilizzato in molte fasi del ciclo di vita del software (come nelle relazioni clienti-fornitori o ingegnere-ingegnere) senza scendere nei dettagli di un linguaggio di programmazione.
 
-La notazione, sintassi e semantica sono standard secondo le specifiche UML
+La notazione, sintassi e semantica sono standard secondo le specifiche UML. 
+L'UML permette di usare una notazione universale per illustrare alcuni concetti del paradigma orientato a oggetti, senza fare così riferimento a un particolare linguaggio di programmazione.
+Ogni simbolo in UML ha una **semantica ben definita** che ne permette **l’univoca interpretazione** fra diversi interlocutori e strumenti software
 ### Modellazione Object-Oriented
 Nella modellazione object-oriented le componenti elementari sono **l’oggetto e la classe**:
 - Un oggetto è qualcosa tratta generalmente dal vocabolario dello spazio del problema o dello spazio della soluzione. Ogni oggetto ha un identità, stato e comportamento.
 - Una classe è una descrizione di un insieme di oggetti omogenei
 
 Visualizzare, specificare, costruire, e documentare sistemi object-oriented è esattamente lo scopo dello UML
+### Oggetti (Istanze in UML)
+In UML un oggetto (o istanza) è graficamente rappresentato in questo modo:
+![[Pasted image 20260312121838.png]]
+Quindi è possibile indicare:
+- Solo il nome (identificatore) dell'istanza
+- Nome dell'istanza e dell'astrazione (la classe) a cui appartiene
+- Solo il nome dell’astrazione, qualora non si conosca a priori il nome dell’istanza
+- Un’istanza orfana, se non si conosce a priori la sua astrazione
