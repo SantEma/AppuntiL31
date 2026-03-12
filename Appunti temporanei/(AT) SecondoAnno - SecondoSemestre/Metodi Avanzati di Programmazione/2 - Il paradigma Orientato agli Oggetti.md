@@ -97,3 +97,7 @@ Graficamente gli attributi sono indicati sotto il nome della classe.
 ![[Pasted image 20260312124322.png]]
 Di un attributo si può specificare l’insieme dei valori assunti (oggetti di una classe) e una eventuale inizializzazione
 ![[Pasted image 20260312124335.png]]
+#### Attributi statici
+Un attributo di classe (detto statico in UML) è indicato come sottolineato.
+![[Pasted image 20260312124541.png]]
+L’attributo numRettangoli indica il numero di oggetti della classe Rettangoli che sono stati istanziati. È un attributo statico (o di classe) in quanto condiviso da tutte le istanze della classe Rettangoli.
