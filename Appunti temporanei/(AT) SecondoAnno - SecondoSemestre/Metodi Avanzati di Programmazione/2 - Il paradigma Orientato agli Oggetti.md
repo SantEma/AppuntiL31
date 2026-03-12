@@ -37,5 +37,4 @@ Normalmente gli OID sono assegnati in modo automatico agli oggetti, sicché non 
 
 La presenza di alias non significa che un oggetto non è identificato univocamente, ma semplicemente che **diversi identificatori di variabile sono stati legati al medesimo riferimento di oggetto**. 
 Lo stato di un oggetto può anche contenere il riferimento ad un altro oggetto, si dice quindi che un **oggetto punta ad un altro**. Il puntamento è asimmetrico, ossia questo puntamento va in unica direzione.
-
 ## UML
