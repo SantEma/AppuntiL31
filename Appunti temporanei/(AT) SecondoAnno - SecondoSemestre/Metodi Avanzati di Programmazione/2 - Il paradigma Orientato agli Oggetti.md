@@ -12,7 +12,7 @@ Confrontando il paradigma orientato a oggetti rispetto a quello imperativo si pu
 - Una **rivoluzione**, in quanto gli oggetti assumono un ruolo fondamentale nella progettazione e nella programmazione. Ora l'information hiding e l' incapsulamento sono principi cardine nel paradigma orientato a oggetti
 ### Classificazione di Wegner
 I linguaggi di programmazione si classificano in:
-- **Object-based**: supportano la nozione di oggetto (come il linguaggio Modula-2)
+- **Object-based**: supportano la nozione di oggetto (come il linguaggio Modula-2), qui non sono ancora trattati come cittadini di prima classe
 - **Class-based**: supportano la nozione di oggetto e classe (come il linguaggio Ada-83)
 - **Object-oriented**: supportano la nozione di oggetto, classe, ereditarietà (Smalltalk, C++, Java, …)
 
