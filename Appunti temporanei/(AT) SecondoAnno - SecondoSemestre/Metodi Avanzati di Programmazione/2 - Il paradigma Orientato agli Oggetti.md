@@ -68,3 +68,14 @@ Quindi è possibile indicare:
 
 Lo stato di un oggetto può essere rappresentato in modo astratto, oppure indicando esplicitamente i valori assunti dagli attributi dell’oggetto
 ![[Pasted image 20260312122252.png]]
+## Classi
+**Una classe è la descrizione di una famiglia di oggetti che condividono la stessa struttura** (gli attributi) **e il medesimo comportamento** (operazioni).
+Nella programmazione OO ogni oggetto è un’istanza di una classe, cioè un oggetto non può essere ottenuto se non si definisce la sua classe di appartenenza. Analogamente nella modellazione OO le istanze **esistono in quanto ci sono le loro astrazioni**.
+I dettagli della realizzazione di una classe sono normalmente nascosti.
+Ogni classe ha una doppia componente
+1. **Una componente statica**, ossia i dati, costituita da campi o attributi dotati di nome, che contengono un valore. I campi caratterizzano lo stato degli oggetti durante l’esecuzione del programma.
+   Questi si distinguono in base al loro ambito d'azione (**scope**):
+	- **Attributi d’istanza**: sono associati ad una istanza e hanno un tempo di vita pari a quello dell’istanza alla quale sono associati.
+	- **Attributi di classe**: sono associati alle classi e condivisi da tutte le istanze della classe. Il loro tempo di vita è lo stesso della classe.
+	Gli attributi di istanza contribuiscono a caratterizzare lo stato di ogni singolo oggetto, mentre gli attributi di classe contribuiscono a definire il fattore comune allo stato di tutti gli oggetti di una classe.  
+ 
