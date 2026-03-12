@@ -126,3 +126,4 @@ Ad esempio, un metodo pubblico può essere invocato da qualunque punto del codic
 Altri livelli di visibilità sono: 
 - **Protetta**: l’elemento è visibile all’interno del package e all’esterno solo ai discendenti della classe di appartenenza
 - **package**: l’elemento è visibile solo agli elementi del package che contiene la classe in cui l’elemento è definito
+
