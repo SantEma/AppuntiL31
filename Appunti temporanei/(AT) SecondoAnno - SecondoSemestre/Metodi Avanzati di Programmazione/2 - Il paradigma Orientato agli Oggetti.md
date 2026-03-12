@@ -109,3 +109,20 @@ Il commento sulla destra fa parte della notazione standard UML e in questo caso 
 #### Metodi
 In UML le operazioni sono indicate graficamente in una sezione al di sotto degli attributi:
 ![[Pasted image 20260312124840.png]]
+#### Classi
+Estendiamo la visione di classi con la specifica di attributi e metodi:
+![[Pasted image 20260312125338.png]]
+I diversi livelli di dettaglio consentono a chi progetta/modella di attribuire maggiore o minore importanza a determinati fattori a seconda della vista del sistema che si sta considerando
+#### Stereotipi
+Gli stereotipi sono dei tipici meccanismi di estendibilità di UML,  essi estendono il vocabolario di UML, permettendo di creare nuovi blocchi per la costruzione dei modelli, derivandoli da blocchi già esistenti ma rendendoli specifici per il particolare dominio.
+Gli stereotipi sono previsti dall'UML e sono rappresentati con le parentesi angolari «»
+### Visibilità delle classi
+Gli attributi e i metodi di una classe possono avere diversi livelli di **visibilità**.
+Un elemento (attributo o metodo) ha
+ - **Visibilità pubblica** quando può essere visto (utilizzato, invocato) da altre classi.
+- Visibilità privata quando può essere visto solo dalla classe di appartenenza
+Ad esempio, un metodo pubblico può essere invocato da qualunque punto del codice (purché la classe sia ‘importata’ in qualche modo), mentre un metodo privato può essere invocato solo da altri metodi della stessa classe
+
+Altri livelli di visibilità sono: 
+- **Protetta**: l’elemento è visibile all’interno del package e all’esterno solo ai discendenti della classe di appartenenza
+- **package**: l’elemento è visibile solo agli elementi del package che contiene la classe in cui l’elemento è definito
