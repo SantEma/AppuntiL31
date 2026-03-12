@@ -65,3 +65,6 @@ Quindi è possibile indicare:
 - Nome dell'istanza e dell'astrazione (la classe) a cui appartiene
 - Solo il nome dell’astrazione, qualora non si conosca a priori il nome dell’istanza
 - Un’istanza orfana, se non si conosce a priori la sua astrazione
+
+Lo stato di un oggetto può essere rappresentato in modo astratto, oppure indicando esplicitamente i valori assunti dagli attributi dell’oggetto
+![[Pasted image 20260312122252.png]]
