@@ -104,4 +104,8 @@ L’attributo numRettangoli indica il numero di oggetti della classe Rettangoli 
 #### Attributi derivati
 Gli attributi derivati sono quelli che possono essere calcolati partendo da altri attributi. UML prevede una rappresentazione specifica mediante una ‘/’ (integer).
 Si rappresenta con i commenti:
-![[Pasted image 20260312124739.png]]Il commento sulla destra fa parte della notazione standard UML e in questo caso è utilizzato per indicare come si calcola l’attributo derivato length
+![[Pasted image 20260312124739.png]]
+Il commento sulla destra fa parte della notazione standard UML e in questo caso è utilizzato per indicare come si calcola l’attributo derivato `lenght`. I commenti possono essere aggiunti a qualunque elemento della notazione UML.
+#### Metodi
+In UML le operazioni sono indicate graficamente in una sezione al di sotto degli attributi:
+![[Pasted image 20260312124840.png]]
