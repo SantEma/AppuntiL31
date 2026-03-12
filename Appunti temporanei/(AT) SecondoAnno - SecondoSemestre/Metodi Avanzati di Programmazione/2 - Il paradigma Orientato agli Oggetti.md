@@ -79,11 +79,12 @@ Ogni classe ha una doppia componente
 	- **Attributi di classe**: sono associati alle classi e condivisi da tutte le istanze della classe. Il loro tempo di vita è lo stesso della classe.
 	Gli attributi di istanza contribuiscono a caratterizzare lo stato di ogni singolo oggetto, mentre gli attributi di classe contribuiscono a definire il fattore comune allo stato di tutti gli oggetti di una classe.  
  2. **Una componente dinamica**, ossia i metodi (o operazioni), che rappresentano il comportamento comune degli oggetti appartenenti alla classe, cioè i servizi che possono essere richiesti a un oggetto di una classe. I metodi manipolano gli attributi.
-     I metodi possono essere classificati in:
+    I metodi possono essere classificati in:
      - **Metodi costruttori**: sono invocati per creare (istanziare) gli oggetti e inizializzarli
      - **Metodi di accesso**: restituiscono astrazioni significative dello stato di un oggetto
      - **Metodi di trasformazione**: modificano lo stato di un oggetto
      - **Metodi distruttori**: sono invocati quando si rimuovono gli oggetti dalla memoria
-      I metodi di accesso e trasformazione possono essere distinti in:
+    I metodi di accesso e trasformazione possono essere distinti in:
       1. **Metodi di istanza**: operano su almeno un attributo di istanza, pertanto possono essere invocati solo specificando l’istanza
       2. **Metodi di classe**: operano esclusivamente su attributi di classe, pertanto possono essere invocati specificando la classe. Si possono invocare metodi di classe anche quando non è stato istanziato alcun oggetto per quella classe
+    In linea di principio, l’invocazione di un metodo di classe può avvenire anche specificando un oggetto (e non la classe), tuttavia ciò è sconsigliato perché non evidenzia il fatto che si manipolano solo attributi di classe. Non è invece possibile invocare un metodo di istanza sulla classe
