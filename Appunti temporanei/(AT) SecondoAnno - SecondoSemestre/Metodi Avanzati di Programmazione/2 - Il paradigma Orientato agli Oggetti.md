@@ -129,3 +129,6 @@ Altri livelli di visibilità sono:
 #### Visibilità degli elementi in UML
 UML consente di specificare i livelli di visibilità di attributi e metodi utilizzando la seguente notazione:
 ![[Pasted image 20260312130406.png]]
+#### Molteplicità della classe
+Con **molteplicità di classe** si intende il numero di istanze che essa può avere. Generalmente non si pone un limite, tuttavia in alcuni casi è necessario indicare che la classe può avere una sola istanza (classe singoletto, singleton class) o comunque un numero ben definito di istanze. UML impone che tale valore sia indicato in alto a destra nell’icona rappresentante la classe:
+![[Pasted image 20260312130627.png]]
