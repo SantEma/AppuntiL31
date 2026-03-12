@@ -89,3 +89,11 @@ Ogni classe ha una doppia componente
       2. **Metodi di classe**: operano esclusivamente su attributi di classe, pertanto possono essere invocati specificando la classe. Si possono invocare metodi di classe anche quando non è stato istanziato alcun oggetto per quella classe
     In linea di principio, l’invocazione di un metodo di classe può avvenire anche specificando un oggetto (e non la classe), tuttavia ciò è sconsigliato perché non evidenzia il fatto che si manipolano solo attributi di classe. Non è invece possibile invocare un metodo di istanza sulla classe
 ### Notazione UML
+In UML una classe è resa graficamente mediante un rettangolo.
+![[Pasted image 20260312124251.png]]
+Ogni classe deve avere un nome che la contraddistingue dalle altre Questo può essere semplice o indicare un percorso.
+![[Pasted image 20260312124304.png]]
+Graficamente gli attributi sono indicati sotto il nome della classe.
+![[Pasted image 20260312124322.png]]
+Di un attributo si può specificare l’insieme dei valori assunti (oggetti di una classe) e una eventuale inizializzazione
+![[Pasted image 20260312124335.png]]
