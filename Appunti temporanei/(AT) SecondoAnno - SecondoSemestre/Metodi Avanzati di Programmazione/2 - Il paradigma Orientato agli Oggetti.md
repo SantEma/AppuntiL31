@@ -19,3 +19,12 @@ I linguaggi di programmazione si classificano in:
 > [!info] Domanda di esame: Quali sono le caratteristiche di un linguaggio ad oggetti?
 > Quelli che supportano nozioni di oggetto, classe e ereditarietà
 
+## Gli oggetti
+Gli oggetti quindi sono questo particolare costrutto che permettono di incapsulare **uno stato e un comportamento**:
+- Lo **stato** è identificato dal contenuto di una certa area di memoria (quindi dalle variabili)
+- Il **comportamento** è definito da una collezione di procedure e funzioni (chiamate **metodi**) che possono operare sulla rappresentazione dell’area di memoria associata all'oggetto.
+
+Un oggetto implementato bene quindi permette la modifica delle variabili soltanto tramite delle sue funzioni dedicate
+> [!example] Esempio di oggetto
+> ![[Pasted image 20260312113300.png]]
+> Le variabili e i metodi definiti nell’oggetto ‘palla’ stabiliscono lo stato e il comportamento che sono rilevanti all’uso della palla nel gioco elettronico
