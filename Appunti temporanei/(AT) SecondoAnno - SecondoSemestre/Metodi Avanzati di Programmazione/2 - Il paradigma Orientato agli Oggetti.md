@@ -15,10 +15,8 @@ I linguaggi di programmazione si classificano in:
 - **Object-based**: supportano la nozione di oggetto (come il linguaggio Modula-2), qui non sono ancora trattati come cittadini di prima classe
 - **Class-based**: supportano la nozione di oggetto e classe (come il linguaggio Ada-83)
 - **Object-oriented**: supportano la nozione di oggetto, classe, ereditarietà (Smalltalk, C++, Java, …)
-
 > [!info] Domanda di esame: Quali sono le caratteristiche di un linguaggio ad oggetti?
 > Quelli che supportano nozioni di oggetto, classe e ereditarietà
-
 ## Gli oggetti
 Gli oggetti quindi sono questo particolare costrutto che permettono di incapsulare **uno stato e un comportamento**:
 - Lo **stato** è identificato dal contenuto di una certa area di memoria (quindi dalle variabili)
@@ -31,4 +29,8 @@ Un oggetto implementato bene quindi permette la modifica delle variabili soltant
 ### Identificatore di oggetto
 Un oggetto ha la sua **identità**, cioè è riconoscibile indipendentemente dal suo stato corrente. Per questo ogni oggetto ha un identificatore di oggetto (object identifier, OID) che lo identifica univocamente. In alcuni contesti gli OID sono anche detti **riferimenti (references)** (in alcuni linguaggi prende questo nome poichè coincide con l'indirizzo di memoria con l'oggetto utilizzato)
 
-Un identificatore di oggetto è **immutabile**, cioè non può essere modificato da una qualche opzione di programmazione. Cambiare l’OID di un oggetto equivale alla cancellazione dell’oggetto e alla creazione di un altro oggetto con lo stesso stato
+Un identificatore di oggetto è **immutabile**, cioè non può essere modificato da una qualche opzione di programmazione. Cambiare l’OID di un oggetto equivale alla cancellazione dell’oggetto e alla creazione di un altro oggetto con lo stesso stato.
+
+Il concetto di uguaglianza non è uguale a quello di identificatore, infatti si può avere lo stesso stato di due oggetti con due OID differenti.
+
+Normalmente gli OID sono assegnati in modo automatico agli oggetti, sicché non hanno un significato nel mondo reale. In molti ambienti di programmazione object-oriented, l’OID corrisponde all'indirizzo dell’area di memoria che conserva lo stato dell’oggetto. Quasi mai il programmatore utilizza esplicitamente i riferimenti, generalmente questi vengono legati a delle variabili e si fa riferimento agli oggetti mediante gli identificatori di variabile, ma variabili distinte potrebbero far riferimento al medesimo oggetto, in questo caso si hanno degli **alias**
