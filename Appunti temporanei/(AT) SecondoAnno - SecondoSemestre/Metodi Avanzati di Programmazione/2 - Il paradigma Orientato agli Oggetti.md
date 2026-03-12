@@ -101,3 +101,7 @@ Di un attributo si può specificare l’insieme dei valori assunti (oggetti di u
 Un attributo di classe (detto statico in UML) è indicato come sottolineato.
 ![[Pasted image 20260312124541.png]]
 L’attributo numRettangoli indica il numero di oggetti della classe Rettangoli che sono stati istanziati. È un attributo statico (o di classe) in quanto condiviso da tutte le istanze della classe Rettangoli.
+#### Attributi derivati
+Gli attributi derivati sono quelli che possono essere calcolati partendo da altri attributi. UML prevede una rappresentazione specifica mediante una ‘/’ (integer).
+Si rappresenta con i commenti:
+![[Pasted image 20260312124739.png]]Il commento sulla destra fa parte della notazione standard UML e in questo caso è utilizzato per indicare come si calcola l’attributo derivato length
