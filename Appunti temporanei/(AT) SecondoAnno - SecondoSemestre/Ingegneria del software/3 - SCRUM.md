@@ -76,3 +76,20 @@ In alternativa si discute sullo sprint concluso, sopratutto su cosa ha fatto sen
 ### Ruoli
 #### Team di sviluppo
 Un team di sviluppo è un gruppo di persone di dimensione dalle 3 alle 8 persone cross-functional (ossia un team formato da persone con tutte le competenze richieste dal progetto).
+#### Product Owner
+È responsabile del valore del prodotto, ossia ha la responsabilità esclusiva di gestione del Product Backlog:
+- Definisce le caratteristiche funzionali e non funzionali (feature) del prodotto (in collaborazione con il team)
+- Assegna le priorità alle feature in base al valore di mercato (per ogni iterazione)
+
+Lui ha anche il potere di accettare o rifiutare i risultati del lavoro del Team di Sviluppo, che devono rispettare diversi criteri suddivisi in: 
+- Generali: in base a una definizione di “Done” (lavoro completo) compresa da tutto il Team di Sviluppo
+- Specifica: Criteri di accettazione (specifiche dei casi di test)
+#### Scrum master
+Lo scrum master è il responsabile del rispetto del metodo SCRUM, in modo da guidare tutti ad usare lo stesso metodo.
+Può essere un esterno o un interno nell'azienda e si interfaccia con i vari management, isolando il team dalle varie distrazioni.
+
+Quando è affiancato dal product owner e al team di sviluppo svolge diversi ruoli:
+- Aiuta a creare gli elementi del Product Backlog
+- Aiuta ad ordinare gli elementi del Product Backlog per massimizzare il valore
+
+
