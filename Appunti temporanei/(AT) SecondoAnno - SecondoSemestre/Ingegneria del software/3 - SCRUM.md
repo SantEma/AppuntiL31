@@ -29,4 +29,14 @@ Altre task presenti sono le **Issues** (ossia le problematiche, molto spesso si 
 
 L'unità di misura principale sono gli **story point**, il cui valore unitario è un valore non standardizzato, ma per convenzione equivale ad una User Story semplice (di solito quella che uno sviluppatore potrebbe fare in mezza giornata lavorativa).
 #### Sprint goal
-Lo sprint goal è una breve indicazione dell’obiettivo principale dello Sprint, fornendo na guida al team sul perché si sta sviluppando un nuovo incremento del prodotto.
+Lo sprint goal è una breve indicazione dell’obiettivo principale dello Sprint, fornendo una guida al team sul perché si sta sviluppando un nuovo incremento del prodotto.
+#### Sprint backlog
+Lo Sprint Backlog è l'insieme degli elementi del Product Backlog selezionati per lo Sprint più un piano per fornire l'Incremento del prodotto e realizzare lo Sprint Goal
+Questi, diversamente dall'essere gestiti dal Product Owner, sono gestite da Team di sviluppo autogestiti, ovvero i componenti del team scelgono su quale elemento lavorare, qualsiasi componente può aggiungere, cancellare o modificare gli elementi.
+La stima del lavoro rimanente è aggiornata nel daily meeting
+
+> [!info] Scrum Board
+> La Scrum board è una rappresentazione grafica di tutto questo processo. 
+> ![[Pasted image 20260313102257.png]]
+
+### Eventi
