@@ -6,10 +6,10 @@ In ogni iterazione si svolgono le varie attività tecniche, quindi i requisiti s
 Gli Sprint non sono interrompibili e non modificabili, le modifiche dei requisiti sono accettate soltanto durante la fine di questo ciclo attuale e l'inizio del ciclo successivo.
 Ogni Sprint ha una durante costante definita inizialmente (**timeboxing**), di solito questi durano dalle 2 alle 4 settimane
 ## Framework
-Il framework è definito in 3 parti principali:
-- Ruoli
-- Eventi
-- Artifact
+Il framework di Scrum è definito in 3 parti principali:
+- Ruoli(Product owner, ScrumMaster, Team)
+- Eventi (Sprint planning, Sprint review, Sprint retrospective, Daily scrum meeting)
+- Artifact(Product backlog, Sprint backlog, Burndown charts)
 ### Artifact
 #### Product Backlog
 Il product backlog è una lista di requisiti funzionali richieste sul progetto. A differenza di un processo a cascata, dove viene fatta tutto a monte, questo processo prevede il cambiamento dinamico di questi requisiti.
@@ -18,3 +18,13 @@ I requisiti vengono stabiliti dal Product Owner (analista di solito impiegato ne
 Per ogni elemento presente nel product backlog si danno delle stime, con diverse unità di misura (di solito giorni-persona)
 
 Le funzionalità da realizzare vengono chiamate **User Story** (punto di vista di un utente rispetto alla funzionalità)
+
+> [!example] Esempio di User Story
+![[Pasted image 20260313100614.png]]
+
+Altre task presenti sono le **Issues** (ossia le problematiche, molto spesso si riferiscono ai bug presenti sui software)
+
+> [!example] Esempio di product backlog
+> ![[Pasted image 20260313100902.png]]
+
+#### Sprint goal
