@@ -72,3 +72,7 @@ In alternativa si discute sullo sprint concluso, sopratutto su cosa ha fatto sen
 - Contento
 - Deluso
 - Disperato
+
+### Ruoli
+#### Team di sviluppo
+Un team di sviluppo è un gruppo di persone di dimensione dalle 3 alle 8 persone cross-functional (ossia un team formato da persone con tutte le competenze richieste dal progetto).
