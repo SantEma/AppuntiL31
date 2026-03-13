@@ -55,4 +55,7 @@ Si divide in due parti:
 
 ![[Pasted image 20260313111425.png]]
 #### Daily scrum meeting
-Il Daily Scrum meeting è un meeting giornaliero per poter fare un recap generale, è breve (15 minuti massimo)
+Il Daily Scrum meeting è un meeting giornaliero per poter fare un recap generale, è breve (15 minuti massimo), ha come basi queste tre domande:
+- Cosa hai fatto ieri?
+- Cosa farai oggi?
+- Ci sono problemi?
