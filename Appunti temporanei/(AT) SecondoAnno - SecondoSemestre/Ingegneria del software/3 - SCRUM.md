@@ -14,5 +14,7 @@ Il framework è definito in 3 parti principali:
 #### Product Backlog
 Il product backlog è una lista di requisiti funzionali richieste sul progetto. A differenza di un processo a cascata, dove viene fatta tutto a monte, questo processo prevede il cambiamento dinamico di questi requisiti.
 
-I requisiti vengono stabiliti dal Product Owner, che stabilisce delle priorità per ogni Sprint.
-Per ogni elemento presente nel product backlog si danno delle stime, 
+I requisiti vengono stabiliti dal Product Owner (analista di solito impiegato nel campo, esperto del dominio), che stabilisce delle priorità per ogni Sprint.
+Per ogni elemento presente nel product backlog si danno delle stime, con diverse unità di misura (di solito giorni-persona)
+
+Le funzionalità da realizzare vengono chiamate **User Story** (punto di vista di un utente rispetto alla funzionalità)
