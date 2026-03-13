@@ -27,4 +27,5 @@ Altre task presenti sono le **Issues** (ossia le problematiche, molto spesso si 
 > [!example] Esempio di product backlog
 > ![[Pasted image 20260313100902.png]]
 
+L'unità di misura principale sono gli **story point**, il cui valore unitario è un valore non standardizzato, ma per convenzione equivale ad una User Story semplice (di solito quella che uno sviluppatore potrebbe fare in mezza giornata lavorativa).
 #### Sprint goal
