@@ -39,3 +39,20 @@ La stima del lavoro rimanente è aggiornata nel daily meeting
 > La Scrum board è una rappresentazione grafica di tutto questo processo. 
 > ![[Pasted image 20260313102257.png]]
 ### Eventi
+Gli eventi nello Scrum sono degli incontri, suddivisi in:
+- Sprint planning
+- Sprint review
+- Sprint retrospective
+- Daily scrum meeting
+I primi 2 si svolgono durante ogni sprint
+#### Sprint planning
+Si divide in due parti:
+1. La selezione dello Sprint, guidata dal Product Owner, dove avvengono:
+	- Valutazione delle priorità nel Product Backlog
+	- Scelta dello Sprint Goal
+	- Selezione degli elementi da completare nello Sprint
+2. Creazione dello Sprint Backlog (autogestita dal team), ossia tutto il processo di raffinamento di design preliminare e identificazione dei task
+
+![[Pasted image 20260313111425.png]]
+#### Daily scrum meeting
+Il Daily Scrum meeting è un meeting giornaliero per poter fare un recap generale, è breve (15 minuti massimo)
