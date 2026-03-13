@@ -38,5 +38,4 @@ La stima del lavoro rimanente è aggiornata nel daily meeting
 > [!info] Scrum Board
 > La Scrum board è una rappresentazione grafica di tutto questo processo. 
 > ![[Pasted image 20260313102257.png]]
-
 ### Eventi
