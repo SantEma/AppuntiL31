@@ -61,4 +61,14 @@ Il Daily Scrum meeting è un meeting giornaliero per poter fare un recap general
 - Ci sono problemi?
 #### Sprint review
 È una riunione aperta dove tutto il team partecipa e sono ben visti degli esterni (come degli utenti), viene mostrata una demo con delle nuove funzionalità.
-Il suo obbiettivo principale è la raccolta di feedback.
+Il suo obbiettivo principale è la raccolta di feedback dalla parte del software.
+#### Sprint retrospective
+Questo punto è dedicato al feedback sul processo sempre alla fine di uno Sprint, partecipa tutto il team e si discute cosa fare nel prossimo sprint, in particolare:
+1. Cosa introdurre
+2. Cosa evitare
+3. Cosa continuare
+
+In alternativa si discute sullo sprint concluso, sopratutto su cosa ha fatto sentire:
+- Contento
+- Deluso
+- Disperato
