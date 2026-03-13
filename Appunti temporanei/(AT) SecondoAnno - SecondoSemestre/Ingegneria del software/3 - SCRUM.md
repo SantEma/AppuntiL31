@@ -29,3 +29,4 @@ Altre task presenti sono le **Issues** (ossia le problematiche, molto spesso si 
 
 L'unità di misura principale sono gli **story point**, il cui valore unitario è un valore non standardizzato, ma per convenzione equivale ad una User Story semplice (di solito quella che uno sviluppatore potrebbe fare in mezza giornata lavorativa).
 #### Sprint goal
+Lo sprint goal è una breve indicazione dell’obiettivo principale dello Sprint, fornendo na guida al team sul perché si sta sviluppando un nuovo incremento del prodotto.
