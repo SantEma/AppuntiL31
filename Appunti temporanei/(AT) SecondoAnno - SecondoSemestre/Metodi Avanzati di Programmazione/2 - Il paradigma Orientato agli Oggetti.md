@@ -248,7 +248,7 @@ In Smalltalk e Java, un metodo definito in una (sotto-)classe può invocare una 
 
 Nell’ereditarietà per variazione funzionale, la visibilità (pubblica, protetta, privata, package) degli attributi e delle operazioni ereditate dalla superclasse non è modificata, inoltre la variazione funzionale attiene solo le operazioni di accesso e trasformazione di una classe, non andando a modificare i costruttori della superclasse originaria.
 #### Per restrizione
-Nella ereditarietà per restrizione, le istanze di una sottoclasse soddisfano vincoli che non sono necessariamente soddisfatti da istanze della superclasse.
+Nella ereditarietà per restrizione, le istanze di una sottoclasse soddisfano vincoli che non sono necessariamente soddisfatti da istanze della superclasse.0
 > [!example] Esempio per restrizione
 > ![[Pasted image 20260316100703.png]]
 ### Principio di sostituibilità (o generalizzazione)
@@ -274,6 +274,7 @@ In questa ereditarietà, la sottoclasse utilizza il codice della superclasse (de
 > ![[Pasted image 20260316101835.png]]
 Pertanto **l’ereditarietà di implementazione comporta la modifica alla visibilità delle caratteristiche ereditate**
 
+
 Questo tipo di ereditarietà è supportata su alcuni linguaggi di programmazione come C++ o Ada-95.
 
 In UML l’ereditarietà di implementazione è indicata utilizzando lo stesso simbolo della generalizzazione, ma specificando a fianco lo stereotipo <<implementation\>>.
@@ -281,5 +282,6 @@ In UML l’ereditarietà di implementazione è indicata utilizzando lo stesso si
 > [!example] Rappresentazione UML
 > ![[Pasted image 20260316102110.png]]
 
-L’ereditarietà di implementazione quindi non è compatibile con il principio di sostituibilità
+L’ereditarietà di implementazione quindi non è compatibile con il principio di sostituibilità.
+L’ereditarietà di implementazione permette un riuso parziale del codice, ma non è consigliata.
 
