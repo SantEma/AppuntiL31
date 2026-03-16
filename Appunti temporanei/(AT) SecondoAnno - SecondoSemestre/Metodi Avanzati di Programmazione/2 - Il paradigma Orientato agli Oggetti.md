@@ -251,11 +251,35 @@ Nell’ereditarietà per variazione funzionale, la visibilità (pubblica, protet
 Nella ereditarietà per restrizione, le istanze di una sottoclasse soddisfano vincoli che non sono necessariamente soddisfatti da istanze della superclasse.
 > [!example] Esempio per restrizione
 > ![[Pasted image 20260316100703.png]]
-### Principio di sostituibilità
-> [!info] Definizione di principio di sostituibilità
+### Principio di sostituibilità (o generalizzazione)
+> [!info] Definizione di principio di sostituibilità (o generalizzazione)
 > Data una dichiarazione di una variabile o di un parametro il cui tipo è dichiarato come $X$, una qualunque istanza di una classe che è discendente di $X$ può essere usato come valore effettivo senza violare la semantica della dichiarazione e il suo uso
 > In altri termini, **l'istanza di un discendente può essere sostituita all'istanza di un ascendente**
 
 La conseguenza del principio di sostituibilità è che una sottoclasse non può rimuovere o rinunciare a proprietà/metodi della superclasse, altrimenti una istanza della sottoclasse non sarà sostituibile in una situazione in cui si dichiara l’uso di istanze della superclasse. 
 In effetti, preservando la visibilità degli attributi e dei metodi ereditati, così come accade nelle tre forme di ereditarietà viste, si garantisce che gli oggetti della sottoclasse offrano quanto meno gli stessi servizi degli oggetti della superclasse (anche sei servizi potranno essere implementati diversamente, come accade nella variazione funzionale).
 **Pertanto il principio di sostituibilità (o polimorfismo di inclusione) è compatibile con l’ereditarietà per estensione, variazione funzionale e restrizione**
+
+
+> [!warning] Cosa dice quindi il principio di sostituibilità?
+> L'oggetto di una sottoclasse può essere usato come se fosse un istanza della superclasse
+
+Nelle varie ereditarietà, la relazione di ereditarietà fra classi corrisponde a una relazione di **generalizzazione** (o "is_a"), perché ogni istanza di una classe derivata da una classe base va considerata come (è anche) una istanza della classe base.
+Ci sarebbe un tipo di ereditarietà che non rispetta questo principio
+#### Ereditarietà di implementazione
+In questa ereditarietà, la sottoclasse utilizza il codice della superclasse (definizioni di attributi e metodi) per implementare l’astrazione associata.
+
+> [!example] Esempio di ereditarietà di implementazione
+> ![[Pasted image 20260316101828.png]]
+> ![[Pasted image 20260316101835.png]]
+Pertanto **l’ereditarietà di implementazione comporta la modifica alla visibilità delle caratteristiche ereditate**
+
+Questo tipo di ereditarietà è supportata su alcuni linguaggi di programmazione come C++ o Ada-95.
+
+In UML l’ereditarietà di implementazione è indicata utilizzando lo stesso simbolo della generalizzazione, ma specificando a fianco lo stereotipo <<implementation\>>.
+
+> [!example] Rappresentazione UML
+> ![[Pasted image 20260316102110.png]]
+
+L’ereditarietà di implementazione quindi non è compatibile con il principio di sostituibilità
+
