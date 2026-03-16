@@ -223,4 +223,18 @@ La visibilità (pubblica, protetta, privata, package) degli attributi e delle op
 > ![[Pasted image 20260316092259.png]]
 > La rappresentazione della freccia è piena, non tratteggiata
 
-La specializzazione per estensione permette di sviluppare del codice estendibile
+> [!warning] Attenzione all'ereditarietà 
+> Gli oggetti della sottoclasse hanno tutti quelli della superclasse, ma questo non vale nella maniera contraria!
+> Nell'esempio, `figura` non avrà mai l'attributo `base`
+
+La specializzazione per estensione permette di sviluppare del codice estendibile, infatti se si dovesse avvertire la necessità di aggiungere ulteriori funzioni occorrerà soltanto individuare le classi interessate e derivare da queste nuove classi alle quali verranno aggiunti gli attributi e i metodi necessari per implementare le nuove funzioni
+#### Per variazione funzionale 
+Nella variazione funzionale si ridefiniscono alcune caratteristiche (metodi) della superclasse quando quelle ereditate si rivelano inadeguate per l’insieme di oggetti descritti dalla sottoclasse, modificando il metodo ereditato.
+La ridefinizione (**overriding**) del metodo ereditato **riguarda solo l’implementazione** e non la segnatura (quindi nome, parametri formali e parametro di ritorno).
+Ogni richiesta di esecuzione del metodo ridefinito da parte di un oggetto della sottoclasse, farà riferimento alla nuova implementazione fornita nella sottoclasse
+
+> [!example] Esempio di overriding
+> ![[Pasted image 20260316093023.png]]
+> Nella classe `ContoCorrente` il metodo `preleva` controlla che il conto non vada in rosso
+> Il metodo `preleva` della classe `ContoCorrenteConFido` ridefinisce quello della superclasse per controllare che il prelievo non vada oltre il fido concesso
+
