@@ -172,4 +172,22 @@ Queste classi template usano a generalizzare
 > [!info] Rappresentazione UML
 > ![[Pasted image 20260316085905.png]]
 
+> [!example] Esempio di classe template
+> ![[Pasted image 20260316090550.png]]
+### Individuazione delle responsabilità
+In una buona modellazione OO di un sistema software è necessario stabilire le responsabilità da attribuire a ciascuna classe individuata, con attributi e operazioni che ha.
+UML consente di modellare le responsabilità in due modi:
+- Specificandole all'interno della classe: 
+  ![[Pasted image 20260316090926.png]]
+- Utilizzando delle note:
+  ![[Pasted image 20260316090950.png]]
 
+La specifica della responsabilità di una classe serve a definire cosa fa una classe (la semantica della classe), e in alternativa si possono usare le varie specifiche assiomatiche o algebriche (sono consigliate quelle algebriche per la progettazione)
+![[Pasted image 20260316090905.png]]
+
+Al fine di rendere il sistema altamente riutilizzabile, il lavoro di individuazione delle classi deve essere condotto in modo preciso, è necessario a tal fine seguire una metodologia ben definita:
+1. Identificare gli elementi che gli utenti usano per descrivere il problema
+2. Per ogni astrazione individuata è necessario identificare un insieme di responsabilità, sincerandosi che vi sia un buon bilanciamento di responsabilità tra le classi
+3. Fornire ad ogni classe gli attributi e le operazioni di cui ha bisogno per eseguire tali responsabilità
+
+L’individuazione delle classi dipende dunque sia dalla realtà che si vuole modellare, sia dalla necessità di individuare il giusto bilanciamento dei compiti da assegnare, al fine di rendere il sistema software altamente mantenibile e riutilizzabile
