@@ -291,10 +291,11 @@ In UML l’ereditarietà di implementazione è indicata utilizzando lo stesso si
 
 L’ereditarietà di implementazione quindi non è compatibile con il principio di sostituibilità.
 L’ereditarietà di implementazione permette un riuso parziale del codice, ma non è consigliata.
-#### Proprietà della relazione di generalizzazione
+##### Proprietà della relazione di generalizzazione
 La relazione di generalizzazione è **transitiva e antisimmetrica**, ossia: 
 - Comporta che le caratteristiche delle classi superiori sono ereditate dalle classi inferiori
 - Definisce una direzione di attraversamento del grafo di ereditarietà che porta dalla sottoclasse alla superclasse
 #### Grafo di ereditarietà
 La rappresentazione della relazione di generalizzazione fra un insieme di classi definisce un **grafo di ereditarietà che è un grafo orientato aciclico**
 ![[Pasted image 20260316102643.png]]
+Le classi foglia sono classi dove nessun'altra classe eredita da quella
