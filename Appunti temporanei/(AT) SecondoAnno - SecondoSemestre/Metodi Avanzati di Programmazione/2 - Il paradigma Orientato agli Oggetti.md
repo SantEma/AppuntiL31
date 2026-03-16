@@ -315,3 +315,9 @@ Per cercare di gestire queste situazioni esistono dei criteri euristici:
 2. Il secondo criterio fa leva sul concetto di "modularità", proponendo di scomporre il grafo di ereditarietà in sottomoduli separati che rappresentano diversi punti di vista concettuali sull'oggetto. In questo caso, le linearizzazioni non devono mai mescolare i sottografi associati a moduli diversi, sebbene anche questo approccio
    ![[Pasted image 20260316114158.png]]
 ### Visibilità protetta
+La relazione di ereditarietà nel paradigma orientato agli oggetti introduce un livello di visibilità specifico e intermedio tra quello pubblico e quello privato, denominato **visibilità protetta (protected)**
+
+Quando una caratteristica di una classe, che sia essa un attributo o un metodo, viene dichiarata con visibilità protetta, diviene accessibile non solo all'interno della classe stessa e a tutte le altre classi appartenenti al medesimo package, ma anche a tutte le sue classi discendenti
+
+> [!NOTE] Title
+> Contents
