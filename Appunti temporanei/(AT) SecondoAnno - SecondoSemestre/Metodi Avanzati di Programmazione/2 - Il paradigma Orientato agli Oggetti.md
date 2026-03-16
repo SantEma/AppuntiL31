@@ -300,7 +300,18 @@ La rappresentazione della relazione di generalizzazione fra un insieme di classi
 ![[Pasted image 20260316102643.png]]
 Le classi foglia sono classi dove nessun'altra classe eredita.
 #### Ereditarietà singola
-Nell'ereditarietà singola, o semplice, ogni classe possiede una sola superclasse diretta, rendendo di fatto il grafo di ereditarietà un vero e proprio albero. Il grafo di ereditarietà per una specifica classe si presenta come una catena lineare di antenati, dove gli elementi sono ordinati secondo una chiara relazione di ordine totale[cite: 2053, 2054]. Quando il sistema deve determinare da quale classe venga ereditato un certo metodo (poniamo un metodo $m$), la risoluzione del problema è molto lineare. Il procedimento prevede prima la determinazione della catena degli antenati della classe e, successivamente, la ricerca della prima occorrenza della definizione o ridefinizione del metodo $m$, partendo dall'estremità inferiore della catena
+Nell'ereditarietà singola, o semplice, ogni classe possiede una sola superclasse diretta, rendendo di fatto il grafo di ereditarietà un vero e proprio albero. Il grafo di ereditarietà per una specifica classe si presenta come una catena lineare di antenati, dove gli elementi sono ordinati secondo una chiara relazione di ordine totale. Quando il sistema deve determinare da quale classe venga ereditato un certo metodo (poniamo un metodo $m$), la risoluzione del problema è molto lineare. Il procedimento prevede prima la determinazione della catena degli antenati della classe e, successivamente, la ricerca della prima occorrenza della definizione o ridefinizione del metodo $m$, partendo dall'estremità inferiore della catena
 #### Ereditarietà multipla
+Quando una classe ha più superclassi si parla di **ereditarietà multipla (multiple inheritance)**
 
+> [!example] Esempio di ereditarietà multipla
+> ![[Pasted image 20260316113956.png]]
+
+L'ereditarietà multipla introduce notevoli difficoltà concettuali e tecniche, specialmente quando un metodo è definito in diverse superclassi ed entrambe le definizioni risultano ereditabili per la sottoclasse, generando così un conflitto, infatti se due o più classi padre definiscono lo stesso metodo, le diverse linearizzazioni possibili del grafo (ad esempio valutare prima un ramo rispetto a un altro) non aiutano il compilatore a scegliere in modo univoco quale metodo debba essere effettivamente ereditato.
+
+Per cercare di gestire queste situazioni esistono dei criteri euristici: 
+1. Il primo di questi criteri si basa sulla "molteplicità dell'ereditarietà" e utilizza l'ordine logico in cui le superclassi sono state elencate al momento della dichiarazione per preferire una specifica linearizzazione del grafo rispetto a un'altra. Questo principio può essere in contraddizione con quello che indica di preferire l’eredità da classi più specifiche
+   ![[Pasted image 20260316114135.png]]
+2. Il secondo criterio fa leva sul concetto di "modularità", proponendo di scomporre il grafo di ereditarietà in sottomoduli separati che rappresentano diversi punti di vista concettuali sull'oggetto. In questo caso, le linearizzazioni non devono mai mescolare i sottografi associati a moduli diversi, sebbene anche questo approccio
+   ![[Pasted image 20260316114158.png]]
 ### Visibilità protetta
