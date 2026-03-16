@@ -133,7 +133,6 @@ UML consente di specificare i livelli di visibilità di attributi e metodi utili
 Con **molteplicità di classe** si intende il numero di istanze che essa può avere. Generalmente non si pone un limite, tuttavia in alcuni casi è necessario indicare che la classe può avere una sola istanza (classe singoletto, singleton class) o comunque un numero ben definito di istanze. UML impone che tale valore sia indicato in alto a destra nell’icona rappresentante la classe:
 ![[Pasted image 20260312130627.png]]
 #### Schema per la definizione di un attributo di una classe
-
 > [!info] Schema 
 > ![[Pasted image 20260316084003.png]]
 ##### Proprietà per gli attributi
@@ -143,13 +142,12 @@ In UML esistono tre proprietà predefinite che possono essere utilizzate con gli
 - **frozen**: il valore dell’attributo non può essere modificato dopo che l’oggetto è stato inizializzato (viene soltanto inizializzato con quei dati)
 
 Nel caso in cui la proprietà non viene specificata si sottintende che assume valore changeable
-#### Schema per la definizione di un operazione
+### Schema per la definizione di un operazione
 Ricordiamo che in UML si distingue **operazione** e **metodo**:
 - Una **operazione** è un servizio che può essere richiesto alla classe
 - Un **metodo** è un’implementazione del servizio
 
 In un operazione ci possono essere più implementazioni, il metodo è l'implementazione dell'operazione
-
 > [!info] Schema 
 > ![[Pasted image 20260316084609.png]]
 > È possibile nel passaggio di parametri avere un valore di default
@@ -161,3 +159,17 @@ Per le operazioni possiamo specificare diverse proprietà:
 - **sequential**: i chiamanti (callers) di questo oggetto devono coordinarsi affinchè solo uno alla volta richieda il servizio. Nel caso di sovrapposizione la semantica e l’integrità dell’oggetto **non sono garantite**, potrebbe corrompersi
 - **guarded**: simile al caso precedente, in ogni istante un solo chiamante può usufruire del servizio, tuttavia, in questo caso, la sequenzialità del servizio è gestita dalla classe proprietaria del servizio stesso (vedi synchronized in Java)
 - **concurrent**: la semantica e l’integrità dell’oggetto è garantita anche in caso di chiamate multiple
+### Classe attiva
+Un oggetto è **attivo** quando può generare thread concorrenti, una classe è attiva quando le sue istanze sono concorrenti con le altre.
+In UML vengono rappresentati così
+> [!info] Rappresentazione classe attiva
+> ![[Pasted image 20260316085731.png]]
+
+### Classi template
+Una **classe template** definisce una famiglia di classi parametrizzate (con parametro di tipo). Non è possibile usare direttamente una classe template. È necessario prima specificare il tipo (operazione di istanziazione). In Java, una classe template corrisponde a una classe generica.
+Queste classi template usano a generalizzare 
+
+> [!info] Rappresentazione UML
+> ![[Pasted image 20260316085905.png]]
+
+
