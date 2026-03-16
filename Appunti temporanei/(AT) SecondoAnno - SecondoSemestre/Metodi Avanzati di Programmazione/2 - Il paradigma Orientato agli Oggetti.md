@@ -299,3 +299,6 @@ La relazione di generalizzazione è **transitiva e antisimmetrica**, ossia:
 La rappresentazione della relazione di generalizzazione fra un insieme di classi definisce un **grafo di ereditarietà che è un grafo orientato aciclico**
 ![[Pasted image 20260316102643.png]]
 Le classi foglia sono classi dove nessun'altra classe eredita da quella
+
+[da finire fino a: Ereditarietà: la visibilità protetta]
+
