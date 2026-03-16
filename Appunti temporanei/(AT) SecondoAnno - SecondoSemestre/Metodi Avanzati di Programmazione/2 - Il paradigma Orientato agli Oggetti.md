@@ -191,3 +191,14 @@ Al fine di rendere il sistema altamente riutilizzabile, il lavoro di individuazi
 3. Fornire ad ogni classe gli attributi e le operazioni di cui ha bisogno per eseguire tali responsabilità
 
 L’individuazione delle classi dipende dunque sia dalla realtà che si vuole modellare, sia dalla necessità di individuare il giusto bilanciamento dei compiti da assegnare, al fine di rendere il sistema software altamente mantenibile e riutilizzabile
+
+### Stereotipi di classi
+Alcune metodologie suggeriscono l’individuazione e la classificazione delle classi secondo i seguenti gruppi:
+- Classi Entità: servono per la modellazione di dati
+- Classi di Confine: [boh]
+- Classi di controllo: sono le classi che permettono i calcoli e operazioni sulle entità, quindi modificano i dati
+
+Tale suddivisione, modellata mediante l’utilizzo di stereotipi, permette il partizionamento del sistema in tre componenti differenti:
+- Dominio
+- Vista
+- Controllo
