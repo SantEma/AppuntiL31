@@ -248,9 +248,16 @@ In Smalltalk e Java, un metodo definito in una (sotto-)classe può invocare una 
 
 Nell’ereditarietà per variazione funzionale, la visibilità (pubblica, protetta, privata, package) degli attributi e delle operazioni ereditate dalla superclasse non è modificata, inoltre la variazione funzionale attiene solo le operazioni di accesso e trasformazione di una classe, non andando a modificare i costruttori della superclasse originaria.
 #### Per restrizione
-Nella ereditarietà per restrizione, le istanze di una sottoclasse soddisfano vincoli che non sono necessariamente soddisfatti da istanze della superclasse.0
+Nella ereditarietà per restrizione, le istanze di una sottoclasse soddisfano vincoli che non sono necessariamente soddisfatti da istanze della superclasse.
+
 > [!example] Esempio per restrizione
 > ![[Pasted image 20260316100703.png]]
+#### Combinazioni di ereditarietà
+Una classe può combinare diversi tipi di ereditarietà
+
+> [!example] Esempio di ereditarietà combinata
+> Contents
+
 ### Principio di sostituibilità (o generalizzazione)
 > [!info] Definizione di principio di sostituibilità (o generalizzazione)
 > Data una dichiarazione di una variabile o di un parametro il cui tipo è dichiarato come $X$, una qualunque istanza di una classe che è discendente di $X$ può essere usato come valore effettivo senza violare la semantica della dichiarazione e il suo uso
@@ -273,7 +280,6 @@ In questa ereditarietà, la sottoclasse utilizza il codice della superclasse (de
 > ![[Pasted image 20260316101828.png]]
 > ![[Pasted image 20260316101835.png]]
 Pertanto **l’ereditarietà di implementazione comporta la modifica alla visibilità delle caratteristiche ereditate**
-
 
 Questo tipo di ereditarietà è supportata su alcuni linguaggi di programmazione come C++ o Ada-95.
 
