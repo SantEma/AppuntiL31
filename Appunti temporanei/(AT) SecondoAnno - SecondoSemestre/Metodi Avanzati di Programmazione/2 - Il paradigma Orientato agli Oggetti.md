@@ -238,3 +238,8 @@ Ogni richiesta di esecuzione del metodo ridefinito da parte di un oggetto della 
 > Nella classe `ContoCorrente` il metodo `preleva` controlla che il conto non vada in rosso
 > Il metodo `preleva` della classe `ContoCorrenteConFido` ridefinisce quello della superclasse per controllare che il prelievo non vada oltre il fido concesso
 
+**La ridefinizione non è incrementale**, quindi i cambiamenti nel metodo originale devono essere riportati anche nei metodi ridefiniti, ma non esiste alcuna garanzia che questo accada e si possono introdurre degli errori.
+Per mitigare gli effetti di questo problema, si può adottare qualche accorgimento nella realizzazione dei metodi per i quali si riconosce già in fase di progetto una incrementalità al cambiamento, ad esempio il metodo di una sottoclasse deve prevedere, nella sua realizzazione, l’invocazione del metodo della superclasse, e nel caso di risposta positiva, aggiungere ulteriori controlli
+
+> [!example] Esempio di fix
+> ![[Pasted image 20260316093725.png]]
