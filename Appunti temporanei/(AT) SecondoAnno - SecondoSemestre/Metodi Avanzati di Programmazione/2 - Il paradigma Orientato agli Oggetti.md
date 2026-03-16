@@ -300,7 +300,9 @@ La rappresentazione della relazione di generalizzazione fra un insieme di classi
 ![[Pasted image 20260316102643.png]]
 Le classi foglia sono classi dove nessun'altra classe eredita.
 #### Ereditarietà singola
-Nell'ereditarietà singola, o semplice, ogni classe possiede una sola superclasse diretta, rendendo di fatto il grafo di ereditarietà un vero e proprio albero. Il grafo di ereditarietà per una specifica classe si presenta come una catena lineare di antenati, dove gli elementi sono ordinati secondo una chiara relazione di ordine totale. Quando il sistema deve determinare da quale classe venga ereditato un certo metodo (poniamo un metodo $m$), la risoluzione del problema è molto lineare. Il procedimento prevede prima la determinazione della catena degli antenati della classe e, successivamente, la ricerca della prima occorrenza della definizione o ridefinizione del metodo $m$, partendo dall'estremità inferiore della catena
+Nell'ereditarietà singola, o semplice, ogni classe possiede una sola superclasse diretta, rendendo di fatto il grafo di ereditarietà un vero e proprio albero. 
+Il grafo di ereditarietà per una specifica classe si presenta come una catena lineare di antenati, dove gli elementi sono ordinati secondo una chiara relazione di ordine totale (come quello che vediamo sopra). 
+Quando il sistema deve determinare da quale classe venga ereditato un certo metodo (poniamo un metodo $m$), la risoluzione del problema è molto lineare. Il procedimento prevede prima la determinazione della catena degli antenati della classe e, successivamente, la ricerca della prima occorrenza della definizione o ridefinizione del metodo $m$, partendo dall'estremità inferiore della catena
 #### Ereditarietà multipla
 Quando una classe ha più superclassi si parla di **ereditarietà multipla (multiple inheritance)**
 
