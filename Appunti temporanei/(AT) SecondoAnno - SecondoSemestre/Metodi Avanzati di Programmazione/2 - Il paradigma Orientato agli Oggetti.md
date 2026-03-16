@@ -152,5 +152,12 @@ In un operazione ci possono essere più implementazioni, il metodo è l'implemen
 
 > [!info] Schema 
 > ![[Pasted image 20260316084609.png]]
+> È possibile nel passaggio di parametri avere un valore di default
+>
 
-
+Per le operazioni possiamo specificare diverse proprietà:
+- **isQuery**: l’esecuzione dell’operazione lascia lo stato del sistema immutato, un’operazione con tale proprietà è quindi priva di **side-effect**
+- **leaf**: l’operazione non può essere più specializzata (overriding) nelle sottoclassi (vedi final in Java)
+- **sequential**: i chiamanti (callers) di questo oggetto devono coordinarsi affinchè solo uno alla volta richieda il servizio. Nel caso di sovrapposizione la semantica e l’integrità dell’oggetto **non sono garantite**, potrebbe corrompersi
+- **guarded**: simile al caso precedente, in ogni istante un solo chiamante può usufruire del servizio, tuttavia, in questo caso, la sequenzialità del servizio è gestita dalla classe proprietaria del servizio stesso (vedi synchronized in Java)
+- **concurrent**: la semantica e l’integrità dell’oggetto è garantita anche in caso di chiamate multiple
