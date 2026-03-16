@@ -1,4 +1,4 @@
-0## Introduzione
+## Introduzione
 Un difetto fondamentale della programmazione imperativa è che **le variabili globali sono potenzialmente accessibili da ogni parte del programma**. I grandi programmi che permettono l’accesso alle variabili globali tendono ad essere ingestibili, la ragione è che nessun modulo che accede ad una variabile globale può essere sviluppato e compreso indipendentemente da altri moduli che pure accedono alla medesima variabile
 
 Il rimedio fu ovviamente **l'information hiding**, ossia quello di incapsulare in un modulo ogni variabile globale insieme a un gruppo di operazioni autorizzate ad accedervi, gli altri moduli non possono accedervi direttamente ma indirettamente chiamando queste operazioni. Il loro nome era proprio quello di **oggetti**
@@ -195,7 +195,7 @@ L’individuazione delle classi dipende dunque sia dalla realtà che si vuole mo
 ### Stereotipi di classi
 Alcune metodologie suggeriscono l’individuazione e la classificazione delle classi secondo i seguenti gruppi:
 - Classi entità: servono per la modellazione di dati
-- Classi di confine: [boh]
+- Classi di confine: usate per l'interazione tra vari classi
 - Classi di controllo: sono le classi che permettono i calcoli e operazioni sulle entità, quindi modificano i dati
 
 Tale suddivisione, modellata mediante l’utilizzo di stereotipi, permette il partizionamento del sistema in tre componenti differenti:
@@ -204,7 +204,7 @@ Tale suddivisione, modellata mediante l’utilizzo di stereotipi, permette il pa
 - Controllo
 
 ### Relazione Istance-of
-Fra un oggetto e una classe sussiste una relazione ‘instance of’ che specifica che un oggetto è una istanza di una classe, in UML sono rappresentate in questa maniera
+Fra un oggetto e una classe sussiste una relazione `instance of` che specifica che un oggetto è una istanza di una classe, in UML sono rappresentate in questa maniera
 
 > [!info] Rappresentazione Istance-of
 > ![[Pasted image 20260316092048.png]]
@@ -240,7 +240,6 @@ Ogni richiesta di esecuzione del metodo ridefinito da parte di un oggetto della 
 
 **La ridefinizione non è incrementale**, quindi i cambiamenti nel metodo originale devono essere riportati anche nei metodi ridefiniti, ma non esiste alcuna garanzia che questo accada e si possono introdurre degli errori.
 Per mitigare gli effetti di questo problema, si può adottare qualche accorgimento nella realizzazione dei metodi per i quali si riconosce già in fase di progetto una incrementalità al cambiamento, ad esempio il metodo di una sottoclasse deve prevedere, nella sua realizzazione, l’invocazione del metodo della superclasse, e nel caso di risposta positiva, aggiungere ulteriori controlli
-
 > [!example] Esempio di fix
 > ![[Pasted image 20260316093725.png]]
 
@@ -248,3 +247,15 @@ Per combinare, in un overriding, il metodo della superclasse con il codice speci
 In Smalltalk e Java, un metodo definito in una (sotto-)classe può invocare una operazione della superclasse facendo riferimento a super, come `super.prelevabile()`.
 
 Nell’ereditarietà per variazione funzionale, la visibilità (pubblica, protetta, privata, package) degli attributi e delle operazioni ereditate dalla superclasse non è modificata, inoltre la variazione funzionale attiene solo le operazioni di accesso e trasformazione di una classe, non andando a modificare i costruttori della superclasse originaria.
+#### Per restrizione
+Nella ereditarietà per restrizione, le istanze di una sottoclasse soddisfano vincoli che non sono necessariamente soddisfatti da istanze della superclasse.
+> [!example] Esempio per restrizione
+> ![[Pasted image 20260316100703.png]]
+### Principio di sostituibilità
+> [!info] Definizione di principio di sostituibilità
+> Data una dichiarazione di una variabile o di un parametro il cui tipo è dichiarato come $X$, una qualunque istanza di una classe che è discendente di $X$ può essere usato come valore effettivo senza violare la semantica della dichiarazione e il suo uso
+> In altri termini, **l'istanza di un discendente può essere sostituita all'istanza di un ascendente**
+
+La conseguenza del principio di sostituibilità è che una sottoclasse non può rimuovere o rinunciare a proprietà/metodi della superclasse, altrimenti una istanza della sottoclasse non sarà sostituibile in una situazione in cui si dichiara l’uso di istanze della superclasse. 
+In effetti, preservando la visibilità degli attributi e dei metodi ereditati, così come accade nelle tre forme di ereditarietà viste, si garantisce che gli oggetti della sottoclasse offrano quanto meno gli stessi servizi degli oggetti della superclasse (anche sei servizi potranno essere implementati diversamente, come accade nella variazione funzionale).
+**Pertanto il principio di sostituibilità (o polimorfismo di inclusione) è compatibile con l’ereditarietà per estensione, variazione funzionale e restrizione**
