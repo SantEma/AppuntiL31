@@ -319,5 +319,7 @@ La relazione di ereditarietà nel paradigma orientato agli oggetti introduce un 
 
 Quando una caratteristica di una classe, che sia essa un attributo o un metodo, viene dichiarata con visibilità protetta, diviene accessibile non solo all'interno della classe stessa e a tutte le altre classi appartenenti al medesimo package, ma anche a tutte le sue classi discendenti
 
-> [!NOTE] Title
-> Contents
+> [!example] Esempio di visibilità protetta
+> ![[Pasted image 20260316114456.png]]
+
+
