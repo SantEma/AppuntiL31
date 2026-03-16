@@ -133,7 +133,7 @@ UML consente di specificare i livelli di visibilità di attributi e metodi utili
 Con **molteplicità di classe** si intende il numero di istanze che essa può avere. Generalmente non si pone un limite, tuttavia in alcuni casi è necessario indicare che la classe può avere una sola istanza (classe singoletto, singleton class) o comunque un numero ben definito di istanze. UML impone che tale valore sia indicato in alto a destra nell’icona rappresentante la classe:
 ![[Pasted image 20260312130627.png]]
 #### Schema per la definizione di un attributo di una classe
-> [!info] Schema 
+> [!info] Schema definizione attributo
 > ![[Pasted image 20260316084003.png]]
 ##### Proprietà per gli attributi
 In UML esistono tre proprietà predefinite che possono essere utilizzate con gli attributi:
@@ -148,7 +148,7 @@ Ricordiamo che in UML si distingue **operazione** e **metodo**:
 - Un **metodo** è un’implementazione del servizio
 
 In un operazione ci possono essere più implementazioni, il metodo è l'implementazione dell'operazione
-> [!info] Schema 
+> [!info] Schema definizione operazione
 > ![[Pasted image 20260316084609.png]]
 > È possibile nel passaggio di parametri avere un valore di default
 >
@@ -194,11 +194,33 @@ L’individuazione delle classi dipende dunque sia dalla realtà che si vuole mo
 
 ### Stereotipi di classi
 Alcune metodologie suggeriscono l’individuazione e la classificazione delle classi secondo i seguenti gruppi:
-- Classi Entità: servono per la modellazione di dati
-- Classi di Confine: [boh]
+- Classi entità: servono per la modellazione di dati
+- Classi di confine: [boh]
 - Classi di controllo: sono le classi che permettono i calcoli e operazioni sulle entità, quindi modificano i dati
 
 Tale suddivisione, modellata mediante l’utilizzo di stereotipi, permette il partizionamento del sistema in tre componenti differenti:
 - Dominio
 - Vista
 - Controllo
+
+### Relazione Istance-of
+Fra un oggetto e una classe sussiste una relazione ‘instance of’ che specifica che un oggetto è una istanza di una classe, in UML sono rappresentate in questa maniera
+
+> [!info] Rappresentazione Istance-of
+> ![[Pasted image 20260316092048.png]]
+
+### Ereditarietà
+Nella progettazione e programmazione OO una relazione fondamentale è quella esistente fra le classi: **la relazione di ereditarietà** (inheritance).
+Una classe è considerata come un repertorio di conoscenze a partire dal quale è possibile definire altre classi più specifiche, che completano le conoscenze della loro classe madre.
+**Una sottoclasse** è dunque, una specializzazione della descrizione di una classe, detta la sua **superclasse**, della quale essa mutua (parte di) gli attributi e i metodi. Quando eredita una sottoclasse deve ereditare sempre le caratteristiche della superclasse
+
+Ci sono diverse forme di ereditarietà:
+#### Per estensione
+In questo caso la sottoclasse introduce delle caratteristiche (attributi e metodi) non presenti nella superclasse e non applicabili a istanze della superclasse.
+La visibilità (pubblica, protetta, privata, package) degli attributi e delle operazioni ereditate dalla superclasse non è modificata
+
+> [!info] Rappresentazione UML
+> ![[Pasted image 20260316092259.png]]
+> La rappresentazione della freccia è piena, non tratteggiata
+
+La specializzazione per estensione permette di sviluppare del codice estendibile
