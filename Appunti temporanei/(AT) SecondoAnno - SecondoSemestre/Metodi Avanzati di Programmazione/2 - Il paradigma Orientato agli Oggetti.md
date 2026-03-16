@@ -243,3 +243,8 @@ Per mitigare gli effetti di questo problema, si può adottare qualche accorgimen
 
 > [!example] Esempio di fix
 > ![[Pasted image 20260316093725.png]]
+
+Per combinare, in un overriding, il metodo della superclasse con il codice specifico della sottoclasse, i linguaggi di programmazione offrono diversi meccanismi
+In Smalltalk e Java, un metodo definito in una (sotto-)classe può invocare una operazione della superclasse facendo riferimento a super, come `super.prelevabile()`.
+
+Nell’ereditarietà per variazione funzionale, la visibilità (pubblica, protetta, privata, package) degli attributi e delle operazioni ereditate dalla superclasse non è modificata, inoltre la variazione funzionale attiene solo le operazioni di accesso e trasformazione di una classe, non andando a modificare i costruttori della superclasse originaria.
