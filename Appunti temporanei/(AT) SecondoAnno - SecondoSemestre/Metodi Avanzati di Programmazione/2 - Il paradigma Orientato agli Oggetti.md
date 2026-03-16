@@ -259,7 +259,7 @@ Una classe può combinare diversi tipi di ereditarietà
 > ![[Pasted image 20260316102445.png]]
 > Contents
 
-### Principio di sostituibilità (o generalizzazione)
+#### Principio di sostituibilità (o generalizzazione)
 > [!info] Definizione di principio di sostituibilità (o generalizzazione)
 > Data una dichiarazione di una variabile o di un parametro il cui tipo è dichiarato come $X$, una qualunque istanza di una classe che è discendente di $X$ può essere usato come valore effettivo senza violare la semantica della dichiarazione e il suo uso
 > In altri termini, **l'istanza di un discendente può essere sostituita all'istanza di un ascendente**
@@ -274,7 +274,7 @@ In effetti, preservando la visibilità degli attributi e dei metodi ereditati, c
 
 Nelle varie ereditarietà, la relazione di ereditarietà fra classi corrisponde a una relazione di **generalizzazione** (o "is_a"), perché ogni istanza di una classe derivata da una classe base va considerata come (è anche) una istanza della classe base.
 Ci sarebbe un tipo di ereditarietà che non rispetta questo principio
-#### Ereditarietà di implementazione
+##### Ereditarietà di implementazione
 In questa ereditarietà, la sottoclasse utilizza il codice della superclasse (definizioni di attributi e metodi) per implementare l’astrazione associata.
 
 > [!example] Esempio di ereditarietà di implementazione
