@@ -256,6 +256,7 @@ Nella ereditarietà per restrizione, le istanze di una sottoclasse soddisfano vi
 Una classe può combinare diversi tipi di ereditarietà
 
 > [!example] Esempio di ereditarietà combinata
+> ![[Pasted image 20260316102445.png]]
 > Contents
 
 ### Principio di sostituibilità (o generalizzazione)
@@ -290,4 +291,5 @@ In UML l’ereditarietà di implementazione è indicata utilizzando lo stesso si
 
 L’ereditarietà di implementazione quindi non è compatibile con il principio di sostituibilità.
 L’ereditarietà di implementazione permette un riuso parziale del codice, ma non è consigliata.
-
+#### Proprietà della relazione di generalizzazione
+La relazione di generalizzazione è **transitiva e antisimmetrica**, 
