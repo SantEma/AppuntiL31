@@ -136,5 +136,21 @@ Con **molteplicità di classe** si intende il numero di istanze che essa può av
 
 > [!info] Schema 
 > ![[Pasted image 20260316084003.png]]
+##### Proprietà per gli attributi
+In UML esistono tre proprietà predefinite che possono essere utilizzate con gli attributi:
+- **changeable**: non vi sono restrizioni sulla modificabilità dell’attributo
+- **addOnly**: per gli attributi con molteplicità maggiore di uno, i valori possono essere aggiunti, ma una volta creati, non possono più essere rimossi o modificati
+- **frozen**: il valore dell’attributo non può essere modificato dopo che l’oggetto è stato inizializzato (viene soltanto inizializzato con quei dati)
+
+Nel caso in cui la proprietà non viene specificata si sottintende che assume valore changeable
+#### Schema per la definizione di un operazione
+Ricordiamo che in UML si distingue **operazione** e **metodo**:
+- Una **operazione** è un servizio che può essere richiesto alla classe
+- Un **metodo** è un’implementazione del servizio
+
+In un operazione ci possono essere più implementazioni, il metodo è l'implementazione dell'operazione
+
+> [!info] Schema 
+> ![[Pasted image 20260316084609.png]]
 
 
