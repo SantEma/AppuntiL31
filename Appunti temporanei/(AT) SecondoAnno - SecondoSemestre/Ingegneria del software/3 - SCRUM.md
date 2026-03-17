@@ -93,4 +93,4 @@ Quando è affiancato dal product owner e al team di sviluppo svolge diversi ruol
 - Aiuta ad ordinare gli elementi del Product Backlog per massimizzare il valore
 ### Scrum of Scrums
 Sono simili ai daily meeting, solo che questi ultimi si svolgono due volte ogni settimana.
-Lo scopo di questi meeting è **coordinare più team**, quando sono tanti, tra di loro. Ogni team sceglie il proprio membro da mandare alle Scrum of Scrums per identificarli.
+Lo scopo di questi meeting è **coordinare più team**, quando sono tanti, tra di loro. Ogni team sceglie il proprio membro da mandare alle Scrum of Scrums per identificarli. 
