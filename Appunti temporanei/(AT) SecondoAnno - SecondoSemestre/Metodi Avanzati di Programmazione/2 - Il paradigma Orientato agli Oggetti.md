@@ -341,3 +341,16 @@ La dichiarazione di una classe foglia permette anche la generazione di codice ot
 Un interfaccia è una collezione di metodi senza implementazione e attributi (ma può contenerne statici).
  
 Una interfaccia è simile a una classe astratta i cui metodi sono tutti astratti e non dispone di attributi.
+> [!info] Rappresentazione UML intefacce
+> ![[Pasted image 20260318113240.png]]
+
+#### Relazione di realizzazione
+Una o più classi possono realizzare/implementare le operazioni indicate in una interfaccia. La relazione che si stabilisce fra una interfaccia e una classe che la implementa è detta **relazione di realizzazione**. In UML è indicata con una freccia tratteggiata
+
+> [!info] Rappresentazione UML relazione di realizzazione
+> ![[Pasted image 20260318113356.png]]
+
+La relazione di realizzazione si presenta come un valido strumento per scindere la specifica di un “contratto” (cosa una classe deve implementare) e la sua implementazione (come si rendono i servizi del contratto)
+
+> [!example] Esempio di relazione di realizzazione
+> ![[Pasted image 20260318113456.png]]
