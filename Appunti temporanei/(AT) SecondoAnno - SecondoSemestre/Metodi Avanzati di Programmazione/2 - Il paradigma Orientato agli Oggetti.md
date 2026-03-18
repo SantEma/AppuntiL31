@@ -326,7 +326,7 @@ Quando una caratteristica di una classe, che sia essa un attributo o un metodo, 
 ### Classi astratte
 È possibile che esistano classi per le quali non è possibile generare delle istanze (**classi astratte**).
 Una classe astratta può essere una classe non completamente specificata, in particolare non è definito il metodo corrispondente a una operazione.
-Le classi astratte non possono essere richiamate e non vi si potrà mai creare oggetti a partire da queste ultime
+Le classi astratte non possono essere richiamate e non vi si potrà mai creare oggetti a partire da queste ultime.
 
 > [!example] Esempio di classe astratta
 > ![[Pasted image 20260318111431.png]]
@@ -337,3 +337,7 @@ Le classi astratte sono strumenti per fattorizzare proprietà comuni tra classi 
 Una classe è detta **finale (final, o foglia)**  quando non può essere ulteriormente specializzata, e quindi non può essere modificata. Da queste classi non è possibile ereditare, ed è fatto per ragioni di affidabilità.
 
 La dichiarazione di una classe foglia permette anche la generazione di codice ottimizzato in quanto facilita l’espansione in linea del codice (impossibile nel caso di metodi sovrascribili nelle sottoclassi)
+### Intefacce
+Un interfaccia è una collezione di metodi senza implementazione e attributi (ma può contenerne statici).
+ 
+Una interfaccia è simile a una classe astratta i cui metodi sono tutti astratti e non dispone di attributi.
