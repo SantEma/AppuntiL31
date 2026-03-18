@@ -328,9 +328,11 @@ Quando una caratteristica di una classe, che sia essa un attributo o un metodo, 
 ### Classi astratte
 È possibile che esistano classi per le quali non è possibile generare delle istanze (**classi astratte**).
 Una classe astratta può essere una classe non completamente specificata, in particolare non è definito il metodo corrispondente a una operazione.
-
+Le classi astratte non possono essere richiamate e non vi si potrà mai creare oggetti a partire da queste ultime
 
 > [!example] Esempio di classe astratta
 > ![[Pasted image 20260318111431.png]]
+> ![[Pasted image 20260318111826.png]]
 
-Le classi astratte sono strumenti per fattorizzare proprietà comuni tra classi simili e poterle organizzare in una gerarchia di ereditarietà, ossia fungono da **serbatoi di ereditarietà**, quindi mettono insieme diverse classi con proprietà uguali e comuni ma implementazioni diverse
+
+Le classi astratte sono strumenti per fattorizzare proprietà comuni tra classi simili e poterle organizzare in una gerarchia di ereditarietà, ossia fungono da **serbatoi di ereditarietà**, mettendo insieme diverse classi con proprietà uguali e comuni ma implementazioni diverse
