@@ -344,6 +344,11 @@ Una interfaccia è simile a una classe astratta i cui metodi sono tutti astratti
 > [!info] Rappresentazione UML intefacce
 > ![[Pasted image 20260318113240.png]]
 
+Le interfacce servono a disaccoppiare la definizione delle operazioni dalla loro implementazione. Per poter usare un certo oggetto è sufficiente conoscere la sua interfaccia: non serve conoscere l’implementazione
+
+> [!example] Esempio interfaccia
+> ![[Pasted image 20260318114521.png]]
+
 #### Relazione di realizzazione
 Una o più classi possono realizzare/implementare le operazioni indicate in una interfaccia. La relazione che si stabilisce fra una interfaccia e una classe che la implementa è detta **relazione di realizzazione**. In UML è indicata con una freccia tratteggiata
 
@@ -354,3 +359,22 @@ La relazione di realizzazione si presenta come un valido strumento per scindere 
 
 > [!example] Esempio di relazione di realizzazione
 > ![[Pasted image 20260318113456.png]]
+#### Ereditarietà
+**Anche le interfacce possono ereditare da altre interfacce**, poiché non ci sono implementazioni, la relazione di ereditarietà è naturalmente una relazione di generalizzazione “is_a”.
+
+> [!example] Esempio di interfacce 
+> Contents
+![[Pasted image 20260318114653.png]]
+
+Poiché non si considerano le implementazioni delle operazioni, l’ereditarietà multipla su interfacce non pone problemi di conflitto di realizzazione, per questo alcuni linguaggi di programmazione, come Java, permettono l’ereditarietà singola sulle classi (in quanto specificano anche le implementazioni) mentre permettono l’ereditarietà multipla sulle interfacce. Questo distingue le classi astratte dalle interfacce.
+#### Relazione di più interfacce
+Poiché non possono sorgere problemi di conflitto di realizzazione, è permesso a una classe di realizzare più interfacce, per di più non correlate da una relazione di generalizzazione.
+
+> [!example] Esempio di relazione di più interfacce
+> ![[Pasted image 20260318114814.png]]
+> In questo modo tutto il codice che utilizza Candidate e Employee può essere utilizzato su oggetti di classe Person.
+#### Realizzazioni multiple di una interfaccia
+Più classi possono implementare la stessa interfaccia, è il caso una interfaccia definita per dati astratti molto utilizzati nello sviluppo del software, come pile, code, liste, alberi e grafi, per i quali sono possibili molteplici realizzazioni
+
+> [!example] Esempio di realizzazione multiple di una interfaccia
+> ![[Pasted image 20260318114924.png]]
