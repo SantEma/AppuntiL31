@@ -362,8 +362,7 @@ La relazione di realizzazione si presenta come un valido strumento per scindere 
 #### Ereditarietà
 **Anche le interfacce possono ereditare da altre interfacce**, poiché non ci sono implementazioni, la relazione di ereditarietà è naturalmente una relazione di generalizzazione “is_a”.
 
-> [!example] Esempio di interfacce 
-> Contents
+> [!example] Esempio di interfacce
 ![[Pasted image 20260318114653.png]]
 
 Poiché non si considerano le implementazioni delle operazioni, l’ereditarietà multipla su interfacce non pone problemi di conflitto di realizzazione, per questo alcuni linguaggi di programmazione, come Java, permettono l’ereditarietà singola sulle classi (in quanto specificano anche le implementazioni) mentre permettono l’ereditarietà multipla sulle interfacce. Questo distingue le classi astratte dalle interfacce.
