@@ -252,4 +252,13 @@ Il for-each **non garantisce nessun ordinamento**, serve soltanto a visitare que
 ### Dichiarazione degli attributi
 [da inserire]
 ### Metodi
+#### Dichiarazione
+[da inserire]
+#### Nome
+[da inserire]
+#### Overloading
+[da inserire]
+#### Parametri
+[da inserire]
+#### Costruttori
 [da inserire]
