@@ -56,7 +56,7 @@ La riga `System.out.println("Ciao mondo!")`è composta da 3 elementi fondamental
 - `System`, che è una delle librerie **core** di Java
 - `out` è un suo attributo (in questo caso un oggetto PrintStream)
 - `println` è un metodo della classe PrintStream che permette di scrivere su un dispositivo di output
-## Le Variabili 
+## Le variabili 
 Le variabili in Java ricoprono il ruolo fondamentale di descrivere lo stato di un oggetto esse possiedono sempre:
 - Un tipo;
 - Un nome identificativo;
@@ -164,6 +164,71 @@ Gli operatori eseguono delle operazioni da 1 a 3 argomenti e restituiscono un va
 
 > [!info] Tabella operatori 
 > ![[Pasted image 20260319112938.png]]
-### Operatori aritmetici
 
+Alcune considerazioni da fare sono:
+- **unary** permette di negare un numero binario
+- **shift** shifta i bit in un numero
+- **relational**: con
+- **equality**: i doppi uguale son particolari, con i tipi primitivi funzionano nella classica maniera, mentre nel confronto di oggetti funzionano solo se questi ultimi hanno lo stesso OID (Object ID)
+### Operatori aritmetici
+> [!info] Tabella degli operatori aritmetici
+> ![[Pasted image 20260319113654.png]]
+
+È possibile combinare assegnazione ed operatori aritmetici, per esempio:
+```java
+x += 1; è equivalente a x = x + 1; 
+x *= 2; è equivalente a x = x * 2;
+```
+L'operatore `+` può essere utilizzato per concatenare le stringhe:
+```java
+String a=‘’Hello ‘’; String b=‘’ world!’’; String msg = a + b; (‘’Hello world!’’)
+```
 ### Operatori unari
+> [!info] Tabella deglio operatori unari
+> ![[Pasted image 20260319113859.png]]
+
+### Operatori uguaglianza e relazionali
+[da inserire]
+### Operatori condizionali
+[da inserire]
+In Java le espressioni sono valutate solo se necessario, per esempio se ci sono OR valuterà soltanto una e, se questa è vera, le altre verranno scartate a prescindere (in altri linguaggi questo non succede)
+### Operatore 'istanceof'
+instanceof è un particolare operatore per stabile se un oggetto è istanza di una particolare classe e restituisce un booleano.
+> [!example] Esempio di istanceof
+> ```java
+> String s = ‘’sono una stringa’’; 
+> boolean t = s instanceof String; 
+> boolean f = s instanceof Double
+> ```
+### Bitwise e bitshift
+[da inserire]
+### Espressioni
+[da inserire]
+### Statement
+[da inserire]
+### Blocchi
+I blocchi sono gruppi di istruzioni racchiusi tra parentesi graffe
+```java
+if (condition) { // begin block 1 System.out.println("Condition is true."); } // end block one else { // begin block 2 System.out.println("Condition is false."); } // end block 2
+``` 
+## Controllo del flusso
+### if-then e if-then-else
+[da inserire]
+### if-else annidati
+[da inserire]
+### Switch
+[da inserire]
+### While
+[da inserire]
+### Do while
+[da inserire]
+### for
+[da inserire]
+### for, Array, Collection
+[da inserire]
+### break
+[da inserire]
+### continue
+[da inserire]
+### return
+[da inserire]
