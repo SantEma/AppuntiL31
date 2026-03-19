@@ -1,2 +1,2 @@
 # Introduzione
-[da finire]
+[mettere Introduzione a Java] e [Stringhe e numeri]
