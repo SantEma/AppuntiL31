@@ -244,3 +244,4 @@ Il for-each **non garantisce nessun ordinamento**, serve soltanto a visitare que
 [da inserire]
 ### return
 [da inserire]
+## Classi
