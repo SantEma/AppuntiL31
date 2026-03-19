@@ -224,7 +224,7 @@ if (condition) { // begin block 1 System.out.println("Condition is true."); } //
 [da inserire]
 ### for
 [da inserire]
-### for, Array, Collection
+### for, Array, Collection (for each)
 Il for è spesso utilizzato per iterare sugli oggetti di un Array o di una Collection, in questo caso esiste una forma compatta (**for-each**)
 
 > [!example] Esempio for-each
