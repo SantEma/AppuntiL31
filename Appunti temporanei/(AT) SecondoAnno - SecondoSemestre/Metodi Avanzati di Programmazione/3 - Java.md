@@ -165,3 +165,5 @@ Gli operatori eseguono delle operazioni da 1 a 3 argomenti e restituiscono un va
 > [!info] Tabella operatori 
 > ![[Pasted image 20260319112938.png]]
 ### Operatori aritmetici
+
+### Operatori unari
