@@ -245,3 +245,11 @@ Il for-each **non garantisce nessun ordinamento**, serve soltanto a visitare que
 ### return
 [da inserire]
 ## Classi
+### Dichiarazione di una classe
+[da inserire]
+### Variabili all'interno
+[da inserire]
+### Dichiarazione degli attributi
+[da inserire]
+### Metodi
+[da inserire]
