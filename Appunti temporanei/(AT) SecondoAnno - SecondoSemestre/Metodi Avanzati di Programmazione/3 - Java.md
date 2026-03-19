@@ -21,10 +21,9 @@ Poiché nel mondo reale moltissimi oggetti condividono delle caratteristiche int
 > [!example] Esempio di classe
 > ![[Pasted image 20260319101544.png]]
 
-L'ereditarietà è un meccanismo estremamente potente che permette di rappresentare le gerarchie tassonomiche, consentendo a una determinata classe di ereditare in blocco gli attributi e i metodi di un'altra classe genitore. 
+L'ereditarietà è un meccanismo estremamente potente che permette di rappresentare le gerarchie tra classi, consentendo a una determinata classe di ereditare in blocco gli attributi e i metodi di un'altra classe genitore. 
 
-> [!example] Esempio di ereditarietà
-> 
+> [!example] Esempio di ereditarietà 
 > Riprendendo l'esempio di prima, classi più specifiche come le BMX, le Mountain Bike e le City Bike ereditano tutte le caratteristiche di base di una Bicicletta generica, aggiungendo poi i propri attributi e metodi specializzati. 
 > ![[Pasted image 20260319101107.png]]
 
