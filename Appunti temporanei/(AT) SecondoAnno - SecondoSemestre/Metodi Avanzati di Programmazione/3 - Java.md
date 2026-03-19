@@ -266,3 +266,5 @@ Il for-each **non garantisce nessun ordinamento**, serve soltanto a visitare que
 [da inserire]
 #### Oggetti
 [da inserire]
+#### Numero arbitrario di argomenti
+#### Metodi static
