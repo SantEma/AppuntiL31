@@ -262,4 +262,7 @@ Il for-each **non garantisce nessun ordinamento**, serve soltanto a visitare que
 [da inserire]
 #### Costruttori
 [da inserire]
+##### Istruzione 'this'
+[da inserire]
 #### Oggetti
+[da inserire]
