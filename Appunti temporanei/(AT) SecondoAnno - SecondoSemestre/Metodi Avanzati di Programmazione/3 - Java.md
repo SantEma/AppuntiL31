@@ -17,16 +17,22 @@ L'adozione di questo paradigma porta numerosi e importanti vantaggi:
 - Facilita il riutilizzo del codice, consentendo di estendere o sostituire facilmente oggetti scritti da altri sviluppatori.
 
 ## Classi, Ereditarietà e Package
-Poiché nel mondo reale moltissimi oggetti condividono delle caratteristiche intrinseche, nella programmazione essi vengono raggruppati in classi che ne definiscono il funzionamento e le peculiarità comuni, rendendo quindi i singoli oggetti istanze fisiche e operative di tali classi. 
+Poiché nel mondo reale moltissimi oggetti condividono delle caratteristiche intrinseche, nella programmazione essi vengono raggruppati in **classi** che ne definiscono il funzionamento e le peculiarità comuni, rendendo quindi i singoli oggetti istanze fisiche e operative di tali classi.
+> [!example] Esempio di classe
+> ![[Pasted image 20260319101544.png]]
 
-L'ereditarietà è un meccanismo estremamente potente che permette di rappresentare le gerarchie tassonomiche, consentendo a una determinata classe di ereditare in blocco gli attributi e i metodi di un'altra classe genitore[: 164, 165, 174]. 
+L'ereditarietà è un meccanismo estremamente potente che permette di rappresentare le gerarchie tassonomiche, consentendo a una determinata classe di ereditare in blocco gli attributi e i metodi di un'altra classe genitore. 
 
 > [!example] Esempio di ereditarietà
 > 
-> Riprendendo l'esempio di prima, classi più specifiche come le BMX, le Mountain Bike e le City Bike ereditano tutte le caratteristiche di base di una Bicicletta generica, aggiungendo poi i propri attributi e metodi specializzati[: 160, 161, 162, 171]. 
+> Riprendendo l'esempio di prima, classi più specifiche come le BMX, le Mountain Bike e le City Bike ereditano tutte le caratteristiche di base di una Bicicletta generica, aggiungendo poi i propri attributi e metodi specializzati. 
 > ![[Pasted image 20260319101107.png]]
 
-Per gestire l'organizzazione di progetti complessi, Java permette di strutturare le classi all'interno di specifiche cartelle separate chiamate package, le quali supportano la creazione di ulteriori sottocartelle per definire gerarchie annidate[: 176, 177, 178, 179, 180]. Il percorso completo e sequenziale dei package necessari per individuare univocamente una classe prende il nome formale di namespace[: 181].
+Per gestire l'organizzazione di progetti complessi, Java permette di strutturare le classi all'interno di specifiche cartelle separate chiamate **package**, le quali supportano la creazione di ulteriori sottocartelle per definire gerarchie annidate. Il percorso completo e sequenziale dei package necessari per individuare univocamente una classe prende il nome formale di **namespace**
+
+> [!example] Rappresentazione grafica di package e namespace sulle biciclette
+> ![[Pasted image 20260319101433.png]]
+
 
 ## Le Variabili in JAVA e le relative convenzioni
 Le variabili in Java ricoprono il ruolo fondamentale di descrivere lo stato di un oggetto; esse possiedono sempre un tipo, un nome identificativo e memorizzano un valore coerente con il tipo specificato in fase di dichiarazione[: 8, 9, 10]. È opportuno prestare attenzione alla terminologia, poiché in Java i termini "variabile" e "field" (o attributo) vengono spesso utilizzati in maniera interscambiabile, generando a volte una lieve confusione[: 11]. Nel linguaggio esistono diverse categorie di variabili: le variabili delle istanze (non statiche), in cui ogni singolo oggetto conserva il suo stato in modo indipendente; le variabili delle classi (statiche), che risultano condivise e identiche per tutte le istanze di una specifica classe; le variabili locali, che vengono utilizzate e risultano accessibili esclusivamente all'interno del metodo in cui sono dichiarate; e infine i parametri, che rappresentano i valori passati al momento della chiamata di un metodo[: 15, 16, 17, 18, 19]. Per quanto riguarda i nomi identificativi, il linguaggio impone che siano case-sensitive, che inizino rigorosamente con una lettera o con il simbolo \$ e che possano contenere numeri al loro interno, incoraggiando comunque l'adozione di nomenclature che siano sempre chiare e auto-esplicative[: 22, 23, 24, 25]. Le convenzioni comunemente accettate prevedono che le costanti e le variabili statiche debbano essere scritte interamente a lettere maiuscole, mentre per i nomi composti da più parole si adotta lo stile in cui la prima lettera di ogni nuova parola successiva alla prima viene scritta in maiuscolo[: 27, 28]. È inoltre una regola sintattica imesempioprescindibile che in Java tutte le variabili debbano essere esplicitamente dichiarate prima di poter essere utilizzate[: 31].
