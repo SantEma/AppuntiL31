@@ -225,7 +225,7 @@ if (condition) { // begin block 1 System.out.println("Condition is true."); } //
 ### for
 [da inserire]
 ### for, Array, Collection
-Il for è spesso utilizzato per iterare sugli oggetti di un Array o di una Collection, in questo caso esiste una forma compatta (for-each)
+Il for è spesso utilizzato per iterare sugli oggetti di un Array o di una Collection, in questo caso esiste una forma compatta (**for-each**)
 
 > [!example] Esempio for-each
 > ```java
@@ -237,6 +237,7 @@ Il for è spesso utilizzato per iterare sugli oggetti di un Array o di una Colle
 > }
 > ``` 
 
+Il for-each **non garantisce nessun ordinamento**, serve soltanto a visitare quello presente all'interno del contenitore
 ### break
 [da inserire]
 ### continue
