@@ -125,3 +125,43 @@ All'interno dei testi è inoltre possibile avvalersi di speciali sequenze di esc
 
 \’’, \’, \\: doppio apice, singolo apice, backslash
 ```
+## Array
+L'array è un **oggetto** che contiene un numero finito di oggetti (o tipi primitivi) dello stesso tipo.
+Ha una lunghezza fissa definita al momento della creazione, ogni suo elemento viene chiamato **elemento** ed è possibile accederne con l'indice
+```java
+Dichiarazione di un array: float[] v;
+Inizializzazione: float[] v=new float[100];
+Assegnazione: v[3]=1.3;
+Dichiarazione e inizializzazione contemporanea: int[] a = {10, 34, 21}; 
+Array multidimensionali: double[][] m; 
+```
+
+Quando si dichiara un array inizializzato, questo avrà dimensioni uguali a quanti elementi son stati inizializzati
+### Copia di un array
+La classe `System` mette a disposizione il metodo `arraycopy` per copiare degli array
+```java
+arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
+```
+
+È composto da:
+- **src**: array sorgente
+- **srcPos**: posizione di inizio in src
+- **dest**: array di destinazione
+- **destPos**: posizione di inizio in dest
+- **length**: numero di elementi da copiare
+
+> [!example] Esempio di copia di array
+> ![[Pasted image 20260319112406.png]]
+### Manipolazione di array
+La classe Arrays mette a disposizione un serie di metodi statici per manipolare gli array, la documentazione è presente [qui](http://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html), ma riportiamo comunque alcuni metodi come:
+- **copyOfRange**: è la copia di array
+- **fill**: riempimento di array
+- **equals**: confronto tra due array
+- **search**: ricerca di un elemento 
+- **sort**: ordinamento crescente
+## Operatori
+Gli operatori eseguono delle operazioni da 1 a 3 argomenti e restituiscono un valore. Gli operatori con stessa priorità son eseguiti da sinistra verso destra, **tranne per le operazioni di assegnamento**
+
+> [!info] Tabella operatori 
+> ![[Pasted image 20260319112938.png]]
+### Operatori aritmetici
