@@ -45,3 +45,4 @@ L'unico vero svantaggio di questo sistema è la curva di apprendimento inizialme
 > [!info] Schema fasi di modifiche nel computer locale
 > ![[Pasted image 20260320125038.png]]
 
+[da completare]
