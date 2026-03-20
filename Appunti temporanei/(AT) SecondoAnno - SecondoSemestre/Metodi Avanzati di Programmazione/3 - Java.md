@@ -186,7 +186,6 @@ String a=‘’Hello ‘’; String b=‘’ world!’’; String msg = a + b; (
 ### Operatori unari
 > [!info] Tabella deglio operatori unari
 > ![[Pasted image 20260319113859.png]]
-
 ### Operatori uguaglianza e relazionali
 [da inserire]
 ### Operatori condizionali
