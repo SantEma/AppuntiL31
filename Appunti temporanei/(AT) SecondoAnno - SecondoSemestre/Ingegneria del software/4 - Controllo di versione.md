@@ -42,10 +42,7 @@ Gli sviluppatori adottano quindi questo workflow (principalmente questo si rifer
 L'unico vero svantaggio di questo sistema è la curva di apprendimento inizialmente ripida, dovuta ai molteplici flussi di lavoro possibili
 ## Git
 ### Modifiche nel computer locale
-In Git, lo stato delle modifiche nel computer locale si divide in diverse aree e fasi
+
 > [!info] Schema fasi di modifiche nel computer locale
 > ![[Pasted image 20260320125038.png]]
 
-In generale:
-- Nella **working directory** risiedono i file modificati fisicamente, che vengono spostati nell'area successiva tramite il comando `git add`
-- **Nella staging area** sono presenti i file che
