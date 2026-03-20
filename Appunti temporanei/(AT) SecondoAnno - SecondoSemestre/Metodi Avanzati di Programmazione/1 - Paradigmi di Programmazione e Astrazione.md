@@ -4,7 +4,7 @@ La scienza del software studia il passaggio dal "cosa" (quello che il programmat
 L'estremo "cosa" raccoglie gli obbiettivi, i desideri e i bisogni dell'utente, la sua conoscenza del dominio del problema, tutti espressi in linguaggio naturale
 L'estremo "come" è l'hardware che può raggiungere quegli obbiettivi e soddisfare i bisogni e i desideri in modo estremamente procedurale e rigorosamente sequenziale
 
-La scienza della programmazione ha esplorato molti punti dello spettro "what-how", creando nella diversi **paradigmi di programmazione**.
+La scienza della programmazione ha esplorato molti punti dello spettro "what-how", creando diversi **paradigmi di programmazione**.
 ## Paradigma
 > [!info] Paradigma
 > Complesso di regole metodologiche, modelli esplicativi, criteri di soluzione di problemi che caratterizza una comunità di scienziati in una fase determinata dell’evoluzione storica della loro disciplina
