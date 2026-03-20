@@ -26,6 +26,15 @@ Gli sviluppatori effettuano due operazioni:
 - Scaricano una copia locale (**checkout**) dal server al computer locale
 - Registrano i file modificati sul repository condiviso nel server (**commit**)
 
-Nel caso ci sia un conflitto in un file (modifiche apportate ), chi arriva per ultimo lo risolve (**merge**).
+Nel caso ci sia un conflitto in un file (modifiche apportate da due o più persone), chi arriva per ultimo lo risolve (operazione chiamata **merge**).
 Nei sistemi centralizzati, creare un ramo parallelo di sviluppo (chiamato **branch**) spesso significava che il server doveva letteralmente copiare e duplicare l'intera cartella del progetto, riunirlo con quello principale (**merge**) generava spesso conflitti difficili da aggiustare.
 ### Controllo distribuito di versione
+A differenza del modello centralizzato, in questo caso esistono più repository, ognuno dei quali possiede la storia completa di tutte le versioni del software
+
+> [!info] Schema controllo distribuito di versione
+> ![[Pasted image 20260320123512.png]]
+
+Gli sviluppatori adottano quindi questo workflow (principalmente questo si riferisce a git, ma è applicabile anche ad altri):
+1.  Iniziano copiando un intero repository tramite un'operazione di `clone`, oppure ne creano uno nuovo, lavorando poi offline sui file della loro copia locale
+2. Successivamente, registrano le modifiche sul proprio repository locale tramite il comando `commit`
+3. Infine condividono il lavoro inviandolo su un repository remoto tramite il comando di  `push` o chiedendo al proprietario di tirare giù le loro modifiche tramite una **pull request**
