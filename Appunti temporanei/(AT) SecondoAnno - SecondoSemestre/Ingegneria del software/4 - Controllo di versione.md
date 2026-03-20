@@ -30,7 +30,6 @@ Nel caso ci sia un conflitto in un file (modifiche apportate da due o più perso
 Questa architettura presenta problematiche nella gestione, in particolare creare un ramo parallelo di sviluppo (chiamato **branch**) spesso significava che il server doveva letteralmente copiare e duplicare l'intera cartella del progetto, per riunirlo con quello principale (**merge**) spesso generava conflitti difficili da aggiustare.
 ### Controllo distribuito di versione
 A differenza del modello centralizzato, in questo caso esistono più repository, ognuno dei quali possiede la storia completa di tutte le versioni del software
-
 > [!info] Schema controllo distribuito di versione
 > ![[Pasted image 20260320123512.png]]
 
