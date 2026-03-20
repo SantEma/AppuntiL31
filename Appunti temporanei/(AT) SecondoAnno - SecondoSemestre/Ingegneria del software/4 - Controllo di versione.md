@@ -38,3 +38,5 @@ Gli sviluppatori adottano quindi questo workflow (principalmente questo si rifer
 1.  Iniziano copiando un intero repository tramite un'operazione di `clone`, oppure ne creano uno nuovo, lavorando poi offline sui file della loro copia locale
 2. Successivamente, registrano le modifiche sul proprio repository locale tramite il comando `commit`
 3. Infine condividono il lavoro inviandolo su un repository remoto tramite il comando di  `push` o chiedendo al proprietario di tirare giù le loro modifiche tramite una **pull request**
+
+L'unico vero svantaggio di questo sistema è la curva di apprendimento inizialmente ripida, dovuta ai molteplici flussi di lavoro possibili
