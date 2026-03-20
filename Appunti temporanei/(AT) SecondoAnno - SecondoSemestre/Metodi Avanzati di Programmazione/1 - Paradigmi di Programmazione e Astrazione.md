@@ -6,7 +6,7 @@ L'estremo "come" è l'hardware che può raggiungere quegli obbiettivi e soddisfa
 
 La scienza della programmazione ha esplorato molti punti dello spettro "what-how", creando diversi **paradigmi di programmazione**.
 ## Paradigma
-> [!info] Paradigma
+> [!info] Paradigma in generale
 > Complesso di regole metodologiche, modelli esplicativi, criteri di soluzione di problemi che caratterizza una comunità di scienziati in una fase determinata dell’evoluzione storica della loro disciplina
 
 > [!info] Paradigma di programmazione
