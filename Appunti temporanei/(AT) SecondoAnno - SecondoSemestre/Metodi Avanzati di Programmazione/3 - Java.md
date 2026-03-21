@@ -393,8 +393,6 @@ All'interno di una classe possiamo trovare diverse tipologie di variabili:
 - **I field, o attributi**, sono variabili che definiscono lo stato dell'oggetto e risultano visibili in tutta la classe
 - Le **variabili locali**, sono confinate e visibili esclusivamente all'interno del metodo in cui vengono dichiarate e utilizzate
 - I **parametri** sono variabili speciali che vengono passate a un metodo nel momento in cui questo viene richiamato
-
-
 ### Dichiarazione degli attributi
 Quando si dichiara un attributo, è necessario specificarne la visibilità, il tipo di dato e il nome; se non viene assegnato esplicitamente un valore iniziale, la variabile assumerà il valore di default previsto per il suo tipo
 > [!example] Esempio di variabili all'interno di una classe
@@ -431,18 +429,87 @@ Java supporta l'overloading dei metodi, una funzionalità che permette a una cla
 #### Parametri
 Per quanto riguarda i parametri, ogni metodo può riceverne da zero a molti, e questi possono essere di qualsiasi tipo, spaziando dai tipi primitivi fino agli oggetti di altre classi come array o stringhe
 
-I parametri all'interno della firma del metodo devono avere nomi differenti tra loro e non è consentito dichiarare variabili locali all'interno del metodo che abbiano lo stesso nome di un parametro. È invece possibile che un parametro abbia lo stesso nome di un attributo della classe; tuttavia, in questo scenario l'attributo viene "nascosto" e reso non direttamente visibile al metodo, a meno che non si utilizzi in modo esplicito la parola chiave this per disambiguare il riferimento. Un'ulteriore caratteristica avanzata permette di definire in un metodo un numero arbitrario di argomenti dello stesso tipo utilizzando la sintassi con i tre puntini (ad esempio String... s); in questo caso, all'interno del metodo, il parametro viene trattato a tutti gli effetti come un array.
+I parametri all'interno della firma del metodo devono avere nomi differenti tra loro e non è consentito dichiarare variabili locali all'interno del metodo che abbiano lo stesso nome di un parametro. È invece possibile che un parametro abbia lo stesso nome di un attributo della classe; tuttavia, in questo scenario l'attributo viene "nascosto" e reso non direttamente visibile al metodo, a meno che non si utilizzi in modo esplicito la parola chiave this per disambiguare il riferimento. .
 #### Costruttori
 I costruttori sono metodi speciali progettati appositamente per inizializzare gli oggetti di una classe al momento della loro creazione.
+> [!example] Esempio di un costruttore
+> ```java
+>  public Bicycle(int startSpeed, int startGear) {
+>     gear = startGear;
+>     speed = startSpeed;
+> }
+> 
+> public Bicycle() {
+>     gear = 1;
+>     speed = 0;
+> }
+> ```
+
+Essi si distinguono per avere lo stesso identico nome della classe a cui appartengono e per il fatto di non restituire alcun valore, nemmeno void. 
+Esattamente come accade per i metodi, una classe può dichiarare più di un costruttore sfruttando l'overloading, purché non esistano due costruttori con lo stesso numero e tipo di parametri. Anche ai costruttori possono essere applicati i modificatori di visibilità **private**, **public** o **protected**.
+Se uno sviluppatore decide di non inserire alcun costruttore all'interno della classe, Java interviene facendo ereditare automaticamente il costruttore senza parametri della superclasse; nel caso in cui la superclasse non possieda tale costruttore, la classe eredita il costruttore di base della classe Object.
 ##### Istruzione 'this'
-[da inserire]
+L'istruzione **this** è uno strumento fondamentale che permette di fare riferimento in modo esplicito agli attributi e ai costruttori della classe corrente in cui ci si trova, rivelandosi particolarmente utile per risolvere ambiguità di nomi o per richiamare un costruttore dall'interno di un altro costruttore
+> [!example] Esempio di istruzione 'this'
+> ```java
+> public class Bicycle {
+>     private int gear;
+>     private int speed;
+>     public Bicycle(int startSpeed, int startGear) {
+>         this.gear = startGear;
+>         this.speed = startSpeed;
+>     }
+> 
+>     public Bicycle() {
+>         this(3, 0);
+>     }
+> } 
+> ```
 #### Oggetti
-[da inserire]
+Gli oggetti veri e propri prendono vita in memoria utilizzando l'istruzione **new**, la quale si occupa di invocare il costruttore appropriato della classe a cui l'oggetto deve appartenere. Una volta che l'oggetto è stato instanziato, è possibile accedere ai suoi attributi e invocare i suoi metodi sfruttando la sintassi basata sul punto, come ad esempio "myBike.gear".
 #### Numero arbitrario di argomenti
-[da inserire]
+Un'ulteriore caratteristica avanzata permette di definire in un metodo un numero arbitrario di argomenti dello stesso tipo utilizzando la sintassi con i tre puntini (ad esempio String... s); in questo caso, all'interno del metodo, il parametro viene trattato a tutti gli effetti come un array
+ 
+> [!example] Esempio di numero arbitrario di argomenti
+> ```java
+> public void print(String... s) { // s è visto come un array
+>     for (String item:s) {
+>         System.out.println(item);
+>     }
+> }
+> 
+> print(‘’Pippo’’, ‘’Topolino’’, ‘’Pluto’’)  // Posso invocare print passando tanti oggetti di tipo String
+> ```
+
 #### Metodi static
-[da inserire]
+Il modificatore static viene impiegato per definire attributi e metodi a livello di classe anziché a livello di singola istanza. Questo significa che una variabile dichiarata come static è condivisa e mantiene lo stesso valore per tutte le istanze create da quella specifica classe. 
+Di conseguenza, i metodi contrassegnati come static possono essere chiamati direttamente utilizzando il nome della classe, senza la necessità preventiva di creare un'istanza o un oggetto.
+
+> [!example] Esempio con dichiarazione ed uso metodi static
+> ```java
+> public class Person {
+>     static int numbOfPersons=0;
+>     private String name;
+>     private String surname;
+>     public Person(String name, String surname) {
+>         this.name=name;
+>     this.surname=surname;
+>     ++numbOfPersons;
+>     }
+> }
+> 
+> Person p1=new Person(‘’Pippo’’, ‘’Rossi’’);
+> Person p2=new Person(‘’Topolino’’, ‘’Bianchi’’);
+> System.out.println(Person.numbOfPersons); // Accedo al valore della variabile static della classe Person 
+> ```
 ### Costanti
-[da inserire]
+Per definire delle **costanti**, ovvero attributi il cui valore una volta assegnato non può più essere modificato, si utilizza il modificatore **final**. Un uso comune in Java per le costanti globali prevede la combinazione dei modificatori public, static e final, rendendo il valore accessibile ovunque senza dover instanziare la classe[
 ### Classe innestata
-[da inserire]
+Il linguaggio offre la possibilità di definire una classe direttamente all'interno del corpo di un'altra classe, creando le cosiddette classi innestate. 
+Queste si dividono principalmente in due categorie: 
+- **Classi innestate statiche**: Una StaticNestedClass è indipendente e non ha accesso alle risorse e ai membri della classe esterna, o OuterClass 
+- **Inner class**: al contrario, una InnerClass gode di un accesso privilegiato a tutte le risorse della OuterClass che la contiene, comprese quelle dichiarate con visibilità private
+  L'utilizzo delle classi innestate è consigliato principalmente in tre scenari: 
+	- Quando la classe interna risulta utile esclusivamente alle logiche della classe esterna; 
+	- Quando si desidera incapsulare una classe B dentro una classe A per permetterle di accedere alle risorse private di A mantenendole sicure; 
+	- In generale per raggruppare logicamente il codice rendendolo più pulito e leggibile.
