@@ -161,7 +161,6 @@ La classe Arrays mette a disposizione un serie di metodi statici per manipolare 
 - **sort**: ordinamento crescente
 ## Operatori
 Gli operatori eseguono delle operazioni da 1 a 3 argomenti e restituiscono un valore. Gli operatori con stessa priorità son eseguiti da sinistra verso destra, **tranne per le operazioni di assegnamento**
-
 > [!info] Tabella operatori 
 > ![[Pasted image 20260319112938.png]]
 
@@ -213,9 +212,17 @@ instanceof è un particolare operatore per stabile se un oggetto è istanza di u
 > boolean f = s instanceof Double
 > ```
 ### Bitwise e bitshift
-[da inserire]
+Gli operatori bitwise e di bit shift permettono di manipolare direttamente i singoli bit a livello macchina.
+L'operatore tilde (~) calcola il complemento della rappresentazione binaria andando a trasformare tutti gli zeri in uno e viceversa.
+
+Per quanto riguarda lo scorrimento dei bit (shift) troviamo:
+- L'operatore `<<` sposta i bit verso sinistra 
+- L'operatore `>>` li sposta verso destra 
+- L'operatore `>>>` si occupa di spostare i bit a destra ma senza conservare il segno originale
+
+Java mette a disposizione specifici operatori binari sui bit, che sono l'AND logico, lo XOR e l'OR che troviamo all'inizio del capitolo .
 ### Espressioni
-[da inserire]
+Un'espressione in Java è un costrutto fondamentale composto tipicamente da variabili, operatori e chiamate a metodi
 ### Statement
 [da inserire]
 ### Blocchi
