@@ -76,10 +76,8 @@ Per quanto riguarda i nomi identificativi, il linguaggio impone che siano case-s
 Le convenzioni comunemente accettate prevedono che 
 - Le costanti e le variabili statiche debbano essere scritte interamente a lettere maiuscole, 
 - Per i nomi composti da più parole si adotta lo stile in cui la prima lettera di ogni nuova parola successiva alla prima viene scritta in maiuscolo.
-
 ## Tipi di dato primitivi
 Il linguaggio Java definisce a livello nativo una serie di tipi di dato primitivi per ottimizzare la memorizzazione dei valori. 
-
 > [!info] Tabella dei valori primitivi
 > ![[Pasted image 20260319104304.png]]
 > Quasi tutti i tipi primitivi possiedono uno zero numerico, un carattere nullo o il valore false come impostazione di default, ad eccezione delle variabili locali che risultano prive di tale assegnazione automatica e necessitano pertanto di un'inizializzazione manuale.
@@ -87,12 +85,10 @@ Il linguaggio Java definisce a livello nativo una serie di tipi di dato primitiv
 Ogni tipo primitivo è inoltre affiancato dalla sua rispettiva classe "wrapper" (la sua rappresentazione ad oggetti come Integer, Long o Boolean). 
 ### Tipo String
 Il tipo String non si tratta di un tipo primitivo ma di un oggetto vero e proprio il cui valore di default risulta essere null. Le stringhe sono istanze immutabili e il linguaggio provvede a creare automaticamente un nuovo oggetto String ogni volta che incontra una sequenza di caratteri racchiusa tra doppi apici.
-
 ## I letterali
 Il termine letterale (literal) viene utilizzato per indicare i valori espliciti che assegniamo direttamente nel codice alle variabili di tipo primitivo o alle stringhe. 
 > [!example] Esempii di literals
 > ![[Pasted image 20260319104603.png]]
-
 ### Letterali interi
 Per quanto riguarda i letterali interi, il compilatore li interpreta sempre come tipo `int` di default, a meno che non venga specificato esplicitamente l'uso del formato long tramite l'aggiunta di una lettera L finale; essi supportano inoltre la scrittura in formati alternativi, potendo essere espressi anche in base esadecimale o binaria.
 
