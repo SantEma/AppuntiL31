@@ -57,7 +57,7 @@ La riga `System.out.println("Ciao mondo!")`è composta da 3 elementi fondamental
 - `out` è un suo attributo (in questo caso un oggetto PrintStream)
 - `println` è un metodo della classe PrintStream che permette di scrivere su un dispositivo di output
 ## Le variabili 
-Le variabili in Java ricoprono il ruolo fondamentale di descrivere lo stato di un oggetto esse possiedono sempre:
+Le variabili in Java ricoprono il ruolo fondamentale di **descrivere lo stato di un oggetto**, ed esse possiedono sempre:
 - Un tipo;
 - Un nome identificativo;
 - Un valore coerente con il tipo specificato in fase di dichiarazione.
@@ -86,7 +86,7 @@ Ogni tipo primitivo è inoltre affiancato dalla sua rispettiva classe "wrapper" 
 ### Tipo String
 Il tipo String non si tratta di un tipo primitivo ma di un oggetto vero e proprio il cui valore di default risulta essere null. Le stringhe sono istanze immutabili e il linguaggio provvede a creare automaticamente un nuovo oggetto String ogni volta che incontra una sequenza di caratteri racchiusa tra doppi apici.
 ## I letterali
-Il termine letterale (literal) viene utilizzato per indicare i valori espliciti che assegniamo direttamente nel codice alle variabili di tipo primitivo o alle stringhe. 
+Il termine letterale (**literal**) viene utilizzato per indicare i **valori espliciti che assegniamo direttamente nel codice alle variabili di tipo primitivo o alle stringhe**. 
 > [!example] Esempii di literals
 > ![[Pasted image 20260319104603.png]]
 ### Letterali interi
@@ -140,30 +140,30 @@ arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
 ```
 
 È composto da:
-- **src**: array sorgente
-- **srcPos**: posizione di inizio in src
-- **dest**: array di destinazione
-- **destPos**: posizione di inizio in dest
-- **length**: numero di elementi da copiare
+- **src**: array sorgente;
+- **srcPos**: posizione di inizio in src;
+- **dest**: array di destinazione;
+- **destPos**: posizione di inizio in dest;
+- **length**: numero di elementi da copiare;
 
 > [!example] Esempio di copia di array
 > ![[Pasted image 20260319112406.png]]
 ### Manipolazione di array
 La classe Arrays mette a disposizione un serie di metodi statici per manipolare gli array, la documentazione è presente [qui](http://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html), ma riportiamo comunque alcuni metodi come:
-- **copyOfRange**: è la copia di array
-- **fill**: riempimento di array
-- **equals**: confronto tra due array
-- **search**: ricerca di un elemento 
-- **sort**: ordinamento crescente
+- **copyOfRange**: è la copia di array;
+- **fill**: riempimento di array;
+- **equals**: confronto tra due array;
+- **search**: ricerca di un elemento;
+- **sort**: ordinamento crescente;
 ## Operatori
 Gli operatori eseguono delle operazioni da 1 a 3 argomenti e restituiscono un valore. Gli operatori con stessa priorità son eseguiti da sinistra verso destra, **tranne per le operazioni di assegnamento**
 > [!info] Tabella operatori 
 > ![[Pasted image 20260319112938.png]]
 
 Alcune considerazioni da fare sono:
-- **unary** permette di negare un numero binario
-- **shift** shifta i bit in un numero
-- **relational**: con
+- **unary**: permette di negare un numero binario;
+- **shift**: shifta i bit in un numero
+- **relational**: mettono in relazione due 
 - **equality**: i doppi uguale son particolari, con i tipi primitivi funzionano nella classica maniera, mentre nel confronto di oggetti funzionano solo se questi ultimi hanno lo stesso OID (Object ID)
 ### Operatori aritmetici
 > [!info] Tabella degli operatori aritmetici
@@ -208,7 +208,7 @@ instanceof è un particolare operatore per stabile se un oggetto è istanza di u
 > boolean f = s instanceof Double
 > ```
 ### Bitwise e bitshift
-Gli operatori bitwise e di bit shift permettono di manipolare direttamente i singoli bit a livello macchina.
+Gli operatori **bitwise** e di **bit shift** permettono di **manipolare direttamente i singoli bit a livello macchina**.
 L'operatore tilde (~) calcola il complemento della rappresentazione binaria andando a trasformare tutti gli zeri in uno e viceversa.
 
 Per quanto riguarda lo scorrimento dei bit (shift) troviamo:
@@ -218,9 +218,12 @@ Per quanto riguarda lo scorrimento dei bit (shift) troviamo:
 
 Java mette a disposizione specifici operatori binari sui bit, che sono l'AND logico, lo XOR e l'OR che troviamo all'inizio del capitolo .
 ### Espressioni
-Un'espressione in Java è un costrutto fondamentale composto tipicamente da variabili, operatori e chiamate a metodi
+Un'espressione in Java è un costrutto fondamentale composto tipicamente da **variabili**, **operatori** e **chiamate a metodi**
 ### Statement
-[da inserire]
+Uno statement rappresenta una **singola istruzione esecutiva** e la sua sintassi richiede tassativamente che termini sempre con il carattere punto e virgola (;).
+All'interno del linguaggio si possono individuare quattro tipologie principali di statement:
+1. Le istruzioni di assegnazione di valori
+2. 
 ### Blocchi
 I blocchi sono gruppi di istruzioni racchiusi tra parentesi graffe
 ```java
