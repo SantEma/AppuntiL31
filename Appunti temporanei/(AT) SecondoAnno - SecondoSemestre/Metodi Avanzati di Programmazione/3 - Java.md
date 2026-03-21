@@ -366,20 +366,55 @@ L'istruzione return viene adoperata per terminare in modo definitivo l'esecuzion
 A seconda del metodo, può essere usata in modo autonomo e senza restituire alcun valore, oppure restituendo un valore specifico tramite una variabile
 ## Classi
 ### Dichiarazione di una classe
-[da inserire]
+La dichiarazione di una classe in Java serve a definire la struttura fondamentale che comprende lo stato della classe attraverso gli attributi, le modalità di creazione e inizializzazione tramite i costruttori, e le funzionalità offerte mediante i metodi
+
+> [!info] Definizione di una classe in Java
+> ```java
+> class MyClass {
+> // attributi
+> // costruttori
+> // metodi
+> } 
+> ```
+
+A livello sintattico, la dichiarazione di una classe inizia specificando la sua visibilità, seguita dalla parola chiave class e dal nome della classe stessa
+> [!info] Definizione di una classe completa
+> ```java
+> <visibilità> class <nome> extends <superclass>
+> implements <interface1>, <interface2> … {
+> //body
+> } 
+> ```
+
+Durante questa fase è anche possibile indicare da quale superclasse essa erediti, utilizzando la parola chiave **extends**, e definire se implementa una o più interfacce tramite la parola chiave **implements**.
+Il livello di visibilità, che può essere public, private o protected, determina come e da chi la classe può essere vista e utilizzata all'interno del progetto
 ### Variabili all'interno
-[da inserire]
+All'interno di una classe possiamo trovare diverse tipologie di variabili:
+- **I field, o attributi**, sono variabili che definiscono lo stato dell'oggetto e risultano visibili in tutta la classe
+- Le **variabili locali**, sono confinate e visibili esclusivamente all'interno del metodo in cui vengono dichiarate e utilizzate
+- I **parametri** sono variabili speciali che vengono passate a un metodo nel momento in cui questo viene richiamato
+
+> [!example] Esempio di variabili all'interno di una classe
+> ```java
+> public class Bicycle {
+> 	private int gear = 1;
+> 	private int speed;
+> }
+> ``` 
+
+Quando si dichiara un attributo, è necessario specificarne la visibilità, il tipo di dato e il nome; se non viene assegnato esplicitamente un valore iniziale, la variabile assumerà il valore di default previsto per il suo tipo
 ### Dichiarazione degli attributi
 [da inserire]
 ### Metodi
 #### Dichiarazione
-[da inserire]
+I metodi rappresentano le funzioni di una classe e la loro dichiarazione richiede l'indicazione della visibilità, del tipo di dato restituito, del nome e di eventuali parametri racchiusi tra parentesi
 #### Nome
-[da inserire]
+Per convenzione, i nomi dei metodi dovrebbero essere scritti in minuscolo e iniziare preferibilmente con un verbo, poiché indicano un'azione; se il nome è composto da più parole, si utilizza la notazione camelCase, inserendo la lettera maiuscola per identificare l'inizio di ogni parola successiva alla prima
 #### Overloading
-[da inserire]
+Java supporta l'overloading dei metodi, una funzionalità che permette a una classe di avere più metodi con lo stesso nome, a condizione fondamentale che abbiano una lista di parametri differente per numero o tipo. 
+È importante notare che i metodi sovraccaricati con lo stesso nome devono comunque restituire lo stesso tipo di valore. 
 #### Parametri
-[da inserire]
+Per quanto riguarda i parametri, ogni metodo può riceverne da zero a molti, e questi possono essere di qualsiasi tipo, spaziando dai tipi primitivi fino agli oggetti di altre classi come array o stringhe
 #### Costruttori
 [da inserire]
 ##### Istruzione 'this'
