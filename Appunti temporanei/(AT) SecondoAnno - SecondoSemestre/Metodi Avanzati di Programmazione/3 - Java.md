@@ -19,13 +19,11 @@ Poiché nel mondo reale moltissimi oggetti condividono delle caratteristiche int
 > ![[Pasted image 20260319101544.png]]
 
 L'ereditarietà è un meccanismo estremamente potente che permette di rappresentare le gerarchie tra classi, consentendo a una determinata classe di ereditare in blocco gli attributi e i metodi di un'altra classe genitore. 
-
 > [!example] Esempio di ereditarietà 
 > Riprendendo l'esempio di prima, classi più specifiche come le BMX, le Mountain Bike e le City Bike ereditano tutte le caratteristiche di base di una Bicicletta generica, aggiungendo poi i propri attributi e metodi specializzati. 
 > ![[Pasted image 20260319101107.png]]
 
 Per gestire l'organizzazione di progetti complessi, Java permette di strutturare le classi all'interno di specifiche cartelle separate chiamate **package**, le quali supportano la creazione di ulteriori sottocartelle per definire gerarchie annidate. Il percorso completo e sequenziale dei package necessari per individuare univocamente una classe prende il nome formale di **namespace**
-
 > [!example] Rappresentazione grafica di package e namespace sulle biciclette
 > ![[Pasted image 20260319101433.png]]
 # Codice
@@ -42,13 +40,15 @@ Ecco qui!
 Il compilatore Java ignorerà qualunque cosa posto all'interno degli slash per le righe con la prima sintassi, nella seconda soltanto la riga corrente
 ## Definizione di classi, il main e println()
 Per definire una classe in Java usiamo la sintassi **class <nomeclasse\>** 
-```java
-class HelloWorldApp{
-	public static void main(String[] args){
-		System.out.println("Ciao mondo!")
-	}
-}
-```
+
+> [!example] Esempio di definizione classe
+> ```java
+> class HelloWorldApp{
+> 	public static void main(String[] args){
+> 		System.out.println("Ciao mondo!")
+> 	}
+> }
+> ```
 
 Il main è l'entrypoint di ogni applicazione dove possiamo richiamare altre classi e metodi, in Java deve essere sempre presente all'interno di un applicazione. Come argomento ha sempre `String[] args`, che si riferisce agli argomenti che possiamo passare al main dalla riga di comando quando invochiamo un applicazione Java.
 
@@ -64,7 +64,6 @@ Le variabili in Java ricoprono il ruolo fondamentale di **descrivere lo stato di
 
 **Vanno sempre dichiarate**, utilizzando la seguente sintassi:
 ![[Pasted image 20260319103905.png]]
-
 
 Nel linguaggio esistono diverse categorie di variabili: 
 - Le variabili delle istanze (non statiche), in cui ogni singolo oggetto conserva il suo stato in modo indipendente; 
@@ -92,59 +91,68 @@ Il termine letterale (**literal**) viene utilizzato per indicare i **valori espl
 ### Letterali interi
 Per quanto riguarda i letterali interi, il compilatore li interpreta sempre come tipo `int` di default, a meno che non venga specificato esplicitamente l'uso del formato long tramite l'aggiunta di una lettera L finale; essi supportano inoltre la scrittura in formati alternativi, potendo essere espressi anche in base esadecimale o binaria.
 
-```java
-int n=10; 
-long m=1000L;
-int h=0xa1; 
-int b=0b001101;
-```
+> [!example] Esempio di letterali interi
+> ```java
+> int n=10; 
+> long m=1000L;
+> int h=0xa1; 
+> int b=0b001101;
+> ```
 ### Letterali in virgola mobile (o floating point)
 I letterali in virgola mobile seguono una logica simile: sono considerati di tipo double per impostazione predefinita, a meno che non si utilizzi la lettera f per forzarne il tipo a float, e supportano l'impiego della notazione scientifica. 
-```java
-float f=3.14f; 
-double d1=134.54 
-double d2=1.3454e2 //Notazione scientifica
-```
+
+> [!example] Esempio di letterali float
+> ```java
+> float f=3.14f; 
+> double d1=134.54 
+> double d2=1.3454e2 //Notazione scientifica
+> ```
 ### Letterali caratteri e Stringhe (character e String)
 i character possono contenere qualunque carattere Unicode a 16-bit racchiuso tra singoli apici, mentre le stringhe impiegano i doppi apici.
 
-```java
-Per char vale questo -> 'c'
-Per String vale questo -> "testo di esempio"
-```
+> [!example] Esempio di letterali caratteri e stringhe
+> ```java
+> Per char vale questo -> 'c'
+> Per String vale questo -> "testo di esempio"
+> ```
+
 All'interno dei testi è inoltre possibile avvalersi di speciali sequenze di escape per rappresentare agevolmente caratteri di controllo come il line feed, la tabulazione oppure per visualizzare simboli specifici come il doppio apice, il singolo apice e il backslash
 
-```java
-\n, \r, \f, \b: line feed, carriage return, form feed, backspace
-
-\t: tab
-
-\’’, \’, \\: doppio apice, singolo apice, backslash
-```
+> [!info] Lista di sequenze escape
+> ```java
+> \n, \r, \f, \b: line feed, carriage return, form feed, backspace
+> \t: tab
+> \’’, \’, \\: doppio apice, singolo apice, backslash
+> ```
 ## Array
 L'array è un **oggetto** che contiene un numero finito di oggetti (o tipi primitivi) dello stesso tipo.
 Ha una lunghezza fissa definita al momento della creazione, ogni suo elemento viene chiamato **elemento** ed è possibile accederne con l'indice
-```java
-Dichiarazione di un array: float[] v;
-Inizializzazione: float[] v=new float[100];
-Assegnazione: v[3]=1.3;
-Dichiarazione e inizializzazione contemporanea: int[] a = {10, 34, 21}; 
-Array multidimensionali: double[][] m; 
-```
+
+> [!example] Esempio di vari tipi di array
+> ```java
+> Dichiarazione di un array: float[] v;
+> Inizializzazione: float[] v=new float[100];
+> Assegnazione: v[3]=1.3;
+> Dichiarazione e inizializzazione contemporanea: int[] a = {10, 34, 21}; 
+> Array multidimensionali: double[][] m; 
+> ```
 
 Quando si dichiara un array inizializzato, questo avrà dimensioni uguali a quanti elementi son stati inizializzati
 ### Copia di un array
 La classe `System` mette a disposizione il metodo `arraycopy` per copiare degli array
-```java
-arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
-```
 
-È composto da:
-- **src**: array sorgente;
-- **srcPos**: posizione di inizio in src;
-- **dest**: array di destinazione;
-- **destPos**: posizione di inizio in dest;
-- **length**: numero di elementi da copiare;
+> [!info] Metodo per la copia di un array
+> ```java
+> arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
+> ```
+> 
+> È composto da:
+> - **src**: array sorgente;
+> - **srcPos**: posizione di inizio in src;
+> - **dest**: array di destinazione;
+> - **destPos**: posizione di inizio in dest;
+> - **length**: numero di elementi da copiare;
+> 
 
 > [!example] Esempio di copia di array
 > ![[Pasted image 20260319112406.png]]
@@ -219,36 +227,98 @@ Per quanto riguarda lo scorrimento dei bit (shift) troviamo:
 Java mette a disposizione specifici operatori binari sui bit, che sono l'AND logico, lo XOR e l'OR che troviamo all'inizio del capitolo .
 ### Espressioni
 Un'espressione in Java è un costrutto fondamentale composto tipicamente da **variabili**, **operatori** e **chiamate a metodi**
+La caratteristica essenziale di un'espressione è che, una volta valutata, restituisce sempre un singolo risultato.
+Il tipo di questo risultato non è universale, ma dipende strettamente dai tipi delle variabili coinvolte, dagli operatori utilizzati e, naturalmente, dai valori restituiti dagli eventuali metodi chiamati.
+Per gestire priorità complesse, le parentesi possono essere utilizzate liberamente per definire e forzare un preciso ordine di valutazione degli operatori.
 ### Statement
-Uno statement rappresenta una **singola istruzione esecutiva** e la sua sintassi richiede tassativamente che termini sempre con il carattere punto e virgola (;).
+Uno **statement** rappresenta una **singola istruzione esecutiva** e la sua sintassi richiede tassativamente che termini sempre con il carattere punto e virgola (;).
 All'interno del linguaggio si possono individuare quattro tipologie principali di statement:
-1. Le istruzioni di assegnazione di valori
-2. 
+1. Le istruzioni di assegnazione di valori;
+2. Gli operatori matematici particolari come $++$ o $--$;
+3. Le istruzioni che effettuano una chiamata ad un metodo;
+4. Le istruzioni dedicate alla creazione di un nuovo oggetto in memoria;
 ### Blocchi
 I blocchi sono gruppi di istruzioni racchiusi tra parentesi graffe
-```java
-if (condition) { 
-// Inizio primo blocco
-System.out.println("La condizione è vera."); 
-} 
-// Fine primo blocco
-else { // Inizio secondo blocco
-System.out.println("La condizione è falsa."); 
-} // Fine secondo blocco
-``` 
+> [!example] Esempio di blocco di codice
+> ```java
+> if (condition) { 
+> // Inizio primo blocco
+> System.out.println("La condizione è vera."); 
+> } 
+> // Fine primo blocco
+> else { 
+> // Inizio secondo blocco
+> System.out.println("La condizione è falsa."); 
+> } 
+> // Fine secondo blocco
+> ``` 
+
 ## Controllo del flusso
 ### if-then e if-then-else
-[da inserire]
+Le istruzioni if-then e if-then-else sono essenziali per eseguire dei blocchi di codice solo ed esclusivamente se si verifica una determinata condizione.
+> [!example] Esempio di istruzione if-then-else
+> ```java
+> if (condition) { 
+> //blocco if 
+> } 
+> else { 
+> //blocco else 
+> }
+> ```
+
+L'if-then avviene soltanto quando una condizione è vera, altrimenti nel caso sia falsa questa va nell'else
 ### if-else annidati
-[da inserire]
+Quando la logica del programma lo richiede, è assolutamente possibile annidare più istruzioni if-else per creare percorsi decisionali multipli
+```java
+if (condizione1) {
+ //blocco condizione 1
+} 
+else if (condizione2){ 
+//blocco condizione 2 
+}
+else if (condizione3){ 
+//blocco condizione 3
+}
+```
 ### Switch
-[da inserire]
+Per gestire scenari con molteplici opzioni si utilizza l'istruzione **switch**, che definisce diversi percorsi di esecuzione in base allo specifico valore che assume una singola variabile
+> [!example] Esempio di switch
+> ```java
+> switch (<variabile>) {
+> case <valore1>: ...; break;// istruzione 1
+> case <valore2>: ...; break; // istruzione 2
+> default: ...; break; // istruzione default
+> }
+> ```
+
+Tale variabile viene confrontata con vari blocchi "case", prevedendo anche un caso "default" finale nel caso nessuna condizione sia rispettata.
+Lo switch può essere applicato soltanto a tipi di dati ben precisi, ovvero ai tipi primitivi byte, short, int, char, alla classe String e ai tipi enumerativi
 ### While
-[da inserire]
+Il ciclo while permette di eseguire un blocco di istruzioni finché una specifica condizione posta in testa al ciclo si mantiene vera
+> [!example] Esempio di condizione while
+> ```java
+> while (condizione) {
+> //blocco istruzioni while
+> }
+> ``` 
 ### Do while
-[da inserire]
+Il ciclo do-while è concettualmente simile al while, ma con una profonda differenza, ossia il controllo della condizione viene effettuato solamente alla fine del blocco di codice, facendolo sempre eseguire **almeno** una volta.
+> [!example] Esempio do-while
+> ```java 
+> do {
+//blocco istruzioni while
+} while (condizione);
+> ```
 ### for
-[da inserire]
+L'istruzione **for** permette di iterare un blocco di istruzioni su uno specifico intervallo di valori
+> [!example] Esempio for
+> ```java
+> for (initialization; termination; increment) {
+> statement(s) //blocco istruzioni
+> }
+> ```
+
+L'intestazione di questo ciclo racchiude tre parametri chiave separati da punto e virgola: la fase di inizializzazione, la condizione di terminazione e l'incremento (o decremento)
 ### for, Array, Collection (for each)
 Il for è spesso utilizzato per iterare sugli oggetti di un Array o di una Collection, in questo caso esiste una forma compatta (**for-each**)
 
@@ -261,14 +331,39 @@ Il for è spesso utilizzato per iterare sugli oggetti di un Array o di una Colle
 > 	} 
 > }
 > ``` 
+A ogni passaggio del ciclo, la variabile temporanea item assume automaticamente il valore dell'elemento successivo, dal primo all'ultimo, fermandosi da sola quando l'array è terminato
 
 Il for-each **non garantisce nessun ordinamento**, serve soltanto a visitare quello presente all'interno del contenitore
 ### break
-[da inserire]
+Lo statement break interrompe istantaneamente e definitivamente un ciclo
+> [!example] Esempio di statement break
+> ```java
+> for (i = 0; i < arrayOfInts.length; i++) {
+> 	if (arrayOfInts[i] == searchfor) {
+> 		foundIt = true;
+> 		break;
+> 	}
+> }
+> ```
+
+Nel caso di cicli annidati, è importante sapere che il break va a interrompere solamente il ciclo più innestato rispetto alla posizione dell'istruzione stessa,
 ### continue
-[da inserire]
+il continue statement salta la corrente iterazione per passare a quella successiva
+> [!example] Esempio di statement continue, cercando in una stringa solo le 'p'
+> ```java
+> for (int i = 0; i < max; i++) {
+> // interested only in p's
+>     if (searchMe.charAt(i) != 'p')
+>         continue;
+>     // process p's
+>     numPs++;
+> }
+> ```
+
+Spesso viene attivato da un costrutto condizionale, come in questo caso\
 ### return
-[da inserire]
+L'istruzione return viene adoperata per terminare in modo definitivo l'esecuzione di un metodo corrente.
+A seconda del metodo, può essere usata in modo autonomo e senza restituire alcun valore, oppure restituendo un valore specifico tramite una variabile
 ## Classi
 ### Dichiarazione di una classe
 [da inserire]
