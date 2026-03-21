@@ -505,11 +505,26 @@ Di conseguenza, i metodi contrassegnati come static possono essere chiamati dire
 ### Costanti
 Per definire delle **costanti**, ovvero attributi il cui valore una volta assegnato non può più essere modificato, si utilizza il modificatore **final**. Un uso comune in Java per le costanti globali prevede la combinazione dei modificatori public, static e final, rendendo il valore accessibile ovunque senza dover instanziare la classe[
 ### Classe innestata
-Il linguaggio offre la possibilità di definire una classe direttamente all'interno del corpo di un'altra classe, creando le cosiddette classi innestate. 
+Il linguaggio offre la possibilità di definire una classe direttamente all'interno del corpo di un'altra classe, creando le cosiddette **classi innestate**. 
 Queste si dividono principalmente in due categorie: 
-- **Classi innestate statiche**: Una StaticNestedClass è indipendente e non ha accesso alle risorse e ai membri della classe esterna, o OuterClass 
-- **Inner class**: al contrario, una InnerClass gode di un accesso privilegiato a tutte le risorse della OuterClass che la contiene, comprese quelle dichiarate con visibilità private
+- **Classi innestate statiche**: Una classe innestata statica è indipendente e non ha accesso alle risorse e ai membri della classe esterna 
+- **Inner class**: al contrario, una classe interna gode di un accesso privilegiato a tutte le risorse della classe esterna che la contiene, comprese quelle dichiarate con visibilità private
   L'utilizzo delle classi innestate è consigliato principalmente in tre scenari: 
 	- Quando la classe interna risulta utile esclusivamente alle logiche della classe esterna; 
 	- Quando si desidera incapsulare una classe B dentro una classe A per permetterle di accedere alle risorse private di A mantenendole sicure; 
 	- In generale per raggruppare logicamente il codice rendendolo più pulito e leggibile.
+
+> [!example] Esempio di classi innestate
+> ```java
+> class OuterClass {
+> ...
+>     static class StaticNestedClass { // Non ha accesso alle risorse di OuterClass
+>         ...
+>     }
+>     class InnerClass { // Ha accesso alle risorse di OuterClass anche se dichiarate private
+>         ...
+>     }
+> } 
+> ```
+
+[da completare]
