@@ -407,20 +407,17 @@ Quando si dichiara un attributo, è necessario specificarne la visibilità, il t
 ### Metodi
 #### Dichiarazione
 I metodi rappresentano le funzioni di una classe e la loro dichiarazione richiede l'indicazione della visibilità, del tipo di dato restituito, del nome e di eventuali parametri racchiusi tra parentesi
-
 > [!example] Esempio di dichiarazione di metodi
 > ```java
 > public int sum(int a, int b) {
 >     return a+b;
 > }
 > ```
-
 #### Nome
 Per convenzione, i nomi dei metodi dovrebbero essere scritti in minuscolo e iniziare preferibilmente con un verbo, poiché indicano un'azione; se il nome è composto da più parole, si utilizza la notazione camelCase, inserendo la lettera maiuscola per identificare l'inizio di ogni parola successiva alla prima
 #### Overloading
 Java supporta l'overloading dei metodi, una funzionalità che permette a una classe di avere più metodi con lo stesso nome, a condizione fondamentale che abbiano una lista di parametri differente per numero o tipo. 
 È importante notare che i metodi sovraccaricati con lo stesso nome devono comunque restituire lo stesso tipo di valore.
-
 > [!example] Esempio di overloading
 > ```java 
 > public int sum(int a, int b) {
