@@ -394,6 +394,9 @@ All'interno di una classe possiamo trovare diverse tipologie di variabili:
 - Le **variabili locali**, sono confinate e visibili esclusivamente all'interno del metodo in cui vengono dichiarate e utilizzate
 - I **parametri** sono variabili speciali che vengono passate a un metodo nel momento in cui questo viene richiamato
 
+
+### Dichiarazione degli attributi
+Quando si dichiara un attributo, è necessario specificarne la visibilità, il tipo di dato e il nome; se non viene assegnato esplicitamente un valore iniziale, la variabile assumerà il valore di default previsto per il suo tipo
 > [!example] Esempio di variabili all'interno di una classe
 > ```java
 > public class Bicycle {
@@ -401,22 +404,39 @@ All'interno di una classe possiamo trovare diverse tipologie di variabili:
 > 	private int speed;
 > }
 > ``` 
-
-Quando si dichiara un attributo, è necessario specificarne la visibilità, il tipo di dato e il nome; se non viene assegnato esplicitamente un valore iniziale, la variabile assumerà il valore di default previsto per il suo tipo
-### Dichiarazione degli attributi
-[da inserire]
 ### Metodi
 #### Dichiarazione
 I metodi rappresentano le funzioni di una classe e la loro dichiarazione richiede l'indicazione della visibilità, del tipo di dato restituito, del nome e di eventuali parametri racchiusi tra parentesi
+
+> [!example] Esempio di dichiarazione di metodi
+> ```java
+> public int sum(int a, int b) {
+>     return a+b;
+> }
+> ```
+
 #### Nome
 Per convenzione, i nomi dei metodi dovrebbero essere scritti in minuscolo e iniziare preferibilmente con un verbo, poiché indicano un'azione; se il nome è composto da più parole, si utilizza la notazione camelCase, inserendo la lettera maiuscola per identificare l'inizio di ogni parola successiva alla prima
 #### Overloading
 Java supporta l'overloading dei metodi, una funzionalità che permette a una classe di avere più metodi con lo stesso nome, a condizione fondamentale che abbiano una lista di parametri differente per numero o tipo. 
-È importante notare che i metodi sovraccaricati con lo stesso nome devono comunque restituire lo stesso tipo di valore. 
+È importante notare che i metodi sovraccaricati con lo stesso nome devono comunque restituire lo stesso tipo di valore.
+
+> [!example] Esempio di overloading
+> ```java 
+> public int sum(int a, int b) {
+>     return a+b;
+> }
+> 
+> public int sum(int a, int b, int c) {
+>     return a+b+c;
+> }
+> ```
 #### Parametri
 Per quanto riguarda i parametri, ogni metodo può riceverne da zero a molti, e questi possono essere di qualsiasi tipo, spaziando dai tipi primitivi fino agli oggetti di altre classi come array o stringhe
+
+I parametri all'interno della firma del metodo devono avere nomi differenti tra loro e non è consentito dichiarare variabili locali all'interno del metodo che abbiano lo stesso nome di un parametro. È invece possibile che un parametro abbia lo stesso nome di un attributo della classe; tuttavia, in questo scenario l'attributo viene "nascosto" e reso non direttamente visibile al metodo, a meno che non si utilizzi in modo esplicito la parola chiave this per disambiguare il riferimento. Un'ulteriore caratteristica avanzata permette di definire in un metodo un numero arbitrario di argomenti dello stesso tipo utilizzando la sintassi con i tre puntini (ad esempio String... s); in questo caso, all'interno del metodo, il parametro viene trattato a tutti gli effetti come un array.
 #### Costruttori
-[da inserire]
+I costruttori sono metodi speciali progettati appositamente per inizializzare gli oggetti di una classe al momento della loro creazione.
 ##### Istruzione 'this'
 [da inserire]
 #### Oggetti
