@@ -187,9 +187,22 @@ String a=‘’Hello ‘’; String b=‘’ world!’’; String msg = a + b; (
 > [!info] Tabella deglio operatori unari
 > ![[Pasted image 20260319113859.png]]
 ### Operatori uguaglianza e relazionali
-[da inserire]
+
+| **Operatore** | Nome                |
+| ------------- | ------------------- |
+| ==            | uguale a            |
+| !=            | diverso da          |
+| >             | maggiore di         |
+| >=            | maggiore o uguale a |
+| <             | minore di           |
+| <=            | minore o uguale a   |
+Questi operatori restituiscono un boolean come risultato del confronto tra due espressioni
 ### Operatori condizionali
-[da inserire]
+
+| **Operatore** | Nome       |
+| ------------- | ---------- |
+| &&            | AND-logico |
+| \|\|          | OR-logico  |
 In Java le espressioni sono valutate solo se necessario, per esempio se ci sono OR valuterà soltanto una e, se questa è vera, le altre verranno scartate a prescindere (in altri linguaggi questo non succede)
 ### Operatore 'istanceof'
 instanceof è un particolare operatore per stabile se un oggetto è istanza di una particolare classe e restituisce un booleano.
@@ -208,7 +221,14 @@ instanceof è un particolare operatore per stabile se un oggetto è istanza di u
 ### Blocchi
 I blocchi sono gruppi di istruzioni racchiusi tra parentesi graffe
 ```java
-if (condition) { // begin block 1 System.out.println("Condition is true."); } // end block one else { // begin block 2 System.out.println("Condition is false."); } // end block 2
+if (condition) { 
+// Inizio primo blocco
+System.out.println("La condizione è vera."); 
+} 
+// Fine primo blocco
+else { // Inizio secondo blocco
+System.out.println("La condizione è falsa."); 
+} // Fine secondo blocco
 ``` 
 ## Controllo del flusso
 ### if-then e if-then-else
