@@ -468,7 +468,7 @@ L'istruzione **this** è uno strumento fondamentale che permette di fare riferim
 #### Oggetti
 Gli oggetti veri e propri prendono vita in memoria utilizzando l'istruzione **new**, la quale si occupa di invocare il costruttore appropriato della classe a cui l'oggetto deve appartenere. Una volta che l'oggetto è stato instanziato, è possibile accedere ai suoi attributi e invocare i suoi metodi sfruttando la sintassi basata sul punto, come ad esempio "myBike.gear".
 #### Numero arbitrario di argomenti
-Un'ulteriore caratteristica avanzata permette di definire in un metodo un numero arbitrario di argomenti dello stesso tipo utilizzando la sintassi con i tre puntini (ad esempio String... s); in questo caso, all'interno del metodo, il parametro viene trattato a tutti gli effetti come un array
+Un'ulteriore caratteristica avanzata permette di definire in un metodo un numero arbitrario di argomenti dello stesso tipo. In questo caso, all'interno del metodo, il parametro viene trattato a tutti gli effetti come un array
  
 > [!example] Esempio di numero arbitrario di argomenti
 > ```java
