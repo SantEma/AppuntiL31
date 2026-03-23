@@ -503,7 +503,7 @@ Di conseguenza, i metodi contrassegnati come static possono essere chiamati dire
 > System.out.println(Person.numbOfPersons); // Accedo al valore della variabile static della classe Person 
 > ```
 ### Costanti
-Per definire delle **costanti**, ovvero attributi il cui valore una volta assegnato non può più essere modificato, si utilizza il modificatore **final**. Un uso comune in Java per le costanti globali prevede la combinazione dei modificatori public, static e final, rendendo il valore accessibile ovunque senza dover instanziare la classe[
+Per definire delle **costanti**, ovvero attributi il cui valore una volta assegnato non può più essere modificato, si utilizza il modificatore **final**. Un uso comune in Java per le costanti globali prevede la combinazione dei modificatori public, static e final, rendendo il valore accessibile ovunque senza dover instanziare la classe
 ### Classe innestata
 Il linguaggio offre la possibilità di definire una classe direttamente all'interno del corpo di un'altra classe, creando le cosiddette **classi innestate**. 
 Queste si dividono principalmente in due categorie: 
@@ -527,4 +527,18 @@ Queste si dividono principalmente in due categorie:
 > } 
 > ```
 
-[da completare]
+#### Tipi enumerativi
+I tipi enumerativi permettono di definire dei tipi che possono assumere solo un set predefinito di costanti
+> [!example] Esempio di tipo enumerativo
+> ```java
+> public enum Day {
+> SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+> THURSDAY, FRIDAY, SATURDAY
+> } 
+> ```
+
+Quando si crea un tipo enum JAVA crea automaticamente una classe di tipo enum che mette a disposizione dei metodi e permette di definire anche dei costruttori e nuovi metodi.
+
+Un metodo possibile nel nostro esempio potrebbe essere Day.values, che restituisce tutti i valori che può assumere
+
+Possiamo definire dei costruttori personalizzati sugli enumerativi
