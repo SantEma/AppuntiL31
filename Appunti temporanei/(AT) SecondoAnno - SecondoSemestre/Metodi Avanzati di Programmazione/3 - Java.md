@@ -538,7 +538,6 @@ Queste si dividono principalmente in due categorie:
 >     }
 > } 
 > ```
-
 #### Tipi enumerativi
 I tipi enumerativi permettono di definire dei tipi che possono assumere solo un set predefinito di costanti
 > [!example] Esempio di tipo enumerativo
