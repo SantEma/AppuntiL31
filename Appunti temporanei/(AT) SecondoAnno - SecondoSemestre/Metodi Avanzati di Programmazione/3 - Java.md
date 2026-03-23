@@ -476,7 +476,7 @@ Gli oggetti veri e propri prendono vita in memoria utilizzando l'istruzione **ne
 > myBike.getSpeed(); //Richiamo del metodo
 > ```
 #### Numero arbitrario di argomenti
-Un'ulteriore caratteristica avanzata permette di definire in un metodo un numero arbitrario di argomenti dello stesso tipo. In questo caso, all'interno del metodo, il parametro viene trattato a tutti gli effetti come un array
+Un'ulteriore caratteristica avanzata permette di definire in un metodo un numero arbitrario di argomenti dello stesso tipo. In questo caso, all'interno del metodo, il parametro viene trattato a tutti gli effetti come un array, rappresentato dai 3 puntini
  
 > [!example] Esempio di numero arbitrario di argomenti
 > ```java
@@ -486,17 +486,16 @@ Un'ulteriore caratteristica avanzata permette di definire in un metodo un numero
 >     }
 > }
 > 
-> print(‘’Pippo’’, ‘’Topolino’’, ‘’Pluto’’)  // Posso invocare print passando tanti oggetti di tipo String
+> print("Pippo", "Topolino", "Pluto")  // Posso invocare print passando tanti oggetti di tipo String
 > ```
-
 #### Metodi static
-Il modificatore static viene impiegato per definire attributi e metodi a livello di classe anziché a livello di singola istanza. Questo significa che una variabile dichiarata come static è condivisa e mantiene lo stesso valore per tutte le istanze create da quella specifica classe. 
+Il modificatore **static** viene impiegato per definire attributi e metodi a livello di classe anziché a livello di singola istanza. Questo significa che una variabile dichiarata come static è condivisa e mantiene lo stesso valore per tutte le istanze create da quella specifica classe. 
 Di conseguenza, i metodi contrassegnati come static possono essere chiamati direttamente utilizzando il nome della classe, senza la necessità preventiva di creare un'istanza o un oggetto.
 
 > [!example] Esempio con dichiarazione ed uso metodi static
 > ```java
 > public class Person {
->     static int numbOfPersons=0;
+>     static int numbOfPersons=0; // Qui il numero di persone aumenterà senza essere resettato alla prossima esecuzione
 >     private String name;
 >     private String surname;
 >     public Person(String name, String surname) {
@@ -512,7 +511,12 @@ Di conseguenza, i metodi contrassegnati come static possono essere chiamati dire
 > ```
 ### Costanti
 Per definire delle **costanti**, ovvero attributi il cui valore una volta assegnato non può più essere modificato, si utilizza il modificatore **final**. Un uso comune in Java per le costanti globali prevede la combinazione dei modificatori public, static e final, rendendo il valore accessibile ovunque senza dover instanziare la classe
-### Classe innestata
+```java
+private final int A = 3; //Visibile solo nella classe
+public final int X = 4 // Visibile ad altre classi
+public static final double PI=3.14 // Visibile ad altre classi in modo static (senza dover creare un’istanza della classe)
+```
+### Classi innestate
 Il linguaggio offre la possibilità di definire una classe direttamente all'interno del corpo di un'altra classe, creando le cosiddette **classi innestate**. 
 Queste si dividono principalmente in due categorie: 
 - **Classi innestate statiche**: Una classe innestata statica è indipendente e non ha accesso alle risorse e ai membri della classe esterna 
