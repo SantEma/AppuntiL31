@@ -338,7 +338,7 @@ Il for-each **non garantisce nessun ordinamento**, serve soltanto a visitare que
 Lo statement break interrompe istantaneamente e definitivamente un ciclo
 > [!example] Esempio di statement break
 > ```java
-> for (i = 0; i < arrayOfInts.length; i++) {
+> for (i = 0; i < arrayOfInts.length; i++) { //si cerca 
 > 	if (arrayOfInts[i] == searchfor) {
 > 		foundIt = true;
 > 		break;
