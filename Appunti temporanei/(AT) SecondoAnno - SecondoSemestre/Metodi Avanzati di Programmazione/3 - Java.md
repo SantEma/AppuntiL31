@@ -429,16 +429,17 @@ Java supporta l'overloading dei metodi, una funzionalità che permette a una cla
 #### Parametri
 Per quanto riguarda i parametri, ogni metodo può riceverne da zero a molti, e questi possono essere di qualsiasi tipo, spaziando dai tipi primitivi fino agli oggetti di altre classi come array o stringhe
 
-I parametri all'interno della firma del metodo devono avere nomi differenti tra loro e non è consentito dichiarare variabili locali all'interno del metodo che abbiano lo stesso nome di un parametro. È invece possibile che un parametro abbia lo stesso nome di un attributo della classe; tuttavia, in questo scenario l'attributo viene "nascosto" e reso non direttamente visibile al metodo, a meno che non si utilizzi in modo esplicito la parola chiave this per disambiguare il riferimento. .
+I parametri all'interno della firma del metodo devono avere nomi differenti tra loro e non è consentito dichiarare variabili locali all'interno del metodo che abbiano lo stesso nome di un parametro. È invece possibile che un parametro abbia lo stesso nome di un attributo della classe, tuttavia in questo scenario l'attributo viene "nascosto" e reso non direttamente visibile al metodo, a meno che non si utilizzi in modo esplicito la parola chiave **this** per disambiguare il riferimento.
 #### Costruttori
 I costruttori sono metodi speciali progettati appositamente per inizializzare gli oggetti di una classe al momento della loro creazione.
 > [!example] Esempio di un costruttore
 > ```java
+> // Metodo senza valori
 >  public Bicycle(int startSpeed, int startGear) {
 >     gear = startGear;
 >     speed = startSpeed;
 > }
-> 
+> // Metodo con valori 
 > public Bicycle() {
 >     gear = 1;
 >     speed = 0;
@@ -447,9 +448,8 @@ I costruttori sono metodi speciali progettati appositamente per inizializzare gl
 
 Essi si distinguono per avere lo stesso identico nome della classe a cui appartengono e per il fatto di non restituire alcun valore, nemmeno void. 
 Esattamente come accade per i metodi, una classe può dichiarare più di un costruttore sfruttando l'overloading, purché non esistano due costruttori con lo stesso numero e tipo di parametri. Anche ai costruttori possono essere applicati i modificatori di visibilità **private**, **public** o **protected**.
-Se uno sviluppatore decide di non inserire alcun costruttore all'interno della classe, Java interviene facendo ereditare automaticamente il costruttore senza parametri della superclasse; nel caso in cui la superclasse non possieda tale costruttore, la classe eredita il costruttore di base della classe Object.
 ##### Istruzione 'this'
-L'istruzione **this** è uno strumento fondamentale che permette di fare riferimento in modo esplicito agli attributi e ai costruttori della classe corrente in cui ci si trova, rivelandosi particolarmente utile per risolvere ambiguità di nomi o per richiamare un costruttore dall'interno di un altro costruttore
+L'istruzione **this** è uno strumento fondamentale che permette di fare riferimento in modo esplicito agli attributi e ai costruttori della classe corrente in cui ci si trova, rivelandosi utile per risolvere ambiguità di nomi o per richiamare un costruttore dall'interno di un altro costruttore
 > [!example] Esempio di istruzione 'this'
 > ```java
 > public class Bicycle {
@@ -466,7 +466,15 @@ L'istruzione **this** è uno strumento fondamentale che permette di fare riferim
 > } 
 > ```
 #### Oggetti
-Gli oggetti veri e propri prendono vita in memoria utilizzando l'istruzione **new**, la quale si occupa di invocare il costruttore appropriato della classe a cui l'oggetto deve appartenere. Una volta che l'oggetto è stato instanziato, è possibile accedere ai suoi attributi e invocare i suoi metodi sfruttando la sintassi basata sul punto, come ad esempio "myBike.gear".
+Gli oggetti veri e propri prendono vita in memoria utilizzando l'istruzione **new**, la quale si occupa di invocare il costruttore appropriato della classe a cui l'oggetto deve appartenere. Una volta che l'oggetto è stato instanziato, è possibile accedere ai suoi attributi e invocare i suoi metodi sfruttando la sintassi basata sul punto.
+
+> [!example] Esempio di istanza e utilizzo di un oggetto
+> ```java
+> Bicycle myBike = new Bicycle(0, 3); //Istanza di un nuovo oggetto
+> 
+> myBike.gear; //richiamo dell'attributo
+> myBike.getSpeed(); //Richiamo del metodo
+> ```
 #### Numero arbitrario di argomenti
 Un'ulteriore caratteristica avanzata permette di definire in un metodo un numero arbitrario di argomenti dello stesso tipo. In questo caso, all'interno del metodo, il parametro viene trattato a tutti gli effetti come un array
  
