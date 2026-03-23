@@ -208,7 +208,7 @@ Questi operatori restituiscono un boolean come risultato del confronto tra due e
 | \|\|          | OR-logico  |
 In Java le espressioni sono valutate solo se necessario, per esempio se ci sono OR valuterà soltanto una e, se questa è vera, le altre verranno scartate a prescindere (in altri linguaggi questo non succede)
 ### Operatore 'istanceof'
-instanceof è un particolare operatore per stabile se un oggetto è istanza di una particolare classe e restituisce un booleano.
+instanceof è un particolare operatore per stabile se un oggetto è istanza di una particolare classe, come risultato restituisce un booleano.
 > [!example] Esempio di istanceof
 > ```java
 > String s = ‘’sono una stringa’’; 
