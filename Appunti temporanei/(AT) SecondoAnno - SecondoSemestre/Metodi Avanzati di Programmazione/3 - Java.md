@@ -549,8 +549,4 @@ I tipi enumerativi permettono di definire dei tipi che possono assumere solo un 
 > } 
 > ```
 
-Quando si crea un tipo enum JAVA crea automaticamente una classe di tipo enum che mette a disposizione dei metodi e permette di definire anche dei costruttori e nuovi metodi.
-
-Un metodo possibile nel nostro esempio potrebbe essere Day.values, che restituisce tutti i valori che può assumere
-
-Possiamo definire dei costruttori personalizzati sugli enumerativi
+Quando si crea un tipo enum, Java crea automaticamente una classe di tipo enum che mette a disposizione dei metodi e permette di definire anche dei costruttori e nuovi metodi.
