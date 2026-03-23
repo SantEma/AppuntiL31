@@ -386,7 +386,7 @@ A livello sintattico, la dichiarazione di una classe inizia specificando la sua 
 > } 
 > ```
 
-Durante questa fase è anche possibile indicare da quale superclasse essa erediti, utilizzando la parola chiave **extends**, e definire se implementa una o più interfacce tramite la parola chiave **implements**.
+Durante questa fase è anche possibile indicare da quale superclasse essa erediti, utilizzando la parola chiave **extends**, e definire se implementa una o più interfacce tramite la parola chiave **implements** (le vedremo successivamente).
 Il livello di visibilità, che può essere public, private o protected, determina come e da chi la classe può essere vista e utilizzata all'interno del progetto
 ### Variabili all'interno
 All'interno di una classe possiamo trovare diverse tipologie di variabili:
