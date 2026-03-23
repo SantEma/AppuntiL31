@@ -348,7 +348,7 @@ Lo statement break interrompe istantaneamente e definitivamente un ciclo
 
 Nel caso di cicli annidati, è importante sapere che il break va a interrompere solamente il ciclo più innestato rispetto alla posizione dell'istruzione stessa,
 ### continue
-il continue statement salta la corrente iterazione per passare a quella successiva
+Lo statement continue  salta la corrente iterazione per passare a quella successiva
 > [!example] Esempio di statement continue, cercando in una stringa solo le 'p'
 > ```java
 > for (int i = 0; i < max; i++) {
