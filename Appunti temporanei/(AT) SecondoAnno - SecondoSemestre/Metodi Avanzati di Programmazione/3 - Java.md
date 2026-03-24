@@ -553,7 +553,7 @@ Quando si crea un tipo enum, Java crea automaticamente una classe di tipo enum c
 Le interfacce in Java permettono di definire il funzionamento di una classe indicando esplicitamente quali metodi la classe deve possedere per potervi aderire.
 Esse contengono unicamente la descrizione delle firme dei metodi senza fornirne alcuna implementazione, ma possono comunque includere delle costanti.
 
-> [!example] Esempio di interfacce
+> [!info] Dichiarazione di interfacce
 > ```java
 > public interface <nome> extends <interface1>, <interface2>, <interface3> {
 >     // dichiarazioni di costanti
@@ -579,7 +579,7 @@ In Java, le classi possono ereditare da altre classi, il che implica che la sott
 > ![[Pasted image 20260324192858.png]]
 > ![[Pasted image 20260324192905.png]]
 
-Un aspetto fondamentale del linguaggio è che tutte le classi scritte in Java ereditano, in modo diretto o indiretto, dalla classe madre universale chiamata `Object`, questa poi formata da 
+Un aspetto fondamentale del linguaggio è che tutte le classi scritte in Java ereditano, in modo diretto o indiretto, dalla classe madre universale chiamata `Object`
 ### Overriding e poliformismo
 Una classe ha la capacità di ridefinire un metodo che ha precedentemente ereditato dalla sua superclasse (o classe padre).
 Quando questo accade, il metodo originale della superclasse viene nascosto e, al suo posto, viene invocato esclusivamente quello ridefinito all'interno della sottoclasse; questo specifico fenomeno strutturale prende il nome di **overriding**
@@ -628,5 +628,7 @@ Per interagire esplicitamente con gli elementi della superclasse, Java mette a d
 >     }
 > }
 > ```
-
 ### Classi astratte
+Le classi astratte si distinguono per la presenza di metodi astratti, ovvero funzioni di cui viene fornita solamente la firma senza alcuna implementazione, sebbene la classe possa contenere parallelamente anche dei metodi regolarmente implementati
+
+La caratteristica restrittiva principale di una classe astratta, dichiarata tramite la parola chiave `abstract`, è che non è fisicamente possibile istanziarne degli oggetti diretti, infatti esse sono concepite esclusivamente per essere ereditate; in tal caso, la sottoclasse ha l'obbligo di fornire un'implementazione concreta per tutti i metodi astratti che ha ereditato
