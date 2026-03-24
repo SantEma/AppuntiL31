@@ -629,7 +629,7 @@ Per interagire esplicitamente con gli elementi della superclasse, Java mette a d
 > }
 > ```
 ### Classi astratte
-Le classi astratte si distinguono per la presenza di metodi astratti, ovvero funzioni di cui viene fornita solamente la firma senza alcuna implementazione, sebbene la classe possa contenere parallelamente anche dei metodi regolarmente implementati
+Le classi astratte si distinguono per la presenza di metodi astratti, ovvero funzioni di cui viene fornita solamente la firma senza alcuna implementazione, sebbene la classe possa contenere dei metodi implementati
 
 La caratteristica restrittiva principale di una classe astratta, dichiarata tramite la parola chiave `abstract`, è che non è fisicamente possibile istanziarne degli oggetti diretti, infatti esse sono concepite esclusivamente per essere ereditate; in tal caso, la sottoclasse ha l'obbligo di fornire un'implementazione concreta per tutti i metodi astratti che ha ereditato
 
@@ -647,5 +647,4 @@ Esistono differenze importanti tra classi astratte e interfacce:
 2. In Java è consentito estendere una sola classe alla volta (anche se astratta), ma si possono implementare contemporaneamente numerose interfacce
 3. Le classi astratte sono utili quando si desidera condividere del codice (sotto forma di metodi) tra un insieme di classi che sono tra di loro strettamente correlate, quando ci si aspetta che le classi figlie abbiano molti metodi o attributi in comune, o quando si necessita di attributi non statici e non finali per permettere ai metodi di modificare liberamente lo stato degli oggetti. Le interfacce sono la scelta preferibile se le classi che le devono implementare non sono strettamente correlate, quando si vuole semplicemente specificare il comportamento di una particolare struttura dati senza entrare nei dettagli implementativi, o quando si ha il bisogno specifico di ricorrere e simulare un'ereditarietà multipli.
 #### Classi astratte e Interfacce combinate
-In Java, una classe astratta ha la capacità di implementare direttamente una o più interfacce. A differenza di quanto accade con le classi concrete, in questo scenario il compilatore non vincola la classe astratta a soddisfare interamente il "contratto" stabilito; essa ha infatti la facoltà di fornire l'implementazione esclusivamente per un sottoinsieme dei metodi richiesti, potendo scegliere liberamente di omettere l'implementazione per gli altri. 
-Questo meccanismo di astrazione selettiva propaga l'obbligo implementativo verso il basso lungo la gerarchia di ereditarietà: saranno poi le successive sottoclassi concrete a doversi fare obbligatoriamente carico di fornire tutte le implementazioni mancanti.
+In Java, una classe astratta può implementare una o più interfacce. Il grande vantaggio in questo caso è che la classe astratta non è obbligata a implementare subito tutti i metodi richiesti, si può decidere di scriverne solo alcuni e lasciarne altri non implementati",  le sottoclassi concrete (cioè le classi "normali" che andranno a estenderla) avranno poi l'obbligo di fornire il codice per tutti i metodi rimasti vuoti.
