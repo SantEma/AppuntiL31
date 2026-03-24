@@ -549,7 +549,7 @@ I tipi enumerativi permettono di definire dei tipi che possono assumere solo un 
 > ```
 
 Quando si crea un tipo enum, Java crea automaticamente una classe di tipo enum che mette a disposizione dei metodi e permette di definire anche dei costruttori e nuovi metodi.
-#### Interfacce
+### Interfacce
 Le interfacce in Java permettono di definire il funzionamento di una classe indicando esplicitamente quali metodi la classe deve possedere per potervi aderire.
 Esse contengono unicamente la descrizione delle firme dei metodi senza fornirne alcuna implementazione, ma possono comunque includere delle costanti.
 
@@ -565,5 +565,24 @@ Esse contengono unicamente la descrizione delle firme dei metodi senza fornirne 
 
 Grazie alle interfacce è possibile definire gruppi di classi che condividono le stesse funzionalità, lasciando però a ciascuna di esse la libertà di implementarle in maniera differente
 
-L'implementazione pratica da parte di una classe avviene tramite la parola chiave `implements`, la quale obbliga la classe stessa a fornire il codice per tutti i metodi definiti all'interno dell'interfaccia
-#### Ere
+L'implementazione pratica da parte di una classe avviene tramite la parola chiave `implements`, la quale obbliga la classe stessa a fornire il codice per tutti i metodi definiti all'interno dell'interfaccia.
+
+Nelle interfacce va rispettato le stesse regole di nome delle classi
+### Ereditarietà
+In Java, le classi possono ereditare da altre classi, il che implica che la sottoclasse acquisisce automaticamente tutti gli attributi e i metodi che possiedono una visibilità `public` oppure `protected` all'interno della superclasse
+
+> [!example] Esempio di ereditarietà in una calcolatrice
+> Prendiamo una calcolatrice basica, come questa:
+> ![[Pasted image 20260324192730.png]]
+> ![[Pasted image 20260324192755.png]]
+> Decidiamo di estenderla con una calcolatrice scientifica
+> ![[Pasted image 20260324192858.png]]
+> ![[Pasted image 20260324192905.png]]
+
+Un aspetto fondamentale del linguaggio è che tutte le classi scritte in Java ereditano, in modo diretto o indiretto, dalla classe madre universale chiamata `Object`, questa poi formata da 
+### Overriding
+Una classe ha la capacità di ridefinire un metodo che ha precedentemente ereditato dalla sua superclasse (o classe padre).
+Quando questo accade, il metodo originale della superclasse viene nascosto e, al suo posto, viene invocato esclusivamente quello ridefinito all'interno della sottoclasse; questo specifico fenomeno strutturale prende il nome di **overriding**
+```java 
+
+```
