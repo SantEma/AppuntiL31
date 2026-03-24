@@ -580,23 +580,53 @@ In Java, le classi possono ereditare da altre classi, il che implica che la sott
 > ![[Pasted image 20260324192905.png]]
 
 Un aspetto fondamentale del linguaggio è che tutte le classi scritte in Java ereditano, in modo diretto o indiretto, dalla classe madre universale chiamata `Object`, questa poi formata da 
-### Overriding
+### Overriding e poliformismo
 Una classe ha la capacità di ridefinire un metodo che ha precedentemente ereditato dalla sua superclasse (o classe padre).
 Quando questo accade, il metodo originale della superclasse viene nascosto e, al suo posto, viene invocato esclusivamente quello ridefinito all'interno della sottoclasse; questo specifico fenomeno strutturale prende il nome di **overriding**
-```java 
-public class ClassA {
-    public void printMe() {
-        System.out.println(‘’Io sono A’’);
-    }
-    public void sayHello() {
-        System.out.println(‘’Hello!’’);
-    }
-}
 
-public class ClassB extends ClassA {
-    public void printMe() { //override del metodo in A, quando si chiama questo metodo nell'oggetto B 
-        System.out.println(‘’Io sono B’’); 
-    }
-}
-```
-Se qui andassi a richiamare il metodo specificando un oggetto di di tipo B e metodo printMe, otterei come output "Io sono B", poichè ho fatto overriding del metodo precedente
+Il polimorfismo è strettamente legato ai concetti di ereditarietà e overriding, in quanto rappresenta la **capacità di ogni sottoclasse di poter ridefinire specifici comportamenti della propria superclasse**.
+Tutte le sottoclassi possono riscrivere determinati comportamenti per adattarli alle proprie esigenze, pur mantenendo altre caratteristiche operative in comune con la classe **padre**
+
+> [!example] Esempio di overriding, poliformismo e ereditarietà
+> ```java 
+> public class ClassA {
+>     public void printMe() {
+>         System.out.println(‘’Io sono A’’);
+>     }
+>     public void sayHello() {
+>         System.out.println(‘’Hello!’’);
+>     }
+> }
+> 
+> public class ClassB extends ClassA {
+>     public void printMe() { //override del metodo in A, ereditato
+>         System.out.println(‘’Io sono B’’); 
+>     }
+> }
+> ```
+> Se qui andassi a richiamare il metodo specificando un oggetto di di tipo B e metodo printMe, otterei come output "Io sono B", poichè ho fatto overriding del metodo precedente
+#### Accesso alla superclasse da una sottoclasse
+Per interagire esplicitamente con gli elementi della superclasse, Java mette a disposizione dello sviluppatore la parola chiave `super`, questa quando viene utilizzata permette:
+- Di invocare direttamente i costruttori della classe padre, utilizzando `super()` senza parametri o `super(lista parametri)` con argomenti specifici, \
+- Di richiamare i metodi originali della superclasse tramite la sintassi `super.methodSuper(...)
+
+> [!example] Esempio di accesso alla superclasse da una sottoclasse
+> ```java
+> public class ClassA {
+>     public void printMe() {
+>         System.out.println(‘’Io sono A’’);
+>     }
+>     public void sayHello() {
+>         System.out.println(‘’Hello!’’);
+>     }
+> }
+> 
+> public class ClassB extends ClassA {
+>     public void printMe() {
+>         super.printMe() //qui invochiamo il metodo di A direttamente
+>         System.out.println(‘’Io sono B’’);
+>     }
+> }
+> ```
+
+### Classi astratte
