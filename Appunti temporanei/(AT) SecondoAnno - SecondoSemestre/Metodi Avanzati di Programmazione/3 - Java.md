@@ -642,4 +642,8 @@ La caratteristica restrittiva principale di una classe astratta, dichiarata tram
 > }
 > ```
 #### Classi astratte vs interfacce
-
+Esistono differenze importanti tra classi astratte e interfacce:
+1. Nelle classi astratte è possibile dichiarare attributi che non siano obbligatoriamente `static` e `final`, e si possono definire metodi completi della loro implementazione. All'interno delle interfacce tutti gli attributi devono essere rigorosamente `static` e `final`, e tutti i metodi assumono di default una visibilità `public`
+2. In Java è consentito estendere una sola classe alla volta (anche se astratta), ma si possono implementare contemporaneamente numerose interfacce
+3. Le classi astratte sono utili quando si desidera condividere del codice (sotto forma di metodi) tra un insieme di classi che sono tra di loro strettamente correlate, quando ci si aspetta che le classi figlie abbiano molti metodi o attributi in comune, o quando si necessita di attributi non statici e non finali per permettere ai metodi di modificare liberamente lo stato degli oggetti. Le interfacce sono la scelta preferibile se le classi che le devono implementare non sono strettamente correlate, quando si vuole semplicemente specificare il comportamento di una particolare struttura dati senza entrare nei dettagli implementativi, o quando si ha il bisogno specifico di ricorrere e simulare un'ereditarietà multipli.
+#### Classi astratte e Interfacce combinate
