@@ -632,3 +632,14 @@ Per interagire esplicitamente con gli elementi della superclasse, Java mette a d
 Le classi astratte si distinguono per la presenza di metodi astratti, ovvero funzioni di cui viene fornita solamente la firma senza alcuna implementazione, sebbene la classe possa contenere parallelamente anche dei metodi regolarmente implementati
 
 La caratteristica restrittiva principale di una classe astratta, dichiarata tramite la parola chiave `abstract`, è che non è fisicamente possibile istanziarne degli oggetti diretti, infatti esse sono concepite esclusivamente per essere ereditate; in tal caso, la sottoclasse ha l'obbligo di fornire un'implementazione concreta per tutti i metodi astratti che ha ereditato
+
+> [!example] Esempio di dichiarazione classe astratta
+> ```java
+> public abstract class GraphicObject {
+>     // declare fields
+>     // declare nonabstract methods
+> abstract void draw();
+> }
+> ```
+#### Classi astratte vs interfacce
+
