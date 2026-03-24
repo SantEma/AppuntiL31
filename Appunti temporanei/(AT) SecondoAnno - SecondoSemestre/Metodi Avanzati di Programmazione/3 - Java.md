@@ -594,9 +594,9 @@ public class ClassA {
 }
 
 public class ClassB extends ClassA {
-    public void printMe() {
-        System.out.println(‘’Io sono B’’);
+    public void printMe() { //override del metodo in A, quando si chiama questo metodo nell'oggetto B 
+        System.out.println(‘’Io sono B’’); 
     }
 }
 ```
-Se qui andassi a richiamare il metodo specificando un oggetto di di tipo A e metodo printMe, otterei come output "Io sono B", poichè ho fatto overriding del metodo precedente
+Se qui andassi a richiamare il metodo specificando un oggetto di di tipo B e metodo printMe, otterei come output "Io sono B", poichè ho fatto overriding del metodo precedente
