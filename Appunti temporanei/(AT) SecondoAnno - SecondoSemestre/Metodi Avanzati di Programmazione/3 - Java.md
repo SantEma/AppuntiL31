@@ -449,7 +449,7 @@ I costruttori sono metodi speciali progettati appositamente per inizializzare gl
 Essi si distinguono per avere lo stesso identico nome della classe a cui appartengono e per il fatto di non restituire alcun valore, nemmeno void. 
 Esattamente come accade per i metodi, una classe può dichiarare più di un costruttore sfruttando l'overloading, purché non esistano due costruttori con lo stesso numero e tipo di parametri. Anche ai costruttori possono essere applicati i modificatori di visibilità **private**, **public** o **protected**.
 ##### Istruzione 'this'
-L'istruzione **this** è uno strumento fondamentale che permette di fare riferimento in modo esplicito agli attributi e ai costruttori della classe corrente in cui ci si trova, rivelandosi utile per risolvere ambiguità di nomi o per richiamare un costruttore dall'interno di un altro costruttore
+L'istruzione **this** è uno strumento fondamentale che permette di fare riferimento in modo esplicito agli attributi e ai costruttori della classe corrente in cui ci si trova, utile per risolvere ambiguità di nomi o per richiamare un costruttore dall'interno di un altro costruttore
 > [!example] Esempio di istruzione 'this'
 > ```java
 > public class Bicycle {
