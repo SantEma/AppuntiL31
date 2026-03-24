@@ -584,5 +584,19 @@ Un aspetto fondamentale del linguaggio è che tutte le classi scritte in Java er
 Una classe ha la capacità di ridefinire un metodo che ha precedentemente ereditato dalla sua superclasse (o classe padre).
 Quando questo accade, il metodo originale della superclasse viene nascosto e, al suo posto, viene invocato esclusivamente quello ridefinito all'interno della sottoclasse; questo specifico fenomeno strutturale prende il nome di **overriding**
 ```java 
+public class ClassA {
+    public void printMe() {
+        System.out.println(‘’Io sono A’’);
+    }
+    public void sayHello() {
+        System.out.println(‘’Hello!’’);
+    }
+}
 
+public class ClassB extends ClassA {
+    public void printMe() {
+        System.out.println(‘’Io sono B’’);
+    }
+}
 ```
+Se qui andassi a richiamare il metodo specificando un oggetto di di tipo A e metodo printMe, otterei come output "Io sono B", poichè ho fatto overriding del metodo precedente
