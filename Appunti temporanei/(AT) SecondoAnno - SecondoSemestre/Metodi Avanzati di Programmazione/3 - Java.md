@@ -407,13 +407,13 @@ Quando si dichiara un attributo, è necessario specificarne la visibilità, il t
 I metodi rappresentano le funzioni di una classe e la loro dichiarazione richiede l'indicazione della visibilità, del tipo di dato restituito, del nome e di eventuali parametri racchiusi tra parentesi
 > [!example] Esempio di dichiarazione di metodi
 > ```java
-> public int sum(int a, int b) {
+> public int sum(int a, int b) { //tipo, nome e parametri
 >     return a+b;
 > }
 > ```
 #### Nome
 Per convenzione, i nomi dei metodi dovrebbero essere scritti in minuscolo e iniziare preferibilmente con un verbo, poiché indicano un'azione; se il nome è composto da più parole, si utilizza la notazione camelCase, inserendo la lettera maiuscola per identificare l'inizio di ogni parola successiva alla prima
-#### Overloading
+#### Overloading di metodi
 Java supporta l'overloading dei metodi, una funzionalità che permette a una classe di avere più metodi con lo stesso nome, a condizione fondamentale che abbiano una lista di parametri differente per numero o tipo. 
 È importante notare che i metodi sovraccaricati con lo stesso nome devono comunque restituire lo stesso tipo di valore.
 > [!example] Esempio di overloading
@@ -500,8 +500,8 @@ Di conseguenza, i metodi contrassegnati come static possono essere chiamati dire
 >     private String surname;
 >     public Person(String name, String surname) {
 >         this.name=name;
->     this.surname=surname;
->     ++numbOfPersons;
+> 	    this.surname=surname;
+> 	    ++numbOfPersons;
 >     }
 > }
 > 
@@ -520,7 +520,7 @@ public static final double PI=3.14 // Visibile ad altre classi in modo static (s
 Il linguaggio offre la possibilità di definire una classe direttamente all'interno del corpo di un'altra classe, creando le cosiddette **classi innestate**. 
 Queste si dividono principalmente in due categorie: 
 - **Classi innestate statiche**: Una classe innestata statica è indipendente e non ha accesso alle risorse e ai membri della classe esterna 
-- **Inner class**: al contrario, una classe interna gode di un accesso privilegiato a tutte le risorse della classe esterna che la contiene, comprese quelle dichiarate con visibilità private
+- **Classi interne**: al contrario, una classe interna gode di un accesso privilegiato a tutte le risorse della classe esterna che la contiene, comprese quelle dichiarate con visibilità private
   L'utilizzo delle classi innestate è consigliato principalmente in tre scenari: 
 	- Quando la classe interna risulta utile esclusivamente alle logiche della classe esterna; 
 	- Quando si desidera incapsulare una classe B dentro una classe A per permetterle di accedere alle risorse private di A mantenendole sicure; 
@@ -552,7 +552,18 @@ Quando si crea un tipo enum, Java crea automaticamente una classe di tipo enum c
 #### Interfacce
 Le interfacce in Java permettono di definire il funzionamento di una classe indicando esplicitamente quali metodi la classe deve possedere per potervi aderire.
 Esse contengono unicamente la descrizione delle firme dei metodi senza fornirne alcuna implementazione, ma possono comunque includere delle costanti.
-```java
 
-```
+> [!example] Esempio di interfacce
+> ```java
+> public interface <nome> extends <interface1>, <interface2>, <interface3> {
+>     // dichiarazioni di costanti
+>     // firme dei metodi
+>     void methodA(int i, double x);
+>     int methodB(String s);
+> }
+> ```
+
 Grazie alle interfacce è possibile definire gruppi di classi che condividono le stesse funzionalità, lasciando però a ciascuna di esse la libertà di implementarle in maniera differente
+
+L'implementazione pratica da parte di una classe avviene tramite la parola chiave `implements`, la quale obbliga la classe stessa a fornire il codice per tutti i metodi definiti all'interno dell'interfaccia
+#### Ere
