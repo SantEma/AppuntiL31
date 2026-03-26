@@ -41,12 +41,10 @@ Gli sviluppatori adottano quindi questo workflow (principalmente questo si rifer
 L'unico vero svantaggio di questo sistema è la curva di apprendimento inizialmente ripida, dovuta ai molteplici flussi di lavoro possibili
 ## Git
 ### Modifiche nel computer locale
+Ogni file, in base al comando, passa in determinate zone come descritte da questo schema:
 
 > [!info] Schema fasi di modifiche nel computer locale
 > ![[Pasted image 20260320125038.png]]
-
-[da completare]
-
 ### Vari comandi di Git
 
 | **Categoria**                  | **Comando**                                           | **Descrizione**                                                                    |
