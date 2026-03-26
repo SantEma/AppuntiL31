@@ -45,6 +45,7 @@ Ogni file, in base al comando, passa in determinate zone come descritte da quest
 
 > [!info] Schema fasi di modifiche nel computer locale
 > ![[Pasted image 20260320125038.png]]
+> ![[Pasted image 20260326190717.png]]
 ### Vari comandi di Git
 
 | **Categoria**                  | **Comando**                                           | **Descrizione**                                                                    |
@@ -103,6 +104,10 @@ Per default il ramo madre si chiama **master** (chiamato anche **main**) e i bra
 L'operazione di **unione** del branch lavorato e finito al ramo master in corso (da cui è stato anche separato il branch stesso), si chiama **merge**.
 
 Generalmente il branch viene usato in **locale**, altrimenti si ricadrebbe nello stesso bisogno che si è avuto per creare la separazione tra branch e master.
+
+> [!example] Rappresentazione grafica del branching
+> ![[Pasted image 20260326190743.png]]
+
 #### Comandi per il branching
 - `git branch`: mostrare i branch esistenti e visualizzare quello corrente
 - `git branch branch-name`: crea un nuovo branch a partire da quello corrente
