@@ -362,7 +362,7 @@ Lo statement continue  salta la corrente iterazione per passare a quella success
 
 Spesso viene attivato da un costrutto condizionale, come in questo caso
 ### return
-L'istruzione return viene adoperata per terminare in modo definitivo l'esecuzione di un metodo corrente.
+L'istruzione return viene adoperata per terminare in modo definitivo l'esecuzione di un metodo corrente.k
 A seconda del metodo, può essere usata in modo autonomo e senza restituire alcun valore, oppure restituendo un valore specifico tramite una variabile
 ## Classi
 ### Dichiarazione di una classe
@@ -570,7 +570,6 @@ L'implementazione pratica da parte di una classe avviene tramite la parola chiav
 Nelle interfacce va rispettato le stesse regole di nome delle classi
 ### Ereditarietà
 In Java, le classi possono ereditare da altre classi, il che implica che la sottoclasse acquisisce automaticamente tutti gli attributi e i metodi che possiedono una visibilità `public` oppure `protected` all'interno della superclasse
-
 > [!example] Esempio di ereditarietà in una calcolatrice
 > Prendiamo una calcolatrice basica, come questa:
 > ![[Pasted image 20260324192730.png]]
