@@ -649,3 +649,12 @@ In Java, una classe astratta può implementare una o più interfacce. Il grande 
 ### Numeri
 Java mette a disposizione delle classi che rappresentano i tipi primitivi numerici che sono `Byte, Short, Long, Integer, Float, Double`. Ognuno di questi eredita dalla classe madre `Numbers`.
 
+Il compilatore converte automaticamente tra tipi primitivi e classi usando una tecnica chiamata **boxing/unboxing**:
+- Il **boxing** (noto anche come **wrapper**) è la trasformazione che consiste nel posizionare un tipo primitivo all'interno di un oggetto in modo che il valore possa essere utilizzato come riferimento.
+- **Unboxing** è la trasformazione inversa dell'estrazione del valore primitivo dal suo oggetto nel wrapper
+
+Questa classe mette a disposizione come sottoclassi:
+- BigInteger/BigDecimal: sottoclassi adibite a interi e decimali con alta precisione
+- AtomicInteger/AtomicDecimal: sottoclassi adibite a interi e decimali per applicazioni concorrenti, una volta che un operazione viene effettuata su un tipo di questo genere non è interrompibile (da questo la sua atomicità)
+
+Di solito si usa
