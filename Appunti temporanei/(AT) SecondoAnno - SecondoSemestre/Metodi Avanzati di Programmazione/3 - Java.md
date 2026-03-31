@@ -657,4 +657,9 @@ Questa classe mette a disposizione come sottoclassi:
 - BigInteger/BigDecimal: sottoclassi adibite a interi e decimali con alta precisione
 - AtomicInteger/AtomicDecimal: sottoclassi adibite a interi e decimali per applicazioni concorrenti, una volta che un operazione viene effettuata su un tipo di questo genere non è interrompibile (da questo la sua atomicità)
 
-Di solito si usa
+Di solito si usa questa classe per alcuni motivi, tra cui:
+- Un argomento deve essere un oggetto e non un tipo primitivo
+- Quando bisogna definire delle costanti statiche nelle classi (come MAX_VALUE o MIN_VALUE)
+- Per delle conversioni tra tipo, come
+	- Da String (stringa contenente dei numeri) a tipo primitivo
+	- Da un tipo numerico ad un altro
