@@ -663,5 +663,3 @@ Di solito si usa questa classe per alcuni motivi, tra cui:
 - Per delle conversioni tra tipo, come
 	- Da String (stringa contenente dei numeri) a tipo primitivo
 	- Da un tipo numerico ad un altro
-
-#### Metodi implementati da Number
