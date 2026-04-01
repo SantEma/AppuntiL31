@@ -99,7 +99,7 @@ Ci sono alcune regole generali di **etiquette** da seguire, ad esempio:
 Il **branch** ci permette di estrarre dal ramo **madre** una parte in cui ci si può lavorare separatamente, decidendo al termine della linea di sviluppo se inglobarlo nel ramo madre, lasciarlo separato o eliminarlo e creare un ulteriore branch da quest'ultimo.
 Questa procedura è il modo migliore per lavorare contemporaneamente a più versioni di un **repository**.
 
-Per default il ramo madre si chiama **master** (chiamato anche **main**) e i branch che vengono riuniti al master verranno rimossi, se quest'ultimi non sono rimossi vuol dire che quel branch serve per tenere traccia comunque di un punto del software che sia esterno o che abbia comunque utilità anche in **maniera esterna al progetto**.
+Per default il ramo madre si chiama **master** (chiamato anche **main**) e i branch che vengono riuniti al master verranno rimossi, se quest'ultimi non sono rimossi vuol dire che quel branch serve per tenere traccia comunque di un punto del software .
 
 L'operazione di **unione** del branch lavorato e finito al ramo master in corso (da cui è stato anche separato il branch stesso), si chiama **merge**.
 
