@@ -99,7 +99,7 @@ Ci sono alcune regole generali di **etiquette** da seguire, ad esempio:
 Il **branch** ci permette di estrarre dal ramo **madre** una parte in cui ci si può lavorare separatamente, decidendo al termine della linea di sviluppo se inglobarlo nel ramo madre, lasciarlo separato o eliminarlo e creare un ulteriore branch da quest'ultimo.
 Questa procedura è il modo migliore per lavorare contemporaneamente a più versioni di un **repository**.
 
-Per default il ramo madre si chiama **master** (chiamato anche **main**) e i branch che vengono riuniti al master verranno rimossi, se quest'ultimi non sono rimossi vuol dire che quel branch serve per tenere traccia comunque di un punto del software .
+Per default il ramo madre si chiama **master** (oppure **main**) e i branch che vengono riuniti al master verranno rimossi, se quest'ultimi non sono rimossi vuol dire che quel branch serve per tenere traccia comunque di un punto del software .
 
 L'operazione di **unione** del branch lavorato e finito al ramo master in corso (da cui è stato anche separato il branch stesso), si chiama **merge**.
 
@@ -134,9 +134,9 @@ Generalmente il branch viene usato in **locale**, altrimenti si ricadrebbe nello
 ![[Pasted image 20260324130100.png|557]]
 ## Github
 Una delle difficoltà di Git è sincronizzarsi tra membri, tramite workflow, per capire chi deve attuare le modifiche e quando.
-Tramite **GitHub** possiamo visualizzare il repository remoto condiviso a tutto il team.
+Grazie a **GitHub** possiamo visualizzare il repository remoto condiviso a tutto il team.
 
-Il repository viene **clonato**, copiando l'URL del repository, e **scaricando** la directory e lo storico di quel progetto per scaricarlo locamelnte sul proprio dispositivo, così da modificare senza disturbare il progetto altrui.
+Il repository viene **clonato**, copiando l'URL del repository. Quando un repository è clonato, viene messo su una directory specificata dall'utente su cui si potrà poi lavorare localmente e proporre le modifiche su cui mergare.
 L'operazione di clone avviene in base a se:
 - Il repository è **privato** (bisogna chiedere i diritti e i permessi per accedervi)
 - Il repository è **pubblico** (tutto il team è messo allo stesso pari senza gerarchie interne. Anche quest'ultimo però può non essere modificabile in globale poiché solo alcuni membri nell'open-source permettono di modificare un intero progetto e non da tutti)
@@ -151,14 +151,14 @@ Possono essere classificati come:
 - Assegnati (in modo che ogni membro del team cerchi di gestire un singolo problema)
 - Irrisolti
 
-Gli issues sono anche **numerati** e descritti da **titolo+descrizione**.
+Gli issues sono anche **numerati** e descritti da **titolo e descrizione**.
 In più è possibile creare discussioni asincrone su di essi per parlare del problema con gli utenti.
 Sono anche classificati in base al tipo di issues:
 - Bug
 - Miglioria
 - Features
 - Security ecc...
-## Step per lavorare nel team con Github
+### Step per lavorare nel team con Github
 Analizziamo un workflow, tra quelli usati a livello di default, ovvero il **GitHub Flow**.
 Questo workflow permette di poter lavorare in modo **asincrono e parallelo** al progetto ma richiede che alla base ci sia lo stesso repository.
 Si eseguono questi 5 passagi principali:
@@ -170,27 +170,25 @@ Si eseguono questi 5 passagi principali:
 
 >[!NOTE] Analizziamo i nuovi termini:
 >- **Deploy**: Il codice finale presente nel main branch (completo di test e totalmente funzionante) viene reso accessibile, per qualsiasi utilizzo, agli utenti finali.
->  - **Pull request**: Richiesta formale inviata ai colleghi del progetto per discutere le modifiche apportate nel branch secondario.
+>  - **Pull request**: Richiesta formale inviata ai componenti del progetto per discutere le modifiche apportate nel branch secondario.
 
-### Fase 1
+#### Fase 1
 Bisogna assegnare l'issue su cui si sta lavorando per la modifica come ***assigned*** e creare il branch sul repository locale nominato con numero dell'issue, titolo e descrizione.
 ![[Pasted image 20260327121436.png]]
-### Fase 2
+#### Fase 2
 Spostandosi sul branch nuovo e dopo aver effettuato le varie modifiche, è necessario eseguire i commit delle modifiche sul nuovo branch (coi comandi affrontati precedentemente).
->[!WARNING] NON SPORCARE IL MAIN
->Nel main branch deve esserci il lavoro pulito senza cancellazioni o visualizzazioni sporche, poiché sarà il progetto inviato al cliente.
-### Fase 3
+#### Fase 3
 La pull request è legata ad un utente del team su cui argomentare l'issue e volendo si può legarla per la chiusura automatica all'issue stesso tramite la dicitura ***closes #123***
 
 La pull request ha la stessa descrizione dell'issue, se è basata su quest'ultimo, altrimenti deve contenere una descrizione con i test eseguiti, le note e avvertimenti, possibili link utili e se necessario anche immagini. Infine menzionare l'utente (@username) a cui fare la request.
 ![[Pasted image 20260327121926.png]]
-### Fase 4
+#### Fase 4
 Alla pull request può partecipare chiunque per dire la sua idea. Prima però l'approvazione dell'apertura del dialogo deve essere accettata e discussa con il membro del team responsabile e poi ci si discute sopra.
 ![[Pasted image 20260327122229.png]]
 In questa discussione è possibile attuare ulteriori modifiche prima del merge.
-### Fase 5
-Alla fine di tutti i check di controllo della qualità, viene cancellato il branch sia via remoto (web) che locale.
-Risolvere i possibili conflitti presenti nel main branch, questa risoluzione avviene tramite la riesecuzione dei seguenti passi:
+#### Fase 5
+Alla fine di tutti i check di controllo della qualità, viene cancellato il branch sia via remoto (web) che locale (oppure mantenuto nel caso si voglia avere una storia delle modifiche).
+Per risolvere i possibili conflitti presenti nel branch principale avviene la ri-esecuzione dei seguenti passi:
 - Aggiornare il repository locale
 - Modifiche e commit
 - Push dei cambiamenti su remoto
