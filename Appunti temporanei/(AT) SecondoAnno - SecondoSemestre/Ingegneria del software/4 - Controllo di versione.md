@@ -107,7 +107,6 @@ Generalmente il branch viene usato in **locale**, altrimenti si ricadrebbe nello
 
 > [!example] Rappresentazione grafica del branching
 > ![[Pasted image 20260326190743.png]]
-
 #### Comandi per il branching
 - `git branch`: mostrare i branch esistenti e visualizzare quello corrente
 - `git branch branch-name`: crea un nuovo branch a partire da quello corrente
