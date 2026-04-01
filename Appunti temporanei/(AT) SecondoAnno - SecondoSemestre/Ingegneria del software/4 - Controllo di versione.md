@@ -113,3 +113,87 @@ Generalmente il branch viene usato in **locale**, altrimenti si ricadrebbe nello
 - `git checkout branch-name`: cambia il branch corrente e aggiorna la working directory
 - `git merge branch-name`: fonde il branch specifico con quello madre
 - `git merge -d branch-name`: cancella il branch selezionato
+#### Inizializzazione e Analisi
+* `git init <nome-cartella>`: Crea e inizializza un nuovo repository Git vuoto nella cartella specificata. Da questo momento, Git inizierà a tracciare le modifiche in quella directory.
+* `git status`: Mostra lo stato attuale del repository. Indica in quale branch ci si trova, quali file sono stati modificati, quali sono pronti per il commit (area di staging) e quali non sono ancora tracciati (untracked).
+* `git diff`: Mostra nel dettaglio le differenze tra i file nella directory di lavoro e quelli che sono stati preparati nell'area di staging. Utile per vedere esattamente quali righe di codice sono state aggiunte o rimosse prima di fare un `add`.
+#### Salvataggio delle Modifiche (Staging e Commit)
+* `git add <nome-file>`: Aggiunge un file (o le sue modifiche) all'**area di staging**. Questo significa che le modifiche sono "in attesa" e pronte per essere impacchettate nel prossimo commit.
+* `git commit -m "messaggio descrittivo"`: Prende tutte le modifiche attualmente nell'area di staging e le salva in modo permanente nella cronologia del repository come una nuova "istantanea". Il flag `-m` permette di allegare un messaggio che spiega brevemente cosa è stato fatto.
+#### Visualizzazione della Cronologia
+* `git log`: Mostra l'elenco cronologico di tutti i commit effettuati nel branch corrente, includendo l'ID univoco del commit (hash), l'autore, la data e il messaggio.
+* `git shortlog`: Mostra un riepilogo più compatto della cronologia, raggruppando i commit in base all'autore.
+#### Gestione dei Branch (Branching)
+* `git branch`: Se lanciato senza parametri, mostra la lista di tutti i rami (branch) locali presenti nel repository. Un asterisco (`*`) indica il branch su cui ci si trova attualmente (es. `* main`).
+* `git branch <nome-branch>`: Crea un nuovo branch con il nome specificato, partendo dal punto esatto della cronologia in cui ci si trova. *Attenzione: questo comando crea solo il branch, ma non ci si sposta automaticamente sopra.*
+* `git checkout <nome-branch>`: Cambia il branch attivo, spostando l'ambiente di lavoro (e l'indicatore `HEAD`) sul branch specificato. I file nella directory di lavoro verranno aggiornati per riflettere lo stato di quel branch.
+* `git branch -d <nome-branch>`: Elimina un branch locale. L'opzione `-d` (delete) è sicura: Git impedirà di eliminare il branch se contiene modifiche che non sono ancora state unite (merged) da qualche altra parte.
+#### Unione dei Branch (Merging)
+* `git merge <nome-branch>`: Unisce le modifiche del branch specificato all'interno del branch in cui ci si trova in quel momento. (Ad esempio, se ci si trova su `main` e si lancia `git merge turingaward`, tutto il lavoro fatto su `turingaward` verrà riversato su `main`).
+#### File MD finale
+![[Pasted image 20260324130100.png|557]]
+## Github
+Una delle difficoltà di Git è sincronizzarsi tra membri, tramite workflow, per capire chi deve attuare le modifiche e quando.
+Tramite **GitHub** possiamo visualizzare il repository remoto condiviso a tutto il team.
+
+Il repository viene **clonato**, copiando l'URL del repository, e **scaricando** la directory e lo storico di quel progetto per scaricarlo locamelnte sul proprio dispositivo, così da modificare senza disturbare il progetto altrui.
+L'operazione di clone avviene in base a se:
+- Il repository è **privato** (bisogna chiedere i diritti e i permessi per accedervi)
+- Il repository è **pubblico** (tutto il team è messo allo stesso pari senza gerarchie interne. Anche quest'ultimo però può non essere modificabile in globale poiché solo alcuni membri nell'open-source permettono di modificare un intero progetto e non da tutti)
+
+La **fork** diversamente dal clone, crea una copia dell' URL di quel repository sul proprio GitHub personale, così da modificare totalmente la propria copia.
+### Issue tracking
+Oltre alle operazioni spiegate precedentemente, GitHub favorisce l'**issue tracking**. Esso è un database in cui i record analizzati sono gli issues stessi.
+Possono essere classificati come:
+- Aperti dal backlog
+- Chiusi dal backlog
+- Risolti
+- Assegnati (in modo che ogni membro del team cerchi di gestire un singolo problema)
+- Irrisolti
+
+Gli issues sono anche **numerati** e descritti da **titolo+descrizione**.
+In più è possibile creare discussioni asincrone su di essi per parlare del problema con gli utenti.
+Sono anche classificati in base al tipo di issues:
+- Bug
+- Miglioria
+- Features
+- Security ecc...
+## Step per lavorare nel team con Github
+Analizziamo un workflow, tra quelli usati a livello di default, ovvero il **GitHub Flow**.
+Questo workflow permette di poter lavorare in modo **asincrono e parallelo** al progetto ma richiede che alla base ci sia lo stesso repository.
+Si eseguono questi 5 passagi principali:
+1. Creare un branch per attuare le modifiche
+2. Aggiungere localmente i commit
+3. Alla fine del commit aprire la **pull request**
+4. Discutere sui cambiamenti attuati
+5. **Mergare e deployare**
+
+>[!NOTE] Analizziamo i nuovi termini:
+>- **Deploy**: Il codice finale presente nel main branch (completo di test e totalmente funzionante) viene reso accessibile, per qualsiasi utilizzo, agli utenti finali.
+>  - **Pull request**: Richiesta formale inviata ai colleghi del progetto per discutere le modifiche apportate nel branch secondario.
+
+### Fase 1
+Bisogna assegnare l'issue su cui si sta lavorando per la modifica come ***assigned*** e creare il branch sul repository locale nominato con numero dell'issue, titolo e descrizione.
+![[Pasted image 20260327121436.png]]
+### Fase 2
+Spostandosi sul branch nuovo e dopo aver effettuato le varie modifiche, è necessario eseguire i commit delle modifiche sul nuovo branch (coi comandi affrontati precedentemente).
+>[!WARNING] NON SPORCARE IL MAIN
+>Nel main branch deve esserci il lavoro pulito senza cancellazioni o visualizzazioni sporche, poiché sarà il progetto inviato al cliente.
+### Fase 3
+La pull request è legata ad un utente del team su cui argomentare l'issue e volendo si può legarla per la chiusura automatica all'issue stesso tramite la dicitura ***closes #123***
+
+La pull request ha la stessa descrizione dell'issue, se è basata su quest'ultimo, altrimenti deve contenere una descrizione con i test eseguiti, le note e avvertimenti, possibili link utili e se necessario anche immagini. Infine menzionare l'utente (@username) a cui fare la request.
+![[Pasted image 20260327121926.png]]
+### Fase 4
+Alla pull request può partecipare chiunque per dire la sua idea. Prima però l'approvazione dell'apertura del dialogo deve essere accettata e discussa con il membro del team responsabile e poi ci si discute sopra.
+![[Pasted image 20260327122229.png]]
+In questa discussione è possibile attuare ulteriori modifiche prima del merge.
+### Fase 5
+Alla fine di tutti i check di controllo della qualità, viene cancellato il branch sia via remoto (web) che locale.
+Risolvere i possibili conflitti presenti nel main branch, questa risoluzione avviene tramite la riesecuzione dei seguenti passi:
+- Aggiornare il repository locale
+- Modifiche e commit
+- Push dei cambiamenti su remoto
+- Ritentare il merge
+Dopo queste modifiche e merging, il master branch viene deployato in modo **automatica** o manuale.
+![[Pasted image 20260327122544.png]]
