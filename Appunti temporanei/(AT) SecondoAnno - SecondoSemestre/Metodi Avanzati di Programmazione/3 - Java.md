@@ -663,3 +663,10 @@ Di solito si usa questa classe per alcuni motivi, tra cui:
 - Per delle conversioni tra tipo, come
 	- Da String (stringa contenente dei numeri) a tipo primitivo
 	- Da un tipo numerico ad un altro
+
+La classe number implementa diversi metodi tra cui:
+
+> [!info] Metodi per la conversione in un tipo primitivo
+> ![[Pasted image 20260402141848.png]]
+
+
