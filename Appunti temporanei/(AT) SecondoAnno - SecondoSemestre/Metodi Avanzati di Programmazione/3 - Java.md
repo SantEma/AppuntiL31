@@ -672,5 +672,9 @@ La classe number implementa diversi metodi tra cui:
 > [!NOTE] Metodi per il confronto di un numero con un argomento
 > ![[Pasted image 20260402142039.png]]
 
-> [!info] Title
-> Contents
+> [!info] boolean equals(Object obj)
+> Questo metodo serve per confrontare due oggetti booleani per determinare se siano di stesso valore. Restituisce "true" se sono uguali, altrimenti "false"
+
+> [!info] Metodi per la conversione
+> ![[Pasted image 20260402142348.png]]
+> Nell'ultima funzione, `int radix` indica il sistema di numerazione da adottare 
