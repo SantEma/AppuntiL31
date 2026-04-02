@@ -669,4 +669,8 @@ La classe number implementa diversi metodi tra cui:
 > [!info] Metodi per la conversione in un tipo primitivo
 > ![[Pasted image 20260402141848.png]]
 
+> [!NOTE] Metodi per il confronto di un numero con un argomento
+> ![[Pasted image 20260402142039.png]]
 
+> [!info] Title
+> Contents
