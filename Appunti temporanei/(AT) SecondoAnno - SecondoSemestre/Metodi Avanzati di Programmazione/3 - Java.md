@@ -708,3 +708,5 @@ Sono presenti funzioni per calcoli esponenziali e logaritmici come:
 - `double log(double d)` per il logaritmo naturale $ln(d)$
 - `double pow(double base, double exponent)` per eseguire l'elevamento a potenza di una base per un esponente
 - `double sqrt(double d)` per calcolare la radice quadrata
+
+Per le funzioni trigonometriche di base e inverse
