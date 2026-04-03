@@ -703,10 +703,14 @@ La classe `Math` mette a disposizione strumenti avanzati per eseguire svariate o
 	- `double floor(double d)` per calcolare l'intero più grande che sia minore o uguale
 	- `double rint(double d)`  per trovare l'intero più vicino a `d`
 
-Sono presenti funzioni per calcoli esponenziali e logaritmici come:
+Sono presenti metodi per calcoli esponenziali e logaritmici come:
 - `double exp(double d)` per calcolare $e^{d}$
 - `double log(double d)` per il logaritmo naturale $ln(d)$
 - `double pow(double base, double exponent)` per eseguire l'elevamento a potenza di una base per un esponente
 - `double sqrt(double d)` per calcolare la radice quadrata
 
-Per le funzioni trigonometriche di base e inverse
+Per le funzioni trigonometriche di base e inverse troviamo altri metodi come:
+- `sin`, `cos`, `tan`, `asin`, `acos`, `atan`
+- `double atan2(double y, double x)`  che permette di convertire coordinate rettangolari in coordinate polari, restituendo l'angolo theta calcolato 
+- `double toDegrees(double d),` e `toRadians(double d)` converte l’argomento in gradi o radianti
+Come argomento per ogni metodo viene passato un double che rappresenta l’angolo espresso in radianti
