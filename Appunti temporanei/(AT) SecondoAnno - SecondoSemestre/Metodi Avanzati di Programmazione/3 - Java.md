@@ -702,3 +702,6 @@ La classe `Math` mette a disposizione strumenti avanzati per eseguire svariate o
 	-  `double ceil(double d)` per ottenere l'intero più piccolo che sia maggiore o uguale al parametro
 	- `double floor(double d)` per calcolare l'intero più grande che sia minore o uguale
 	- `double rint(double d)`  per trovare l'intero più vicino a `d`
+
+Sono presenti funzioni per calcoli esponenziali e logaritmici come:
+- `double exp(double d)` per calcolare $e^{d}$
