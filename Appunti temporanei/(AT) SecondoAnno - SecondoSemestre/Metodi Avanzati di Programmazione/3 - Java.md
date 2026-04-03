@@ -678,3 +678,4 @@ La classe number implementa diversi metodi tra cui:
 > [!info] Metodi per la conversione
 > ![[Pasted image 20260402142348.png]]
 > 
+#### Stampa dei numeri
