@@ -679,3 +679,26 @@ La classe number implementa diversi metodi tra cui:
 > ![[Pasted image 20260402142348.png]]
 > 
 #### Stampa dei numeri
+In Java, poiché ogni numero può essere convertito in una stringa, è possibile stamparli direttamente sullo standard output utilizzando i metodi `System.out.print` e `System.out.println`. `System.out` è un'istanza della classe `PrintStream`, il che permette di utilizzare indifferentemente anche i metodi equivalenti `printf` e `format`
+
+> [!example] Esempio di format
+> ```java
+System.out.format("The value of the float variable is %f, while the value of the integer variable is %d, and the string is %s", floatVar, intVar, stringVar)
+>``` 
+>Il metodo `format` accetta una stringa di formattazione seguita da una serie di argomenti, specificando in modo preciso come questi ultimi debbano essere visualizzati
+>
+>
+
+> [!info] Flag converter e flag
+> Al metodo format possono essere passate queste flag:
+> ![[Pasted image 20260403173345.png]]
+### Math
+La classe `Math` mette a disposizione strumenti avanzati per eseguire svariate operazioni matematiche. Al suo interno si trovano:
+- Costanti fondamentali come `Math.E` e `Math.PI`
+- Metodi per operazioni di base, tra cui:
+	- Calcolo del valore assoluto tramite `abs`
+	- Arrotondamento tramite `round`
+	- Determinazione del valore minimo o massimo tra due numeri con `min` e `max
+	-  `double ceil(double d)` per ottenere l'intero più piccolo che sia maggiore o uguale al parametro
+	- `double floor(double d)` per calcolare l'intero più grande che sia minore o uguale
+	- `double rint(double d)`  per trovare l'intero più vicino a `d`
