@@ -731,5 +731,6 @@ Una stringa può essere pensata e gestita logicamente come un array di caratteri
 > ``` 
 > Il metodo charAt(int i) di String restituisce il carattere alla i-esima posizione
 #### Metodi della classe `String`
+
 ##### Conversione da numeri a stringhe
 #### Espressioni regolari
