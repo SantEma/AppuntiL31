@@ -731,6 +731,26 @@ Una stringa può essere pensata e gestita logicamente come un array di caratteri
 > ``` 
 > Il metodo charAt(int i) di String restituisce il carattere alla i-esima posizione
 #### Metodi della classe `String`
+La classe presenta diversi metodi:
+- `length()` restituisce la lunghezza della stringa in caratteri
+- `contains(CharSequence s)` verifica la presenza di una particolare sequenza testuale con risultato booleano
+- `indexOf(String s)`  restituisce l’indice dal quale inizia la sottostringa `s`, -1 se non esiste la sottostringa
+- `indexOf(String s, int i)` restituisce l’indice dal quale inizia la sottostringa `s` a partire dall'i-esimo carattere, -1 se non esiste la sottostringa
+- `replace(CharSequence s1, CharSequence s2)` consente di scambiare sequenze di caratteri esatti (`s1` è quella da cercare, `s2` quella con cui sostituirla)
+- `replaceAll(String regex, String r)` sostituisce tutte le sequenze che corrispondono all’espressione regolare regex con `r`
+- `matches(String regex)` restituisce true se la stringa corrisponde all’espressione regolare `regex`
+- `split(String regex)` restituisce un array di String dividendo dove c’è il match con regex
+- `startsWith` ed `endsWith` verificano in modo rapido le sequenze collocate agli estremi di una stringa, vengono usati in congiunzione ad altri metodi
+- `equals(Object o)` è l'operatore di uguaglianza fatto per le stringhe, si deve assolutamente evitare l'uso dell'operatore di uguaglianza classico tra oggetti (`==`)
+- `int compareTo(String str), int compareToIgnoreCase(String str)` permettono un confronto funzionale all'ordinamento, il secondo si usa quando non è necessario il case-sensitive
+- `substring(int b, int e), substring(int b)` permette di estrarre e generare una porzione della stringa a partire da un indice iniziale fino alla fine, o limitandosi a un indice finale escluso
+- `trim` rimuove gli spazi bianchi inutili presenti all'inizio e alla fine
+- `toLowerCase(), toUpperCase()` convertono globalmente il formato delle lettere rispettivamente in minuscolo e maiuscolo
 
+```java 
+
+```
 ##### Conversione da numeri a stringhe
+La conversione da un formato stringa verso effettivi valori numerici è operabile utilizzando i metodi di parsing specifici implementati per ogni tipo primitivo:
+- 
 #### Espressioni regolari
