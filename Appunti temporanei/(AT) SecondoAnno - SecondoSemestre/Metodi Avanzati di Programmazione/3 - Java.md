@@ -747,10 +747,49 @@ La classe presenta diversi metodi:
 - `trim` rimuove gli spazi bianchi inutili presenti all'inizio e alla fine
 - `toLowerCase(), toUpperCase()` convertono globalmente il formato delle lettere rispettivamente in minuscolo e maiuscolo
 
-```java 
+> [!example] Esempio di stringa palindroma
+> 
+> ```java 
+> public class StringDemo {
+>     public static void main(String[] args) {
+>         String palindrome = "Dot saw I was Tod";
+>         int len = palindrome.length();
+>         char[] tempCharArray = new char[len];
+>         char[] charArray = new char[len];
+>         // La stringa originale viene messa in un array di char
+>         for (int i = 0; i < len; i++) {
+>             tempCharArray[i] = palindrome.charAt(i);
+>         }
+>         // L'array di char viene girato
+>         for (int j = 0; j < len; j++) {
+>             charArray[j] = tempCharArray[len - 1 - j];
+>         }
+>         //Viene messa in un nuovo oggetto e stampata
+>         String reversePalindrome = new String(charArray);
+>         System.out.println(reversePalindrome);
+>     }
+> }
+> ```
 
-```
 ##### Conversione da numeri a stringhe
 La conversione da un formato stringa verso effettivi valori numerici è operabile utilizzando i metodi di parsing specifici implementati per ogni tipo primitivo:
-- 
+```java
+int i = Integer.parseInt(“42”); 
+float f = Float.parseFloat(“3.14”); 
+double d = Double.parseDouble(“4.32144”);
+Float fo = Float.valueOf(“3.14”);
+```
+
+Se l'esigenza è quella di trasformare un numero nativo in una stringa, si farà ricorso ai metodi di conversione:
+
+```java
+int i=3; double d=3.4; 
+String s3 = Integer.toString(i); 
+String s4 = Double.toString(d);
+
+int i=3; 
+String s1 = String.valueOf(i);
+```
+#### Classe Stringbuilder
+Ogni qual volta sia necessario costruire o manipolare stringhe di cui si vuole modificare costantemente il contenuto, è mandatorio ricorrere alla classe `StringBuilder`
 #### Espressioni regolari
