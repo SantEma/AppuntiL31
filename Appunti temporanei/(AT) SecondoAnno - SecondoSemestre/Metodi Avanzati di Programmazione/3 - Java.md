@@ -40,7 +40,6 @@ Ecco qui!
 Il compilatore Java ignorerà qualunque cosa posto all'interno degli slash per le righe con la prima sintassi, nella seconda soltanto la riga corrente
 ## Definizione di classi, il main e println()
 Per definire una classe in Java usiamo la sintassi **class <nomeclasse\>** 
-
 > [!example] Esempio di definizione classe
 > ```java
 > class HelloWorldApp{
@@ -109,7 +108,6 @@ I letterali in virgola mobile seguono una logica simile: sono considerati di tip
 > ```
 ### Letterali caratteri e Stringhe (character e String)
 i character possono contenere qualunque carattere Unicode a 16-bit racchiuso tra singoli apici, mentre le stringhe impiegano i doppi apici.
-
 > [!example] Esempio di letterali caratteri e stringhe
 > ```java
 > Per char vale questo -> 'c'
@@ -117,7 +115,6 @@ i character possono contenere qualunque carattere Unicode a 16-bit racchiuso tra
 > ```
 
 All'interno dei testi è inoltre possibile avvalersi di speciali sequenze di escape per rappresentare agevolmente caratteri di controllo come il line feed, la tabulazione oppure per visualizzare simboli specifici come il doppio apice, il singolo apice e il backslash
-
 > [!info] Lista di sequenze escape
 > ```java
 > \n, \r, \f, \b: line feed, carriage return, form feed, backspace
@@ -127,7 +124,6 @@ All'interno dei testi è inoltre possibile avvalersi di speciali sequenze di esc
 ## Array
 L'array è un **oggetto** che contiene un numero finito di oggetti (o tipi primitivi) dello stesso tipo.
 Ha una lunghezza fissa definita al momento della creazione, ogni suo elemento viene chiamato **elemento** ed è possibile accederne con l'indice
-
 > [!example] Esempio di vari tipi di array
 > ```java
 > Dichiarazione di un array: float[] v;
@@ -140,7 +136,6 @@ Ha una lunghezza fissa definita al momento della creazione, ogni suo elemento vi
 Quando si dichiara un array inizializzato, questo avrà dimensioni uguali a quanti elementi son stati inizializzati
 ### Copia di un array
 La classe `System` mette a disposizione il metodo `arraycopy` per copiare degli array
-
 > [!info] Metodo per la copia di un array
 > ```java
 > arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
@@ -665,7 +660,6 @@ Di solito si usa questa classe per alcuni motivi, tra cui:
 	- Da un tipo numerico ad un altro
 
 La classe number implementa diversi metodi tra cui:
-
 > [!info] Metodi per la conversione in un tipo primitivo
 > ![[Pasted image 20260402141848.png]]
 
@@ -680,7 +674,6 @@ La classe number implementa diversi metodi tra cui:
 > 
 #### Stampa dei numeri
 In Java, poiché ogni numero può essere convertito in una stringa, è possibile stamparli direttamente sullo standard output utilizzando i metodi `System.out.print` e `System.out.println`. `System.out` è un'istanza della classe `PrintStream`, il che permette di utilizzare indifferentemente anche i metodi equivalenti `printf` e `format`
-
 > [!example] Esempio di format
 > ```java
 System.out.format("The value of the float variable is %f, while the value of the integer variable is %d, and the string is %s", floatVar, intVar, stringVar)
@@ -722,7 +715,6 @@ La classe `String` rappresenta sequenze testuali ed è caratterizzata dalla sua 
 Ogni letterale scritto tra virgolette nel codice Java è a tutti gli effetti una vera e propria istanza predefinita della classe `String`
 
 Una stringa può essere pensata e gestita logicamente come un array di caratteri; infatti, per accedere agli elementi si usa il metodo `charAt()`, che restituisce il carattere posizionato all'indice specificato
-
 > [!example] Esempio di charAt()
 > ```java
 > char[] helloArray = { 'h', 'e', 'l', 'l', 'o', '.' }; 
@@ -746,7 +738,6 @@ La classe presenta diversi metodi:
 - `substring(int b, int e), substring(int b)` permette di estrarre e generare una porzione della stringa a partire da un indice iniziale fino alla fine, o limitandosi a un indice finale escluso
 - `trim` rimuove gli spazi bianchi inutili presenti all'inizio e alla fine
 - `toLowerCase(), toUpperCase()` convertono globalmente il formato delle lettere rispettivamente in minuscolo e maiuscolo
-
 > [!example] Esempio di stringa palindroma
 > 
 > ```java 
@@ -781,7 +772,6 @@ Float fo = Float.valueOf(“3.14”);
 ```
 
 Se l'esigenza è quella di trasformare un numero nativo in una stringa, si farà ricorso ai metodi di conversione:
-
 ```java
 int i=3; double d=3.4; 
 String s3 = Integer.toString(i); 
@@ -792,4 +782,31 @@ String s1 = String.valueOf(i);
 ```
 #### Classe Stringbuilder
 Ogni qual volta sia necessario costruire o manipolare stringhe di cui si vuole modificare costantemente il contenuto, è mandatorio ricorrere alla classe `StringBuilder`
+La classe lavora con una lunghezza variabile che consente l'aggiunta o la modifica continua di nuovi caratteri
+##### Metodi e costruttori Stringbuilder
+> [!info] Metodi di Stringbuiler
+>` length()` restituisce la lunghezza della stringa presente nell'oggetto StringBuilder  
+> `capacity()` restituisce la capacità attuale di questo oggetto StringBuilder (>=length())
+
+> [!info] Costruttori di Stringbuilder
+> ![[Pasted image 20260407190808.png]]
+> - `StringBuilder append(...)` aggiunge alla fine dello StringBuilder l’argomento (viene convertito in String anche i tipi primitivi)
+> - `StringBuilder delete(int start, int end), StringBuilder deleteCharAt(int index)` cancella una porzione o un carattere della stringa
+> - `StringBuilder insert(int offset, …)`: inserisce l’argomento a partire dalla posizione `offset`
+> - `StringBuilder replace(int start, int end, String s), void setCharAt(int index, char c)` sostituisce una porzione o un singolo carattere della stringa
+> - `StringBuilder reverse()` inverte l’ordine dei caratteri della stringa
+> - `String toString()`: restituisce una stringa che contiene la sequenza dei caratteri in StringBuilder
+
+> [!example] Esempio con Stringbuilder, stringa palindroma
+> ```java
+> public class StringBuilderDemo { 
+> 	public static void main(String[] args) { 
+> 	String palindrome = "Dot saw I was Tod"; 
+> 	StringBuilder sb = new StringBuilder(palindrome); 
+> 	sb.reverse(); // reverse it System.out.println(sb); 
+> 	}
+> }
+> ```
+
 #### Espressioni regolari
+Un'**espressione regolare** rappresenta a livello logico una parola capace di denotare un linguaggio regolare
