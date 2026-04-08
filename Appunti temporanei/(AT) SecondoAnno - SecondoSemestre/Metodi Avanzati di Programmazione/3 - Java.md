@@ -729,9 +729,7 @@ La classe presenta diversi metodi:
 - `indexOf(String s)`  restituisce l’indice dal quale inizia la sottostringa `s`, -1 se non esiste la sottostringa
 - `indexOf(String s, int i)` restituisce l’indice dal quale inizia la sottostringa `s` a partire dall'i-esimo carattere, -1 se non esiste la sottostringa
 - `replace(CharSequence s1, CharSequence s2)` consente di scambiare sequenze di caratteri esatti (`s1` è quella da cercare, `s2` quella con cui sostituirla)
-- `replaceAll(String regex, String r)` sostituisce tutte le sequenze che corrispondono all’espressione regolare regex con `r`
 - `matches(String regex)` restituisce true se la stringa corrisponde all’espressione regolare `regex`
-- `split(String regex)` restituisce un array di String dividendo dove c’è il match con regex
 - `startsWith` ed `endsWith` verificano in modo rapido le sequenze collocate agli estremi di una stringa, vengono usati in congiunzione ad altri metodi
 - `equals(Object o)` è l'operatore di uguaglianza fatto per le stringhe, si deve assolutamente evitare l'uso dell'operatore di uguaglianza classico tra oggetti (`==`)
 - `int compareTo(String str), int compareToIgnoreCase(String str)` permettono un confronto funzionale all'ordinamento, il secondo si usa quando non è necessario il case-sensitive
@@ -815,4 +813,32 @@ Un'**espressione regolare** rappresenta a livello logico una parola capace di de
 > ![[Stringhe e numeri_0.png]]
 > ![[Stringhe e numeri_1.png]]![[6 - JAVA - Stringhe e numeri_2.png]]![[6 - JAVA - Stringhe e numeri_3.png]]![[6 - JAVA - Stringhe e numeri_4.png]]![[6 - JAVA - Stringhe e numeri_5.png]]![[6 - JAVA - Stringhe e numeri_6.png]]
 
-#####
+Dalla classe `String`, due metodi sono utilizzabili con le varie espressioni regolari:
+- `split(String regex)` restituisce un array di String dividendo dove c’è il match con regex
+- `replaceAll(String regex, String r)` sostituisce tutte le sequenze che corrispondono all’espressione regolare regex con `r`
+##### Classe Pattern
+Per utilizzi che richiedono procedure di validazione più strutturate o intensive, si ricorre esplicitamente alla classe `Pattern`, la quale costituisce una rappresentazione compilata in memoria di un'espressione regolare specificata tramite stringa
+
+Partendo da un pattern già compilato, è possibile generare un oggetto derivato di tipo `Matcher`, il cui compito primario è quello di eseguire attivamente il matching, cercando in tutti i modi di far combaciare la sequenza di caratteri passata in input con le direttive fornite dall'espressione regolare pre-compilata
+
+> [!example] Esempio di invocazione
+> ```java 
+> Pattern p = Pattern.compile("a*b"); 
+> Matcher m = p.matcher("aaaaab"); 
+> boolean b = m.matches();
+> ``` 
+
+##### Classe Matcher
+La classe `Matcher` esegue le operazioni di matching su una sequenza di caratteri in funzione dell’espressione regolare compilata
+
+Un matcher viene creato da un pattern invocando il metodo matcher del pattern. Una volta creato, un matcher può essere utilizzato per eseguire tre diversi tipi di operazioni di match:
+- `match` viene usato per tentare l'abbinamento esatto dell'intera sequenza in input
+- `lookingAt` cerca un abbinamento parziale avendo però l'obbligo di partire rigorosamente dall'inizio
+- `find` serve a scorrere e analizzare progressivamente l'input alla ricerca della prima sottosequenza utile che corrisponda positivamente
+
+Ognuno di questi metodi restituisce un valore booleano che indica l'esito positivo o negativo.
+
+Un matcher trova corrispondenze in un sottoinsieme del suo input chiamato regione. Per impostazione predefinita, la regione contiene tutto l'input del matcher. Una regione può essere modificata tramite il metodo `region` e costantemente monitorata interrogando i valori forniti da `regionStart` e `regionEnd`
+
+Lo stato esplicito di un matcher include gli indici di inizio e fine dell'ultimo `match (start ed end)`, includendo anche gli indici di inizio e fine della sotto-sequenza dell’ultimo match, nonché un conteggio totale `(groupCount)` di tali sotto-sequenze.
+Per comodità, vengono forniti anche metodi per restituire queste sottosequenze in forma di stringa `(group)`
