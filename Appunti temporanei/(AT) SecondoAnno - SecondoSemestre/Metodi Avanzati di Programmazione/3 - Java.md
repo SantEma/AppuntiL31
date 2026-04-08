@@ -811,3 +811,8 @@ La classe lavora con una lunghezza variabile che consente l'aggiunta o la modifi
 #### Espressioni regolari
 Un'**espressione regolare** rappresenta a livello logico una parola capace di denotare un linguaggio regolare, utile per verificare se una data stringa sia o meno conforme alle regole di quel linguaggio.
 
+> [!info] Diverse espressioni regolari nel linguaggio Java
+> ![[Stringhe e numeri_0.png]]
+> ![[Stringhe e numeri_1.png]]![[6 - JAVA - Stringhe e numeri_2.png]]![[6 - JAVA - Stringhe e numeri_3.png]]![[6 - JAVA - Stringhe e numeri_4.png]]![[6 - JAVA - Stringhe e numeri_5.png]]![[6 - JAVA - Stringhe e numeri_6.png]]
+
+#####
