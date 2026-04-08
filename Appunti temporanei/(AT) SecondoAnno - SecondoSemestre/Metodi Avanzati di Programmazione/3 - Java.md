@@ -809,4 +809,5 @@ La classe lavora con una lunghezza variabile che consente l'aggiunta o la modifi
 > ```
 
 #### Espressioni regolari
-Un'**espressione regolare** rappresenta a livello logico una parola capace di denotare un linguaggio regolare
+Un'**espressione regolare** rappresenta a livello logico una parola capace di denotare un linguaggio regolare, utile per verificare se una data stringa sia o meno conforme alle regole di quel linguaggio.
+
