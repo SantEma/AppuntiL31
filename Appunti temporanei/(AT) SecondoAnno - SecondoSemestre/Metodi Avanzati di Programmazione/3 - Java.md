@@ -808,7 +808,6 @@ La classe lavora con una lunghezza variabile che consente l'aggiunta o la modifi
 
 #### Espressioni regolari
 Un'**espressione regolare** rappresenta a livello logico una parola capace di denotare un linguaggio regolare, utile per verificare se una data stringa sia o meno conforme alle regole di quel linguaggio.
-
 > [!info] Diverse espressioni regolari nel linguaggio Java
 > ![[Stringhe e numeri_0.png]]
 > ![[Stringhe e numeri_1.png]]![[6 - JAVA - Stringhe e numeri_2.png]]![[6 - JAVA - Stringhe e numeri_3.png]]![[6 - JAVA - Stringhe e numeri_4.png]]![[6 - JAVA - Stringhe e numeri_5.png]]![[6 - JAVA - Stringhe e numeri_6.png]]
@@ -835,10 +834,40 @@ Un matcher viene creato da un pattern invocando il metodo matcher del pattern. U
 - `match` viene usato per tentare l'abbinamento esatto dell'intera sequenza in input
 - `lookingAt` cerca un abbinamento parziale avendo però l'obbligo di partire rigorosamente dall'inizio
 - `find` serve a scorrere e analizzare progressivamente l'input alla ricerca della prima sottosequenza utile che corrisponda positivamente
-
 Ognuno di questi metodi restituisce un valore booleano che indica l'esito positivo o negativo.
 
 Un matcher trova corrispondenze in un sottoinsieme del suo input chiamato regione. Per impostazione predefinita, la regione contiene tutto l'input del matcher. Una regione può essere modificata tramite il metodo `region` e costantemente monitorata interrogando i valori forniti da `regionStart` e `regionEnd`
 
 Lo stato esplicito di un matcher include gli indici di inizio e fine dell'ultimo `match (start ed end)`, includendo anche gli indici di inizio e fine della sotto-sequenza dell’ultimo match, nonché un conteggio totale `(groupCount)` di tali sotto-sequenze.
 Per comodità, vengono forniti anche metodi per restituire queste sottosequenze in forma di stringa `(group)`
+> [!example] Esempi per la classe matcher
+> ```java
+> //Esempio N.1
+> Matcher matcher1 = pattern.matcher("dlkflsASDaslsdSD"); //deve corrispondere l'intera stringa
+> System.out.println(matcher1.matches());
+> Matcher matcher2 = pattern.matcher("dlkflsASDaslsdSD 8798767"); //la corrispondenza deve partire dall'inizio ma non è necessario che corrisponda l'intera stringa
+> System.out.println(matcher2.lookingAt());
+> Matcher matcher3 = pattern.matcher("dlkflsASDaslsdSD");
+> //cicla su tutti i matching
+> while (matcher3.find()) {
+>     System.out.println(matcher3.group() + ": " +
+>     matcher3.start() + "-" + matcher3.end());
+> }
+> //Esempio N.2
+> //Una sequenza di numeri seguita da 1 o massimo 3 lettere min.
+> String regexp = "([0-9]+)([a-z]{1,3})";
+> Pattern pattern2 = Pattern.compile(regexp);
+> String str = "9843989jf 39203920jie 32122i";
+> Matcher matcher4 = pattern2.matcher(str);
+> while (matcher4.find()) {
+>     //restituisce il numero di gruppi (individuati dalle parentesi nella regexp)
+>     int gc = matcher4.groupCount();
+>     //il gruppo 0 corrisponde all'intero matching
+>     for (int i = 0; i <= gc; i++) {
+>        System.out.println(matcher4.group(i) + ": " +
+>         matcher4.start(i) + "-" + matcher4.end(i));
+>     }
+>     System.out.println();
+> }
+> ```
+> 
