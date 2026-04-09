@@ -999,4 +999,4 @@ Siccome `Set` non può contenere duplicati, torna particolarmente utile nella cr
 >     }
 > }
 > ```
-
+##### Operazione sugli insiemi
