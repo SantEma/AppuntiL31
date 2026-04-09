@@ -952,7 +952,6 @@ Come detto precedentement, la sottoclasse `Set` rappresenta un contenitore di ti
 L’uguaglianza degli oggetti in questa sottoclasse è definita dai metodi equals e hashCode della classe `Object`
 
 Siccome `Set` non può contenere duplicati, torna particolarmente utile nella creazione di una `Collection` senza duplicati partendo da una esistente
-
 > [!example] Esempio di Collection senza duplicati
 > ```java
 > Set s=new LinkedHashSet(c);
@@ -1000,3 +999,25 @@ Siccome `Set` non può contenere duplicati, torna particolarmente utile nella cr
 > }
 > ```
 ##### Operazione sugli insiemi
+Il set permette operazioni su insiemi, tra cui unione, intersezione e differenza
+> [!info] Unione
+> ```java
+> Set<Type> union = new HashSet<Type>(s1);
+> union.addAll(s2);
+> ``` 
+> Il metodo `addAll(Collection c)` aggiunge tutti gli elementi della collezione specificata (in questo caso `s2`) all'insieme su cui viene chiamato, se non sono già presenti
+
+> [!info] Intersezione 
+>```java
+Set<Type> intersection = new HashSet<Type>(s1);
+intersection.retainAll(s2);
+>```
+> Il metodo `retainAll(Collection c)` mantiene nell'insieme corrente _solo_ gli elementi che sono contenuti anche nella collezione specificata (`s2`). Rimuove tutto il resto.
+
+> [!info] Differenza
+> ```java
+> Set<Type> difference = new HashSet<Type>(s1);
+> difference.removeAll(s2);
+> ```
+> Il metodo `removeAll(Collection c)` rimuove dall'insieme corrente tutti gli elementi che sono contenuti anche nella collezione specificata (`s2`).
+
