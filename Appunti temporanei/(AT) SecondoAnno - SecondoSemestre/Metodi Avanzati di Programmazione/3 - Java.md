@@ -906,4 +906,11 @@ Tutte le interfacce che ereditano da Collection ereditano i suoi metodi primitiv
 - `boolean contains(Object element)`restituisce true se la collection contiene elementi
 - `boolean add(E element)` aggiunge un elemento alla Collection 
 - `boolean remove(Object element)` rimuove un elemento alla Collection 
-- `Iterator iterator()` restituisce un oggetto Iterator che permette di iterare su tutti gli elementi della Collectio
+- `Iterator iterator()` restituisce un oggetto Iterator che permette di iterare su tutti gli elementi della Collection
+
+Alcuni metodi agiscono sull'intera Collection:
+- `boolean containsAll(Collection c)` restituisce true se la collection contiene tutti gli elementi in `c`
+- `boolean addAll(Collection c)` aggiunge tutti gli elementi in `c` alla collection 
+- `boolean removeAll(Collection c)` rimuove tutti gli elementi di c dalla collection 
+- `boolean retainAll(Collection c)` mantiene nella collection solo gli elementi presenti in `c`
+- `void clear()` elimina tutti gli elementi dalla collection
