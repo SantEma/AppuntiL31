@@ -958,3 +958,45 @@ Siccome `Set` non può contenere duplicati, torna particolarmente utile nella cr
 > Set s=new LinkedHashSet(c);
 > ```
 > `s` non conterrà duplicati
+
+> [!example] Esempio di utilizzo di Set
+> ```java
+> 
+> public class Esempio1 {
+>     public static void main(String[] args) {
+>         // Crea un nuovo Set (insieme) di stringhe utilizzando LinkedHashSet.
+>         Set<String> set = new LinkedHashSet<>();
+>         
+>         // Aggiunge elementi al set.
+>         set.add("a");
+>         set.add("a"); // I duplicati vengono ignorati in un Set. Questa operazione non ha effetto.
+>         set.add("b");
+>         set.add("c");
+>         
+>         // Output: "3: [a, b, c]". 
+>         // La dimensione è 3 perché il secondo "a" non è stato inserito.
+>         System.out.println(set.size() + ": " + set);
+>         
+>         // Rimuove l'elemento "a" dal set.
+>         set.remove("a");
+>         
+>         // Output: "2: [b, c]".
+>         // Il set ora contiene solo 2 elementi.
+>         System.out.println(set.size() + ": " + set);
+>         
+>         // Crea un secondo Set chiamato set1 e ci aggiunge "b" e "c".
+>         Set<String> set1 = new LinkedHashSet<>();
+>         set1.add("b");
+>         set1.add("c");
+>         
+>         // removeAll elimina dal primo 'set' tutti gli elementi presenti nel 'set1'.
+>         // Dato che 'set' conteneva [b, c] e 'set1' contiene [b, c], il primo set si svuota.
+>         set.removeAll(set1);
+>         
+>         // Output: "0: []".
+>         // La dimensione è 0 e l'insieme è vuoto.
+>         System.out.println(set.size() + ": " + set);
+>     }
+> }
+> ```
+
