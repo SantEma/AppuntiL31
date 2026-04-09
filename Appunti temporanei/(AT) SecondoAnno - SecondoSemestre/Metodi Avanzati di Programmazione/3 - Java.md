@@ -871,3 +871,4 @@ Per comodità, vengono forniti anche metodi per restituire queste sottosequenze 
 > }
 > ```
 > 
+## Collection
