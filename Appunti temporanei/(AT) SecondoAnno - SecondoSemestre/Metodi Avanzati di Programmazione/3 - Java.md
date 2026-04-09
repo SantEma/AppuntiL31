@@ -871,4 +871,22 @@ Per comodità, vengono forniti anche metodi per restituire queste sottosequenze 
 > }
 > ```
 > 
-## Collection
+### Collection
+Una **collection** è un oggetto volto a racchiudere più oggetti al suo interno per poterli memorizzare, recuperare ed elaborare.
+
+In parole povere, rappresenta un gruppo di cose che vanno tenute insieme, come:
+- Un mazzo di carte;
+- L'elenco della rubrica telefonica;
+- Insieme di email ricevute;
+etc...
+
+Java mette a disposizione un **framework** (insieme di strumenti e librerie predefiniti che forniscono una struttura di base per lo sviluppo e la distribuzione di applicazioni in un particolare ambiente) per la gestione delle Collection, composto da:
+- Interfacce
+- Implementazioni
+- Algoritmi (ricerca, ordinamento etc.) in grado di funzionare in modo polimorfo
+#### Interfacce di collection
+
+> [!info] Gerarchia delle interfacce di Collection
+> ![[Pasted image 20260409105151.png]]
+> Map è una collection particolare che non eredita da Collection
+
