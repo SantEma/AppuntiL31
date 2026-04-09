@@ -888,7 +888,7 @@ Java mette a disposizione un **framework** (insieme di strumenti e librerie pred
 
 > [!info] Gerarchia delle interfacce di Collection
 > ![[Pasted image 20260409105151.png]]
-> Map è una collection particolare che non eredita da Collection
+>`Map` è una collection particolare che non eredita da `Collection`
 
 Ognuna di queste interfacce ha un diverso utilizzo:
 - `Collection` è la radice della gerarchia e per questo la più generica, rappresenta semplicemente un contenitore di oggetti (elementi) senza alcun particolare vincolo
