@@ -890,3 +890,20 @@ Java mette a disposizione un **framework** (insieme di strumenti e librerie pred
 > ![[Pasted image 20260409105151.png]]
 > Map è una collection particolare che non eredita da Collection
 
+Ognuna di queste interfacce ha un diverso utilizzo:
+- `Collection` è la radice della gerarchia e per questo la più generica, rappresenta semplicemente un contenitore di oggetti (elementi) senza alcun particolare vincolo
+- `Set` rappresenta un contenitore di tipo insieme, non può contenere duplicati
+	- `SortedSet` è un `Set` in cui gli elementi sono ordinati in ordine crescente
+- `List`  è una lista di elementi, ogni elemento avrà una posizione nella lista, ammette duplicati
+- `Queue` è una coda in cui gli elementi hanno un preciso ordine di inserimento e recupero (si usa la tecninca FIFO, ma ci sono code particolari dette con priorità il cui ordine è dettato da una funzione di ordinamento)
+- `Deque` è simile ad una coda ma permette l’accesso ad entrambe l’estremità della coda
+- `Map` permette di collegare dei valori a delle chiavi (queste non possono essere duplicate all'interno della stessa `Map`)
+	- `SortedMap` è una `Map` in cui le chiavi sono ordinate in ordine crescente 
+##### Metodi delle Collection generali
+Tutte le interfacce che ereditano da Collection ereditano i suoi metodi primitivi per gestire un gruppo di oggetti:
+- `int size()` restituisce il numero di oggetti 
+- `boolean isEmpty()` restituisce true se la Collection è vuota  
+- `boolean contains(Object element)`restituisce true se la collection contiene elementi
+- `boolean add(E element)` aggiunge un elemento alla Collection 
+- `boolean remove(Object element)` rimuove un elemento alla Collection 
+- `Iterator iterator()` restituisce un oggetto Iterator che permette di iterare su tutti gli elementi della Collectio
