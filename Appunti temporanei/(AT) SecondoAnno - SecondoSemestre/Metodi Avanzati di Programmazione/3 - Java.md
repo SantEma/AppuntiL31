@@ -913,4 +913,48 @@ Alcuni metodi agiscono sull'intera Collection:
 - `boolean addAll(Collection c)` aggiunge tutti gli elementi in `c` alla collection 
 - `boolean removeAll(Collection c)` rimuove tutti gli elementi di c dalla collection 
 - `boolean retainAll(Collection c)` mantiene nella collection solo gli elementi presenti in `c`
-- `void clear()` elimina tutti gli elementi dalla collection
+- `void clear()` elimina tutti gli elementi dalla collection\
+
+L’interfaccia Collection ha due metodi `toArray` che permettono di fare da ponte tra le collection e gli array:
+- `Object[] a = c.toArray()` trasforma la collection `c` in un array di oggetti, `a` avrà la stessa dimensione di `c`
+- `String[] a = c.toArray(new String[0])`: se conosciamo il tipo di elementi in `c` possiamo creare un array che contiene gli stessi elementi di `c` e dello stesso tipo
+##### Iterazione e interfaccia Iterator
+Esistono due modi per iterare una Collection:
+1. Il metodo for-each
+2. Il metodo iterator, che utilizza l'interfaccia Iterator con i suoi diversi metodi tra cui
+	- `hasNext()` restituisce true se ci sono altri elementi da visionare
+	- `next()`: restituisce il prossimo elemento
+	- `remove()`: rimuove l’elemento corrente
+> [!example] Classe Iterator
+> ```java
+> public interface Iterator { 
+> 	boolean hasNext(); 
+> 	E next(); 
+> 	void remove(); 
+> }
+> ```
+
+> [!example] Filtrare elementi da una collection
+> ```java
+> Iterator it=collection.iterator() 
+> while (it.hasNext()) { 
+> 	if (!cond(it.next())) it.remove(); //cond è un metodo fittizzio che decide se un elemento rispetta o meno una particolare condizione 
+> }
+> ```
+> 
+Nel caso quindi sia necessario rimuovere degli elementi è preferibile utilizzare un Iterator e non il metodo for-each
+#### Set
+Come detto precedentement, la sottoclasse `Set` rappresenta un contenitore di tipo insieme che non può contenere duplicati. Implementa tutti i metodi dell'interfaccia `Collection` e presenta tre implementazioni:
+- **HashSet**: un set implementato da una tabella hash non mantiene l’ordine di inserimento degli elementi; è l’implementazione più efficiente
+- **TreeSet**: un set implementato con una struttura ad albero che mantiene l’ordine di inserimento, è meno efficiente
+- **LinkedHashSet**: un set implementato con una tabella hash e puntatore che mantiene l’ordine di inserimento degli elementi
+
+L’uguaglianza degli oggetti in questa sottoclasse è definita dai metodi equals e hashCode della classe `Object`
+
+Siccome `Set` non può contenere duplicati, torna particolarmente utile nella creazione di una `Collection` senza duplicati partendo da una esistente
+
+> [!example] Esempio di Collection senza duplicati
+> ```java
+> Set s=new LinkedHashSet(c);
+> ```
+> `s` non conterrà duplicati
