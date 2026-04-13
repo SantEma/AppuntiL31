@@ -1214,5 +1214,6 @@ Generalmente questa interfaccia implementa dei metodi che creano delle eccezioni
 - remove():restituisce e rimuove l’elemento in testa alla coda, se la coda è vuota genera un’eccezione
 
 I metodi di inserimento, cancellazione e recupero sono duplicati e si differenziano sul loro comportamento (eccezione/restituzione valore) nel caso in cui la coda è vuota o ha raggiunto la capacità massima
+
 #### Implementazioni di Queue
 L'implementazioni di default di una coda è quella di `LinkedList`, che implementa sempre la coda FIFO. Nel caso ci sia bisogno di una lista con priorità, si usa `PriorityQueue`, l'elemento sempre in cima è quello più piccolo.
