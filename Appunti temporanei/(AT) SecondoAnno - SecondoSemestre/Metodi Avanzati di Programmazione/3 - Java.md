@@ -1062,9 +1062,98 @@ ListIterator ha altri metodi implementati:
 - `remove()`: rimuove l’elemento ottenuto dall’ultima chiamata di `next()` o `previous()` 
 - `add(E e)`: aggiunge un elemento tra `previous()` e  `next()` 
 - `set(E e)`: sostituisce con `e` l’elemento ottenuto dall’ultima chiamata di `next()` o `previous()`
-```java
 
-```
+> [!example] Esempio di operazioni base su una lista
+> ```java
+> public class List1 {
+>     public static void main(String[] args) {
+>         // Inizializza una nuova ArrayList di tipo String
+>         List<String> list = new ArrayList<>();
+>         
+>         // Aggiunge elementi in coda alla lista
+>         list.add("a");
+>         list.add("b");
+>         list.add("c");
+>         list.add("a");
+>         System.out.println(list); // Stampa: [a, b, c, a]
+>         
+>         // Sostituisce l'elemento all'indice 0 ("a") con "z"
+>         list.set(0, "z");
+>         System.out.println(list); // Stampa: [z, b, c, a]
+>         
+>         // Inserisce "d" esattamente all'indice 3, spostando in avanti gli elementi successivi
+>         list.add(3, "d");
+>         System.out.println(list); // Stampa: [z, b, c, d, a]
+>         
+>         // Recupera e stampa l'elemento all'indice 1 ("b")
+>         System.out.println(list.get(1));
+>         
+>         // Rimuove l'elemento all'indice 2 (che attualmente è "c")
+>         list.remove(2);
+>         System.out.println(list); // Stampa: [z, b, d, a]
+>         
+>         // Cerca e stampa l'indice della prima occorrenza di "a"
+>         System.out.println(list.indexOf("a")); // Stampa: 3
+>         
+>         // Aggiunge un'altra "a" in fondo e cerca l'indice della sua ultima occorrenza
+>         list.add("a");
+>         System.out.println(list.lastIndexOf("a")); // Stampa: 4
+>     }
+> }
+> ```
+
+> [!example] Esempio di ListIterator
+> ```java
+> public class List2 {
+>     public static void main(String[] args) {
+>         // Crea e popola la lista
+>         List<String> list = new ArrayList<>();
+>         list.add("a");
+>         list.add("b");
+>         list.add("c");
+>         list.add("a");
+>         list.add("z");
+>         list.add("h");
+>         
+>         // Crea un ListIterator associato alla lista
+>         ListIterator<String> lit = list.listIterator();
+>         
+>         // hasNext() verifica se c'è un elemento successivo nella lista
+>         while (lit.hasNext()) {
+>             // Stampa l'indice precedente (-1 alla prima iterazione) e l'indice successivo
+>             System.out.print(lit.previousIndex() + "\t" + lit.nextIndex() + " -> ");
+>             
+>             // next() recupera l'elemento corrente e sposta il cursore in avanti
+>             System.out.println(lit.next());
+>         }
+>     }
+> }
+> ```
+
+> [!example] Esempio di scorrimento all'indietro
+>  ```java
+> public class List3 {
+>     public static void main(String[] args) {
+>         // Crea e popola la lista
+>         List<String> list = new ArrayList<>();
+>         list.add("a");
+>         list.add("b");
+>         list.add("c");
+>         list.add("a");
+>         list.add("z");
+>         list.add("h");
+>         
+>         // Inizializza l'iteratore partendo dal PENULTIMO elemento (size - 1)
+>         ListIterator<String> lit = list.listIterator(list.size() - 1);
+>         
+>         // hasPrevious() verifica se ci sono elementi precedenti rispetto al cursore
+>         while (lit.hasPrevious()) {
+>             // previous() recupera l'elemento e sposta il cursore all'indietro
+>             System.out.println(lit.previous());
+>         }
+>     }
+> }
+>  ```
 ##### Sotto lista
 Il metodo `subList(int start, int end)` permette di ottenere una sottolista a partire dalla posizione start fino alla posizione end (non inclusa).
 
