@@ -1169,7 +1169,7 @@ La classe `Collections` (da non confondere con quella classica `Collection`) met
 - fill: sostituisce tutti gli elementi con un altro valore
 - copy: copia tra due liste
 - binarySearch: ricerca un elemento nella lista utilizzando la ricerca binaria
-- indexOfSubList, lastIndexOfSubList: cercano una sottolista all’interno di una lista
+- indexOfSubList, lastIndexOfSubList: cercano una sottolista all'interno di una lista
 
 > [!example] Esempio di shuffling
 > ```java
@@ -1202,5 +1202,5 @@ La classe `Collections` (da non confondere con quella classica `Collection`) met
 > ```
 
 #### Queue
-L'interfaccia `Queue`, come detto prima,
-[da finire]
+L'interfaccia `Queue`, come già detto precedentemente, crea una coda per poter mantenere degli elementi e processarli in un preciso ordine (di solito FIFO).
+Essendo un interfaccia, non è possibile istanziare un oggetto di tipo Queue, ma estende una Collection già presente.
