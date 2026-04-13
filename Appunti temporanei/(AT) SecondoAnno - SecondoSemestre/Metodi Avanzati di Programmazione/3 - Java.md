@@ -1062,14 +1062,25 @@ ListIterator ha altri metodi implementati:
 - `remove()`: rimuove l’elemento ottenuto dall’ultima chiamata di `next()` o `previous()` 
 - `add(E e)`: aggiunge un elemento tra `previous()` e  `next()` 
 - `set(E e)`: sostituisce con `e` l’elemento ottenuto dall’ultima chiamata di `next()` o `previous()`
-[Inserire esempio codice lista]
+```java
+
+```
 ##### Sotto lista
-Il metodo `subList()` permette di ottenere una sottolista a partire dalla posizione start fino alla posizione end (non inclusa).
+Il metodo `subList(int start, int end)` permette di ottenere una sottolista a partire dalla posizione start fino alla posizione end (non inclusa).
 
 `subList()` restituisce una nuova lista con gli elementi richiesti, non viene fatta nessuna modifica sulla lista di partenza
 ##### Algoritmi sulle liste
-La classe `Collections` mette a disposizione dei metodi statici per effettuare degli algoritmi sulle classi che implementano Collection
-[inserire metodi]
+La classe `Collections` (da non confondere con quella classica `Collection`) mette a disposizione dei metodi statici per effettuare degli algoritmi sulle classi che implementano Collection:
+- sort: ordina gli elementi nella lista
+- shuffle: permuta in modo casuale gli elementi nella lista
+- reverse: inverte l’ordine degli elementi
+- rotate: ruota gli elementi di una lista
+- swap: scambia due elementi nella lista
+- replaceAll: sostituisce un elemento con una altro valore
+- fill: sostituisce tutti gli elementi con un altro valore
+- copy: copia tra due liste
+- binarySearch: ricerca un elemento nella lista utilizzando la ricerca binaria
+- indexOfSubList, lastIndexOfSubList: cercano una sottolista all’interno di una lista
 [inserire esempio sullo shuffle]
 #### Queue
 L'interfaccia `Queue`, come detto prima,
