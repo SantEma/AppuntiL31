@@ -1259,7 +1259,11 @@ L'implementazioni di default di una coda è quella di `LinkedList`, che implemen
 > ```
 #### Deque (Deck)
 Deque è una Collection che è simile alla coda, ma con l'eccezione di poter inserire elementi all'inizio e alla fine di essa.
-##### Metodi di 
+##### Metodi di Deque
+Rispetto alla coda, Deque implementa le sue controparti:
+- `addFirst(E e), addLast(E e)
+- `offerFirst(E e), offerLast(E e) `
+- 
 > [!example] Esempio di Deque
 > ```java
 > public class Deque1 {
@@ -1288,3 +1292,4 @@ Deque è una Collection che è simile alla coda, ma con l'eccezione di poter ins
 >     }
 > }
 > ```
+
