@@ -1209,11 +1209,51 @@ Generalmente questa interfaccia implementa dei metodi che creano delle eccezioni
 - `add(E e)`: aggiunge un elemento alla coda, restituisce true se l’elemento è inserito altrimenti genera un’eccezione
 - `element()`: restituisce l’elemento in testa alla coda senza rimuoverlo, se la coda è vuota genera un’eccezione
 - `offer(E e)`: aggiunge un elemento alla coda
-- peek(): restituisce l’elemento in testa alla coda senza rimuoverlo, oppure null se la coda è vuota
-- poll(): restituisce e rimuove l’elemento in testa alla coda, null se la coda è vuota
-- remove():restituisce e rimuove l’elemento in testa alla coda, se la coda è vuota genera un’eccezione
+- `peek()` restituisce l’elemento in testa alla coda senza rimuoverlo, oppure null se la coda è vuota
+- `poll()`: restituisce e rimuove l’elemento in testa alla coda, null se la coda è vuota
+- `remove()`:restituisce e rimuove l’elemento in testa alla coda, se la coda è vuota genera un’eccezione
 
 I metodi di inserimento, cancellazione e recupero sono duplicati e si differenziano sul loro comportamento (eccezione/restituzione valore) nel caso in cui la coda è vuota o ha raggiunto la capacità massima
 
+> [!example] Esempio operazioni base 
+> ```java
+> public class Queue1 {
+>     public static void main(String[] args) {
+>         // Crea una nuova coda FIFO (First-In-First-Out) basata su LinkedList
+>         Queue<String> q = new LinkedList<>();
+>         
+>         // offer() aggiunge un elemento in fondo alla coda.
+>         q.offer("g");
+>         q.offer("h");
+>         q.offer("a");
+>         
+>         // peek() recupera il primo elemento della coda.
+>         // Poiché "g" è stato inserito per primo, sarà il primo della fila.
+>         System.out.println(q.peek()); // Stampa: g
+>     }
+> }
+> ```
+
+
 #### Implementazioni di Queue
 L'implementazioni di default di una coda è quella di `LinkedList`, che implementa sempre la coda FIFO. Nel caso ci sia bisogno di una lista con priorità, si usa `PriorityQueue`, l'elemento sempre in cima è quello più piccolo.
+> [!example] Esempio coda con priorità
+> ```java
+> public class Queue2 {
+>     public static void main(String[] args) {
+>         // Inizializza una PriorityQueue. Gli elementi verranno ordinati 
+>         // automaticamente in base alla loro "priorità" (ordine alfabetico).
+>         Queue<String> q = new PriorityQueue<>();
+>         
+>         // Aggiunge elementi alla coda
+>         q.offer("g");
+>         q.offer("h");
+>         q.offer("a");
+>         
+>         // peek() guarda il primo elemento in coda,.
+>         // Poiché "a" viene prima di "g" e "h" nell'alfabeto, è lui
+>         // l'elemento con la priorità più alta.
+>         System.out.println(q.peek()); // Stampa: a
+>     }
+> }
+> ```
