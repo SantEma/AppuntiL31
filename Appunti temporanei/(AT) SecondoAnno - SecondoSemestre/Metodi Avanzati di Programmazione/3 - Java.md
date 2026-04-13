@@ -945,11 +945,11 @@ Esistono due modi per iterare una Collection:
 Nel caso quindi sia necessario rimuovere degli elementi è preferibile utilizzare un Iterator e non il metodo for-each
 #### Set
 Come detto precedentement, la sottoclasse `Set` rappresenta un contenitore di tipo insieme che non può contenere duplicati. Implementa tutti i metodi dell'interfaccia `Collection` e presenta tre implementazioni:
-- **HashSet**: un set implementato da una tabella hash non mantiene l’ordine di inserimento degli elementi; è l’implementazione più efficiente
+- **HashSet**: un set implementato da una tabella hash non mantiene l’ordine di inserimento degli elementi; è l’implementazione più efficiente 
 - **TreeSet**: un set implementato con una struttura ad albero che mantiene l’ordine di inserimento, è meno efficiente
 - **LinkedHashSet**: un set implementato con una tabella hash e puntatore che mantiene l’ordine di inserimento degli elementi
 
-L’uguaglianza degli oggetti in questa sottoclasse è definita dai metodi equals e hashCode della classe `Object`
+L’uguaglianza degli oggetti in questa sottoclasse è definita dai metodi `equals` e `hashCode` (restituisce un intero) della classe `Object`
 
 Siccome `Set` non può contenere duplicati, torna particolarmente utile nella creazione di una `Collection` senza duplicati partendo da una esistente
 > [!example] Esempio di Collection senza duplicati
