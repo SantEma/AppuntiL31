@@ -1204,3 +1204,4 @@ La classe `Collections` (da non confondere con quella classica `Collection`) met
 #### Queue
 L'interfaccia `Queue`, come già detto precedentemente, crea una coda per poter mantenere degli elementi e processarli in un preciso ordine (di solito FIFO).
 Essendo un interfaccia, non è possibile istanziare un oggetto di tipo Queue, ma estende una Collection già presente.
+##### Metodi in Queue
