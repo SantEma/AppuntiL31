@@ -1056,3 +1056,5 @@ Il metodo `subList()` permette di ottenere una sottolista a partire dalla posizi
 ##### Algoritmi sulle liste
 La classe `Collections` mette a disposizione dei metodi statici per effettuare degli algoritmi sulle classi che implementano Collection
 [inserire metodi]
+[inserire esempio sullo shuffle]
+#### Queue
