@@ -1040,7 +1040,7 @@ Per iterare gli elementi della lista esistono diversi metodi:
 - Ci sono due metodi che restituiscono un ListIterator che permette di scorrere la lista sia in avanti che indietro:
 	- `listIterator()`: restituisce un ListIterator che parte dall’inizio della lista
 	- `listIterator(int i)`: restituisce in ListIterator che parte dalla posizione `i`
-
+##### ListIterator
 Il ListIterator è un iteratore che ammette un cursore tra un elemento e l’altro della lista (se non specificato si mette all'inizio ovviamente) e permette di andare all'elemento precedente `previous()` e all'elemento successivo `next()`
 
 > [!example] ListIterator in forma grafica
@@ -1048,8 +1048,11 @@ Il ListIterator è un iteratore che ammette un cursore tra un elemento e l’alt
 
 ListIterator ha altri metodi implementati:
 [Inserire metodi ListIterator]
-```java
-
-```
-
+[Inserire esempio codice lista]
 ##### Sotto lista
+Il metodo `subList()` permette di ottenere una sottolista a partire dalla posizione start fino alla posizione end (non inclusa).
+
+`subList()` restituisce una nuova lista con gli elementi richiesti, non viene fatta nessuna modifica sulla lista di partenza
+##### Algoritmi sulle liste
+La classe `Collections` mette a disposizione dei metodi statici per effettuare degli algoritmi sulle classi che implementano Collection
+[inserire metodi]
