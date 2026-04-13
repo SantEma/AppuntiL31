@@ -1170,7 +1170,37 @@ La classe `Collections` (da non confondere con quella classica `Collection`) met
 - copy: copia tra due liste
 - binarySearch: ricerca un elemento nella lista utilizzando la ricerca binaria
 - indexOfSubList, lastIndexOfSubList: cercano una sottolista all’interno di una lista
-[inserire esempio sullo shuffle]
+
+> [!example] Esempio di shuffling
+> ```java
+> public class List4 {
+>     public static void main(String[] args) {
+>         // Inizializzazione della lista con un nome più chiaro
+>         List<String> list = new ArrayList<>();
+>         
+>         // Aggiunta degli elementi
+>         list.add("pippo"); 
+>         list.add("topolino");
+>         list.add("paperino");
+>         
+>         // Stampa iniziale: [pippo, topolino, paperino]
+>         System.out.println(list); 
+>         
+>         // Ordina la lista in ordine alfabetico
+>         Collections.sort(list);
+>         System.out.println(list); // [paperino, pippo, topolino]
+>         
+>         // Mescola gli elementi in modo casuale
+>         Collections.shuffle(list);
+>         System.out.println(list); 
+>         
+>         // Ruota gli elementi. Con -1, il primo elemento diventa l'ultimo
+>         Collections.rotate(list, -1);
+>         System.out.println(list); 
+>     }
+> }
+> ```
+
 #### Queue
 L'interfaccia `Queue`, come detto prima,
 [da finire]
