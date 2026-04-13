@@ -1058,3 +1058,4 @@ La classe `Collections` mette a disposizione dei metodi statici per effettuare d
 [inserire metodi]
 [inserire esempio sullo shuffle]
 #### Queue
+L'interfaccia `Queue`, come detto prima, 
