@@ -966,6 +966,7 @@ Siccome `Set` non può contenere duplicati, torna particolarmente utile nella cr
 >         // Crea un nuovo Set (insieme) di stringhe utilizzando LinkedHashSet.
 >         Set<String> set = new LinkedHashSet<>();
 >         
+>         
 >         // Aggiunge elementi al set.
 >         set.add("a");
 >         set.add("a"); // I duplicati vengono ignorati in un Set. Questa operazione non ha effetto.
@@ -998,6 +999,8 @@ Siccome `Set` non può contenere duplicati, torna particolarmente utile nella cr
 >     }
 > }
 > ```
+> Quando si crea un Set, è possibile assegnare una variabile Set senza specificare quale si usi, per rendere il codice più generico possibile e non legarlo all'implementazione.
+> Questo vale anche per tutte le implementazioni successive di `Collection`
 ##### Operazione sugli insiemi
 Il set permette operazioni su insiemi, tra cui unione, intersezione e differenza
 > [!info] Unione
@@ -1020,4 +1023,33 @@ intersection.retainAll(s2);
 > difference.removeAll(s2);
 > ```
 > Il metodo `removeAll(Collection c)` rimuove dall'insieme corrente tutti gli elementi che sono contenuti anche nella collezione specificata (`s2`).
+#### Lista
+Una lista è una sequenza di elementi ordinata, in questo caso sono ammessi duplicati (purchè si trovino in posizioni diverse) e sono presenti dei metodi oltre quelli previsti da Collection per sfruttare il suo ordinamento
 
+Una lista non ha una dimensione predefinita, cresce dinamicamente
+##### Implementazioni delle liste
+Ci sono due implementazioni:
+- `ArrayList`: lista basata sugli array, la più performante
+- `LinkedList`: implementazioni con doppi puntatori
+##### Metodi lista
+[Inserire i metodi]
+indexOf usa il metodo equals
+##### Iterazione nella lista
+Per iterare gli elementi della lista esistono diversi metodi:
+- `iterator()`: restituisce un iteratore su questa lista, gli elementi verranno elencati in sequenza
+- Ci sono due metodi che restituiscono un ListIterator che permette di scorrere la lista sia in avanti che indietro:
+	- `listIterator()`: restituisce un ListIterator che parte dall’inizio della lista
+	- `listIterator(int i)`: restituisce in ListIterator che parte dalla posizione `i`
+
+Il ListIterator è un iteratore che ammette un cursore tra un elemento e l’altro della lista (se non specificato si mette all'inizio ovviamente) e permette di andare all'elemento precedente `previous()` e all'elemento successivo `next()`
+
+> [!example] ListIterator in forma grafica
+> ![[Pasted image 20260413085315.png]]
+
+ListIterator ha altri metodi implementati:
+[Inserire metodi ListIterator]
+```java
+
+```
+
+##### Sotto lista
