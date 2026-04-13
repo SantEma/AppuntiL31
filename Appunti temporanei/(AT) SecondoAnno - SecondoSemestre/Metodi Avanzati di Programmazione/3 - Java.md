@@ -1032,8 +1032,18 @@ Ci sono due implementazioni:
 - `ArrayList`: lista basata sugli array, la più performante
 - `LinkedList`: implementazioni con doppi puntatori
 ##### Metodi lista
-[Inserire i metodi]
-indexOf usa il metodo equals
+Alcuni metodi sfruttano l'accesso alla posizione:
+- `get(int i)`: restituisce l’oggetto alla posizione `i` (le posizioni partono da 0)
+- `set(int i, E element)`: inserisce l’elemento alla posizione `i`
+- `remove(int i)`: elimina l’oggetto in posizione `i`
+- `add(int i, E element)`: aggiunge l’elemento in posizione `i`
+- `addAll(int i, Collection c)`: aggiunge tutti gli elementi in c a partire dalla posizione `i`
+
+Per ricercare degli elementi all'interno di una lista si usano questi metodi:
+- `indexOf(Object o)`:restituisce la posizione in cui si trova l’oggetto `o`, altrimenti -1. Usa il metodo `equals` sotto.
+- `lastIndexOf(Object o)`: restituisce l’ultima posizione in cui si trova l’oggetto o, altrimenti -1
+
+`o` potrebbe trovarsi in più posizioni nella lista, se questo è duplicato viene restituita l’ultima posizione
 ##### Iterazione nella lista
 Per iterare gli elementi della lista esistono diversi metodi:
 - `iterator()`: restituisce un iteratore su questa lista, gli elementi verranno elencati in sequenza
@@ -1047,7 +1057,11 @@ Il ListIterator è un iteratore che ammette un cursore tra un elemento e l’alt
 > ![[Pasted image 20260413085315.png]]
 
 ListIterator ha altri metodi implementati:
-[Inserire metodi ListIterator]
+- `hasNext()`: booleano che controlla se è presente un elemento avanti
+- `hasPrevious()`: booleano che controlla se è presente un elemento indietro
+- `remove()`: rimuove l’elemento ottenuto dall’ultima chiamata di `next()` o `previous()` 
+- `add(E e)`: aggiunge un elemento tra `previous()` e  `next()` 
+- `set(E e)`: sostituisce con `e` l’elemento ottenuto dall’ultima chiamata di `next()` o `previous()`
 [Inserire esempio codice lista]
 ##### Sotto lista
 Il metodo `subList()` permette di ottenere una sottolista a partire dalla posizione start fino alla posizione end (non inclusa).
