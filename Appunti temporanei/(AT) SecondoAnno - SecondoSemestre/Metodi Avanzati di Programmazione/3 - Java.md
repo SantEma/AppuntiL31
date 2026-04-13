@@ -1204,4 +1204,13 @@ La classe `Collections` (da non confondere con quella classica `Collection`) met
 #### Queue
 L'interfaccia `Queue`, come già detto precedentemente, crea una coda per poter mantenere degli elementi e processarli in un preciso ordine (di solito FIFO).
 Essendo un interfaccia, non è possibile istanziare un oggetto di tipo Queue, ma estende una Collection già presente.
+Generalmente questa interfaccia implementa dei metodi che creano delle eccezioni o fanno il return di un valore specifico (null o false)
 ##### Metodi in Queue
+- `add(E e)`: aggiunge un elemento alla coda, restituisce true se l’elemento è inserito altrimenti genera un’eccezione
+- `element()`: restituisce l’elemento in testa alla coda senza rimuoverlo, se la coda è vuota genera un’eccezione
+- `offer(E e)`: aggiunge un elemento alla coda
+- peek(): restituisce l’elemento in testa alla coda senza rimuoverlo, oppure null se la coda è vuota
+- poll(): restituisce e rimuove l’elemento in testa alla coda, null se la coda è vuota
+- remove():restituisce e rimuove l’elemento in testa alla coda, se la coda è vuota genera un’eccezione
+
+I metodi di inserimento, cancellazione e recupero sono duplicati e si differenziano sul loro comportamento (eccezione/restituzione valore) nel caso in cui la coda è vuota o ha raggiunto la capacità massima
