@@ -1259,3 +1259,32 @@ L'implementazioni di default di una coda è quella di `LinkedList`, che implemen
 > ```
 #### Deque (Deck)
 Deque è una Collection che è simile alla coda, ma con l'eccezione di poter inserire elementi all'inizio e alla fine di essa.
+##### Metodi di 
+> [!example] Esempio di Deque
+> ```java
+> public class Deque1 {
+>     public static void main(String[] args) {
+>         // Inizializza una Deque utilizzando l'implementazione LinkedList.
+>         // LinkedList è perfetta per questo scopo perché gestisce in modo molto
+>         // efficiente l'aggiunta e la rimozione di elementi ad entrambi gli estremi.
+>         Deque<String> q = new LinkedList<>();
+>         
+>         // offerLast() aggiunge elementi in coda (alla fine della lista)
+>         q.offerLast("g"); // Stato attuale: [g]
+>         q.offerLast("h"); // Stato attuale: [g, h]
+>         
+>         // offerFirst() aggiunge un elemento in testa (all'inizio della lista),
+>         // spingendo indietro gli elementi già presenti.
+>         q.offerFirst("z"); // Stato attuale: [z, g, h]
+>         
+>         // Aggiunge un altro elemento in coda
+>         q.offerLast("a"); // Stato attuale: [z, g, h, a]
+>         
+>         // peekLast() legge l'ultimo elemento (senza rimuoverlo)
+>         System.out.println("Coda: " + q.peekLast());   // Stampa: a
+>         
+>         // peekFirst() legge il primo elemento (senza rimuoverlo)
+>         System.out.println("Testa: " + q.peekFirst()); // Stampa: z
+>     }
+> }
+> ```
