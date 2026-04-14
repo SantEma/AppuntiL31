@@ -1307,3 +1307,33 @@ L'interfaccia Map implementa alcuni metodi utili
 - `containsKey(Object key)`, : booleano che restituisce true se la Map contiene la chiave `key`
 - `containsValue(Object value)`: booleano che restituisce true se la Map contiene il valore `value`
 - `putAll(Map<K, V> map)`: inserisce tutti gli elementi di `map`
+```java
+
+
+public class Freq {
+    public static void main(String[] args) {
+        // Inizializza una nuova HashMap. 
+        // La Chiave (String) sarà la parola, il Valore (Integer) sarà il suo conteggio.
+        Map<String, Integer> m = new HashMap<>();
+
+        // Inizializza la tabella delle frequenze leggendo dalla riga di comando (args)
+        for (String a : args) {
+            // Cerca la parola 'a' nella mappa. 
+            // Se la parola non è ancora stata inserita, m.get() restituirà null.
+            Integer freq = m.get(a);
+            
+            // L'operatore ternario (condizione ? caso_vero : caso_falso) decide cosa inserire:
+            // - Se freq è null (parola nuova), inserisce la parola con valore 1.
+            // - Se freq NON è null (parola già vista), reinserisce la parola 
+            //   sovrascrivendo il vecchio valore con freq + 1.
+            m.put(a, (freq == null) ? 1 : freq + 1);
+        }
+
+        // m.size() restituisce il numero di chiavi (ovvero le parole uniche)
+        System.out.println(m.size() + " distinct words:");
+        
+        // Stampa il contenuto dell'intera mappa nel formato {chiave1=valore1, chiave2=valore2...}
+        System.out.println(m);
+    }
+}
+```
