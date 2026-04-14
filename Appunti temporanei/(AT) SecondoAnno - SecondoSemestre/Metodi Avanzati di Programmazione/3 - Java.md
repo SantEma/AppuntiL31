@@ -1208,7 +1208,7 @@ Generalmente questa interfaccia implementa dei metodi che creano delle eccezioni
 ##### Metodi in Queue
 - `add(E e)`: aggiunge un elemento alla coda, restituisce true se l’elemento è inserito altrimenti genera un’eccezione
 - `element()`: restituisce l’elemento in testa alla coda senza rimuoverlo, se la coda è vuota genera un’eccezione
-- `offer(E e)`: aggiunge un elemento alla coda
+- `offer(E e)`: aggiunge un elemento alla coda, in caso contrario offre valore null
 - `peek()` restituisce l’elemento in testa alla coda senza rimuoverlo, oppure null se la coda è vuota
 - `poll()`: restituisce e rimuove l’elemento in testa alla coda, null se la coda è vuota
 - `remove()`:restituisce e rimuove l’elemento in testa alla coda, se la coda è vuota genera un’eccezione
@@ -1261,9 +1261,12 @@ L'implementazioni di default di una coda è quella di `LinkedList`, che implemen
 Deque è una Collection che è simile alla coda, ma con l'eccezione di poter inserire elementi all'inizio e alla fine di essa.
 ##### Metodi di Deque
 Rispetto alla coda, Deque implementa le sue controparti:
-- `addFirst(E e), addLast(E e)
-- `offerFirst(E e), offerLast(E e) `
-- 
+- `addFirst(E e), addLast(E e)`: funziona come la controparte di Queue, una aggiunge in cima alla coda e il secondo alla fine delle coda (fa risultare un eccezione nel caso non sia possibile)
+- `offerFirst(E e), offerLast(E e) ` funziona come la controparte di Queue, una aggiunge in cima alla coda e il secondo alla fine delle coda (valore null nel caso non sia possibile)
+- `removeFirst(), removeLast()` funziona come la controparte di Queue, una rimuove in cima alla coda e il secondo alla fine delle coda (fa risultare un eccezione nel caso non sia possibile)
+- `pollFirst(), pollLast()` funziona come la controparte di Queue, una rimuove in cima alla coda e il secondo alla fine delle coda (valore null nel caso non sia possibile)
+- `getFirst(), getLast()` funziona come la controparte di Queue, una prende il valore in cime alla coda e il secondo alla fine della coda (fa risultare un eccezione nel caso non sia possibile)
+- `peekFirst(), peekLast()` funziona come la controparte di Queue, una prende il valore in cime alla coda e il secondo alla fine della coda (valore null nel caso non sia possibile)
 > [!example] Esempio di Deque
 > ```java
 > public class Deque1 {
