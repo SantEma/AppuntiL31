@@ -709,7 +709,7 @@ Per le funzioni trigonometriche di base e inverse troviamo altri metodi come:
 Come argomento per ogni metodo viene passato un double che rappresenta l’angolo espresso in radianti
 
 
-Per generare numeri casuali nell'intervallo $[0;1)$ tramite `Math.random()`, il cui risultato può essere scalato moltiplicandolo per un intero. Nel caso si voglia generare una serie più articolata di numeri casuali è consigliato l'utilizzo della classe dedicata `java.util.Random`
+Per generare numeri casuali nell'intervallo 0 - 1 si usa `Math.random()`, il cui risultato può essere scalato moltiplicandolo per un intero. Nel caso si voglia generare una serie più articolata di numeri casuali è consigliato l'utilizzo della classe dedicata `java.util.Random`
 ### Stringhe
 La classe `String` rappresenta sequenze testuali ed è caratterizzata dalla sua immutabilità, ossia il valore dell'istanza non può in alcun modo essere alterato una volta portato a compimento il suo processo di creazione.
 Ogni letterale scritto tra virgolette nel codice Java è a tutti gli effetti una vera e propria istanza predefinita della classe `String`
