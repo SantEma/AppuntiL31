@@ -1383,4 +1383,6 @@ Ogni classe eredita da Object due importanti metodi:
 
 Se due oggetti sono uguali in base al metodo `equals (Object)`, la chiamata del metodo `hashCode` su ciascuno dei due oggetti deve produrre gli stessi risultati interi, poichè Object genera l’hash code utilizzando l’indirizzo di memoria dell’oggetto
 #### Generics
-Le Cio
+
+
+Per comprendere l'utilità dei generics, è fondamentale analizzare come cambia la gestione dei tipi di dato nel codice:
