@@ -1293,4 +1293,5 @@ Rispetto alla coda, Deque implementa le sue controparti:
 >     }
 > }
 > ```
-
+#### Map
+L'interfaccia MAP permette di creare delle associazioni chiave-valore
