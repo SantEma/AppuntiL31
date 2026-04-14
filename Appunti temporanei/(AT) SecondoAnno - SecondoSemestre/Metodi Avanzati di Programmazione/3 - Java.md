@@ -1294,4 +1294,8 @@ Rispetto alla coda, Deque implementa le sue controparti:
 > }
 > ```
 #### Map
-L'interfaccia MAP permette di creare delle associazioni chiave-valore
+L'interfaccia MAP permette di creare delle associazioni chiave-valore. Ogni chiave è univoca e ad ognuna di essa è associato un solo valore.
+Esistono tre implementazioni dell'interfaccia Map (simili a Set):
+- HashMap
+- TreeMap
+- LinkedHashMap
