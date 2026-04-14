@@ -1299,3 +1299,11 @@ Esistono tre implementazioni dell'interfaccia Map (simili a Set):
 - HashMap
 - TreeMap
 - LinkedHashMap
+##### Metodi di Map
+L'interfaccia Map implementa alcuni metodi utili
+- `get(Object key)`: restituisce l’oggetto associato alla chiave `key`
+- `put(K key, V value)`: inserisce una coppia chiave-volere nella `Map`
+- `remove(Object key)`: rimuove la coppia chiave-valore associata a` key`
+- `containsKey(Object key)`, : booleano che restituisce true se la Map contiene la chiave `key`
+- `containsValue(Object value)`: booleano che restituisce true se la Map contiene il valore `value`
+- `putAll(Map<K, V> map)`: inserisce tutti gli elementi di `map`
