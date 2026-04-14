@@ -225,13 +225,7 @@ Un'espressione in Java è un costrutto fondamentale composto tipicamente da **va
 La caratteristica essenziale di un'espressione è che, una volta valutata, restituisce sempre un singolo risultato.
 Il tipo di questo risultato non è universale, ma dipende strettamente dai tipi delle variabili coinvolte, dagli operatori utilizzati e, naturalmente, dai valori restituiti dagli eventuali metodi chiamati.
 Per gestire priorità complesse, le parentesi possono essere utilizzate liberamente per definire e forzare un preciso ordine di valutazione degli operatori.
-### Statement
-Uno **statement** rappresenta una **singola istruzione esecutiva** e la sua sintassi richiede tassativamente che termini sempre con il carattere punto e virgola (;).
-All'interno del linguaggio si possono individuare quattro tipologie principali di statement:
-1. Le istruzioni di assegnazione di valori;
-2. Gli operatori matematici particolari come $++$ o $--$;
-3. Le istruzioni che effettuano una chiamata ad un metodo;
-4. Le istruzioni dedicate alla creazione di un nuovo oggetto in memoria;
+
 ### Blocchi
 I blocchi sono gruppi di istruzioni racchiusi tra parentesi graffe
 > [!example] Esempio di blocco di codice
@@ -248,6 +242,13 @@ I blocchi sono gruppi di istruzioni racchiusi tra parentesi graffe
 > // Fine secondo blocco
 > ``` 
 
+### Statement
+Uno **statement** rappresenta una **singola istruzione esecutiva** e la sua sintassi richiede tassativamente che termini sempre con il carattere punto e virgola (;).
+All'interno del linguaggio si possono individuare quattro tipologie principali di statement:
+1. Le istruzioni di assegnazione di valori;
+2. Gli operatori matematici particolari come $++$ o $--$;
+3. Le istruzioni che effettuano una chiamata ad un metodo;
+4. Le istruzioni dedicate alla creazione di un nuovo oggetto in memoria;
 ## Controllo del flusso
 ### if-then e if-then-else
 Le istruzioni if-then e if-then-else sono essenziali per eseguire dei blocchi di codice solo ed esclusivamente se si verifica una determinata condizione.
@@ -1384,5 +1385,7 @@ Ogni classe eredita da Object due importanti metodi:
 Se due oggetti sono uguali in base al metodo `equals (Object)`, la chiamata del metodo `hashCode` su ciascuno dei due oggetti deve produrre gli stessi risultati interi, poichè Object genera l’hash code utilizzando l’indirizzo di memoria dell’oggetto
 #### Generics
 
-
+Le Collection sono originariamente strutture generiche nate per memorizzare oggetti di tipo generico `Object`, tuttavia è possibile tipizzare queste collezioni utilizzando i generics attraverso la sintassi `<T>`, la quale permette a tutti i metodi della struttura di lavorare specificamente su oggetti di tipo `T` anziché sul tipo generico `Object
 Per comprendere l'utilità dei generics, è fondamentale analizzare come cambia la gestione dei tipi di dato nel codice:
+> [!example] Senza vs Con Generics
+> ![[Pasted image 20260414180540.png]]
