@@ -1338,3 +1338,4 @@ L'interfaccia Map implementa alcuni metodi utili
 > }
 > ```
 
+#### Equals e hashCode
