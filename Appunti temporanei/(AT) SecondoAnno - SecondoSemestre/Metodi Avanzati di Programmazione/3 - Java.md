@@ -1272,8 +1272,6 @@ Rispetto alla coda, Deque implementa le sue controparti:
 > public class Deque1 {
 >     public static void main(String[] args) {
 >         // Inizializza una Deque utilizzando l'implementazione LinkedList.
->         // LinkedList è perfetta per questo scopo perché gestisce in modo molto
->         // efficiente l'aggiunta e la rimozione di elementi ad entrambi gli estremi.
 >         Deque<String> q = new LinkedList<>();
 >         
 >         // offerLast() aggiunge elementi in coda (alla fine della lista)
