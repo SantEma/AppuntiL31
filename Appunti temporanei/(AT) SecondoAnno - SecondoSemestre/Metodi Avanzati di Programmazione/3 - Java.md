@@ -1339,3 +1339,7 @@ L'interfaccia Map implementa alcuni metodi utili
 > ```
 
 #### Equals e hashCode
+Ogni classe eredita da Object due importanti metodi:
+- `equals()`, che ricordiamo essere il metodo per confrontare due operatori, restituisce un valore booleano true quando due oggetti sono uguali
+  Il metodo `equals`  è utilizzato da Set per evitare duplicati, ma anche da tutti i metodi di Collection che cercano un oggetto
+- `hashCode()`, che restituisce il codice intero hash per l‘oggetto. È utilizzato dalle tabelle hash come quelle fornite da HashMap
