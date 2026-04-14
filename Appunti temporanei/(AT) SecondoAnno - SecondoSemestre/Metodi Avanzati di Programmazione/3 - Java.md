@@ -1201,6 +1201,43 @@ La classe `Collections` (da non confondere con quella classica `Collection`) met
 > }
 > ```
 
+##### SortedSet
+> [!info] Visione veloce di SortedSet
+> ![[Pasted image 20260414175335.png]]
+
+> [!example] Ricerca frequenza parole con SortedSet
+> 
+> ```java
+> import java.util.HashMap;
+> import java.util.Map;
+> 
+> public class Freq {
+>     public static void main(String[] args) {
+>         // Inizializza una nuova HashMap. 
+>         // La Chiave (String) sarà la parola, il Valore (Integer) sarà il suo conteggio.
+>         Map<String, Integer> m = new HashMap<>();
+> 
+>         // Inizializza la tabella delle frequenze leggendo dalla riga di comando (args)
+>         for (String a : args) {
+>             // Cerca la parola 'a' nella mappa. 
+>             // Se la parola non è ancora stata inserita, m.get() restituirà null.
+>             Integer freq = m.get(a);
+>             
+>             // L'operatore ternario (condizione ? caso_vero : caso_falso) decide cosa inserire:
+>             // - Se freq è null (parola nuova), inserisce la parola con valore 1.
+>             // - Se freq NON è null (parola già vista), reinserisce la parola 
+>             //   sovrascrivendo il vecchio valore con freq + 1.
+>             m.put(a, (freq == null) ? 1 : freq + 1);
+>         }
+> 
+>         // m.size() restituisce il numero di chiavi (ovvero le parole uniche)
+>         System.out.println(m.size() + " distinct words:");
+>         
+>         // Stampa il contenuto dell'intera mappa nel formato {chiave1=valore1, chiave2=valore2...}
+>         System.out.println(m);
+>     }
+> }
+> ```
 #### Queue
 L'interfaccia `Queue`, come già detto precedentemente, crea una coda per poter mantenere degli elementi e processarli in un preciso ordine (di solito FIFO).
 Essendo un interfaccia, non è possibile istanziare un oggetto di tipo Queue, ma estende una Collection già presente.
@@ -1233,8 +1270,6 @@ I metodi di inserimento, cancellazione e recupero sono duplicati e si differenzi
 >     }
 > }
 > ```
-
-
 #### Implementazioni di Queue
 L'implementazioni di default di una coda è quella di `LinkedList`, che implementa sempre la coda FIFO. Nel caso ci sia bisogno di una lista con priorità, si usa `PriorityQueue`, l'elemento sempre in cima è quello più piccolo.
 > [!example] Esempio coda con priorità
@@ -1337,7 +1372,9 @@ L'interfaccia Map implementa alcuni metodi utili
 >     }
 > }
 > ```
-
+##### SortedMap
+> [!info] Visione veloce di SortedMap
+> ![[Pasted image 20260414175459.png]]
 #### Equals e hashCode
 Ogni classe eredita da Object due importanti metodi:
 - `equals()`, che ricordiamo essere il metodo per confrontare due operatori, restituisce un valore booleano true quando due oggetti sono uguali
@@ -1345,3 +1382,5 @@ Ogni classe eredita da Object due importanti metodi:
 - `hashCode()`, che restituisce il codice intero hash per l‘oggetto. È utilizzato dalle tabelle hash come quelle fornite da HashMap
 
 Se due oggetti sono uguali in base al metodo `equals (Object)`, la chiamata del metodo `hashCode` su ciascuno dei due oggetti deve produrre gli stessi risultati interi, poichè Object genera l’hash code utilizzando l’indirizzo di memoria dell’oggetto
+#### Generics
+Le Cio
