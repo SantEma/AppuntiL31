@@ -1,4 +1,3 @@
-
 ## Dal cosa al come
 La scienza del software studia il passaggio dal "cosa" (quello che il programmatore pensa, quindi il problema) al "come" (come viene eseguito dalla macchina)
 
