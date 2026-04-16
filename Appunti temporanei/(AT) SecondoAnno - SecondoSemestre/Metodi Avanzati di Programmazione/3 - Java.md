@@ -1388,3 +1388,26 @@ Le Collection sono originariamente strutture generiche nate per memorizzare ogge
 Per comprendere l'utilità dei generics, è fondamentale analizzare come cambia la gestione dei tipi di dato nel codice:
 > [!example] Senza vs Con Generics
 > ![[Pasted image 20260414180540.png]]
+### Eccezioni
+Le eccezioni sono eventi che si verificano durante l'esecuzione del programma e identifica un anomalia che impedisce il normale flusso del programma.
+
+
+In Java esiste un meccanismo (gestore delle eccezioni) che cattura e gestisce le eccezioni, che di solito possono essere generate durante l'esecuzione di un metodo. Il gestore delle eccezioni gestisce soltanto un determinato tipo di eccezione.
+Ogni eccezione ha un oggetto con tutte le informazioni su cosa è accaduto.
+#### Tipologie di eccezioni
+Esistono 3 grandi tipologie di eccezioni:
+- **Exception (con sottoclassi)**: sono eccezioni che possono essere gestite e catturate (anche se il programmatore dovrebbe anticipare e gestire questo tipo di eccezioni)
+- **Error (e sottoclassi)**: sono eccezioni che non possono essere gestite e dipendono da qualcosa esterno dal programma
+- **RuntimeException (e sottoclassi)**: eccezioni interne al programma che non possono essere anticipate o catturate (essenzialmente sono dei bug)
+#### Try-catch and finally
+Per catturare un eccezione bisogna utilizzare il blocco try-catch
+> [!info] Blocco try-catch
+> ```java
+> try {
+>     \\istruzioni
+> } catch (Exception ex) {
+>     \\gestione dell’eccezione
+> } finally {
+>     \\istruzioni che devono essere in ogni caso eseguite
+> }
+> ```
