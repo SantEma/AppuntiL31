@@ -1413,3 +1413,19 @@ Per catturare un eccezione bisogna utilizzare il blocco try-catch
 > ```
 > Il blocco `finally` è opzionale, può essere utilizzato per effettuare delle operazioni di ‘’pulizia’’
 
+Per gestire più eccezioni nella stessa linea di codice si usa la seguente sintassi:
+> [!example] Catch di più eccezioni
+> ```java
+> try { 
+> //Istruzioni
+> } catch (IOException|SQLException ex) { 
+> 	System.err.println("Caught Exception: " + ex.getMessage()); 
+> }
+> ```
+#### Lancio di un eccezione
+I metodi possono dichiarare il tipo di eccezione che si potrebbe verificare al suo interno. Questo in sostanza obbliga tutti i metodi chiamanti a gestire l'eccezione nel blocco try-catch
+```java
+public File openFile(String filename) throws IOException{} 
+	//istruzioni 
+}
+``` 
