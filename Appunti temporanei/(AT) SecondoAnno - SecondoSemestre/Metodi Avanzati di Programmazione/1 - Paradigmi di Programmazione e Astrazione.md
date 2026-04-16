@@ -114,7 +114,7 @@ Similmente, nella programmazione l’astrazione allude alla distinzione che si f
 - **Cosa** (what) fa un pezzo di codice
 - **Come** (how) esso è implementato
 
-Per l’utente l’essenziale è cosa fa il codice, mentre non è interessato ai dettagli dell'implementazione.
+Per l’utente l’essenziale è cosa fa il codice, mentre non è interessato ai dettagli dellimplementazione.
 ### Astrazione funzionale
 > [!info] Definizione
 > L’astrazione funzionale si riferisce alla progettazione del software, e in particolare alla possibilità di specificare un modulo software che trasforma dei dati di input in dati di output nascondendo i dettagli algoritmici della trasformazione.
@@ -131,8 +131,7 @@ Il modulo software deve trasformare un input in un output, cioè deve calcolare 
 > 
 > Queste specifiche semantiche sono dette **assiomatiche**
 > ![[Pasted image 20260305112003.png]]
-
-#### Stepwise refinement
+### Stepwise refinement
 L’astrazione funzionale si è affermata pienamente solo quando emerse una metodologia che mirava a costruire i programmi **progredendo dal generale al particolare**, ossia quella del **stepwise refinement**.
 Si caratterizza secondo i seguente passi:
 1. Decomponi il compito $P$ in sotto-compiti $P_{1} , P_{2} , \dots, P_{n}$
