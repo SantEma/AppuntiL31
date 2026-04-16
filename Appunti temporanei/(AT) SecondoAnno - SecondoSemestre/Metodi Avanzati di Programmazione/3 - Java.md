@@ -1413,5 +1413,3 @@ Per catturare un eccezione bisogna utilizzare il blocco try-catch
 > ```
 > Il blocco `finally` è opzionale, può essere utilizzato per effettuare delle operazioni di ‘’pulizia’’
 
-
-
