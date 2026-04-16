@@ -184,7 +184,7 @@ In C++ ad esempio sono le funzioni precedute da  `private` o `public`
 La combinazione del **principio dell’astrazione dati con la tecnica dell’incapsulamento** suggerisce che:
 1. La rappresentazione del dato va nascosta all'interno dell'incapsulamento
 2. L’accesso al dato deve passare solo attraverso operazioni lecite
-3. Le operazioni lecite, che ovviamente devono avere accesso alla informazione sulla rappresentazione del dato, vanno impacchettate con la rappresentazione del dato stesso
+3. Le operazioni lecite, che ovviamente devono avere accesso all'informazione sulla rappresentazione del dato, vanno impacchettate con la rappresentazione del dato stesso
 > [!example] Esempio di unione di astrazione dati e incapsulamento
 > ![[Pasted image 20260305114849.png]]
 > ![[Pasted image 20260307112433.png]]
