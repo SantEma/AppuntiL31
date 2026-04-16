@@ -200,7 +200,7 @@ La progettazione da **function centered** diventa **data centered**.
 L'isolamento però di questi due moduli non può essere totale, quindi si va ad utilizzare la **specifica**
 ## I punti di vista dell'astrazione
 In generale, le astrazioni supportano la separazione dei diversi interessi di 
--  **Utenti**: interessati a cosa si astrae (what) 
+- **Utenti**: interessati a cosa si astrae (what) 
 - **Implementatori**: interessati a come (how) si realizza 
 Per questa ragione una definizione di astrazione ha sempre due componenti:
 - **Specifica** 
