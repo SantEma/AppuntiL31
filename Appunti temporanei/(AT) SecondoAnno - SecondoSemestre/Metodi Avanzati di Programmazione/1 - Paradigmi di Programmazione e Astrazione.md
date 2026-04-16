@@ -166,7 +166,7 @@ Questo porta ad un vantaggio non indifferente, ossia un cambiamento nella rappre
 Tutte le astrazioni seguono il principio dell'**information hiding**, ossia l'occultamento dei dettagli del processo di trasformazione (**non si dice come farlo**).
 Il principio dell’astrazione dati identifica nella rappresentazione del dato l’informazione da nascondere.
 #### Incapsulamento
-L'incapsulamento (**encapsulation**) è una tecnica di progettazione consistente nell'impacchettare (o "racchiudere in capsule") una collezione di entità, creandone una barriera concettuale
+L'incapsulamento (**encapsulation**) è una tecnica di progettazione che consiste nell'impacchettare (o "racchiudere in capsule") una collezione di entità, creandone una barriera concettuale
 Come l’astrazione, l’incapsulamento sotto-intende: 
 - **Un processo**: l’impacchettamento
 - **Una entità**: il "pacchetto" ottenuto 
