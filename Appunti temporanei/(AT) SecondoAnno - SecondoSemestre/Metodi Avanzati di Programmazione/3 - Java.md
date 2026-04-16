@@ -1399,6 +1399,8 @@ Esistono 3 grandi tipologie di eccezioni:
 - **Exception (con sottoclassi)**: sono eccezioni che possono essere gestite e catturate (anche se il programmatore dovrebbe anticipare e gestire questo tipo di eccezioni)
 - **Error (e sottoclassi)**: sono eccezioni che non possono essere gestite e dipendono da qualcosa esterno dal programma
 - **RuntimeException (e sottoclassi)**: eccezioni interne al programma che non possono essere anticipate o catturate (essenzialmente sono dei bug)
+
+Tutte le eccezioni sono sottoclassi di Exception, ed è possibile creare una propria classe exception, estendendo quella originale o una delle sue sottoclassi 
 #### Try-catch and finally
 Per catturare un eccezione bisogna utilizzare il blocco try-catch
 > [!info] Blocco try-catch
@@ -1425,7 +1427,12 @@ Per gestire più eccezioni nella stessa linea di codice si usa la seguente sinta
 #### Lancio di un eccezione
 I metodi possono dichiarare il tipo di eccezione che si potrebbe verificare al suo interno. Questo in sostanza obbliga tutti i metodi chiamanti a gestire l'eccezione nel blocco try-catch
 ```java
-public File openFile(String filename) throws IOException{} 
-	//istruzioni 
+public File openFile(String filename) throws IOException{
+	try { 
+		//istruzioni 
+	} catch (IOException ex) { 
+		throw ex; 
+	}
 }
 ``` 
+
