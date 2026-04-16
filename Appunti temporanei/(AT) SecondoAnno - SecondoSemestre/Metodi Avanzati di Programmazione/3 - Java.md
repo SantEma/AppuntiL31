@@ -1436,3 +1436,4 @@ public File openFile(String filename) throws IOException{
 }
 ``` 
 
+Il throw generalmente si usa per imporre regole rigide (come dei parametri importanti non validi, file non trovati, connessioni perse) in modo da interrompere il flusso di esecuzione.
