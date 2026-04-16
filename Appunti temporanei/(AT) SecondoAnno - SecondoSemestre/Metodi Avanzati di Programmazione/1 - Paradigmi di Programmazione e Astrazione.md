@@ -96,23 +96,25 @@ Non si tratta di omettere parti della rappresentazione di un problema, ma di rif
 > [!example] Esempio di astrazione
 > ![[Pasted image 20260304130450.png]]
 
-L’astrazione si focalizza sulle caratteristiche essenziali di un oggetto, rispetto alla prospettiva di colui che osserva.
+L’astrazione si focalizza sulle caratteristiche essenziali di un oggetto a rispetto della prospettiva di colui che osserva.
 ### Astrazione: processo o entità
 Il termine astrazione sotto-intende due concetti distinti, entrambi validi e ugualmente necessari:
 - **Un processo**: l’estrazione delle informazioni essenziali e rilevanti per un particolare scopo, ignorando il resto dell’informazione
 - **Una entità**: una descrizione semplificata di un sistema che enfatizza alcuni dei dettagli o proprietà trascurandone altri
 Entrambe le viste sono valide e di fatto necessarie.
 
-Si suppone che si voglia controllare il traffico aereo, avremo due tipologie di dettagli:
-- Dettagli **essenziali**: posizione del velivolo, velocità, etc.
-- Dettagli **irrilevanti**: colore, nomi dei passeggeri, etc.
+> [!example] Esempio dell'aereo
+> Si suppone che si voglia controllare il traffico aereo, avremo due tipologie di dettagli:
+> - Dettagli **essenziali**: posizione del velivolo, velocità, etc.
+> - Dettagli **irrilevanti**: colore, nomi dei passeggeri, etc.
+
 Nel quotidiano il principio di astrazione è costantemente applicato ogni qualvolta utilizziamo uno strumento senza per questo sapere come è realizzato.
 ## Astrazione nel software
 Similmente, nella programmazione l’astrazione allude alla distinzione che si fa tra
 - **Cosa** (what) fa un pezzo di codice
 - **Come** (how) esso è implementato
 
-Per l’utente l’essenziale è cosa fa il codice, mentre non è interessato ai dettagli della implementazione.
+Per l’utente l’essenziale è cosa fa il codice, mentre non è interessato ai dettagli dell'implementazione.
 ### Astrazione funzionale
 > [!info] Definizione
 > L’astrazione funzionale si riferisce alla progettazione del software, e in particolare alla possibilità di specificare un modulo software che trasforma dei dati di input in dati di output nascondendo i dettagli algoritmici della trasformazione.
