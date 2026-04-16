@@ -1408,6 +1408,8 @@ Per catturare un eccezione bisogna utilizzare il blocco try-catch
 > } catch (Exception ex) {
 >     \\gestione dell’eccezione
 > } finally {
->     \\istruzioni che devono essere in ogni caso eseguite
+>     \\istruzioni che devono essere indipendentemente eseguite dal successo o non successo della try-catch
 > }
 > ```
+> Il blocco `finally` è opzionale, può essere utilizzato per effettuare delle operazioni di ‘’pulizia’’
+
