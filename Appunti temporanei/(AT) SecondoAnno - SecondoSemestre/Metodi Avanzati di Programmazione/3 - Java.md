@@ -1406,11 +1406,11 @@ Per catturare un eccezione bisogna utilizzare il blocco try-catch
 > [!info] Blocco try-catch
 > ```java
 > try {
->     \\istruzioni
+>     //istruzioni
 > } catch (Exception ex) {
->     \\gestione dell’eccezione
+>     //gestione dell’eccezione
 > } finally {
->     \\istruzioni che devono essere indipendentemente eseguite dal successo o non successo della try-catch
+>     //istruzioni che devono essere indipendentemente eseguite dal successo o non successo della try-catch
 > }
 > ```
 > Il blocco `finally` è opzionale, può essere utilizzato per effettuare delle operazioni di ‘’pulizia’’
@@ -1424,6 +1424,8 @@ Per gestire più eccezioni nella stessa linea di codice si usa la seguente sinta
 > 	System.err.println("Caught Exception: " + ex.getMessage()); 
 > }
 > ```
+
+System.err.println() stampa l'errore ma non ferma l'esecuzione del programma. 
 #### Lancio di un eccezione
 I metodi possono dichiarare il tipo di eccezione che si potrebbe verificare al suo interno. Questo in sostanza obbliga tutti i metodi chiamanti a gestire l'eccezione nel blocco try-catch
 ```java
