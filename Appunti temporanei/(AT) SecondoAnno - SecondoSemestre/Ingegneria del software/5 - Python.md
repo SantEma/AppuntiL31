@@ -53,7 +53,7 @@ Essendo oggetti mutabili, la modifica di una lista altera il contenuto del conte
 
 > [!example] Esempio di notazione start:end:step
 > ![[Pasted image 20260420114007.png]]
-### Sequenze, Tuple e Range
+### Tuple, Sequenze e Range
 Le liste appartengono alla più ampia famiglia delle sequenze, un raggruppamento concettuale che include anche le stringhe di testo e le tuple. 
 A differenza delle liste, le tuple si definiscono tramite parentesi tonde e sono rigorosamente immutabili, prestandosi particolarmente alla conservazione di dati disomogenei che non devono subire alterazioni nel tempo.
 
@@ -61,6 +61,9 @@ A differenza delle liste, le tuple si definiscono tramite parentesi tonde e sono
 > ```python
 > t=("a",2,"c")
 > ```
+> Sarebbe raccomandabile mettere in una tupla i dati disomogenei e in una lista quelli omogenei
+
+
 
 ## Testing
 
