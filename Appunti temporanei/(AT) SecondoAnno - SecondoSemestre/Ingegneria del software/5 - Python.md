@@ -44,11 +44,35 @@ Le liste rappresentano una sequenza ordinata di oggetti di qualsiasi tipo, racch
 > l = [4.02, "bruno", x, True]
 > ```
 > L'accesso agli elementi avviene tramite un sistema di indicizzazione che parte da 0 per il conteggio da sinistra verso destra, o da -1 per esplorare la lista a ritroso partendo dall'ultimo elemento. 
+> ```python
+> print(l[0])   # 4.02  (primo elemento)
+> print(l[-1])  # True  (ultimo elemento)
+> ```
 
 Python fornisce un ricco arsenale di metodi per manipolare le liste: 
 - È possibile aggiungere elementi con `append()` o `extend()`, 
 - È possibile inserire in posizioni specifiche elementi con `insert()`, rimuoverli con `remove()` o estrarli tramite `pop()`,
 - Ordinare elementi in modo crescente o decrescente con `sort()` e `reverse()` e contarne le occorrenze con `count()`. 
+
+> [!example] 
+> ```python
+> x = [5]
+> l = [4.02, "claudio", x, True]
+> l.append("giulio")   # aggiunge in fondo
+> l.extend(x)          # estende con gli elementi di x
+> l.insert(2, False)   # inserisce False all'indice 2
+> l.remove("claudio")  # rimuove la prima occorrenza
+> e = l.pop(3)         # estrae e rimuove l'elemento all'indice 3
+> print("lista: {}, elemento: {}".format(l, e))
+> # Output: lista: [4.02, False, [5], "giulio", 5], elemento: True
+> 
+> l = [7, 22.1, 22.1, 7, 7, 11.6]
+> l.sort()              # ordinamento crescente
+> l.reverse()           # ribalta la lista
+> l.sort(reverse=True)  # equivalente a sort() + reverse()
+> print(l.index(22.1))  # 1 - indice della prima occorrenza
+> print(l.count(7))     # 3 - numero di occorrenze
+> ```
 
 Essendo oggetti mutabili, la modifica di una lista altera il contenuto del contenitore originale in memoria; per questo motivo, se si desidera creare una copia indipendente, è necessario utilizzare il metodo `.copy()` oppure ricorrere alla notazione`[start:end:step]`, che consente di estrarre porzioni specifiche di una lista definendo l'indice di partenza incluso, quello di fine escluso e il passo di avanzamento, offrendo persino la possibilità di invertire l'intera lista semplicemente impostando un passo negativo.
 
