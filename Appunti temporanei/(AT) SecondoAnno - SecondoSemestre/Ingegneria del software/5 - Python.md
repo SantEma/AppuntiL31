@@ -44,6 +44,11 @@ Le liste rappresentano una sequenza ordinata di oggetti di qualsiasi tipo, racch
 > l = [4.02, "bruno", x, True]
 > ```
 
+Python fornisce un ricco arsenale di metodi per manipolare le liste: 
+- è possibile aggiungere elementi con `append` o `extend`, 
+- inserirli in posizioni specifiche con `insert`, rimuoverli con `remove` o estrarli tramite `pop`,
+- oltre a ordinarli in modo crescente o decrescente con `sort` e `reverse` e contarne le occorrenze con `count`. 
 
+Essendo oggetti mutabili, la modifica di una lista altera il contenuto del contenitore originale in memoria; per questo motivo, se si desidera creare una copia indipendente, è necessario utilizzare il metodo `.copy()` oppure ricorrere allo slicing. Lo slicing, espresso con la sintassi `[start:end:step]`, consente di estrarre porzioni specifiche di una lista definendo l'indice di partenza incluso, quello di fine escluso e il passo di avanzamento, offrendo persino la possibilità di invertire l'intera lista semplicemente impostando un passo negativo.
 ## Testing
 
