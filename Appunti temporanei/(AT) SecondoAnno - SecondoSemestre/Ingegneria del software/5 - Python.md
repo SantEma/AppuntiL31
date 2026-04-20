@@ -104,9 +104,39 @@ A differenza delle liste, le tuple si definiscono tramite parentesi tonde e sono
 > ```
 > Sarebbe raccomandabile mettere in una tupla i dati disomogenei e in una lista quelli omogenei
 
-Tutte le sequenze condividono funzionalità comuni: gli operatori
-- `in` e `not in` permettono di verificare l'esistenza di un elemento, 
+Tutte le sequenze condividono funzionalità comuni: 
+- Gli operatori `in` e `not in` permettono di verificare l'esistenza di un elemento,
 - L'operatore di addizione concatena più sequenze, la moltiplicazione per un numero intero le replica.
+- Funzioni integrate come `len`, `min`, `max` e `sum` ne analizzano il contenuto.
+
+> [!example] Esempio di funzioni di sequenze
+> ```python
+> l = [None] * 100  # lista di 100 elementi None
+> 
+> len(l)   # lunghezza
+> min(l)   # valore minimo
+> max(l)   # valore massimo
+> sum(l)   # somma degli elementi
+> ```
+
+Una caratteristica potente delle sequenze è il "sequence unpacking", che permette di assegnare i singoli valori interni a variabili distinte in una sola riga di codice.
+
+> [!example] Esempio di sequence unpackaging
+> ```python
+> l = (4, 6, 8, 10)
+> a, b, _, c = l
+> # a=4, b=6, _=8 (ignorato), c=10
+> ```
+
+Per generare rapidamente sequenze numeriche entra in gioco il tipo di dato `range`, utilissimo per creare contatori specificando un punto di inizio, un termine escluso e un passo, dove il parametro di partenza è considerato zero se omesso.
+
+> [!example] 
+> ```python
+> range(start, end, step)
+> 
+> # Esempio: numeri da 1 a 100 con passo 3
+> l = list(range(1, 100, 3))
+> ```
 
 ## Testing
 
