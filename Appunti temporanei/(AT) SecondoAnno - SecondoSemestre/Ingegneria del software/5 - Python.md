@@ -13,7 +13,6 @@ Oltre ai numeri, assumono un'importanza cruciale le variabili booleane, che poss
 
 ### Strutture di Controllo e Cicli Iterativi
 Per implementare la logica decisionale all'interno di un algoritmo, Python utilizza i blocchi condizionali definiti dalle parole chiave `if`, `elif` ed `else`, i quali eseguono porzioni di codice diverse in base alla veridicità di uno o più predicati. 
-
 > [!example] Esempio di indentazione e codice sulle strutture di controllo
 > ```python
 > if <cond1>:
@@ -27,7 +26,6 @@ Per implementare la logica decisionale all'interno di un algoritmo, Python utili
 L'intero linguaggio si basa sull'indentazione (solitamente 4 spazi) per raggruppare visivamente e strutturalmente le istruzioni: un'indentazione errata non è solo un problema stilistico, ma genera comportamenti anomali o errori di esecuzione.
 
 Quando si presenta la necessità di ripetere un'azione fintanto che una specifica condizione iniziale risulta vera, si ricorre al ciclo iterativo `while`, che valuta la condizione ad ogni passaggio e interrompe l'esecuzione nel momento in cui essa diventa falsa.
-
 > [!example] Esempio di while
 > ```python
 > while <condizione>:
@@ -37,7 +35,6 @@ Quando si presenta la necessità di ripetere un'azione fintanto che una specific
 > ```
 ### Liste e Manipolazione dei Dati
 Le liste rappresentano una sequenza ordinata di oggetti di qualsiasi tipo, racchiusa tra parentesi quadre e separata da virgole, con la peculiarità di poter contenere al suo interno anche altre liste.
-
 > [!example] Esempio di lista
 > ```python
 > l = [4.02, "bruno", x, True]
@@ -52,8 +49,7 @@ Python fornisce un ricco arsenale di metodi per manipolare le liste:
 - È possibile aggiungere elementi con `append()` o `extend()`, 
 - È possibile inserire in posizioni specifiche elementi con `insert()`, rimuoverli con `remove()` o estrarli tramite `pop()`,
 - Ordinare elementi in modo crescente o decrescente con `sort()` e `reverse()` e contarne le occorrenze con `count()`. 
-
-> [!example] 
+> [!example] Esempio dei metodi descritti
 > ```python
 > x = [5]
 > l = [4.02, "claudio", x, True]
@@ -74,7 +70,6 @@ Python fornisce un ricco arsenale di metodi per manipolare le liste:
 > ```
 
 Essendo oggetti mutabili, la modifica di una lista altera il contenuto del contenitore originale in memoria; per questo motivo, se si desidera creare una copia indipendente, è necessario utilizzare il metodo `.copy()` oppure ricorrere alla notazione`[start:end:step]`, che consente di estrarre porzioni specifiche di una lista definendo l'indice di partenza incluso, quello di fine escluso e il passo di avanzamento, offrendo persino la possibilità di invertire l'intera lista semplicemente impostando un passo negativo.
-
 > [!example] Esempio di notazione start:end:step
 > ```python
 > l = [2, 3, 10, 50]
@@ -107,7 +102,6 @@ Tutte le sequenze condividono funzionalità comuni:
 - Gli operatori `in` e `not in` permettono di verificare l'esistenza di un elemento,
 - L'operatore di addizione concatena più sequenze, la moltiplicazione per un numero intero le replica.
 - Funzioni integrate come `len`, `min`, `max` e `sum` ne analizzano il contenuto.
-
 > [!example] Esempio di funzioni di sequenze
 > ```python
 > l = [None] * 100  # lista di 100 elementi None
@@ -119,7 +113,6 @@ Tutte le sequenze condividono funzionalità comuni:
 > ```
 
 Una caratteristica potente delle sequenze è il "sequence unpacking", che permette di assegnare i singoli valori interni a variabili distinte in una sola riga di codice.
-
 > [!example] Esempio di sequence unpackaging
 > ```python
 > l = (4, 6, 8, 10)
@@ -128,7 +121,6 @@ Una caratteristica potente delle sequenze è il "sequence unpacking", che permet
 > ```
 
 Per generare rapidamente sequenze numeriche entra in gioco il tipo di dato `range`, utilissimo per creare contatori specificando un punto di inizio, un termine escluso e un passo, dove il parametro di partenza è considerato zero se omesso.
-
 > [!example] Esempio di range
 > ```python
 > range(start, end, step)
@@ -138,7 +130,6 @@ Per generare rapidamente sequenze numeriche entra in gioco il tipo di dato `rang
 > ```
 ### Set e Dizionari
 Python gestisce i dati non ordinati attraverso i set e i dizionari. Il set, delimitato da parentesi graffe, è una collezione non ordinata e non indicizzabile che garantisce l'assenza di duplicati, rivelandosi lo strumento ideale per gestire enormi moli di dati su cui effettuare rapide ricerche di appartenenza.
-
 > [!example] Esempio di set
 > ```python
 > s = {4, 2, 4, 1}
@@ -155,8 +146,7 @@ Il dizionario, anch'esso definito da parentesi graffe, struttura invece le infor
 > ```
 
 Per accedere al valore di un dizionario è sufficiente richiamare la sua chiave, a patto che questa sia un identificatore valido, utilizzando le parentesi quadre oppure il metodo `.get()`.
-
-> [!example] Accesso ai valori del dizionario
+> [!example] Esempio di accesso ai valori del dizionario
 > ```python
 > d = {'Uniba': 'Università nel Sud Italia', 7: 'Numero intero'}
 > print(d['Uniba'])               # accesso con parentesi quadre
@@ -165,7 +155,6 @@ Per accedere al valore di un dizionario è sufficiente richiamare la sua chiave,
 > ```
 
 Esattamente come accade per le liste, anche i dizionari sono oggetti mutabili, il che significa che una semplice assegnazione ne copia solo il riferimento in memoria, rendendo necessario l'uso del metodo `.copy()` per duplicare l'oggetto in modo sicuro.
-
 > [!example] Esempio di mutabilità e copia dei dizionari
 > ```python
 > d = {'Uniba': 'Università nel Sud Italia', 7: 'Numero intero'}
@@ -177,3 +166,178 @@ Esattamente come accade per le liste, anche i dizionari sono oggetti mutabili, i
 > c = d.copy()
 > ```
 
+### Iterazioni Avanzate: Il Ciclo For
+Per scorrere gli elementi di qualsiasi oggetto in grado di restituire un dato alla volta (chiamato iterabile), Python introduce il ciclo `for`. Questo costrutto può percorrere liste, tuple, stringhe, set e dizionari.
+> [!example] Esempio di ciclo for su una lista e con range
+> ```python
+> seq = [1, 2, 3, 4, 5]
+> for item in seq:
+>     print(item)
+> 
+> # Con range come contatore:
+> for i in range(0, 100):
+>     print(i)
+> ```
+
+In combinazione con il ciclo for, funzioni come `zip()` consentono di iterare simultaneamente sugli elementi corrispondenti di iterabili diversi, mentre `enumerate()` restituisce in contemporanea sia l'elemento corrente che il suo indice posizionale.
+> [!example] Esempio di zip() ed enumerate()
+> ```python
+> numbers = [1, 2, 3, 4]
+> letters = ['a', 'b', 'c', 'd']
+> for n, l in zip(numbers, letters):
+>     print(f'{n}: {l}')
+> 
+> seq = ['a', 'b', 'c']
+> for index, item in enumerate(seq):
+>     print(index)
+>     print(item)
+> ```
+
+L'iterazione sui dizionari può avvenire estraendo le sole chiavi con `.keys()` o, in maniera più efficiente, sfruttando il metodo `.items()` abbinato al sequence unpacking per ottenere ed elaborare direttamente sia la chiave che il valore associato all'interno del blocco di iterazione.
+> [!example] Esempio di iterazione su dizionari
+> ```python
+> d = {1: "Bruno", 2: "Giulio", 3: "Luigi", 4: "Fabio"}
+> 
+> # Iterazione sulle chiavi:
+> for k in d.keys():
+>     print("chiave {} valore {}".format(k, d[k]))
+> 
+> # Iterazione su coppie chiave-valore (modo più efficiente):
+> for key, val in d.items():
+>     print("chiave {} valore {}".format(key, val))
+> ```
+### List Comprehension e generatori
+Una delle caratteristiche più eleganti del linguaggio è la "list comprehension", una tecnica compatta per creare, filtrare e manipolare liste in una sola riga di codice sostituendo ingombranti costrutti iterativi.
+> [!example] Esempio di list comprehension
+> ```python
+> x = range(1, 5)
+> h = [b ** 2 for b in x]                       # [1, 4, 9, 16]
+> f = [b ** 2 for b in x if b % 2 == 0]         # [4, 16]
+> g = [b ** 2 if b % 2 == 0 else 0 for b in x]  # [0, 4, 0, 16]
+> ```
+
+Questa sintassi può essere nidificata con loop interni ed esterni per elaborare strutture dati complesse, come ad esempio appiattire matrici o trasporle.
+> [!example] Esempio di list comprehension annidata
+> ```python
+> # Appiattire una lista di liste con sostituzione condizionale:
+> planets = [['Mercurio', 'Venere', 'Terra'],
+>            ['Marte', 'Giove', 'Saturno'],
+>            ['Urano', 'Nettuno', 'Plutone']]
+> flat = [p if len(p) <= 6 else 'NA' for row in planets for p in row]
+> 
+> # Trasposto di una matrice:
+> matrix = [[2, 6, 5], [4, 3, 5], [6, 6, 1], [1, 2, 3]]
+> transposed = [[row[i] for row in matrix] for i in range(len(matrix[0]))]
+> ```
+
+Quando non si desidera caricare un'intera lista in memoria ma elaborare i dati a run-time, si ricorre alle espressioni generatore (generator), che mantengono una sintassi simile alla list comprehension ma utilizzano parentesi tonde, rivelandosi essenziali per inserire flussi di dati all'interno di funzioni che convertono o sommano i tipi di dato senza spreco di risorse.
+> [!example] Esempio di espressioni generator
+> ```python
+> a = sum(expression for name in seq)
+> b = set(expression for name in seq)
+> ```
+### Funzioni e Programmazione Funzionale
+Per evitare ripetizioni di codice e rendere i programmi modulari, Python permette di incapsulare blocchi logici all'interno di funzioni personalizzate tramite la parola chiave `def`, potendo specificare parametri (anche con valori di default opzionali) e restituire uno o più risultati attraverso l'istruzione facoltativa `return`.
+> [!example] Definizione e chiamata di una funzione
+> ```python
+> def power(n, exp=2):
+>     s = n ** exp
+>     return s
+> 
+> for i in range(1, 5):
+>     res = power(i)
+>     print(res)
+> ```
+
+Per operazioni estremamente brevi o matematiche, è possibile dichiarare funzioni anonime note come funzioni `lambda`, che condensano l'intera logica in un'unica espressione.
+> [!example] Funzione lambda
+> ```python
+> power = lambda n, exp: n ** exp
+> ```
+
+Queste ultime trovano la loro massima utilità nei paradigmi di programmazione funzionale, venendo spesso passate come argomenti a costrutti come `filter()`, che estrae elementi basandosi su un predicato booleano, e `map()`, che applica una trasformazione sistematica agli elementi di uno o più iterabili.
+> [!example] filter() e map() con lambda
+> ```python
+> a = [1, 2, 3, 4, 5]
+> b = [9, 8, 7, 6, 5]
+> 
+> # filter: restituisce gli elementi di a per cui la funzione è True
+> filter(lambda x: x < 3, a)
+> 
+> # map: applica la funzione a ciascuna coppia di elementi
+> map(lambda x, y: x + y, a, b)
+> ```
+
+### Moduli e Programmazione Orientata agli Oggetti (OOP)
+All'aumentare della complessità del progetto, il codice viene suddiviso in file separati che possono essere integrati mediante i comandi `import`, l'assegnazione di alias o l'importazione mirata di singole funzionalità con `from ... import`.
+> [!example] Import di moduli
+> ```python
+> import utilities
+> utilities.square(8)
+> 
+> import utilities as alias
+> alias.square(8)
+> 
+> from utilities import square
+> square(8)
+> ```
+
+L'apice dell'organizzazione strutturale si raggiunge con la Programmazione Orientata agli Oggetti, che modella concetti tramite classi e ne istanzia specifici individui. All'interno di una classe, il costruttore `__init__` inizializza le variabili (attributi), mentre la parola chiave `self` garantisce l'accesso alle caratteristiche e ai metodi dello specifico individuo.
+> [!example] Definizione di una classe
+> ```python
+> class Studente:
+>     def __init__(self, nome, cognome):
+>         self.nome = nome
+>         self.cognome = cognome
+> 
+>     def get_anagrafica(self):
+>         return f"Anagrafica studente\nNome: {self.nome}\nCognome: {self.cognome}"
+> 
+> s1 = Studente("Mario", "Rossi")
+> print(s1.get_anagrafica())
+> ```
+
+Python supporta nativamente l'ereditarietà: una classe derivata può recepire attributi e metodi da una classe genitore e accedere a quest'ultima tramite la funzione `super()`, con la libertà di sovrascrivere (overriding) le funzionalità ereditate per adattarle alle nuove esigenze.
+> [!example] Ereditarietà e overriding
+> ```python
+> class Persona:
+>     def __init__(self, nome, cognome):
+>         self.nome = nome
+>         self.cognome = cognome
+> 
+>     def get_anagrafica(self):
+>         return f"Anagrafica\nNome: {self.nome}\nCognome: {self.cognome}"
+> 
+> class Studente(Persona):
+>     def __init__(self, nome, cognome, corso_di_studio):
+>         super().__init__(nome, cognome)
+>         self.corso_di_studio = corso_di_studio
+> 
+>     def get_anagrafica(self):
+>         return super().get_anagrafica() + f"\nCorso di studio: {self.corso_di_studio}"
+> ```
+
+A questo si aggiunge il concetto di polimorfismo gestito dai metodi dunder (double underscore), come `__str__` o `__add__`, che permettono di ridefinire comportamenti standard del linguaggio per gli oggetti personalizzati.
+> [!example] Metodi dunder e polimorfismo
+> ```python
+> class Studente:
+>     def __init__(self, nome, cognome):
+>         self.nome = nome
+>         self.cognome = cognome
+> 
+>     def __str__(self):
+>         return f"Oggetto contenente informazioni sullo studente {self.nome} {self.cognome}"
+> 
+> x = Studente("Mario", "Rossi")
+> print(x)  # chiama automaticamente __str__
+> ```
+
+Infine, l'incapsulamento e la sicurezza dei dati si ottengono per convenzione tramite l'uso di un singolo underscore per marcare attributi protetti (ereditabili ma logicamente interni), o due underscore consecutivi per definire attributi rigorosamente privati, nascosti all'esterno e alle classi figlie.
+> [!example] Attributi pubblici, protetti e privati
+> ```python
+> class Test:
+>     def __init__(self):
+>         self.a = 11    # pubblico
+>         self._b = 23   # protetto (convenzione)
+>         self.__c = 23  # privato (name mangling)
+> ```
