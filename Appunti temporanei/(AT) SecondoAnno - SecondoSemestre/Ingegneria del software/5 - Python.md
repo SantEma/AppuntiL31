@@ -43,6 +43,7 @@ Le liste rappresentano una sequenza ordinata di oggetti di qualsiasi tipo, racch
 > ```python
 > l = [4.02, "bruno", x, True]
 > ```
+> L'accesso agli elementi avviene tramite un sistema di indicizzazione che parte da 0 per il conteggio da sinistra verso destra, o da -1 per esplorare la lista a ritroso partendo dall'ultimo elemento. 
 
 Python fornisce un ricco arsenale di metodi per manipolare le liste: 
 - È possibile aggiungere elementi con `append()` o `extend()`, 
