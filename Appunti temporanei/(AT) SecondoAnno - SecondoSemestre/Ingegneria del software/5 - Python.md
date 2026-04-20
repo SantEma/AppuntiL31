@@ -8,5 +8,4 @@ Ad essa viene associato un identificatore, ovvero un nome che segue regole preci
 - Non deve coincidere con nessuna parola riservata del linguaggio. 
 Per convenzione, i nomi delle variabili iniziano sempre con una lettera minuscola. Rispetto alle solite variabili, in Python non è necessario
 ## Testing
-### 
 
