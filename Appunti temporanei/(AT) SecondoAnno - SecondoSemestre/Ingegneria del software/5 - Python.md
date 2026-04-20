@@ -146,9 +146,8 @@ Python gestisce i dati non ordinati attraverso i set e i dizionari. Il set, deli
 > # s[1]     # TypeError! I set non sono indicizzabili
 > ```
 
-Il dizionario, anch'esso definito da parentesi graffe, struttura invece le informazioni come collezioni mutabili di coppie chiave-valore, un po' come un vocabolario tradizionale.
-
-> [!example]
+Il dizionario, anch'esso definito da parentesi graffe, struttura invece le informazioni come collezioni mutabili di coppie chiave-valore.
+> [!example] Esempio di dizionario
 > ```python
 > d = {'Uniba': 'Università nel Sud Italia', 'Gatto': 'Mammifero di tipo felino'}
 > # Oppure, se le chiavi sono identificatori validi:
