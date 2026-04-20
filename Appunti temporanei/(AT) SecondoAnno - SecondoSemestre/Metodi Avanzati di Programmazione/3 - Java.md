@@ -1441,3 +1441,5 @@ public File openFile(String filename) throws IOException{
 Il throw generalmente si usa per imporre regole rigide (come dei parametri importanti non validi, file non trovati, connessioni perse) in modo da interrompere il flusso di esecuzione.
 
 Una guida interessante con esempi ancora più chiari la trovate [qui](https://rollbar.com/guides/java/how-to-throw-exceptions-in-java/)
+### Meta-classi
+Una meta-classe è una classe particolare per descrivere la struttura (dati e operazioni) di altre classi
