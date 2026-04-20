@@ -77,9 +77,21 @@ Python fornisce un ricco arsenale di metodi per manipolare le liste:
 Essendo oggetti mutabili, la modifica di una lista altera il contenuto del contenitore originale in memoria; per questo motivo, se si desidera creare una copia indipendente, è necessario utilizzare il metodo `.copy()` oppure ricorrere alla notazione`[start:end:step]`, che consente di estrarre porzioni specifiche di una lista definendo l'indice di partenza incluso, quello di fine escluso e il passo di avanzamento, offrendo persino la possibilità di invertire l'intera lista semplicemente impostando un passo negativo.
 
 > [!example] Esempio di notazione start:end:step
-> ![[Pasted image 20260420114007.png]]
+> ```python
+> l = [2, 3, 10, 50]
+c = l[1:3]          # [3, 10]
+print(l[:2])        # [2, 3]
+print(l[1:])        # [3, 10, 50]
+print(l[:])         # [2, 3, 10, 50]
+print(l[::-1])      # [50, 10, 3, 2]  <- lista invertita!
+> ```
 ### Tuple, Sequenze e Range
 Le liste appartengono alla più ampia famiglia delle sequenze, un raggruppamento concettuale che include anche le stringhe di testo e le tuple. 
+```python
+s = "Hello"
+print(s[2])   # 'l'
+print(s[3:])  # 'lo'
+```
 A differenza delle liste, le tuple si definiscono tramite parentesi tonde e sono rigorosamente immutabili, prestandosi particolarmente alla conservazione di dati disomogenei che non devono subire alterazioni nel tempo.
 
 > [!example] Esempio di una tupla
