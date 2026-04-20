@@ -38,5 +38,12 @@ Quando si presenta la necessità di ripetere un'azione fintanto che una specific
 > ```
 ### Liste e Manipolazione dei Dati
 Le liste rappresentano una sequenza ordinata di oggetti di qualsiasi tipo, racchiusa tra parentesi quadre e separata da virgole, con la peculiarità di poter contenere al suo interno anche altre liste.
+
+> [!example] Esempio di lista
+> ```python
+> l = [4.02, "bruno", x, True]
+> ```
+
+
 ## Testing
 
