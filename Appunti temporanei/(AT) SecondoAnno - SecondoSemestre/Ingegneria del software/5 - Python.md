@@ -1,4 +1,3 @@
-
 ## Codice
 ### Variabile
 Una variabile in Python rappresenta una specifica locazione di memoria riservata per conservare dati di vario tipo, come interi, decimali, stringhe o oggetti complessi.
@@ -130,13 +129,50 @@ Una caratteristica potente delle sequenze è il "sequence unpacking", che permet
 
 Per generare rapidamente sequenze numeriche entra in gioco il tipo di dato `range`, utilissimo per creare contatori specificando un punto di inizio, un termine escluso e un passo, dove il parametro di partenza è considerato zero se omesso.
 
-> [!example] 
+> [!example] Esempio di range
 > ```python
 > range(start, end, step)
 > 
 > # Esempio: numeri da 1 a 100 con passo 3
 > l = list(range(1, 100, 3))
 > ```
+### Set e Dizionari
+Python gestisce i dati non ordinati attraverso i set e i dizionari. Il set, delimitato da parentesi graffe, è una collezione non ordinata e non indicizzabile che garantisce l'assenza di duplicati, rivelandosi lo strumento ideale per gestire enormi moli di dati su cui effettuare rapide ricerche di appartenenza.
 
+> [!example] Esempio di set
+> ```python
+> s = {4, 2, 4, 1}
+> print(s)   # {1, 2, 4}  <- il duplicato è rimosso
+> # s[1]     # TypeError! I set non sono indicizzabili
+> ```
+
+Il dizionario, anch'esso definito da parentesi graffe, struttura invece le informazioni come collezioni mutabili di coppie chiave-valore, un po' come un vocabolario tradizionale.
+
+> [!example]
+> ```python
+> d = {'Uniba': 'Università nel Sud Italia', 'Gatto': 'Mammifero di tipo felino'}
+> # Oppure, se le chiavi sono identificatori validi:
+> d = dict(Uniba='...', Gatto='...')
+> ```
+
+Per accedere al valore di un dizionario è sufficiente richiamare la sua chiave, a patto che questa sia un identificatore valido, utilizzando le parentesi quadre oppure il metodo `.get()`.
+
+```python
+d = {'Uniba': 'Università nel Sud Italia', 7: 'Numero intero'}
+print(d['Uniba'])       # accesso con parentesi quadre
+print(d.get(7))         # accesso con .get()
+d['Bari'] = 'Bellissima citta'  # aggiunta di una nuova coppia
+```
+
+Esattamente come accade per le liste, anche i dizionari sono oggetti mutabili, il che significa che una semplice assegnazione ne copia solo il riferimento in memoria, rendendo necessario l'uso del metodo `.copy()` per duplicare l'oggetto in modo sicuro.
+
+```python
+d = {'Uniba': 'Università nel Sud Italia', 7: 'Numero intero'}
+c = d
+c['Uniba'] = 5
+print(d)  # anche d è cambiato!
+
+# Per una vera copia:
+c = d.copy()
 ## Testing
 
