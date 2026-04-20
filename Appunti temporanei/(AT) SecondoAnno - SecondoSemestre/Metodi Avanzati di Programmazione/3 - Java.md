@@ -1441,17 +1441,3 @@ public File openFile(String filename) throws IOException{
 Il throw generalmente si usa per imporre regole rigide (come dei parametri importanti non validi, file non trovati, connessioni perse) in modo da interrompere il flusso di esecuzione.
 
 Una guida interessante con esempi ancora più chiari la trovate [qui](https://rollbar.com/guides/java/how-to-throw-exceptions-in-java/)
-### Meta-classi
-Una meta-classe è una classe particolare per descrivere la struttura (dati e operazioni) di altre classi
-
-In Java il modello di metaclasse è differente da quello normale che troveremmo in C.
-Tutte le classi ereditano da `Object`, questa ha anche il metodo `getclass()` che permette di restituire per ogni oggetto un istanza della classe `Class` che descrive la classe di appartenenza dell'oggetto. `Class` è detta **metaclasse** ma non in senso stretto, poichè i suoi oggetti non sono classi ma le descrivono.
-Questo modello serve per realizzare il meccanismo di **riflessione**, che permette ad un oggetto di stabilire a runtime le componenti di una classe
-#### Classe "Class"
-`Class` include metodi per:
-- Scoprire il nome della classe
-- Scoprire il nome della superclasse
-- Scoprire il nome dei metodi
-- Scoprire il nome degli attributi
-
-Questo è utile, poichè la JVM non sa ovviamente quali sono le istanze, quindi a run-time 
