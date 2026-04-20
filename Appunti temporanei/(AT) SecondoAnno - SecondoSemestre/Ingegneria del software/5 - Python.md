@@ -6,6 +6,11 @@ Ad essa viene associato un identificatore, ovvero un nome che segue regole preci
 - Deve iniziare con una lettera o con un underscore, 
 - Può contenere caratteri alfanumerici 
 - Non deve coincidere con nessuna parola riservata del linguaggio. 
-Per convenzione, i nomi delle variabili iniziano sempre con una lettera minuscola. Rispetto alle solite variabili, in Python non è necessario
+Per convenzione, i nomi delle variabili iniziano sempre con una lettera minuscola. Rispetto ad altri linguaggi, in Python non è necessario dover specificare il tipo.
+
+
+
+
+
 ## Testing
 
