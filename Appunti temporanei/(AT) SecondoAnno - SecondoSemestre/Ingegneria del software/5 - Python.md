@@ -1,4 +1,4 @@
-[da recuperare lezione]
+
 ## Codice
 ### Variabile
 Una variabile in Python rappresenta una specifica locazione di memoria riservata per conservare dati di vario tipo, come interi, decimali, stringhe o oggetti complessi.
