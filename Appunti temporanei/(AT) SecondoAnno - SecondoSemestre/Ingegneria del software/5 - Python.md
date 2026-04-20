@@ -104,7 +104,9 @@ A differenza delle liste, le tuple si definiscono tramite parentesi tonde e sono
 > ```
 > Sarebbe raccomandabile mettere in una tupla i dati disomogenei e in una lista quelli omogenei
 
-
+Tutte le sequenze condividono funzionalità comuni: gli operatori
+- `in` e `not in` permettono di verificare l'esistenza di un elemento, 
+- L'operatore di addizione concatena più sequenze, la moltiplicazione per un numero intero le replica.
 
 ## Testing
 
