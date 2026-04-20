@@ -156,22 +156,24 @@ Il dizionario, anch'esso definito da parentesi graffe, struttura invece le infor
 
 Per accedere al valore di un dizionario è sufficiente richiamare la sua chiave, a patto che questa sia un identificatore valido, utilizzando le parentesi quadre oppure il metodo `.get()`.
 
-```python
-d = {'Uniba': 'Università nel Sud Italia', 7: 'Numero intero'}
-print(d['Uniba'])       # accesso con parentesi quadre
-print(d.get(7))         # accesso con .get()
-d['Bari'] = 'Bellissima citta'  # aggiunta di una nuova coppia
-```
+> [!example] Accesso ai valori del dizionario
+> ```python
+> d = {'Uniba': 'Università nel Sud Italia', 7: 'Numero intero'}
+> print(d['Uniba'])               # accesso con parentesi quadre
+> print(d.get(7))                 # accesso con .get()
+> d['Bari'] = 'Bellissima citta'  # aggiunta di una nuova coppia
+> ```
 
 Esattamente come accade per le liste, anche i dizionari sono oggetti mutabili, il che significa che una semplice assegnazione ne copia solo il riferimento in memoria, rendendo necessario l'uso del metodo `.copy()` per duplicare l'oggetto in modo sicuro.
 
-```python
-d = {'Uniba': 'Università nel Sud Italia', 7: 'Numero intero'}
-c = d
-c['Uniba'] = 5
-print(d)  # anche d è cambiato!
-
-# Per una vera copia:
-c = d.copy()
-## Testing
+> [!example] Esempio di mutabilità e copia dei dizionari
+> ```python
+> d = {'Uniba': 'Università nel Sud Italia', 7: 'Numero intero'}
+> c = d
+> c['Uniba'] = 5
+> print(d)  # anche d è cambiato!
+> 
+> # Per una vera copia:
+> c = d.copy()
+> ```
 
