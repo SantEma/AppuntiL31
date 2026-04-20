@@ -29,14 +29,14 @@ L'intero linguaggio si basa sull'indentazione (solitamente 4 spazi) per raggrupp
 
 Quando si presenta la necessità di ripetere un'azione fintanto che una specifica condizione iniziale risulta vera, si ricorre al ciclo iterativo `while`, che valuta la condizione ad ogni passaggio e interrompe l'esecuzione nel momento in cui essa diventa falsa.
 
-> [!NOTE] Esempio di while
+> [!example] Esempio di while
 > ```python
 > while <condizione>:
 >     <istruzioni fino a quando condizione == True>
 > else:
 >     <istruzioni quando condizione == False>
 > ```
-
-
+### Liste e Manipolazione dei Dati
+Le liste rappresentano una sequenza ordinata di oggetti di qualsiasi tipo, racchiusa tra parentesi quadre e separata da virgole, con la peculiarità di poter contenere al suo interno anche altre liste.
 ## Testing
 
