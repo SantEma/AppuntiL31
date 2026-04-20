@@ -1443,3 +1443,4 @@ Il throw generalmente si usa per imporre regole rigide (come dei parametri impor
 Una guida interessante con esempi ancora più chiari la trovate [qui](https://rollbar.com/guides/java/how-to-throw-exceptions-in-java/)
 ### Meta-classi
 Una meta-classe è una classe particolare per descrivere la struttura (dati e operazioni) di altre classi
+
