@@ -87,16 +87,20 @@ print(l[::-1])      # [50, 10, 3, 2]  <- lista invertita!
 > ```
 ### Tuple, Sequenze e Range
 Le liste appartengono alla più ampia famiglia delle sequenze, un raggruppamento concettuale che include anche le stringhe di testo e le tuple. 
-```python
-s = "Hello"
-print(s[2])   # 'l'
-print(s[3:])  # 'lo'
-```
+
+> [!example] Esempio di stringa come sequenza
+> ```python
+> s = "Hello"
+> print(s[2])   # 'l'
+> print(s[3:])  # 'lo'
+> ```
+
 A differenza delle liste, le tuple si definiscono tramite parentesi tonde e sono rigorosamente immutabili, prestandosi particolarmente alla conservazione di dati disomogenei che non devono subire alterazioni nel tempo.
 
 > [!example] Esempio di una tupla
 > ```python
-> t=("a",2,"c")
+> t = ("a", 2, "c")
+> t[1] = "b"  # TypeError! Le tuple sono immutabili
 > ```
 > Sarebbe raccomandabile mettere in una tupla i dati disomogenei e in una lista quelli omogenei
 
