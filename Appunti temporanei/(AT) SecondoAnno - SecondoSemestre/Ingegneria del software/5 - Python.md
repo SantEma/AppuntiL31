@@ -73,11 +73,11 @@ Essendo oggetti mutabili, la modifica di una lista altera il contenuto del conte
 > [!example] Esempio di notazione start:end:step
 > ```python
 > l = [2, 3, 10, 50]
-c = l[1:3]          # [3, 10]
-print(l[:2])        # [2, 3]
-print(l[1:])        # [3, 10, 50]
-print(l[:])         # [2, 3, 10, 50]
-print(l[::-1])      # [50, 10, 3, 2]  <- lista invertita!
+> c = l[1:3]          # [3, 10]
+> print(l[:2])        # [2, 3]
+> print(l[1:])        # [3, 10, 50]
+> print(l[:])         # [2, 3, 10, 50]
+> print(l[::-1])      # [50, 10, 3, 2]  <- lista invertita!
 > ```
 ### Tuple, Sequenze e Range
 Le liste appartengono alla più ampia famiglia delle sequenze, un raggruppamento concettuale che include anche le stringhe di testo e le tuple. 
