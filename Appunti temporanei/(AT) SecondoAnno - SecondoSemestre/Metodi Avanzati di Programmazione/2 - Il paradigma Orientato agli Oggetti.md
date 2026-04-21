@@ -381,7 +381,8 @@ Più classi possono implementare la stessa interfaccia, è il caso una interfacc
 Una meta-classe è una classe particolare per descrivere la struttura (dati e operazioni) di altre classi
 
 In Java il modello di metaclasse è differente da quello normale che troveremmo in C.
-Tutte le classi ereditano da `Object`, questa ha anche il metodo `getclass()` che permette di restituire per ogni oggetto un istanza della classe `Class` che descrive la classe di appartenenza dell'oggetto. `Class` è detta **metaclasse** ma non in senso stretto, poichè i suoi oggetti non sono classi ma le descrivono.
+Tutte le classi ereditano da `Object`, questa ha anche il metodo `getclass()` che permette di restituire per ogni oggetto un istanza della classe `Class` che descrive la classe di appartenenza dell'oggetto. 
+`Class` è detta **metaclasse** ma non in senso stretto, poichè i suoi oggetti non sono classi ma le descrivono.
 Questo modello serve per realizzare il meccanismo di **riflessione**, che permette ad un oggetto di stabilire a runtime le componenti di una classe
 #### Classe "Class"
 `Class` include metodi per:
