@@ -377,7 +377,7 @@ Più classi possono implementare la stessa interfaccia, è il caso una interfacc
 
 > [!example] Esempio di realizzazione multiple di una interfaccia
 > ![[Pasted image 20260318114924.png]]
-### Meta-c lassi
+### Meta-classi
 Una meta-classe è una classe particolare per descrivere la struttura (dati e operazioni) di altre classi
 > [!example] Esempio di metaclasse
 > ![[Pasted image 20260421211607.png]]
@@ -398,3 +398,41 @@ Questo è utile, poichè la JVM non sa ovviamente quali sono le istanze, quindi 
 > [!info] Rappresentazione UML delle metaclassi 
 > ![[Pasted image 20260421211830.png]]
 ### Aggregazione di oggetti
+L'ereditarietà non è sempre lo strumento adatto per costruire oggetti, infatti spesso un oggetto è ottenuto **aggregando** altri oggetti
+
+> [!example] Esempio di aggregazione
+> Definire una classe `Automobile` tramite ereditarietà multipla da `Motore` o `Ruota` è un errore concettuale, poiché l'ereditarietà fonde i comportamenti anziché comporli. Un'automobile è composta da parti, ma il suo comportamento non è la semplice unione di quello dei componenti. Inoltre, l'ereditarietà di implementazione non permetterebbe di gestire correttamente la molteplicità, come nel caso delle quattro ruote di un'auto.
+> ![[Pasted image 20260422130424.png]]
+> La molteplicità consente di indicare quanti oggetti possono essere aggregati
+
+L'uso dell'aggregazione viene suggerito nelle seguenti situazioni:
+1. Contenimento fisico (pagina di un libro), 
+2. Appartenenza (giocatore in una squadra),
+3. Composizione funzionale (ruote di un'auto)
+
+Si possono stabilire legami con più istanze di una classe che descrive un componente (per esempio, più ruote). La relazione che si stabilisce in questo modo fra le classi è detta di aggregazione o composizione (o relazione “has_a”).
+
+L'aggregazione è un'associazione debole, se l'intero viene distrutto, le parti possono sopravvivere, mentre la composizione è un associazione forte che implica una dipendenza esistenziale: le parti nascono e muoiono con il contenitore e non possono essere condivise con altri oggetti.
+
+> [!example] Esempio di composizione
+> ![[Pasted image 20260422130237.png]]
+> La composizione viene indicata con un rombo pieno in UML
+#### Ereditarietà vs. Aggregazione
+La scelta tra queste due relazioni non è sempre immediata. Se consideriamo una classe `Orologio` che deve gestire `Data` e `Tempo`, possiamo usare l'ereditarietà multipla o comporre l'oggetto con due campi specifici:
+- Nell'ereditarietà, l'oggetto accede direttamente ai campi delle superclassi e beneficia del polimorfismo di inclusione ("is_a"). 
+- Nell'aggregazione, l'accesso richiede l'invocazione di metodi sui componenti. In generale, l'aggregazione si usa quando servono i servizi di una classe ma non la sua interfaccia, mentre l'ereditarietà permette di riutilizzare codice polimorfo pre-esistente.
+
+Il meccanismo di aggregazione/composizione è generalmente usato quando si vogliono utilizzare i servizi di una classe predefinita ma non la sua interfaccia. L’ereditarietà di implementazione, qualora non dovesse essere permessa da un linguaggio di programmazione, potrebbe essere resa da una relazione di aggregazione/composizione.
+
+### Organizzazione in Package 
+Per gestire la complessità, le classi vengono organizzate in **package**, ossia un meccanismo generale per organizzare le classi in gruppi
+
+> [!example] Rappresentazione UML dei package
+> ![[Pasted image 20260422131059.png]]
+> In genere i package si usano per riunire classi, ma nella notazione UML essi possono includere qualsiasi costrutto UML e possono essere persino eterogenei (ad esempio, possono contenere classi e interfacce).
+> ![[Pasted image 20260422131203.png]]
+
+Un package definisce un namespace (spazio degli identificatori) per i suoi elementi. Questo significa che ogni classe di un package di classi deve avere un nome distinto all’interno del package che la racchiud. Il nome completo  (o qualificato) usa la notazione `::`. 
+
+I package possono importare elementi altrui per evitare nomi qualificati, ma tale relazione non è transitiva. In caso di conflitti, il nome locale ha la precedenza. 
+I package possono anche essere innestati o legati da relazioni di generalizzazione, ereditando elementi pubblici e protetti.
