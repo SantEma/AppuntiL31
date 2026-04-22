@@ -525,3 +525,5 @@ Nel polimorfismo parametrico, una funzione polimorfa ha un parametro di tipo esp
 Le funzioni che esibiscono il polimorfismo parametrico sono anche dette **funzioni generiche**. 
 Una funzione generica può lavorare su argomenti di molti tipi, generalmente esibendo lo stesso comportamento indipendentemente dal tipo dell’argomento.
 #### Poliformismo per inclusione
+Questo polimorfismo deriva dalla relazione tra sottotipi, dove un oggetto può appartenere a una classe e a tutte le sue superclassi. 
+Ciò permette di assegnare un'istanza di una sottoclasse a una variabile della superclasse
