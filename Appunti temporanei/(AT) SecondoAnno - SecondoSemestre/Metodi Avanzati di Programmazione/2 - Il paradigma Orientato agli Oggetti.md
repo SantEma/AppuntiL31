@@ -455,3 +455,16 @@ Si può anche specificare la visibilità degli elementi di un package:
 Le **classi interne** (inner class) sono dichiarate dentro una classe ospite e possono essere private. 
 Esse possono accedere a tutti i membri della classe ospitante, mentre l'inverso è limitato alla parte pubblica. 
 Un'istanza della inner class non può esistere senza l'oggetto ospitante e non può contenere campi statici.
+
+> [!warning] Attenzione
+> In Java, una classe top level non può mai essere privata
+
+### Il polimorfismo 
+Il poliformismo permette di associare diverse realizzazioni (o morfismi) a un'unica operazione
+Il concetto di polimorfismo è stato definito informalmente da Christopher Strachey in due tipi principali:
+- **Polimorfismo parametrico**: è ottenuto quando una funzione lavora uniformemente su una gamma di tipi. Questi tipi normalmente esibiscono una qualche struttura comune.
+- **Polimorfismo ad hoc**:  è ottenuto quando una funzione lavora, o sembra lavorare, su tipi differenti (che potrebbero non esibire una struttura comune) e potrebbe comportarsi in modo totalmente differente per ciascuno di essi.
+
+La classificazione di Cardelli e Wegner introduce una nuova forma di polimorfismo, quello **per inclusione**, al fine di modellare i concetti di sottotipo e di ereditarietà. 
+
+Il polimorfismo per inclusione e parametrico sono classificati come due sottocategorie del polimorfismo universale. L’idea di polimorfismo universale è quella di poter operare su un numero infinito di tipi, a patto che essi rispettino alcuni vincoli.
