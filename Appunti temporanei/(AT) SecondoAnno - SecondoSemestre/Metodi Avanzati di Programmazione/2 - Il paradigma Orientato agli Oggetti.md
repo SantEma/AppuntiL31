@@ -379,8 +379,7 @@ Più classi possono implementare la stessa interfaccia, è il caso una interfacc
 > ![[Pasted image 20260318114924.png]]
 ### Meta-classi
 Una meta-classe è una classe particolare per descrivere la struttura (dati e operazioni) di altre classi
-
-> [!example] Esempio di metaclassi
+> [!example] Esempio di metaclasse
 > ![[Pasted image 20260421211607.png]]
 
 In Java il modello di metaclasse è differente da quello normale che troveremmo in C.
