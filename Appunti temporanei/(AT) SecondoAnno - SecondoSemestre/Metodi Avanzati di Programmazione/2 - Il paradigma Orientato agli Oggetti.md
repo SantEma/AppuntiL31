@@ -443,6 +443,14 @@ I package possono essere innestati senza alcun limite di profondità
 
 > [!example] Esempio di package innestato
 > ![[Pasted image 20260422132147.png]]
+
+Si può anche specificare la visibilità degli elementi di un package:
+- Public (+) sono visibili ad altri elementi del package stesso, a uno dei package innestati o a package che li importano.
+- Private (-) non sono visibili all’esterno del package
+
+> [!example]  Esempio di package pubblico e privato
+> ![[Pasted image 20260422180239.png]]
+
 ### Classi interne
 Le **classi interne** (inner class) sono dichiarate dentro una classe ospite e possono essere private. 
 Esse possono accedere a tutti i membri della classe ospitante, mentre l'inverso è limitato alla parte pubblica. 
