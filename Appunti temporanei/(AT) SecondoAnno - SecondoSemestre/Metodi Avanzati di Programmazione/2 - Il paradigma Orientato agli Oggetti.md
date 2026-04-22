@@ -434,5 +434,16 @@ Per gestire la complessità, le classi vengono organizzate in **package**, ossia
 
 Un package definisce un namespace (spazio degli identificatori) per i suoi elementi. Questo significa che ogni classe di un package di classi deve avere un nome distinto all’interno del package che la racchiud. Il nome completo  (o qualificato) usa la notazione `::`. 
 
-I package possono importare elementi altrui per evitare nomi qualificati, ma tale relazione non è transitiva. In caso di conflitti, il nome locale ha la precedenza. 
-I package possono anche essere innestati o legati da relazioni di generalizzazione, ereditando elementi pubblici e protetti.
+I package possono importare elementi altrui per evitare nomi qualificati, ma tale relazione non è transitiva. 
+> [!example] Esempio di relazione non transitiva
+>Se A importa B e B importa C, allora A può usare (senza qualificarli) gli elementi di B e B può usare (senza qualificarli) gli elementi di C, ma non è detto che A possa usare (senza qualificarli) gli elementi di C (a meno che A non importi anche C
+
+
+I package possono essere innestati senza alcun limite di profondità
+
+> [!example] Esempio di package innestato
+> ![[Pasted image 20260422132147.png]]
+### Classi interne
+Le **classi interne** (inner class) sono dichiarate dentro una classe ospite e possono essere private. 
+Esse possono accedere a tutti i membri della classe ospitante, mentre l'inverso è limitato alla parte pubblica. 
+Un'istanza della inner class non può esistere senza l'oggetto ospitante e non può contenere campi statici.
