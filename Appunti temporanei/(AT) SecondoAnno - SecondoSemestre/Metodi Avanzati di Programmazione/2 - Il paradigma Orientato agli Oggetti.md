@@ -468,3 +468,25 @@ Il concetto di polimorfismo è stato definito informalmente da Christopher Strac
 La classificazione di Cardelli e Wegner introduce una nuova forma di polimorfismo, quello **per inclusione**, al fine di modellare i concetti di sottotipo e di ereditarietà. 
 
 Il polimorfismo per inclusione e parametrico sono classificati come due sottocategorie del polimorfismo universale. L’idea di polimorfismo universale è quella di poter operare su un numero infinito di tipi, a patto che essi rispettino alcuni vincoli.
+#### La coercizione
+La coercizione è il meccanismo di conversione implicita operata da un compilatore per applicare un operatore definito per oggetti di tipo T1 anche a oggetti di tipo T2.
+
+> [!example] Esempio di coercizione generale
+> ![[Pasted image 20260422181141.png]]
+
+
+> [!example] Esempio di coercizione in Java (unboxing e autounboxing)
+> ```java
+>int i;
+>Integer j; 
+>i = 1;
+>j = 2;
+>i = j;  // unboxing: Integer - int
+>j = i;  // autoboxing: int - Integer
+>```
+
+
+Le coercizioni possono essere stabilite staticamente al compile-time (inserendole automaticamente fra gli argomenti e le funzioni al momento della compilazione) oppure determinate dinamicamente a run-time.
+
+La coercizione è la forma di polimorfismo più semplice, infatti essa opera a un livello semantico, cioè cambiando la rappresentazione del dato
+#### Overloading
