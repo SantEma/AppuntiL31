@@ -463,12 +463,13 @@ Un'istanza della inner class non può esistere senza l'oggetto ospitante e non p
 Il poliformismo permette di associare diverse realizzazioni (o morfismi) a un'unica operazione
 Il concetto di polimorfismo è stato definito informalmente da Christopher Strachey in due tipi principali:
 - **Polimorfismo parametrico**: è ottenuto quando una funzione lavora uniformemente su una gamma di tipi. Questi tipi normalmente esibiscono una qualche struttura comune.
-- **Polimorfismo ad hoc**:  è ottenuto quando una funzione lavora, o sembra lavorare, su tipi differenti (che potrebbero non esibire una struttura comune) e potrebbe comportarsi in modo totalmente differente per ciascuno di essi.
+- **Polimorfismo ad-hoc**: è ottenuto quando una funzione lavora, o sembra lavorare, su tipi differenti (che potrebbero non esibire una struttura comune) e potrebbe comportarsi in modo totalmente differente per ciascuno di essi.
 
 La classificazione di Cardelli e Wegner introduce una nuova forma di polimorfismo, quello **per inclusione**, al fine di modellare i concetti di sottotipo e di ereditarietà. 
 
 Il polimorfismo per inclusione e parametrico sono classificati come due sottocategorie del polimorfismo universale. L’idea di polimorfismo universale è quella di poter operare su un numero infinito di tipi, a patto che essi rispettino alcuni vincoli.
-#### La coercizione
+#### Polimorfismo ad-hoc
+##### La coercizione
 La coercizione è il meccanismo di conversione implicita operata da un compilatore per applicare un operatore definito per oggetti di tipo T1 anche a oggetti di tipo T2.
 
 > [!example] Esempio di coercizione generale
@@ -489,4 +490,38 @@ La coercizione è il meccanismo di conversione implicita operata da un compilato
 Le coercizioni possono essere stabilite staticamente al compile-time (inserendole automaticamente fra gli argomenti e le funzioni al momento della compilazione) oppure determinate dinamicamente a run-time.
 
 La coercizione è la forma di polimorfismo più semplice, infatti essa opera a un livello semantico, cioè cambiando la rappresentazione del dato
-#### Overloading
+##### Overloading
+Si ha il polimorfismo per **overloading** quando lo stesso identificatore è usato per metodi differenti, disambiguati dal contesto o dal tipo degli argomenti
+
+> [!example] Esempio di overloading su un operatore
+> ```java
+> // Overloading dell'operatore +
+> class Rational {
+> public:
+>     Rational(double);
+>     const Rational& operator+(const Rational& other);
+>     ...
+> };
+> 
+> // Overloading del nome di funzione max
+> double max(double d1, double d2);
+> char   max(char c1, char c2);
+> char*  max(char* s1, char* s2);
+> const char* max(const char* s1, const char* s2);
+> ```
+
+L'overloading può interagire con la coercizione: se `+` è definito per due interi e per due reali, espressioni miste come `3 + 4.0` non causano errori di tipo grazie alla combinazione dei due meccanismi.
+
+Nel paradigma a oggetti si ha overloading anche tra funzioni con lo stesso nome definite in classi non correlate gerarchicamente: la disambiguazione si basa sulla classe dell'istanza su cui viene invocato il metodo.
+
+Nel paradigma a oggetti si ha overloading anche nel caso di funzioni con medesimo nome ma definite in classi non correlate gerarchicament
+
+> [!example] Esempio polimorfismo meno potente
+> ![[Pasted image 20260422183457.png]]
+
+#### Polimorfismo parametrico
+Nel polimorfismo parametrico, una funzione polimorfa ha un parametro di tipo esplicito o implicito, che determina il tipo dell’argomento per ciascuna applicazione della funzione.
+
+Le funzioni che esibiscono il polimorfismo parametrico sono anche dette **funzioni generiche**. 
+Una funzione generica può lavorare su argomenti di molti tipi, generalmente esibendo lo stesso comportamento indipendentemente dal tipo dell’argomento.
+#### Poliformismo per inclusione
