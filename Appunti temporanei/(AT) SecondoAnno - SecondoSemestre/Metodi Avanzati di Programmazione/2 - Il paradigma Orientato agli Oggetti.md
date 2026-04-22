@@ -527,3 +527,10 @@ Una funzione generica può lavorare su argomenti di molti tipi, generalmente esi
 #### Poliformismo per inclusione
 Questo polimorfismo deriva dalla relazione tra sottotipi, dove un oggetto può appartenere a una classe e a tutte le sue superclassi. 
 Ciò permette di assegnare un'istanza di una sottoclasse a una variabile della superclasse
+
+Esso si manifesta in due modi:
+- Si può assegnare un oggetto di una qualsiasi sottoclasse di una classe C a una variabile definita di classe C
+- Una funzione che opera su un oggetto di classe C può essere applicata anche a oggetti di classe C’, sottoclasse di C.\\
+##### Legame statico/dinamico
+Nella maggior parte dei linguaggi di programmazione la visibilità degli identificatori e dei legami (binding) dei nomi alle dichiarazioni è determinata al momento della compilazione (compile-time), in questo caso si parla di ambito **d’azione statico (static scope)**. 
+Nell’ambito **d’azione dinamico (dynamic scope)**, il legame fra l’uso di un identificatore e la sua dichiarazione dipende dall’ordine di esecuzione, e così è differito al momento dell’esecuzione (run-time).
