@@ -377,7 +377,7 @@ Più classi possono implementare la stessa interfaccia, è il caso una interfacc
 
 > [!example] Esempio di realizzazione multiple di una interfaccia
 > ![[Pasted image 20260318114924.png]]
-### Meta-classi
+### Meta-c lassi
 Una meta-classe è una classe particolare per descrivere la struttura (dati e operazioni) di altre classi
 > [!example] Esempio di metaclasse
 > ![[Pasted image 20260421211607.png]]
@@ -393,7 +393,8 @@ Questo modello serve per realizzare il meccanismo di **riflessione**, che permet
 - Scoprire il nome dei metodi `(getMethods)`
 - Scoprire il nome degli attributi `(getFields)`
 Questi appartengono rispettivamente alle classi Method e Field. Class, Method, e Field sono sottoclassi di Object come tutte le classi.
-Questo è utile, poichè la JVM non sa ovviamente quali sono le istanze, quindi a run-time le scopre ed è possibile modificarle
+Questo è utile, poichè la JVM non sa ovviamente quali sono le istanze, quindi a run-time le scopre e le utilizza.
 
 > [!info] Rappresentazione UML delle metaclassi 
 > ![[Pasted image 20260421211830.png]]
+### Aggregazione di oggetti
