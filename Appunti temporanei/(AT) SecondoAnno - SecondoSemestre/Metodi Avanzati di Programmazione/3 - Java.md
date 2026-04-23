@@ -1391,7 +1391,6 @@ Per comprendere l'utilità dei generics, è fondamentale analizzare come cambia 
 ### Eccezioni
 Le eccezioni sono eventi che si verificano durante l'esecuzione del programma e identifica un anomalia che impedisce il normale flusso del programma.
 
-
 In Java esiste un meccanismo (gestore delle eccezioni) che cattura e gestisce le eccezioni, che di solito possono essere generate durante l'esecuzione di un metodo. Il gestore delle eccezioni gestisce soltanto un determinato tipo di eccezione.
 Ogni eccezione ha un oggetto con tutte le informazioni su cosa è accaduto.
 #### Tipologie di eccezioni
@@ -1617,12 +1616,11 @@ La scomposizione della "Matrioska":
 **3. L'Interprete: `new Scanner(...)`**
 - **Il suo unico lavoro:** Tradurre e analizzare. Prende il flusso di testo veloce e ottimizzato che gli arriva dal `BufferedReader` e lo "scansiona".
 - **Il vantaggio:** È lui che ti mette a disposizione i metodi comodi come `.nextInt()`, `.nextDouble()` o `.nextLine()`. Riesce a capire gli spazi, ad andare a capo e a convertire il testo nei tipi di dato Java che ti servono.
-#### Perché tutto questo è un vantaggio?
+
 Se Java avesse un blocco monolitico come `FileScanner`, dovresti riscrivere tutto il codice usando un ipotetico `WebScanner`.
 
 Invece, grazie a questo sistema a matrioska, **cambi solo il pezzo più interno** (il minatore), lasciando intatto il trasportatore e l'interprete. Si sostituisce il `FileReader` con uno stream di rete, ma lo `Scanner` continuerà a funzionare esattamente allo stesso modo nel resto del tuo programma.
-
-#### I/O da linea di comando
+##### I/O da linea di comando
 La classe System mette a disposizione tre stream collegati al terminale:
 - `System.in`: InputStream che legge l'input
 - `System.out`: PrintStream che stampa l'output
