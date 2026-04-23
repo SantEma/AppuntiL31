@@ -15,4 +15,4 @@ Ma quali sono le condizioni per il rilascio continuo?
   Da qui nasce la figura del DevOps, un ibrido tra i due citati
 - La presenza di una deployment pipeline, ossia di un automazione di tutti i passaggi sul processo del rilascio
 
-Principalmente useremo Docker e Github Actions come 
+Principalmente useremo Docker e Github Actions come piattaforma CI/CD
