@@ -1441,3 +1441,279 @@ public File openFile(String filename) throws IOException{
 Il throw generalmente si usa per imporre regole rigide (come dei parametri importanti non validi, file non trovati, connessioni perse) in modo da interrompere il flusso di esecuzione.
 
 Una guida interessante con esempi ancora più chiari la trovate [qui](https://rollbar.com/guides/java/how-to-throw-exceptions-in-java/)
+### I/O Stream
+Un flusso I/O rappresenta una sorgente di input o una destinazione di output e sono di vario tipo, possono essere file su disco, array di memoria ecc...
+
+Gli **stream** supportano molti tipi diversi di dati, dai byte semplici agli oggetti. Alcuni flussi semplicemente si occupano di **trasmettere dati**, mentre altri **manipolano** i dati.
+Ma indipendentemente da come funzionano, tutti i flussi presentano **una sequenza di dati.**
+#### Byte stream
+I byte stream sono utilizzati per leggere e scrivere byte (8 bit) su un dispositivo di I/O.
+Ereditano dalle classi **InputStream** e **OutputStream**.
+
+Ci sono diverse classi che ereditano direttamente dai byte stream per scrivere e leggere sui file:
+- FileInputStream
+- FileOutputStream
+
+Ad esempio:
+```JAVA
+public class CopyBytes{
+	public static void main(String[] args) throws IOException{
+		FileInputStream in = null;
+		FileOutputStream out = null;
+		try{
+			in = new FileInputStream("sorgente.txt");
+			out = new FileOutputStream("destinazione.txt");
+			int c;
+			while((c = in.read())!= -1)
+			 out.write(c);
+		}
+		finally{
+			if(in != null)
+			 in.close();
+			if(out != null)
+			 out.close();
+		}
+	}
+}
+```
+Come possiamo notare si **chiudono sempre** gli stream. E' di vitale importanza eseguire ciò, poiché possiamo deallocare risorse e evitiamo di perdere le informazioni scritte sullo stream.
+
+Lo stream sui byte andrebbe evitato poiché **non è un'ottima operazione**. Essa è un operazione di basso livello ed esistono degli stream **idonei** per scrivere e leggere caratteri per caratteri.
+#### Character stream
+Si utilizza in caso dovessimo eseguire operazioni IO di caratteri. Questo tipo di flusso gestisce automaticamente la codifica corretta per i caratteri, seguendo lo stile 
+UTF o ISO.
+
+Le classi di questo tipo di stream sono:
+- FileReader
+- FileWriter
+
+Ad esempio:
+```JAVA
+FileReader inputStream = null;
+FileWriter outputStream = null;
+
+try{
+	inputStream = new FileReader("sorgente.txt");
+	outputStream = new FileWriter("destinazione.txt");
+	
+	int c;
+	while ((c = inputStream.read())!=-1){
+		outputStream.write(c);
+	}
+} finally{
+	if(inputStream != null){
+		inputStream.close();
+	}
+	if(outputStream != null){
+		outputStream.close();
+	}
+}
+```
+#### Line-oriented
+Per facilitare il lavoro in un file pieno di caratteri (e generalmente i file presentano più testi che caratteri), andiamo a raccogliere proprio i testi.
+Per far ciò dobbiamo accedere a sequenze di caratteri, ovvero dobbiamo **prelevare le stringhe**.
+
+Le classi IO che permettono il prelievo di una stringa e l'inserimento di una stringa su un file sono:
+- BufferedReader
+- PrintWriter
+
+Ad esempio:
+```JAVA
+BufferedReader inputStream = null;
+PrintWriter outputStream = null;
+
+try{
+	inputStream = new BufferedReader(new FileReader("sorgente.txt"));
+	outputStream = new PrintWriter(new FileWriter("destinazione.txt"));
+	
+	String l;
+	while ((l = inputStream.readLine())!=null){
+		outputStream.println(l);
+	}
+} finally{
+	if(inputStream != null){
+		inputStream.close();
+	}
+	if(outputStream != null){
+		outputStream.close();
+	}
+}
+```
+#### Buffered I/O
+Il più famoso ed utilizzato, specialmente per lo sviluppo in JAVA, è proprio il **buffered** stream.
+E' molto conveniente poiché le operazioni vengono eseguite **direttamente sul dispositivo di I/O**; questo è possibile poiché le classi di JAVA (generalmente) sono **unbeffered**.
+
+>[!NOTE] Buffered e Unbeffered
+> - **Unbeffered Stream**: Ogni singola richiesta di lettura o scrittura viene gestita e inviata **direttamente e immediatamente al dispositivo di I/O** (come il disco rigido)
+> - **Buffered Stream**: Utilizza un'area di memoria temporanea e velocissima nella RAM (chiamata buffer)
+
+l confronto tra questi due metodi serve a dimostrare il principio dell'**ottimizzazione delle prestazioni**.
+Il punto chiave è che il "collo di bottiglia" in informatica è quasi sempre la comunicazione con l'hardware fisico. Accedere al disco fisso o inviare un pacchetto di rete costa tantissimo in termini di tempo macchina.
+
+**Le classi buffered**, ovvero BufferedReader e BufferedWriter) utilizzano un buffer predisposto all'I/O che velocizza le operazioni di read&write.
+
+**Le funzioni** che seguono questa classe sono:
+- **BufferedInputStream** e **BufferedOutputStream**: creano le versioni buffered di un byte stream
+- **BufferedReader** e **BufferedWriter**: creano le versioni buffered di un character stream
+
+A livello di codice si creano nel seguente modo: 
+
+> [!example] Esempio di creazione BufferedReader e BufferedWriter
+> ```java 
+> inputStream = new BufferedReader(new FileReader(“pippo.txt")); 
+> outputStream = new BufferedWriter(new FileWriter(“pluto.txt"));
+> ``` 
+
+#### La classe File
+La classe File può rappresentare due concetti diversi sotto lo stesso nome:
+- **nome** di un particolare file
+- **nome** di una directory
+Se stiamo parlando dell'ultimo caso, possiamo conoscere gli insieme dei file che lo compongono tramite il metodo **list()**, che restituisce un array di stringe con gli elementi di tale insieme.
+Ovviamente è possibile anche selezionare solo un tipo di oggetti nella cartella (per esempio se vogliamo visualizzare solo tutti i `.exe`) ricorrendo ad un **filtro**, detto **directory filter**.
+
+L'interfaccia **FilenameFilter** è molto semplice: `public interface FilenameFilter{ boolean accept (File dir, String name);}`
+Le classi che implementano questa funzione devono fornire sia un metodo **accept()** obbligatoriamente sia un metodo **list()** della classe madre **File**, così da eseguire una **call back** per determinare quali nomi di file devono essere inclusi nella lista.
+##### Metodo Accept()
+Gli argomenti del metodo **accept()** sono due:
+- Un oggetto **File** che rappresenta la directory in cui si trova il file
+- Un oggetto **String** che rappresenta il nome del file
+
+Precedentemente, abbiamo visto come il metodo **accept()** ci assicurava di lavorare solo con il nome del file, senza avere informazioni sul suo **percorso**.
+Tuttavia, esiste un'altra interfaccia simile detta **FileFilter** in cui il metodo **accept, prende in input direttamente l'oggetto File**.
+
+La classe File è usata anche per:
+- creare nuove cartelle o percorsi tramite `\mkdir()` o `\mkdirs()`
+- accedere alle caratteristiche dei file
+- eliminare un file
+- verificare l'oggetto File
+#### I/O con l'utente
+Fino ad ora questi output che abbiamo rilasciato nel programma dal file per l'utente non erano formattati adeguatamente. Per rispondere a questa necessità utilizziamo il **format**. Stessa pratica diviene necessaria per quanto riguarda l'input, in maniera tale da ottenere le singole informazioni necessarie e non tutto il file.
+Per processare gli input si utilizza la classe **scanner**; essa suddivide l'input in **token** e traduce ogni token in un tipo predefinito.
+La suddivisione tra i vari token avviene tramite l'utilizzo dei **white space**.
+```JAVA
+Scanner s = null;
+double sum = 0;
+try{
+	s = new Scanner(new BufferedReader(new FileReader("input.txt")));
+	while (s.hasNext()){
+		if( s.hasNextDouble()){ //ricerchiamo il dato semplice Double
+			sum+=s.nextDouble();
+		} else s.next();
+	}
+} finally{
+	s.close();
+}
+System.out.println(sum);
+```
+La scomposizione della "Matrioska":
+**1. Il Minatore: `new FileReader("input.txt")`**
+- **Il suo unico lavoro:** Creare il collegamento fisico con il file sul disco rigido e iniziare a estrarre i dati.
+- **Il problema:** Questo è uno stream **unbuffered** (come abbiamo visto precedentemente). Estrae i caratteri uno per volta, direttamente dal disco. Se lo usassimo da solo, sarebbe lentissimo. Non sa cosa siano le parole o i numeri, vede solo una fila di caratteri.
+
+**2. Il Trasportatore: `new BufferedReader(...)`**
+- **Il suo unico lavoro:** Ottimizzare la velocità. Prende in input il lento `FileReader`, aspetta che estragga un bel po' di caratteri, li accumula in un "magazzino" nella RAM (il buffer) e poi li passa al livello successivo tutti in blocco.
+- **Il problema:** È velocissimo, ma è "stupido". Sa leggere intere frasi, ma per lui è solo testo puro. Se nel file c'è scritto "100", per il `BufferedReader` è la parola composta dalle lettere '1', '0', '0', non il numero matematico cento.
+
+**3. L'Interprete: `new Scanner(...)`**
+- **Il suo unico lavoro:** Tradurre e analizzare. Prende il flusso di testo veloce e ottimizzato che gli arriva dal `BufferedReader` e lo "scansiona".
+- **Il vantaggio:** È lui che ti mette a disposizione i metodi comodi come `.nextInt()`, `.nextDouble()` o `.nextLine()`. Riesce a capire gli spazi, ad andare a capo e a convertire il testo nei tipi di dato Java che ti servono.
+#### Perché tutto questo è un vantaggio?
+Se Java avesse un blocco monolitico come `FileScanner`, dovresti riscrivere tutto il codice usando un ipotetico `WebScanner`.
+
+Invece, grazie a questo sistema a matrioska, **cambi solo il pezzo più interno** (il minatore), lasciando intatto il trasportatore e l'interprete. Si sostituisce il `FileReader` con uno stream di rete, ma lo `Scanner` continuerà a funzionare esattamente allo stesso modo nel resto del tuo programma.
+
+#### I/O da linea di comando
+La classe System mette a disposizione tre stream collegati al terminale:
+- `System.in`: InputStream che legge l'input
+- `System.out`: PrintStream che stampa l'output
+- `System.err`: PrintStream che stampa messaggi di errore
+```JAVA
+public static void main(String args[]){
+	Scanner scanner=new Scanner(new InputStreamReader(System.in));
+	String s= "";
+	while (scanner.hasNext()){
+		s= scanner.next();
+		if(!s.equalsIgnoreCase("exit")){
+			System.out.println("Hai scritto: "+s);
+		} else{
+			System.out.println("Goodbye!");
+			break;
+		}
+	}
+	scanner.close();
+}
+```
+### Data Streams
+I flussi di dati supportano l'I/O binario dei valori di dati primitivi, tra cui le stringhe pure.
+I flussi di dati implementano l'interfaccia **DataInput** o **DataOutput**, tra cui le più utilizzate di queste due interfacce sono proprio **DataInputStream** e **DataOutputStream**.
+L'esempio **DataStreams** mostra i flussi di dati scrivendo un **set di record di dati** e quindi rileggendoli. Ogni record è costituito da tre valori relativi ad un articolo: 
+- Prezzo (double), 
+- quantità (int), 
+- descrizione (String).
+
+Ad esempio:
+```JAVA
+static final String dataFile="invoicedata";
+
+static final double[] prices={19.99,9.99,15,99,4,99};
+static final int[] units={12,8,13,29,50};
+static final String[] descs={
+	"Java T-shirt",
+	"Java Mug",
+	"Duke Juggling Dolls",
+	"Java Pin",
+};
+```
+
+DataStreams rileva una condizione di fine file catturando una **EOFException**, anziché testare un valore restituito non valido, come i modelli visti precedentemente. Generalmente si usa **IOException (end of stream)**.
+
+Ogni scrittura in DataStreams corrisponde esattamente alla lettura corrispondente passo passo. Il programmatore deve assicurarsi che i tipi di output ed input siano abbinati correttamente. I dati in input sono binari, senza nulla che indichi il tipo dei singoli valori o da dove inizia il flusso.
+#### Serializzazione degli oggetti
+Se volessimo invece salvare dei dati su un file che non siano di tipo primitivo, come gli oggetti, DataStream da solo non basta. Dovremmo memorizzare tutte le parti di un oggetto in maniera separata, con una rappresentazione ben precisa così da ricostruire l'informazione correttamente al momento del bisogno. Questo processo risulta noioso e faticoso e prende il nome di **persistenza**.
+
+>[!NOTE] Definizione persistenza
+>La **persistenza** di un oggetto è la capacità dell'oggetto di vivere separatamente dal programma che lo ha generato
+
+Java contiene un meccanismo interno per creare oggetti persistenti, detto **serializzazione**.
+La serializzazione trasforma in una sequenza di byte il concetto che vogliamo rappresentare, dopo di che questa rappresentazione di byte può essere ricostruita nel suo aspetto originale.
+Dopo che l'oggetto viene serializzato può essere salvato su un file o inviato ad un altro PC.
+
+La sua realizzazione prevede l'uso di un interfaccia con due classi:
+- **ObjectOutputStream**, il quale contiene il metodo **writeObject** che serve per serializzare un oggetto.
+- **ObjectInputStream**, il quale contiene il metodo **readObject** che serve per deserializzare un oggetto.
+
+Ogni oggetto che si vuole serializzare deve implementare l’interfaccia **Serializable**, la quale non contiene metodi e **serve soltanto al compilatore** per comprendere che un oggetto di quella determinata classe può essere serializzato.
+
+**ObjectInputStream** e **ObjectOutputStream** sono **stream di manipolazione** e devono essere utilizzati congiuntamente a un **OutputStream** e un **InputStream**.
+Ne sussegue l'esempio:
+```JAVA
+FileOutputStream outFile = new FileOutputStream("info.dat");
+ObjectOutputStream outStream = new ObjectOutputStream (outFile);
+outStream.writeObject(myCar); // dove myCar è un oggetto di una classe Car definita dal programmatore
+```
+
+Per poter leggere l’oggetto serializzato e ricaricarlo in memoria centrale si procederà come segue:
+```JAVA
+FileInputStream inFile = new FileInputStream("info.dat");
+ObjectInputStream inStream = new ObjectInputStream(inFile);
+Car myCar = (Car) inStream.readObject();
+```
+La serializzazione di un oggetto si occupa di serializzare tutti gli eventuali riferimenti ad esso collegati. Dunque, se la classe Car contenesse dei riferimenti (variabili di classe o di istanza) a oggetti di classe Engine, questa verrebbe serializzata automaticamente e diverrebbe parte della serializzazione di Car. La classe Engine dovrà, pertanto, implementare anch’essa l’interfaccia serializable al suo interno.
+
+>[!ERROR] Errore comune: 
+>Gli attributi di classe, cioè definiti come static, **NON vengono serializzati**. Per poterli salvare occorre provvedere in modo personalizzato.
+
+![[Pasted image 20260422184507.png]]
+
+Molte classi della **libreria standard Java implementano l’interfaccia Serializable** in modo da essere serializzate quando necessario, come ad esempio la classe String.
+#### Transient
+A volte, quando si serializza un oggetto, si può desiderare di **escludere delle informazioni**, ad esempio, una password.
+Questo accade quando le informazioni vengono trasmesse via rete, poiché il pericolo è che, pur dichiarandola con visibilità privata, la password possa essere letta e usata da soggetti non autorizzati quando viene serializzata.
+Per questo tipo di richiesta e problematica ci viene in aiuto la parola chiave **transient** associato al nome di una variabile. Esso indica al compilatore di nascondere quella variabile, così da non rappresentarla come parte dello stream di byte della versione serializzata dell'oggetto.
+
+Ad esempio:
+```JAVA
+private transient String password;
+private String CF;
+```
+In questo caso, durante la serializzazione dell'oggetto che include queste due variabili, la variabile CF, anche se privata, sarà serializzata, mentre la password sarà ignorata nella rappresentazione grazie alla keyword transient.
