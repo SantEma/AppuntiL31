@@ -1699,9 +1699,46 @@ Car myCar = (Car) inStream.readObject();
 La serializzazione di un oggetto si occupa di serializzare tutti gli eventuali riferimenti ad esso collegati. Dunque, se la classe Car contenesse dei riferimenti (variabili di classe o di istanza) a oggetti di classe Engine, questa verrebbe serializzata automaticamente e diverrebbe parte della serializzazione di Car. La classe Engine dovrà, pertanto, implementare anch’essa l’interfaccia serializable al suo interno.
 
 >[!ERROR] Errore comune: 
->Gli attributi di classe, cioè definiti come static, **NON vengono serializzati**. Per poterli salvare occorre provvedere in modo personalizzato.
+>Gli attributi di classe, cioè definiti come static, **non vengono serializzati**. Per poterli salvare occorre provvedere in modo personalizzato.
 
-![[Pasted image 20260422184507.png]]
+> [!example] Esempio di serializzazione
+> 
+> ```java
+> class Nave implements Serializable {
+> 
+>     private static int nroNavi = 1;
+>     private int nroNave;
+>     private String nomeNave;
+> 
+>     // Costruttore: assegna il numero progressivo e il nome alla nave
+>     Nave(String nomeNave) {
+>         nroNave = nroNavi++;// Assegna il numero corrente e incrementa il contatore
+>         this.nomeNave = nmeNave;// Assegna il nome passato come parametro
+>     }
+> 
+>     // Restituisce una rappresentazione testuale della nave
+>     public String toString() {
+>         return nomeNave + ": " + nroNave;
+>     }
+> 
+>     // Metodo per SALVARE (serializzare) l'oggetto su file binario "info.dat"
+>     public void salva() throws FileNotFoundException, IOException {
+>         ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("info.dat"));
+>         out.writeObject(this);// Serializza l'oggetto Nave corrente
+>         out.writeObject(nroNavi);       
+>         out.close();
+>     }
+> 
+>     // Metodo statico per CARICARE (deserializzare) un oggetto Nave dal file "info.dat"
+>     public static Nave carica() throws FileNotFoundException, IOException {
+>         ObjectInputStream in = new ObjectInputStream(new FileInputStream("info.dat"));
+>         Nave n = (Nave) in.readObject();// Legge e ricostruisce l'oggetto Nave
+>         Nave.nroNavi = in.readObject();
+>         in.close();
+>         return n;// Restituisce la nave deserializzata
+>     }
+> }
+> ```
 
 Molte classi della **libreria standard Java implementano l’interfaccia Serializable** in modo da essere serializzate quando necessario, come ad esempio la classe String.
 #### Transient
