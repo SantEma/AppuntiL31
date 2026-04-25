@@ -35,7 +35,7 @@ I linguaggi di programmazione sono dotati di opportuni **costrutti linguistici**
 I paradigmi che supportano la programmazione ad alto livello possono essere raggruppati in base al loro approccio alla soluzione dei problemi.
 - **Approccio operazionale:** descrive per passi **COME** costruire una soluzione.
 - **Approccio dimostrazionale**: è una variante del precedente che illustra la soluzione in modo operativo per esempi specifici e lascia al sistema il compito di generalizzare queste soluzione di esempi ad altri casi.
-- **Approccio definizionale**: esso stabilisce delle proprietà della soluzione in modo da vincolarla senza per questo descrivere come viene calcolata.
+- **Approccio definizionale**: esso stabilisce delle proprietà della soluzione in modo da vincolarla senza descrivere come viene calcolata.
 ##### Approccio operazionale
 Questo approccio è il pilastro della programmazione imperativa e qui il programmatore agisce come un coordinatore che impartisce ordini sequenziali. **Il focus è sul mutamento di stato del sistema (le istruzioni modificano dei valori sulla memoria) attraverso istruzioni precise**.
 Il concetto chiave di questo approccio è il programmatore controlla quel **flusso di controllo** (cicli for, istruzioni if, assegnazione di variabili).
