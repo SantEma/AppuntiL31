@@ -1759,4 +1759,36 @@ Le Generics in Java vengono introdotte per poter superare il limite imposto dall
 > È possibile implementare un metodo $m$ che prende in input un oggetto della classe base $A$ come argomento. Tale metodo potrà essere utilizzato su tutte le sottoclassi della classe $A$ (ammesso che $A$ non sia dichiarata `final`). 
 > La limitazione della applicabilità del metodo $m$ ad un albero di ereditarietà con radice $A$ può essere superato con l’utilizzo di un’interfaccia, ma alcune volte anche questo diventa un limite, dovendo ricorrere all'astrazione generica
 
-Le Generics quindi permettono un astrazione maggiore rispetto alle interfacce, creando **classi contenitori** in grado di contenere oggetti di qualsiasi classe
+Le Generics quindi permettono un astrazione maggiore rispetto alle interfacce, creando **classi contenitori** in grado di contenere oggetti omogenei di qualsiasi classe
+
+> [!example] Esempio di Generics (W3Schools)
+> ```java
+> class Box<T> {  
+>   T value; // T is a placeholder for any data type  
+>   
+>   void set(T value) {  
+>     this.value = value;  
+>   }  
+>   
+>   T get() {  
+>     return value;  
+>   }  
+> }  
+>   
+> public class Main {  
+>   public static void main(String[] args) {  
+>     // Create a Box to hold a String  
+>     Box<String> stringBox = new Box<>();  
+>     stringBox.set("Hello");  
+>     System.out.println("Value: " + stringBox.get());  
+>   
+>     // Create a Box to hold an Integer  
+>     Box<Integer> intBox = new Box<>();  
+>     intBox.set(50);  
+>     System.out.println("Value: " + intBox.get());  
+>   }  
+> }
+> ```
+
+#### Tuple di Generics
+In alcuni casi è possibile che sia necessario definire una funzione che restituisca non un singolo valore ma una coppia di valori o una tripla, allora si può definire con le Generics delle tuple
