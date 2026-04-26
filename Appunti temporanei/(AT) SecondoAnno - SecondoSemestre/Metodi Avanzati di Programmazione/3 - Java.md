@@ -1753,4 +1753,10 @@ private String CF;
 ```
 In questo caso, durante la serializzazione dell'oggetto che include queste due variabili, la variabile CF, anche se privata, sarà serializzata, mentre la password sarà ignorata nella rappresentazione grazie alla keyword transient.
 ### Generics
-Le Generics in Java vengono introdotte per poter
+Le Generics in Java vengono introdotte per poter superare il limite imposto dalle interfacce nella generalizzazione (ossia il **polimorfismo per inclusione**)
+
+> [!example] Limitazione delle interfacce in Java
+> È possibile implementare un metodo $m$ che prende in input un oggetto della classe base $A$ come argomento. Tale metodo potrà essere utilizzato su tutte le sottoclassi della classe $A$ (ammesso che $A$ non sia dichiarata `final`). 
+> La limitazione della applicabilità del metodo $m$ ad un albero di ereditarietà con radice $A$ può essere superato con l’utilizzo di un’interfaccia, ma alcune volte anche questo diventa un limite, dovendo ricorrere all'astrazione generica
+
+Le Generics quindi permettono un astrazione maggiore rispetto alle interfacce, creando **classi contenitori** in grado di contenere oggetti di qualsiasi classe
