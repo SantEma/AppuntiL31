@@ -1790,5 +1790,6 @@ Le Generics quindi permettono un astrazione maggiore rispetto alle interfacce, c
 > }
 > ```
 
+Uno degli scopi primari delle Java Generics risiede nella capacità di fornire un meccanismo di casting automatico e sicuro al momento dell'istanziazione di un tipo parametrizzato, delegando al compilatore il compito di verificare la consistenza dei tipi rigorosamente a tempo di compilazione (compile-time)
 #### Tuple di Generics
 In alcuni casi è possibile che sia necessario definire una funzione che restituisca non un singolo valore ma una coppia di valori o una tripla, allora si può definire con le Generics delle tuple
