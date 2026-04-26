@@ -1757,4 +1757,6 @@ Un meccanismo messo a disposizione dai linguaggi OO per supportare la generalizz
 
 
 Infatti, è possibile implementare un metodo $m$ che prende in input un oggetto della classe base $A$ come argomento. Tale metodo potrà essere utilizzato su tutte le sottoclassi della classe $A$ (ammesso che $A$ non sia dichiarata final). 
-La limitazione della applicabilità del metodo $m$ ad un albero di ereditarietà con radice $A$ può essere superato con l’utilizzo di un’interfaccia, ma in alcuni casi anche il vincolarsi ad una interfaccia può sembrare troppo restrittivo
+La limitazione della applicabilità del metodo $m$ ad un albero di ereditarietà con radice $A$ può essere superato con l’utilizzo di un’interfaccia, ma in alcuni casi anche il vincolarsi ad una interfaccia può sembrare troppo restrittivo.
+
+Questo è il concetto che sta alla base della astrazione generica, con le Java Generics è possibile implementare il **concetto di tipo parametrizzato**, che permette di creare componenti (spesso dei contenitori) che sono semplici da utilizzare con più tipi che, con un meccanismo di casting, permette di controllare la consistenza di tipo al compile-time
