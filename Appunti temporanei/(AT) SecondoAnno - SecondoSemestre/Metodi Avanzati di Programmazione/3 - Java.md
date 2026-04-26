@@ -1807,7 +1807,7 @@ public class TwoTuple<A,B> {
 TwoTuple tt = new TwoTuple("hi", 47); 
 System.out.println(tt.toString());
 ```
-#### Containers
+#### Containers per Generics
  Le Generics sono basilari per l'implementazione di tipi astratti di dati classici, come lo **stack**. È possibile strutturare uno stack dinamico senza vincolarlo al tipo di dato memorizzato, impiegando, ad esempio, una classe interna privata (inner class) destinata alla rappresentazione del singolo nodo della struttura
 
 > [!example] Esempio di containers
@@ -1816,3 +1816,18 @@ System.out.println(tt.toString());
 > La classe Node<U\> è di servizio alla definizione di LinkedStack<T\>, per questa ragione non è resa accessibile se non a quest’ultima.
 
 In generale non è possibile creare un oggetto di una classe interna a meno che non si disponga di un oggetto della classe esterna, tuttavia nel caso di classe interna dichiarata static (detta anche nested) non è necessario disporre di tale oggetto.
+
+Tornando all’esempio di contenitore generico, a questo punto è possibile creare uno Stack che contiene solo Stringhe:
+> [!example] Esempio Stack solo stringhe
+> ```java    
+> LinkedStack<String> names = new LinkedStack<String>();
+> 
+> void printNames(LinkedStack<String> names) {
+>     String nextName = names.pop(); // no casting needed!
+>     names.push("John"); // ok
+>     names.push(new Integer(3)); // compile-time error! This stack contains only String
+> }
+> ```
+> Tramite la parametrizzazione, un tentativo di immissione di un dato incoerente nella struttura genera tempestivamente un errore a tempo di compilazione, garantendo la sicurezza (type safety) senza oneri aggiuntivi di casting in fase di estrazione.
+
+#### Interfacce per Generics
