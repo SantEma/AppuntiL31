@@ -1752,3 +1752,9 @@ private transient String password;
 private String CF;
 ```
 In questo caso, durante la serializzazione dell'oggetto che include queste due variabili, la variabile CF, anche se privata, sarà serializzata, mentre la password sarà ignorata nella rappresentazione grazie alla keyword transient.
+### Generics
+Un meccanismo messo a disposizione dai linguaggi OO per supportare la generalizzazione di una soluzione computazionale è rappresentato dal **polimorfismo per inclusione**.
+
+
+Infatti, è possibile implementare un metodo $m$ che prende in input un oggetto della classe base $A$ come argomento. Tale metodo potrà essere utilizzato su tutte le sottoclassi della classe $A$ (ammesso che $A$ non sia dichiarata final). 
+La limitazione della applicabilità del metodo $m$ ad un albero di ereditarietà con radice $A$ può essere superato con l’utilizzo di un’interfaccia, ma in alcuni casi anche il vincolarsi ad una interfaccia può sembrare troppo restrittivo
