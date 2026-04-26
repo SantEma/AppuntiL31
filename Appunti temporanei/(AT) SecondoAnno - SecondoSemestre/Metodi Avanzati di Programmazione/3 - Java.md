@@ -1831,3 +1831,23 @@ Tornando all’esempio di contenitore generico, a questo punto è possibile crea
 > Tramite la parametrizzazione, un tentativo di immissione di un dato incoerente nella struttura genera tempestivamente un errore a tempo di compilazione, garantendo la sicurezza (type safety) senza oneri aggiuntivi di casting in fase di estrazione.
 
 #### Interfacce per Generics
+Le Java Generics possono essere anche utilizzate per parametrizzare la dichiarazione di interfacce
+> [!example] Esempio di dichiarazione di interfacce
+> 
+> ```java
+> public interface Generator <T> { T next(); }
+> ```   
+> L'interfaccia Generator garantisce che il metodo` next()` restituisca un valore del tipo specificato dal parametro `T`. Un’altra interfaccia parametrizzata è Iterable che forza l'implementazione del metodo: 
+> ```java
+> Iterator<T> iterator()
+> ``` 
+> Le classi che implementano tale interfaccia permettono ad un oggetto di essere usato nello statement "foreach".
+
+#### Metodi generici
+Oltre all'astrazione strutturale, il linguaggio permette la definizione di metodi generici, parametrizzando unicamente le dichiarazioni delle specifiche funzioni all'interno di una classe.
+**Un metodo può essere definito generico indipendentemente dalla fatto che la classe sia generica oppure no.** Per di più, se un metodo definito in una classe parametrizzata è statico, tale metodo non accederà al parametro di tipo della classe.
+
+Per definire un metodo come generico è sufficiente parametrizzare la sua dichiarazione
+> [!example] Esempio di metodo generico
+> ![[Pasted image 20260426164504.png]]
+> Nell'esempio, la funzione `f()` è stata “sovraccaricata” (overloaded) ben sei volte. `f()` accetterà anche valori di tipo primitivo mediante il meccanismo dell'autoboxing.
