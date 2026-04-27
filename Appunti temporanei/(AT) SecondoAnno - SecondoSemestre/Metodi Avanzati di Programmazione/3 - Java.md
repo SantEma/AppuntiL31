@@ -1855,3 +1855,4 @@ Per definire un metodo come generico è sufficiente parametrizzare la sua dichia
 Java introduce anche una semplificazione che permette di inferire (definire) il tipo in maniera automatica
 
 I metodi generici possono essere anche utilizzati in combinazione con metodi a numero variabile di argomenti
+[da finire]
