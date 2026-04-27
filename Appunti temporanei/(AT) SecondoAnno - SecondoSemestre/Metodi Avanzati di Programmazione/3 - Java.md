@@ -1851,8 +1851,10 @@ Per definire un metodo come generico è sufficiente parametrizzare la sua dichia
 > [!example] Esempio di metodo generico
 > ![[Pasted image 20260426164504.png]]
 > Nell'esempio, la funzione `f()` è stata “sovraccaricata” (overloaded) ben sei volte. `f()` accetterà anche valori di tipo primitivo mediante il meccanismo dell'autoboxing.
-
-Java introduce anche una semplificazione che permette di inferire (definire) il tipo in maniera automatica
+> Java introduce anche una semplificazione che permette di inferire (definire) il tipo in maniera automatica
+> ```java
+> List <String> ls = new ArrayList();
+> ```
 
 I metodi generici possono essere anche utilizzati in combinazione con metodi a numero variabile di argomenti
 [da finire]
