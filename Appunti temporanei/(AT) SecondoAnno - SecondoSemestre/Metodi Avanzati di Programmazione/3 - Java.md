@@ -1858,6 +1858,17 @@ Per definire un metodo come generico è sufficiente parametrizzare la sua dichia
 
 I metodi generici possono essere anche utilizzati in combinazione con metodi a numero variabile di argomenti
 #### Problema dell'erasure
+Le Java Generics lasciano comunque alcune questioni poco chiare. 
+Per esempio, mentre è possibile ricorrere al letterale di classe per la classe ArrayList:
+```java
+ArrayList.class
+``` 
+non è possibile ricorrere al letterale di classe per la classe ArrayList ottenuta parametrizzando il tipo del contenuto:
+```java
+ArrayList<Integer>.class
+``` 
+Il compilatore Java adotta la **tecnica dell'erasure**: tutte le direttive e i controlli sui tipi vengono eseguiti ed esauriti a compile-time, per poi essere cancellati durante la generazione del bytecode. Conseguentemente, a tempo di esecuzione, le istanze di collezioni diverse dal punto di vista semantico risultano essere indistinguibili e appartenenti al medesimo tipo base grazie alla tecnica dell'astrazione generica.
 #### Wildcards
+All'interno 
 
 ###
