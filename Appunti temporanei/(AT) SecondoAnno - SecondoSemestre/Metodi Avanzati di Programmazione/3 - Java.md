@@ -1856,3 +1856,5 @@ Java introduce anche una semplificazione che permette di inferire (definire) il 
 
 I metodi generici possono essere anche utilizzati in combinazione con metodi a numero variabile di argomenti
 [da finire]
+
+###
