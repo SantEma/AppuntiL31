@@ -1857,6 +1857,7 @@ Per definire un metodo come generico è sufficiente parametrizzare la sua dichia
 > ```
 
 I metodi generici possono essere anche utilizzati in combinazione con metodi a numero variabile di argomenti
-
+#### Problema dell'erasure
+#### Wildcards
 
 ###
