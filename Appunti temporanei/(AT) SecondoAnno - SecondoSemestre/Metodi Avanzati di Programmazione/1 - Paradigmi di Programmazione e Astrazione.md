@@ -114,7 +114,7 @@ Similmente, nella programmazione l’astrazione allude alla distinzione che si f
 - **Cosa** (what) fa un pezzo di codice
 - **Come** (how) esso è implementato
 
-Per l’utente l’essenziale è cosa fa il codice, mentre non è interessato ai dettagli dellimplementazione.
+Per l’utente l’essenziale è cosa fa il codice, mentre non è interessato ai dettagli dell'implementazione.
 ### Astrazione funzionale
 > [!info] Definizione
 > L’astrazione funzionale si riferisce alla progettazione del software, e in particolare alla possibilità di specificare un modulo software che trasforma dei dati di input in dati di output nascondendo i dettagli algoritmici della trasformazione.
