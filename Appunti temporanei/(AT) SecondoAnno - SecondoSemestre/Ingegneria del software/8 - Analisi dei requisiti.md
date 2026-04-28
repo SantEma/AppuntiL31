@@ -13,7 +13,7 @@ Un **attributo** è una proprietà rilevante di un concetto (o classe) che conti
 Un'**associazione** è una relazione rivelante tra due concetti (o classi) ed è etichettata.
 Le associazioni sono generalmente bidirezionali, anche se generalmente vengono lette da sinistra a destra o dall'altro al basso.
 Le associazioni possono essere anche **ricorsive**.
-#### Legami delle associazioni
+##### Legami delle associazioni
 Un'associazione può rappresentare in modo più preciso anche un **gruppo di legami** tra gli oggetti delle classi associate:
 ![[Pasted image 20260424100339.png]]
 ![[Pasted image 20260424100354.png]]
