@@ -39,8 +39,6 @@ Per definizione, ogni oggetto di una sottoclasse è anche un oggetto della sua s
 
 >[!WARNING] Attenzione
 >Non tutti gli attributi sono generali per tutte le sottoclassi di una superclasse.
-
-Per rappresentare graficamente una bozza degli studi di dominio si usa una **lavagna condivisa in scrittura** così da condividere questi dettagli.
 ## I requisiti
 Un requisito è una caratteristica o condizione che un sistema è tenuto a rispettare.
 La formulazione dei requisiti chiarisce il modo in cui i bisogni dei clienti o degli utenti dovranno essere soddisfatti dai progettisti.
@@ -85,7 +83,7 @@ Si creano delle **interviste** fisicamente tra analista e cliente o tramite **wo
 La figura che identifica gli interlocutori è chiamato **stakeholder**.
 Si generano **prototipi UI** da far vedere al cliente per poter continuare a procedere lo sviluppo software e avviene anche il recupero e l'analisi della documentazione da sistemi esterni.
 #### SRS
-La specifica dei requisiti o **SRS** avviene tramite la sottoscrizione di **documenti**, la cui struttura può dettata dagli standard come *IEEE Std 830-1998* ecc...
+La specifica dei requisiti o **SRS** avviene tramite la sottoscrizione di **documenti**, la cui struttura può dettata dagli standard come IEEE Std 830-1998...
 Il documento è suddiviso in varie parti:
 1. **Introduzione**
 2. **Descrizione**
