@@ -88,8 +88,8 @@ Il documento è suddiviso in varie parti:
 1. **Introduzione**
 2. **Descrizione**
 3. **Requisiti specifici**
-	1. Requisiti funzionali
-	2. Requisiti non funzionali
+	- Requisiti funzionali
+	- Requisiti non funzionali
 4. Appendici
 5. Indice
 ### Stile di descrizione dei requisiti
@@ -104,10 +104,12 @@ I casi d'uso differiscono dalle user stories dal **metodo in cui sono descritti*
 - **Casi d'uso**: descritti tramite la narrazione delle interazioni tipiche tra attori e sistema
 
 L'attore è il ruolo dell' utilizzatore del prodotto, che può essere un utente del prodotto finale o utilizzatore di mezzo, o anche qualcuno che svolge interazioni con il sistema.
-L'attore è definito **esterno al sistema** e possono essere:
-- Persone fisiche
-- Sistemi che lavorano esternamente al progetto (come il sistema di contabilità)
-- Dispositivi hardware esterni
+L'attore è definito **esterno al sistema** e può essere:
+- Una persona fisia
+- Sistema che lavora esternamente al progetto (come il sistema di contabilità)
+- Dispositivo hardware esterno
+
+L'attore può essere anche riferito al plurale
 #### Diagramma di contesto
 Il diagramma di contesto ci permette di definire in modo grafico i confini del sistema e chiarisce anche le entità che devono interagire con quest'ultimo.
 ![[Pasted image 20260424113447.png]]
@@ -139,3 +141,17 @@ La revisione dei requisiti avviene mediante ispezioni ottenute in diversi modi:
 	- Incosistenza
 	- Fatto non corretto
 	- Informazione estranea
+### Gestione dei cambiamenti dei requisiti
+Per gestire i cambiamenti dei requisiti sono fondamentali 4 punti:
+- Minimizzazione delle ridondanze
+- Tracciabilità
+- Annotazione degli attributi dei requisiti
+- Procedure di gestione della configurazione
+#### Minimizzazione delle ridondanze
+In questo passaggio, utilizziamo degli strumenti specializzati su repository per poterle ridurre
+![[Pasted image 20260428102539.png]]
+#### Tracciabilità
+
+#### Annotazione degli attributi dei requisiti
+
+#### Gestione della configurazione
