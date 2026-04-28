@@ -60,23 +60,23 @@ Lo scambio dei requisiti fino al prodotto finito avviene nel seguente schema:
 Sebbene lo schema sia tipico di altri contesti ingegneristici, l’applicazione nel campo del software è spesso problematica.
 ### Problemi nella raccolta dei requisiti
 **Idealmente** si dovrebbero seguire questi passaggi semplici:
-- il committente comunica i requisiti alla partenza del progetto 
-- il compito degli analisti è soltanto quello di acquisirli e di comprenderli
+- Il committente comunica i requisiti alla partenza del progetto 
+- Il compito degli analisti è soltanto quello di acquisirli e di comprenderli
 
 **Concettualmente e realmente** non avviene mai questo, poiché il cliente non conosce bene i termini da utilizzare per far comprendere appieno all'analista cosa raccogliere come dati, ma può essere astratto, confuso e non preciso o diverso da come se lo aspettava il cliente a prodotto aggiornato nello sviluppo.
 Si eseguono più step nella scoperta dei dati e specialmente durante l'evoluzione del progetto, poiché nasceranno più requisiti:
 - I requisiti possono nascere, o cambiare, anche dopo il raggiungimento dell'accordo (o la stipula del contratto), mentre sono in corso le attività di realizzazione
 - Fattori che possono determinare un cambiamento di requisiti: 
-	- innovazioni legislative 
-	- cambiamenti negli scenari di mercato o nelle strategie aziendali, 
-	- nuove opportunità e bisogni 
-	- scoperta di errori
+	- Innovazioni legislative 
+	- Cambiamenti negli scenari di mercato o nelle strategie aziendali, 
+	- Nuove opportunità e bisogni 
+	- Scoperta di errori
 ### Ingegneria dei requisiti
 Esistono varie tecniche per:
-- Scoprire i requisiti
-- Specificare i requisiti
-- Validare i requisiti
-- Gestire dei cambiamenti
+- **Scoprire** i requisiti
+- **Specificare** i requisiti
+- **Validare** i requisiti
+- **Gestire** dei cambiamenti
 Queste tecniche sono notate come l'**ingegneria dei requisiti**.
 #### Scoprire i requisiti
 Si creano delle **interviste** fisicamente tra analista e cliente o tramite **workshop** dove molti membri del team parlano con molti clienti coinvolti.
@@ -100,14 +100,14 @@ I requisiti si descrivono tramite le:
 #### Casi d'uso e user stories
 Essi rappresentano una funzionalità che il sistema deve offrire ai suoi **attori**.
 I casi d'uso differiscono dalle user stories dal **metodo in cui sono descritti**:
-- User story sono descritte con brevi annotazioni da post-it
-- Casi d'uso sono descritti tramite la narrazione delle interazioni tipiche tra attori e sistema
+- **User story**: descritte con brevi annotazioni da post-it
+- **Casi d'uso**: descritti tramite la narrazione delle interazioni tipiche tra attori e sistema
 
-Gli **attori** è il ruolo degli utilizzatori del prodotto, che possono essere utenti del prodotto finale o utilizzatori di mezzo, o possono anche essere qualcuno che svolge interazioni con il sistema.
+L'attore è il ruolo dell' utilizzatore del prodotto, che può essere un utente del prodotto finale o utilizzatore di mezzo, o anche qualcuno che svolge interazioni con il sistema.
 L'attore è definito **esterno al sistema** e possono essere:
-- persone fisiche
-- sistemi che lavorano esternamente al progetto (come il sistema di contabilità)
-- dispositivi hardware esterni
+- Persone fisiche
+- Sistemi che lavorano esternamente al progetto (come il sistema di contabilità)
+- Dispositivi hardware esterni
 #### Diagramma di contesto
 Il diagramma di contesto ci permette di definire in modo grafico i confini del sistema e chiarisce anche le entità che devono interagire con quest'ultimo.
 ![[Pasted image 20260424113447.png]]
