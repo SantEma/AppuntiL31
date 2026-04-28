@@ -190,3 +190,27 @@ Nell'ambito dell'ingegneria del software moderna, la descrizione funzionale avvi
 
 > [!info] Template delle user story
 > ![[Pasted image 20260428114635.png]]
+
+> [!example] Esempio di user-story
+> ![[Pasted image 20260428115921.png]]
+
+
+
+#### Test di accettazione e specifiche
+I test di accettazione costituiscono la vera e propria specifica tecnica e funzionale di una user story. Le condizioni di soddisfazione, generalmente dettate dal Product Owner, vengono aggiunte direttamente alla storia e si traducono essenzialmente in test eseguibili
+
+> [!example] Esempio di testi di accettazione e specifiche
+> ![[Pasted image 20260428120054.png]]
+
+#### Decomposizione di user story per  iterazioni distinte
+Nelle fasi di pianificazione, si manifesta frequentemente la necessità di decomporre una user story troppo generica al fine di poterne distribuire la realizzazione in iterazioni di sviluppo distinte
+
+> [!example] Esempio di decomposizione di user story
+> ![[Pasted image 20260428120010.png]]
+
+##### Epic
+Quando una user story si rivela essere di dimensioni troppo ampie per poter essere sviluppata e conclusa all'interno di una sola iterazione produttiva, essa assume formalmente la definizione di "Epic". 
+Un'Epic funge da contenitore tematico e deve inevitabilmente essere frammentata in entità minori.
+
+> [!example] Esempio di epic
+> ![[Pasted image 20260428120153.png]]
