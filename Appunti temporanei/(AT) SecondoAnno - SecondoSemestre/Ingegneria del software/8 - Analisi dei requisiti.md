@@ -1,11 +1,12 @@
-# Modello di dominio
-Il modello di dominio è utile per avere una base solida della **business logic** e per rappresentarlo si utilizza un **diagramma delle classi con prospettiva concettuale**, esso rappresenta in modo visivo i concetti caratteristici del dominio che stiamo studiando.
-Inoltre questo modello è **indipendente dal software** ed è chiamato anche **modello concettuale** (già visto e usato nei concetti di Basi di Dati).
-## Classe come concetto
+## Modello di dominio
+Il modello di dominio è utile per comprendere e comunicare i concetti fondamentali di un dominio (quindi di un ambito). 
+Per rappresentarlo si utilizza un **diagramma delle classi con prospettiva concettuale**, il quale rappresenta in modo visivo i concetti caratteristici del dominio che stiamo studiando.
+Inoltre questo modello è **indipendente dal software** ed è chiamato anche **modello concettuale**.
+### Classe come concetto
 Una classe rappresenta un concetto ben definito che permette l'astrazione di istanze simili.
 ![[Pasted image 20260424095750.png]]
 Le proprietà della classe sono gli **attributi** e le **associazioni**.
-### Attributi e Associazioni
+#### Attributi e Associazioni
 Un **attributo** è una proprietà rilevante di un concetto (o classe) che contiene un valore per ogni oggetto.
 ![[Pasted image 20260424095913.png]]
 
