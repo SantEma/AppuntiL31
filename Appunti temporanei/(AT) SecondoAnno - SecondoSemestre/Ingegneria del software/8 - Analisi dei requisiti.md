@@ -17,10 +17,10 @@ Le associazioni possono essere anche **ricorsive**.
 Un'associazione può rappresentare in modo più preciso anche un **gruppo di legami** tra gli oggetti delle classi associate:
 ![[Pasted image 20260424100339.png]]
 ![[Pasted image 20260424100354.png]]
-### Classi associative e attributi di legame
+#### Classi associative e attributi di legame
 Le classi nate dalle associazioni sono utilizzate per modellare proprietà intrinseche nella relazione delle due classi coinvolte. Un attributo di una classe associativa contiene un **valore per ogni legame** e per definizione di Basi di Dati si ricorda che nascono molto spesso dalle relazioni di tipo **molti-a-molti**.
 ![[Pasted image 20260424101220.png]]
-## Ruoli
+### Ruoli
 Un'alternativa grafica per non inserire l'etichetta nell'associazione è quella di definire dei **ruoli**. I ruoli rappresentano il nome della proprietà e sono posti alla fine della linea di congiunzione.
 I ruoli hanno gran efficacia nelle associazioni tra oggetti della stessa classe, come l'esempio precedente:![[Pasted image 20260424101505.png]]
 L'aggregazione del contenuto e del contenitore viene rappresentato anch'esso graficamente tramite il **daimo**, il quale può essere **vuoto** o **pieno**:
@@ -30,7 +30,7 @@ La **composizione** è una forma definita **forte** dell'aggregazione, poiché s
 - la parte componente può appartenere solo ad un unico oggetto contenitore
 La composizione è una forma definita **debole** invece quando l'oggetto può esistere anche senza un altra classe.
 
-In lettura queste due parti si leggono con ***è parte di*** o al contrario ***è composto da***.
+In lettura queste due parti si leggono con **è parte di* o al contrario *è composto da**.
 ## Generalizzazione
 L'associazione tra classi viene definita sotto il concetto di ***è un tipo di*** o al contrario come ***può essere un***. 
 Questo concetto è utilizzato per definire le **tassonomie** di classi, così possiamo dividere le classi in **superclasse** e le loro rispettive **sottoclassi**.
