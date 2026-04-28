@@ -30,19 +30,19 @@ La **composizione** è una forma definita **forte** dell'aggregazione, poiché s
 - la parte componente può appartenere solo ad un unico oggetto contenitore
 La composizione è una forma definita **debole** invece quando l'oggetto può esistere anche senza un altra classe.
 
-In lettura queste due parti si leggono con **è parte di* o al contrario *è composto da**.
+In lettura queste due parti si leggono con **è parte di o al contrario è composto da**.
 ## Generalizzazione
 L'associazione tra classi viene definita sotto il concetto di ***è un tipo di*** o al contrario come ***può essere un***. 
 Questo concetto è utilizzato per definire le **tassonomie** di classi, così possiamo dividere le classi in **superclasse** e le loro rispettive **sottoclassi**.
 ![[Pasted image 20260424102403.png]]
-Ad esempio *Docente* è una classe specializzata di *Persona* che è una classe generale.
+
 Per definizione, ogni oggetto di una sottoclasse è anche un oggetto della sua superclasse.
 
 >[!WARNING] Attenzione
 >Non tutti gli attributi sono generali per tutte le sottoclassi di una superclasse.
 
 Per rappresentare graficamente una bozza degli studi di dominio si usa una **lavagna condivisa in scrittura** così da condividere questi dettagli. Questa lavagna virtuale è integrata sulle piattaforme di meeting (come quella su teams). Altrimenti Claude IA può aiutare a dare una base di partenza.
-# I requisiti
+## I requisiti
 Un requisito è una caratteristica o condizione che un sistema è tenuto a rispettare.
 La formulazione dei requisiti chiarisce il modo in cui i bisogni dei clienti o degli utenti dovranno essere soddisfatti dai progettisti.
 L'insieme dei requisiti è noto come **spazio delle soluzioni ammissibili**.
