@@ -128,7 +128,14 @@ Uno scenario definisce cosa accade nel sistema in seguito all'evento di innesco,
 - Come e quando il caso d'uso inizia
 - Chi inizia il caso d'uso
 - Interazione tra attore/i e caso d'uso, insieme a cosa viene scambiato
-- Come 
+- Come e quando il caso d’uso termina
+
+
+> [!example] Esempio di descrizione di caso d'uso mediante scenari
+> ![[Pasted image 20260428110511.png]]
+> ![[Pasted image 20260428110526.png]]
+> ![[Pasted image 20260428110534.png]]
+
 #### Validazione dei requisiti
 Nella validazione dei requisiti l'obiettivo è assicurarsi che la specifica dei requisiti del software rappresenti in modo accurato e chiaro i bisogni del committente.
 
