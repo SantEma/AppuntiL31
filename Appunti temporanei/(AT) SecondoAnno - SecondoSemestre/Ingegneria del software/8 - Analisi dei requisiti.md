@@ -152,7 +152,9 @@ aspetto fondamentale dell'analisi e della definizione dei requisiti software con
 Questi strumenti  sono fondamentali per l'intera architettura dell'informazione di progetto, mettendo in comunicazione i bisogni primari degli utenti (User needs) con i documenti dei requisiti e i relativi attributi. Inoltre, l'utilizzo di un repository centralizzato permette di estrarre dati in modo strutturato attraverso la generazione di interrogazioni (queries) e reportistica dedicata
 ![[Pasted image 20260428102539.png]]
 #### Tracciabilità
-La qualità di un documento di Specifica dei Requisiti Software (SRS) dipende fortemente dalla sua tracciabilità
+La qualità di un documento di Specifica dei Requisiti Software (SRS) dipende fortemente dalla sua **tracciabilità**.
+Un SRS è considerato tracciabile qualora l'origine di ciascun requisito in esso contenuto risulti chiara ed inequivocabile, e qualora il documento stesso faciliti il costante riferimento a ogni singolo requisito durante tutte le successive fasi di sviluppo e di manutenzione del prodotto
 #### Annotazione degli attributi dei requisiti
 
 #### Gestione della configurazione
+La gestione della configurazione comprende un insieme di procedure volte a garantire il controllo assoluto sulle modifiche apportate ai requisiti e agli artefatti di progetto
