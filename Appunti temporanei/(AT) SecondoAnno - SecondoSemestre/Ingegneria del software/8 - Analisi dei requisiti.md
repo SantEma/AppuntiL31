@@ -148,10 +148,11 @@ Per gestire i cambiamenti dei requisiti sono fondamentali 4 punti:
 - Annotazione degli attributi dei requisiti
 - Procedure di gestione della configurazione
 #### Minimizzazione delle ridondanze
-In questo passaggio, utilizziamo degli strumenti specializzati su repository per poterle ridurre
+aspetto fondamentale dell'analisi e della definizione dei requisiti software consiste nella minimizzazione delle ridondanze, possibile tramite degli strumenti specializzati.
+Questi strumenti  sono fondamentali per l'intera architettura dell'informazione di progetto, mettendo in comunicazione i bisogni primari degli utenti (User needs) con i documenti dei requisiti e i relativi attributi. Inoltre, l'utilizzo di un repository centralizzato permette di estrarre dati in modo strutturato attraverso la generazione di interrogazioni (queries) e reportistica dedicata
 ![[Pasted image 20260428102539.png]]
 #### Tracciabilità
-
+La qualità di un documento di Specifica dei Requisiti Software (SRS) dipende fortemente dalla sua tracciabilità
 #### Annotazione degli attributi dei requisiti
 
 #### Gestione della configurazione
