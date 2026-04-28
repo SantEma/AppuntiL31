@@ -32,7 +32,7 @@ La composizione è una forma definita **debole** invece quando l'oggetto può es
 
 In lettura queste due parti si leggono con **è parte di o al contrario è composto da**.
 ## Generalizzazione
-L'associazione tra classi viene definita sotto il concetto di ***è un tipo di*** o al contrario come ***può essere un***. 
+L'associazione tra classi viene definita sotto il concetto di **è un tipo di** o al contrario come **può essere un**. 
 Questo concetto è utilizzato per definire le **tassonomie** di classi, così possiamo dividere le classi in **superclasse** e le loro rispettive **sottoclassi**.
 ![[Pasted image 20260424102403.png]]
 
