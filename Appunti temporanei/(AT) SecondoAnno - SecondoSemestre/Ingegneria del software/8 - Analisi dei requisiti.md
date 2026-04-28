@@ -108,7 +108,6 @@ L'attore è definito **esterno al sistema** e può essere:
 - Una persona fisia
 - Sistema che lavora esternamente al progetto (come il sistema di contabilità)
 - Dispositivo hardware esterno
-
 L'attore può essere anche riferito al plurale
 #### Diagramma di contesto
 Il diagramma di contesto ci permette di definire in modo grafico i confini del sistema e chiarisce anche le entità che devono interagire con quest'ultimo.
@@ -162,7 +161,23 @@ Questi strumenti  sono fondamentali per l'intera architettura dell'informazione 
 La qualità di un documento di Specifica dei Requisiti Software (SRS) dipende fortemente dalla sua **tracciabilità**.
 Un SRS è considerato tracciabile qualora l'origine di ciascun requisito in esso contenuto risulti chiara ed inequivocabile, e qualora il documento stesso faciliti il costante riferimento a ogni singolo requisito durante tutte le successive fasi di sviluppo e di manutenzione del prodotto
 #### Annotazione degli attributi dei requisiti
+Per una corretta sistematizzazione e prioritizzazione, è indispensabile procedere con l'annotazione puntuale degli attributi associati a ciascun requisito. Tali attributi permettono di qualificare il requisito secondo diverse dimensioni analitiche.
 
+Si dividono in diverse annotazioni:
+- Annotazione della criticità dei requisiti: 
+	- Se malfunzionamenti possono causare problemi gravi (sicurezza persone, perdite finanziarie, …)
+- Annotazione dell’importanza dei requisiti: 
+	- obbligatori (must)  
+	- desiderabili (should)  
+	- opzionali (may) 
+- Annotazione della stabilità dei requisiti:  
+	- Stabili  
+	- Volatili
+- Annotazione dello stato dei requisiti:
+	- richiesti (da chi?) 
+	- validati  
+	- realizzati (in quale release?) 
+	- rimossi (quando?)
 #### Gestione della configurazione
 La gestione della configurazione comprende un insieme di procedure volte a garantire il controllo assoluto sulle modifiche apportate ai requisiti e agli artefatti di progetto.
 Queste procedure sono volte al:
@@ -170,3 +185,8 @@ Queste procedure sono volte al:
 - Non essere possibile effettuare cambiamenti in modo concorrente
 - Tenere traccia dei cambiamenti in modo tale poter tornare indietro
 - Tenere traccia di chi ha effettuato il cambiamento e delle motivazioni
+### User story
+Nell'ambito dell'ingegneria del software moderna, la descrizione funzionale avviene frequentemente tramite l'utilizzo delle **user story**
+
+> [!info] Template delle user story
+> ![[Pasted image 20260428114635.png]]
