@@ -157,4 +157,9 @@ Un SRS è considerato tracciabile qualora l'origine di ciascun requisito in esso
 #### Annotazione degli attributi dei requisiti
 
 #### Gestione della configurazione
-La gestione della configurazione comprende un insieme di procedure volte a garantire il controllo assoluto sulle modifiche apportate ai requisiti e agli artefatti di progetto
+La gestione della configurazione comprende un insieme di procedure volte a garantire il controllo assoluto sulle modifiche apportate ai requisiti e agli artefatti di progetto.
+Queste procedure sono volte al:
+- Permettere solo che le persone autorizzate possano effettuare cambiamenti
+- Non essere possibile effettuare cambiamenti in modo concorrente
+- Tenere traccia dei cambiamenti in modo tale poter tornare indietro
+- Tenere traccia di chi ha effettuato il cambiamento e delle motivazioni
