@@ -61,7 +61,7 @@ I requisiti devono essere espressi in maniera corretta, dettagliata e chiara nel
 Lo scambio dei requisiti fino al prodotto finito avviene nel seguente schema:
 ![[Pasted image 20260424111227.png]]
 Sebbene lo schema sia tipico di altri contesti ingegneristici, l’applicazione nel campo del software è spesso problematica.
-## Problemi nella raccolta dei requisiti
+### Problemi nella raccolta dei requisiti
 **Idealmente** si dovrebbero seguire questi passaggi semplici:
 - il committente comunica i requisiti alla partenza del progetto 
 - il compito degli analisti è soltanto quello di acquisirli e di comprenderli
@@ -74,18 +74,18 @@ Quindi si eseguiranno più step nella scoperta dei dati e specialmente durante l
 	- cambiamenti negli scenari di mercato o nelle strategie aziendali, 
 	- nuove opportunità e bisogni 
 	- scoperta di errori
-## Ingegneria dei requisiti
+### Ingegneria dei requisiti
 Esistono varie tecniche per:
 - Scoprire i requisiti
 - Specificare i requisiti
 - Validare i requisiti
 - Gestire dei cambiamenti
 Queste tecniche sono notate come l'**ingegneria dei requisiti**.
-### Scoprire i requisiti
+#### Scoprire i requisiti
 Si creano delle **interviste** fisicamente tra analista e cliente o tramite **workshop** dove molti membri del team parlano con molti clienti coinvolti.
 La figura che identifica gli interlocutori è chiamato **stakeholder**.
 Si generano **prototipi UI** da far vedere al cliente per poter continuare a procedere lo sviluppo software e avviene anche il recupero e l'analisi della documentazione da sistemi esterni.
-### SRS
+#### SRS
 La specifica dei requisiti o **SRS** avviene tramite la sottoscrizione di **documenti**, la cui struttura può dettata dagli standard come *IEEE Std 830-1998* ecc...
 Il documento è suddiviso in varie parti:
 1. **Introduzione**
@@ -95,12 +95,12 @@ Il documento è suddiviso in varie parti:
 	2. Requisiti non funzionali
 4. Appendici
 5. Indice
-## Stile di descrizione dei requisiti
+### Stile di descrizione dei requisiti
 I requisiti si descrivono tramite le:
 - **Proposizioni**, sia funzionali che non
 - **Casi d'uso**, usati solo per quelli funzionali
 - **User stories**, usati solo per requisiti funzionali nello sviluppo agile
-### Casi d'uso e user stories
+#### Casi d'uso e user stories
 Essi rappresentano una funzionalità che il sistema deve offrire ai suoi **attori**.
 I casi d'uso differiscono dalle user stories dal **metodo in cui sono descritti**:
 - User story sono descritte con brevi annotazioni da post-it
@@ -111,9 +111,9 @@ L'attore è definito **esterno al sistema** e possono essere:
 - persone fisiche
 - sistemi che lavorano esternamente al progetto (come il sistema di contabilità)
 - dispositivi hardware esterni
-### Diagramma di contesto
+#### Diagramma di contesto
 Il diagramma di contesto ci permette di definire in modo grafico i confini del sistema e chiarisce anche le entità che devono interagire con quest'ultimo.
 ![[Pasted image 20260424113447.png]]
 ![[Pasted image 20260424113507.png]]
-## Descrizione caso d'uso
+#### Descrizione caso d'uso
 La descrizione del caso d'uso si divide in **Formato breve** [Da finire da pag 16 a 26]
