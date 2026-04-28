@@ -10,7 +10,7 @@ Le proprietà della classe sono gli **attributi** e le **associazioni**.
 Un **attributo** è una proprietà rilevante di un concetto (o classe) che contiene un valore per ogni oggetto.
 ![[Pasted image 20260424095913.png]]
 
-Un'**associazione** è una relazione rivelante tra due concetti (o classi) ed è etichettata, come ad esempio `classe1 verbo classe2` quindi *Persona **lavora per** Dipartimento*.
+Un'**associazione** è una relazione rivelante tra due concetti (o classi) ed è etichettata.
 Le associazioni sono generalmente bidirezionali, anche se generalmente vengono lette da sinistra a destra o dall'altro al basso.
 Inoltre le associazioni possono essere anche **ricorsive**, come una classe di nome *"cartella"* che *contiene* altre classi cartella.
 #### Legami delle associazioni
