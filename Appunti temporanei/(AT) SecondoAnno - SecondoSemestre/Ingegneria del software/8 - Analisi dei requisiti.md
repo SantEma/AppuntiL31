@@ -9,7 +9,6 @@ Le proprietà della classe sono gli **attributi** e le **associazioni**.
 #### Attributi e Associazioni
 Un **attributo** è una proprietà rilevante di un concetto (o classe) che contiene un valore per ogni oggetto.
 ![[Pasted image 20260424095913.png]]
-
 Un'**associazione** è una relazione rivelante tra due concetti (o classi) ed è etichettata.
 Le associazioni sono generalmente bidirezionali, anche se generalmente vengono lette da sinistra a destra o dall'altro al basso.
 Le associazioni possono essere anche **ricorsive**.
@@ -17,8 +16,9 @@ Le associazioni possono essere anche **ricorsive**.
 Un'associazione può rappresentare in modo più preciso anche un **gruppo di legami** tra gli oggetti delle classi associate:
 ![[Pasted image 20260424100339.png]]
 ![[Pasted image 20260424100354.png]]
+La molteplicità specifica quanti oggetti di una classe possono essere associati con un singolo oggetto di un’altra classe
 #### Classi associative e attributi di legame
-Le classi nate dalle associazioni sono utilizzate per modellare proprietà intrinseche nella relazione delle due classi coinvolte. Un attributo di una classe associativa contiene un **valore per ogni legame** e per definizione di Basi di Dati si ricorda che nascono molto spesso dalle relazioni di tipo **molti-a-molti**.
+Le classi nate dalle associazioni sono utilizzate per modellare proprietà intrinseche nella relazione delle due classi coinvolte. Un attributo di una classe associativa contiene un **valore per ogni legame**. Molto spesso nascono relazioni N-N (molti a molti)
 ![[Pasted image 20260424101220.png]]
 ### Ruoli
 Un'alternativa grafica per non inserire l'etichetta nell'associazione è quella di definire dei **ruoli**. I ruoli rappresentano il nome della proprietà e sono posti alla fine della linea di congiunzione.
@@ -26,10 +26,9 @@ I ruoli hanno gran efficacia nelle associazioni tra oggetti della stessa classe,
 L'aggregazione del contenuto e del contenitore viene rappresentato anch'esso graficamente tramite il **daimo**, il quale può essere **vuoto** o **pieno**:
 ![[Pasted image 20260424101826.png]]
 La **composizione** è una forma definita **forte** dell'aggregazione, poiché stiamo definendo che:
-- la parte componente non può esistere senza il contenitore
-- la parte componente può appartenere solo ad un unico oggetto contenitore
+- La parte componente non può esistere senza il contenitore
+- La parte componente può appartenere solo ad un unico oggetto contenitore
 La composizione è una forma definita **debole** invece quando l'oggetto può esistere anche senza un altra classe.
-
 In lettura queste due parti si leggono con **è parte di o al contrario è composto da**.
 ## Generalizzazione
 L'associazione tra classi viene definita sotto il concetto di **è un tipo di** o al contrario come **può essere un**. 
@@ -41,7 +40,7 @@ Per definizione, ogni oggetto di una sottoclasse è anche un oggetto della sua s
 >[!WARNING] Attenzione
 >Non tutti gli attributi sono generali per tutte le sottoclassi di una superclasse.
 
-Per rappresentare graficamente una bozza degli studi di dominio si usa una **lavagna condivisa in scrittura** così da condividere questi dettagli. Questa lavagna virtuale è integrata sulle piattaforme di meeting (come quella su teams). Altrimenti Claude IA può aiutare a dare una base di partenza.
+Per rappresentare graficamente una bozza degli studi di dominio si usa una **lavagna condivisa in scrittura** così da condividere questi dettagli.
 ## I requisiti
 Un requisito è una caratteristica o condizione che un sistema è tenuto a rispettare.
 La formulazione dei requisiti chiarisce il modo in cui i bisogni dei clienti o degli utenti dovranno essere soddisfatti dai progettisti.
@@ -66,10 +65,10 @@ Sebbene lo schema sia tipico di altri contesti ingegneristici, l’applicazione 
 - il committente comunica i requisiti alla partenza del progetto 
 - il compito degli analisti è soltanto quello di acquisirli e di comprenderli
 
-**Concettualmente e realmente** però non avviene mai questo, poiché il cliente non conosce bene i termini da utilizzare per far comprendere appieno all'analista cosa raccogliere come dati, ma può essere astratto, confuso e non preciso o diverso da come se lo aspettava il cliente a prodotto aggiornato nello sviluppo.
-Quindi si eseguiranno più step nella scoperta dei dati e specialmente durante l'evoluzione del progetto, poiché nasceranno più requisiti:
-- i requisiti possono nascere, o cambiare, anche dopo il raggiungimento dell'accordo (o la stipula del contratto), mentre sono in corso le attività di realizzazione
-- fattori che possono determinare un cambiamento di requisiti: 
+**Concettualmente e realmente** non avviene mai questo, poiché il cliente non conosce bene i termini da utilizzare per far comprendere appieno all'analista cosa raccogliere come dati, ma può essere astratto, confuso e non preciso o diverso da come se lo aspettava il cliente a prodotto aggiornato nello sviluppo.
+Si eseguono più step nella scoperta dei dati e specialmente durante l'evoluzione del progetto, poiché nasceranno più requisiti:
+- I requisiti possono nascere, o cambiare, anche dopo il raggiungimento dell'accordo (o la stipula del contratto), mentre sono in corso le attività di realizzazione
+- Fattori che possono determinare un cambiamento di requisiti: 
 	- innovazioni legislative 
 	- cambiamenti negli scenari di mercato o nelle strategie aziendali, 
 	- nuove opportunità e bisogni 
