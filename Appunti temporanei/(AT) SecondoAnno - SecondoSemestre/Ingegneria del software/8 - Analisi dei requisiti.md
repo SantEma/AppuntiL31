@@ -113,4 +113,29 @@ Il diagramma di contesto ci permette di definire in modo grafico i confini del s
 ![[Pasted image 20260424113447.png]]
 ![[Pasted image 20260424113507.png]]
 #### Descrizione caso d'uso
-La descrizione del caso d'uso si divide in **Formato breve** [Da finire da pag 16 a 26]
+La descrizione del caso d'uso si divide in 
+- **Formato breve**: composto da un singolo paragrafo di poche righe
+- **Formato strutturato**: composto da scenari di interazione
+##### Scenari di interazione per casi d'uso
+I casi d’uso possono essere descritti sotto forma di scenari di interazione (dialogo) tra gli attori e il sistema
+In generale si dividono in:
+- Scenario principale di successo
+- Scenari alternativi ed eccezionali espressi come estensioni
+
+Uno scenario definisce cosa accade nel sistema in seguito all'evento di innesco, ossia:
+- Come e quando il caso d'uso inizia
+- Chi inizia il caso d'uso
+- Interazione tra attore/i e caso d'uso, insieme a cosa viene scambiato
+- Come 
+#### Validazione dei requisiti
+Nella validazione dei requisiti l'obiettivo è assicurarsi che la specifica dei requisiti del software rappresenti in modo accurato e chiaro i bisogni del committente.
+
+La revisione dei requisiti avviene mediante ispezioni ottenute in diversi modi:
+- Lettura individuale e discussione in gruppo
+- Utilizzo di checklist
+- Difetti classificati come:
+	- Omissione
+	- Informazione ambigua
+	- Incosistenza
+	- Fatto non corretto
+	- Informazione estranea
