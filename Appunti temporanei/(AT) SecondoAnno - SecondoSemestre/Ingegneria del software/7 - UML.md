@@ -23,3 +23,7 @@ Lo scopo principale di usare l'UML come design tecnico dettagliato (chiamato anc
 Il linguaggio quindi serve a guidare e documentare fedelmente la realizzazione del software, dovendo pertanto rispettare criteri di completezza e non ambiguità
 
 I diagrammi creati diventano parte integrante e formale della documentazione del sistema
+
+### UML come linguaggio di programmazione
+L'UML come linguaggio di programmazione mira a consentire agli sviluppatori di programmare in modalità visuale, mantenendo una totale indipendenza dalla piattaforma software .
+I diagrammi vengono compilati in modo diretto per generare formati eseguibili, un paradigma che prende il nome di Model Driven Development (MDD),
