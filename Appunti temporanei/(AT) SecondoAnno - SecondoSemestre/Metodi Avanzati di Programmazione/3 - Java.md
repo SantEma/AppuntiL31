@@ -1937,6 +1937,8 @@ Quando si dispone di un oggetto, si può estrarre il riferimento all’oggetto C
 #### Meccanismo di riflessione
 Talvolta le informazioni sulla classe dell’oggetto non sono accessibili a tempo di compilazione, in tal caso risulta molto utile poter usufruire di un meccanismo che ricava le informazioni relative alla classe al run-time
 
-La classe Class supporta il concetto di riflessione e c’è una libreria aggiuntiva java.lang.reflect che contiene delle classi utili allo scopo: Field, Method, Constructor (ognuno dei quali implementa una interfaccia Member).
+La classe `Class` supporta il concetto di riflessione e c’è una libreria aggiuntiva `java.lang.reflect` che contiene delle classi utili allo scopo: Field, Method, Constructor (ognuno dei quali implementa una interfaccia Member).
+
+Questo tipo di oggetti sono creati dalla JVM al run-time per rappresentare il corrispondente membro della classe sconosciuta. Ogni 
 ### JDBC
 [da finire]
