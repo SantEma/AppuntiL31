@@ -13,3 +13,13 @@ A seconda delle esigenze del progetto, l'UML può essere impiegato con tre diffe
 - Semplice abbozzo 
 - Design tecnico dettagliato
 - Linguaggio di programmazione
+### UML come abbozzo
+L'utilizzo dell'UML come abbozzo, o "sketch", ha lo scopo principale di stimolare la comprensione e la comunicazione durante le discussioni di team, permettendo di focalizzare l'attenzione solo su determinati aspetti di un sistema software.
+I criteri fondanti di questo approccio sono la **selettività** e **l'espressività**:
+- La selettività implica che solo alcuni dettagli vengano modellati, potendo omettere liberamente informazioni non essenziali
+- L'espressività  è la creazione di diagrammi intesi come figure collaborative, spesso abbozzate improvvisando su supporti informali come le lavagne
+### UML come design tecnico
+Lo scopo principale di usare l'UML come design tecnico dettagliato (chiamato anche **blueprint**) è quella di dare uno schema da seguire ai programmatori.
+Il linguaggio quindi serve a guidare e documentare fedelmente la realizzazione del software, dovendo pertanto rispettare criteri di completezza e non ambiguità
+
+I diagrammi creati diventano parte integrante e formale della documentazione del sistema
