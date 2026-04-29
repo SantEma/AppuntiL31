@@ -1870,6 +1870,13 @@ In alcuni casi un riferimento potrebbe essere troppo generico, quindi al fine di
 
 ### Identificazione di tipo a run-time
 Java permette di scoprire informazioni sugli oggetti e sulle classi a run-time, basandosi su due approcci:
-- RTTI (RUn)
+- RTTI (Run-time Type Identification, RTTI): si presuppone che le informazioni di tutti i tipi sono accessibili sia in fase di compilazione che di esecuzione
+- Meccanismo di riflessione: permette di scoprire informazioni sulle classi esclusivamente al run-time
+#### RTTI tradizionale
+La rappresentazione delle informazioni su un tipo viene realizzato tramite un tipo speciale di oggetto chiamato **Class** (talvolta chiamato meta classe).
+Contiene diverse informazioni, tra cui metodi, attributi, modalità di accesso... e durante la compilazione ogni classe che costituisce un programma ha un oggetto Class 
+
+Gli oggetti di Class relativi alle varie classi che compongono un programma non sono caricati tutti in memoria prima di iniziare l’esecuzione, infatti quando in run-time si istanzia una classe, la Java Virtual Machine (JVM), su cui sta girando il programma, prima verifica se l’oggetto Class corrispondente è caricato e in caso negativo la JVM lo carica cercando il file .class con quel nome
+
 ### JDBC
 [da finire]
