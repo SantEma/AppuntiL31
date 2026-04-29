@@ -1909,6 +1909,14 @@ Gli oggetti di Class relativi alle varie classi che compongono un programma non 
 > ```
 > In questo esempio, ognuna delle classi Candy e Cookie ha una clausola statica che viene eseguita quando la classe è caricata la prima volta
 
+Il metodo `forName()` è un metodo statico di Class che serve per ottenere un riferimento a un oggetto Class, esso prende un oggetto di tipo String contenente il nome testuale della classe di cui si vuole il riferimento e restituisce un riferimento a Class. Si può notare come ogni oggetto Class è stato caricato solo quando era necessario.
+
+Alternativamente, per ottenere un riferimento a un oggetto Class **si può anche ricorrere al letterale di classe (class literal)**, dato dal nome della classe seguito da .class (esempio: Gum.class).
+I vantaggi di questa notazione sono:
+- Semplicità
+- Efficienza 
+- Controllo di esistenza della classe durante la compilazione
+Il letterale di classe funzione
 
 #### Meccanismo di riflessione
 
