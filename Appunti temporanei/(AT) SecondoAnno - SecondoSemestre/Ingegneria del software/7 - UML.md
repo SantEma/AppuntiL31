@@ -62,3 +62,18 @@ Si rivela indispensabile nei progetti di grande scala.
 > ![[Pasted image 20260429093739.png]]
 
 ### Diagramma comportamentale
+I diagrammi comportamentali modellano la dinamica del sistema
+#### Diagramma delle attività
+Il diagramma delle attività è dedicato alla modellazione dei processi e dei workflow, descrivendo comportamenti sia procedurali che paralleli
+#### Diagramma dei casi d'uso
+Il diagramma dei casi d'uso, già presente storicamente in UML 1, espone il modo in cui gli attori o gli utenti interagiscono con il sistema, sebbene la rappresentazione grafica in sé sia considerata meno rilevante rispetto alle descrizioni testuali associat
+#### Diagramma di macchina a stati
+Il diagramma di macchina a stati evidenzia come eventi specifici modifichino un oggetto lungo il suo ciclo di vita
+#### Diagramma di sequenza
+l diagramma di sequenza pone forte enfasi sull'ordine cronologico dei messaggi scambiati tra gli oggetti ed è massicciamente impiegato per illustrare il comportamento in specifici scenari funzionali
+#### Diagramma di comunicazione
+Il diagramma di comunicazione è logicamente equivalente a quello di sequenza, ma sposta l'enfasi visiva sui collegamenti strutturali tra le entità, risultando tuttavia meno diffuso
+#### Diagramma di interazione generale
+Il diagramma di interazione generale, novità di UML 2, costituisce una fusione concettuale tra un diagramma di sequenza e uno delle attività
+#### Diagramma di temporizzazione
+Il diagramma di temporizzazione, anch'esso introdotto con UML 2, si concentra rigorosamente sui vincoli temporali ed è adottato specialmente nell'ambito dei software embedded e real-time, oltre a essere uno strumento d'elezione per gli ingegneri impegnati nella progettazione elettronic
