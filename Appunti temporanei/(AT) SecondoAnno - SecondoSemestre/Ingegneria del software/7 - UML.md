@@ -31,6 +31,27 @@ L'UML si divide in due macro categorie di diagrammi:
 - **Diagrammi strutturali**
 - **Diagrammi comportamentali**
 ### Diagrammi strutturali
-I diagrammi strutturali descrivono l'architettura statica del sistema e includono il diagramma delle classi, il diagramma dei componenti, il diagramma di struttura composita, il diagramma di deployment, il diagramma degli oggetti e il diagramma dei package
+I diagrammi strutturali descrivono l'architettura statica del sistema e includono i seguenti diagrammi che andremo a vedee
 #### Diagramma delle classi
 Il diagramma delle classi mostra le classi, le loro caratteristiche interne e le reciproche relazioni
+> [!example] Esempio di diagramma delle classi
+> ![[Pasted image 20260429092856.png]]
+>  È uno strumento largamente utilizzato sia nella modellazione concettuale che in quella software
+#### Diagramma dei componenti
+Il diagramma dei componenti illustra i moduli del sistema e le relative connessioni
+> [!example] Esempio di diagramma dei componenti
+> ![[Pasted image 20260429093015.png]]
+#### Diagramma di struttura composita
+Il diagramma di struttura composita, introdotto a partire dalla versione UML 2, mostra in dettaglio la scomposizione a runtime di un classificatore
+
+> [!example] Esempio di diagramma di struttura composita
+> ![[Pasted image 20260429093154.png]]
+> Utile per esplicitare le realizzazioni dei casi d'uso
+#### Diagramma di deployment
+Il diagramma di deployment imostra la mappa la distribuzione fisica dei componenti software nei diversi nodi hardware di elaborazione
+> [!example] Esempio di diagramma di deployment
+> ![[Pasted image 20260429093333.png]]
+#### Diagramma degli oggetti
+#### Diagramma dei package
+
+### Diagramma comportamentale
