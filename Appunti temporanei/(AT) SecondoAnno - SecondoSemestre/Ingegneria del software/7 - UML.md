@@ -64,9 +64,14 @@ Si rivela indispensabile nei progetti di grande scala.
 ### Diagramma comportamentale
 I diagrammi comportamentali modellano la dinamica del sistema
 #### Diagramma delle attività
-Il diagramma delle attività è dedicato alla modellazione dei processi e dei workflow, descrivendo comportamenti sia procedurali che paralleli
+Il diagramma delle attività è atto a rappresentare la modellazione dei processi e dei workflow, descrivendo comportamenti sia procedurali che paralleli
+> [!example] Esempio di diagramma delle attività
+> ![[Pasted image 20260429094556.png]]
 #### Diagramma dei casi d'uso
-Il diagramma dei casi d'uso, già presente storicamente in UML 1, espone il modo in cui gli attori o gli utenti interagiscono con il sistema, sebbene la rappresentazione grafica in sé sia considerata meno rilevante rispetto alle descrizioni testuali associat
+Il diagramma dei casi d'uso espone il modo in cui gli attori o gli utenti interagiscono con il sistema, sebbene la rappresentazione grafica in sé sia considerata meno rilevante rispetto alle descrizioni testuali associate
+
+> [!example] Esempio di diagramma dei casi d'uso
+> ![[Pasted image 20260429094631.png]]
 #### Diagramma di macchina a stati
 Il diagramma di macchina a stati evidenzia come eventi specifici modifichino un oggetto lungo il suo ciclo di vita
 #### Diagramma di sequenza
