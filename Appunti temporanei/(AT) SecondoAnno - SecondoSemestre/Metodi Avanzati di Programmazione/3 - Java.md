@@ -1933,8 +1933,10 @@ In Java, che esegue il controllo di tipo, questo tipo di cast è spesso chiamato
 Un’altra forma di RTTI in Java è ottenuta attraverso l’uso della parola chiave `instanceof`, che indica se un oggetto è istanza di un particolare tipo e restituisce un boolean.
 L’uso dell’operatore `instanceof` potrebbe risultare spesso molto noioso perché lo si deve specificare per il confronto di ogni tipo di oggetto distinto, quindi la classe `Class` mette a disposizione il metodo `isInstance()` che fornisce un modo per invocare dinamicamente l’operatore `instanceof`
 
-Quando si dispone di un oggetto, si può estrarre il riferimento all’oggetto Class relativo alla sua classe richiamando un metodo che è implementato in Object: getClass
+Quando si dispone di un oggetto, si può estrarre il riferimento all’oggetto Class relativo alla sua classe richiamando un metodo che è implementato in Object: `getClass`
 #### Meccanismo di riflessione
-[da finire]
+Talvolta le informazioni sulla classe dell’oggetto non sono accessibili a tempo di compilazione, in tal caso risulta molto utile poter usufruire di un meccanismo che ricava le informazioni relative alla classe al run-time
+
+La classe Class supporta il concetto di riflessione e c’è una libreria aggiuntiva java.lang.reflect che contiene delle classi utili allo scopo: Field, Method, Constructor (ognuno dei quali implementa una interfaccia Member).
 ### JDBC
 [da finire]
