@@ -52,6 +52,13 @@ Il diagramma di deployment imostra la mappa la distribuzione fisica dei componen
 > [!example] Esempio di diagramma di deployment
 > ![[Pasted image 20260429093333.png]]
 #### Diagramma degli oggetti
+Il diagramma degli oggetti fornisce un'istantanea di una configurazione di istanze e dei loro collegamenti in un preciso momento temporale
+> [!example] Esempio di diagramma degli oggetti
+> ![[Pasted image 20260429093813.png]]
 #### Diagramma dei package
+Il diagramma dei package visualizza le dipendenze tra costrutti di raggruppamento (i package, appunto, che possono contenere classi, casi d'uso o componenti). 
+Si rivela indispensabile nei progetti di grande scala.
+> [!example] Esempio di diagramma dei package
+> ![[Pasted image 20260429093739.png]]
 
 ### Diagramma comportamentale
