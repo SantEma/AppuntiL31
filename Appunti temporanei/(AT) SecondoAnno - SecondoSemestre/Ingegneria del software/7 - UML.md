@@ -84,8 +84,19 @@ l diagramma di sequenza mostra l'ordine cronologico dei messaggi scambiati tra g
 > ![[Pasted image 20260429095230.png]]
 > 
 #### Diagramma di comunicazione
-Il diagramma di comunicazione è logicamente equivalente a quello di sequenza, ma sposta l'enfasi visiva sui collegamenti strutturali tra le entità, risultando tuttavia meno diffuso
+Il diagramma di comunicazione è logicamente equivalente a quello di sequenza, ma sposta l'enfasi visiva sui collegamenti strutturali tra le entità, risultando tuttavia meno utilizzato
+> [!example] Esempio di diagramma di comunicazione
+> ![[Pasted image 20260429095404.png]]
 #### Diagramma di interazione generale
 Il diagramma di interazione generale, novità di UML 2, costituisce una fusione concettuale tra un diagramma di sequenza e uno delle attività
+> [!example] Esempio di diagramma di interazione generale
+> ![[Pasted image 20260429095428.png]]
 #### Diagramma di temporizzazione
 Il diagramma di temporizzazione, anch'esso introdotto con UML 2, si concentra rigorosamente sui vincoli temporali ed è adottato specialmente nell'ambito dei software embedded e real-time, oltre a essere uno strumento d'elezione per gli ingegneri impegnati nella progettazione elettronic
+
+> [!example] Esempio di diagramma di temporizzazione
+> ![[Pasted image 20260429095458.png]]
+### Utilizzo dei diagrammi UML
+Generalmente, in diverse fasi di progettazione, vengono utilizzati i seguenti diagrammi UML:
+- **Analisi dei requisiti**: diagramma delle classi, diagramma delle attività, diagramma di macchina a stati
+- **Attività di design**: diagramma delle classi, diagrammi di sequenza
