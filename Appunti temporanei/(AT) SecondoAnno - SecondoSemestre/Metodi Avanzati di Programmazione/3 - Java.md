@@ -1930,7 +1930,10 @@ Le forme di RTTI viste finora sono:
 
 In Java, che esegue il controllo di tipo, questo tipo di cast è spesso chiamato “type safe downcast”
 
-Un’altra forma di RTTI in Java è ottenuta attraverso l’uso della parola chiave `instanceof`, che indica se un oggetto è istanza di un particolare tipo e restituisce un boolean
+Un’altra forma di RTTI in Java è ottenuta attraverso l’uso della parola chiave `instanceof`, che indica se un oggetto è istanza di un particolare tipo e restituisce un boolean.
+L’uso dell’operatore `instanceof` potrebbe risultare spesso molto noioso perché lo si deve specificare per il confronto di ogni tipo di oggetto distinto, quindi la classe `Class` mette a disposizione il metodo `isInstance()` che fornisce un modo per invocare dinamicamente l’operatore `instanceof`
+
+Quando si dispone di un oggetto, si può estrarre il riferimento all’oggetto Class relativo alla sua classe richiamando un metodo che è implementato in Object: getClass
 #### Meccanismo di riflessione
 [da finire]
 ### JDBC
