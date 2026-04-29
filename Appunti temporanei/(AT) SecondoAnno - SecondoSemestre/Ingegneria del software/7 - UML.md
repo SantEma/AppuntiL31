@@ -74,8 +74,15 @@ Il diagramma dei casi d'uso espone il modo in cui gli attori o gli utenti intera
 > ![[Pasted image 20260429094631.png]]
 #### Diagramma di macchina a stati
 Il diagramma di macchina a stati evidenzia come eventi specifici modifichino un oggetto lungo il suo ciclo di vita
+
+> [!example] Esempio di diagramma di macchina a stati
+> ![[Pasted image 20260429095135.png]]
+
 #### Diagramma di sequenza
-l diagramma di sequenza pone forte enfasi sull'ordine cronologico dei messaggi scambiati tra gli oggetti ed è massicciamente impiegato per illustrare il comportamento in specifici scenari funzionali
+l diagramma di sequenza mostra l'ordine cronologico dei messaggi scambiati tra gli oggetti ed è massicciamente impiegato per illustrare il comportamento in specifici scenari funzionali
+> [!example] Esempio di diagramma di sequenza
+> ![[Pasted image 20260429095230.png]]
+> 
 #### Diagramma di comunicazione
 Il diagramma di comunicazione è logicamente equivalente a quello di sequenza, ma sposta l'enfasi visiva sui collegamenti strutturali tra le entità, risultando tuttavia meno diffuso
 #### Diagramma di interazione generale
