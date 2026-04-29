@@ -1869,6 +1869,7 @@ In alcuni casi un riferimento potrebbe essere troppo generico, quindi al fine di
 > ```
 
 ### Identificazione di tipo a run-time
-[da finire]
+Java permette di scoprire informazioni sugli oggetti e sulle classi a run-time, basandosi su due approcci:
+- RTTI (RUn)
 ### JDBC
 [da finire]
