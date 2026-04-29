@@ -23,7 +23,14 @@ Lo scopo principale di usare l'UML come design tecnico dettagliato (chiamato anc
 Il linguaggio quindi serve a guidare e documentare fedelmente la realizzazione del software, dovendo pertanto rispettare criteri di completezza e non ambiguità
 
 I diagrammi creati diventano parte integrante e formale della documentazione del sistema
-
 ### UML come linguaggio di programmazione
 L'UML come linguaggio di programmazione mira a consentire agli sviluppatori di programmare in modalità visuale, mantenendo una totale indipendenza dalla piattaforma software .
 I diagrammi vengono compilati in modo diretto per generare formati eseguibili, un paradigma che prende il nome di Model Driven Development (MDD),
+## Diagrammi UML
+L'UML si divide in due macro categorie di diagrammi:
+- **Diagrammi strutturali**
+- **Diagrammi comportamentali**
+### Diagrammi strutturali
+I diagrammi strutturali descrivono l'architettura statica del sistema e includono il diagramma delle classi, il diagramma dei componenti, il diagramma di struttura composita, il diagramma di deployment, il diagramma degli oggetti e il diagramma dei package
+#### Diagramma delle classi
+Il diagramma delle classi mostra le classi, le loro caratteristiche interne e le reciproche relazioni
