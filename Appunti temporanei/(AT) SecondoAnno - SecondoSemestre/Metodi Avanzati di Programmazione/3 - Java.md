@@ -1878,5 +1878,39 @@ Contiene diverse informazioni, tra cui metodi, attributi, modalità di accesso..
 
 Gli oggetti di Class relativi alle varie classi che compongono un programma non sono caricati tutti in memoria prima di iniziare l’esecuzione, infatti quando in run-time si istanzia una classe, la Java Virtual Machine (JVM), su cui sta girando il programma, prima verifica se l’oggetto Class corrispondente è caricato e in caso negativo la JVM lo carica cercando il file .class con quel nome
 
+> [!example] Esempio di RTTI tradizionale
+> ```java
+> class Candy {
+>     static { // questa è una clausola statica
+>         System.out.println("Loading Candy");
+>     }
+> }
+> class Cookie {
+>     static { // questa è una clausola statica
+>         System.out.println("Loading Cookie");
+>     }
+> }
+> 
+> public class SweetShop {
+> public static void main(String[] args) {
+>     System.out.println("inside main");
+>     new Candy();
+>     System.out.println("After creating Candy");
+>     try {
+>         Class.forName("Gum");
+>     } catch(ClassNotFoundException e) {
+>         e.printStackTrace(System.err);
+>     }
+>     System.out.println("After Class.forName(\"Gum\")");
+>     new Cookie();
+>     System.out.println("After creating Cookie");
+>     }
+> }
+> ```
+> In questo esempio, ognuna delle classi Candy e Cookie ha una clausola statica che viene eseguita quando la classe è caricata la prima volta
+
+
+#### Meccanismo di riflessione
+
 ### JDBC
 [da finire]
