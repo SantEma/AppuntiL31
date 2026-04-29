@@ -1916,9 +1916,16 @@ I vantaggi di questa notazione sono:
 - Semplicità
 - Efficienza 
 - Controllo di esistenza della classe durante la compilazione
-Il letterale di classe funzione
+
+Il letterale di classe funziona anche con gli array, tipi primitivi (boolea.class) e interfacce
+Per i "wrapper" dei tipi primitivi c'è anche un campo standard chiamato **TYPE**, che produce un riferimento all'oggetto Class per il tipo primitivo associato tale che si hanno le seguenti equivalenze
+
+> [!info] Equivalenze di tipo TYPE
+> ![[Pasted image 20260429121813.png]]
+
+##### Forme di RTTI
 
 #### Meccanismo di riflessione
-
+[da finire]
 ### JDBC
 [da finire]
