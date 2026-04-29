@@ -1924,7 +1924,13 @@ Per i "wrapper" dei tipi primitivi c'è anche un campo standard chiamato **TYPE*
 > ![[Pasted image 20260429121813.png]]
 
 ##### Forme di RTTI
+Le forme di RTTI viste finora sono:
+- Il classico cast che usa RTTI per assicurarsi che il cast è corretto e solleva una eccezione ClassCastException se è stato ottenuto un cast non corretto
+- L’oggetto Class rappresentante il tipo dell’oggetto. L’oggetto Class può essere interrogato per ottenere utili informazioni al run-time
 
+In Java, che esegue il controllo di tipo, questo tipo di cast è spesso chiamato “type safe downcast”
+
+Un’altra forma di RTTI in Java è ottenuta attraverso l’uso della parola chiave `instanceof`, che indica se un oggetto è istanza di un particolare tipo e restituisce un boolean
 #### Meccanismo di riflessione
 [da finire]
 ### JDBC
