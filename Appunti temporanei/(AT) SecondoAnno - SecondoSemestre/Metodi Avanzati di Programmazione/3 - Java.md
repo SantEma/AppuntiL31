@@ -1587,7 +1587,43 @@ La classe File è usata anche per:
 - eliminare un file
 - verificare l'oggetto File
 #### I/O con l'utente
-[da correggere]
+Fino ad ora questi output che abbiamo rilasciato nel programma dal file per l'utente non erano formattati adeguatamente. Per rispondere a questa necessità utilizziamo il **format**. Stessa pratica diviene necessaria per quanto riguarda l'input, in maniera tale da ottenere le singole informazioni necessarie e non tutto il file.
+Per processare gli input si utilizza la classe `Scanner`, essa suddivide l'input in **token** e traduce ogni token in un tipo predefinito.
+La suddivisione tra i vari token avviene tramite l'utilizzo dei **white space**.
+> [!example] Esempio di suddivisione di token
+> ```Java
+> Scanner s = null;
+> double sum = 0;
+> try{
+> 	s = new Scanner(new BufferedReader(new FileReader("input.txt")));
+> 	while (s.hasNext()){
+> 		if( s.hasNextDouble()){ //ricerchiamo il dato semplice Double
+> 			sum+=s.nextDouble();
+> 		} else s.next();
+> 	}
+> } finally{
+> 	s.close();
+> }
+> System.out.println(sum);
+> ```
+
+La scomposizione della "Matrioska":
+**1. Il Minatore: `new FileReader("input.txt")`**
+- **Il suo unico lavoro:** Creare il collegamento fisico con il file sul disco rigido e iniziare a estrarre i dati.
+- **Il problema:** Questo è uno stream **unbuffered** (come abbiamo visto precedentemente). Estrae i caratteri uno per volta, direttamente dal disco. Se lo usassimo da solo, sarebbe lentissimo. Non sa cosa siano le parole o i numeri, vede solo una fila di caratteri.
+
+**2. Il Trasportatore: `new BufferedReader(...)`**
+- **Il suo unico lavoro:** Ottimizzare la velocità. Prende in input il lento `FileReader`, aspetta che estragga un bel po' di caratteri, li accumula in un "magazzino" nella RAM (il buffer) e poi li passa al livello successivo tutti in blocco.
+- **Il problema:** È velocissimo, ma è "stupido". Sa leggere intere frasi, ma per lui è solo testo puro. Se nel file c'è scritto "100", per il `BufferedReader` è la parola composta dalle lettere '1', '0', '0', non il numero matematico cento.
+
+**3. L'Interprete: `new Scanner(...)`**
+- **Il suo unico lavoro:** Tradurre e analizzare. Prende il flusso di testo veloce e ottimizzato che gli arriva dal `BufferedReader` e lo "scansiona".
+- **Il vantaggio:** È lui che ti mette a disposizione i metodi comodi come `.nextInt()`, `.nextDouble()` o `.nextLine()`. Riesce a capire gli spazi, ad andare a capo e a convertire il testo nei tipi di dato Java che ti servono.
+#### Perché tutto questo è un vantaggio?
+Se Java avesse un blocco monolitico come `FileScanner`, dovresti riscrivere tutto il codice usando un ipotetico `WebScanner`.
+
+Invece, grazie a questo sistema a matrioska, **cambi solo il pezzo più interno** (il minatore), lasciando intatto il trasportatore e l'interprete. Si sostituisce il `FileReader` con uno stream di rete, ma lo `Scanner` continuerà a funzionare esattamente allo stesso modo nel resto del tuo programma.
+### I/O da linea di comando
 ##### I/O da linea di comando
 La classe System mette a disposizione tre stream collegati al terminale:
 - `System.in`: InputStream che legge l'input
