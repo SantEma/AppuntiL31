@@ -1584,14 +1584,14 @@ La classe File è usata anche per:
 - eliminare un file
 - verificare l'oggetto File
 #### I/O con l'utente
-[da finire]
+Ogni output visto fino a questo momento non è formattato adeguatamente. Per adeguarci a questa necessità utilizziamo 
 ### I/O da linea di comando
 ##### I/O da linea di comando
 La classe System mette a disposizione tre stream collegati al terminale:
 - `System.in`: InputStream che legge l'input
 - `System.out`: PrintStream che stampa l'output
 - `System.err`: PrintStream che stampa messaggi di errore
-> [!example] Esempio di I/O con l'utente
+> [!example] Esempio di I/O con l'utente da linea di comando
 > ```Java
 > public static void main(String args[]){
 > 	Scanner scanner=new Scanner(new InputStreamReader(System.in));
