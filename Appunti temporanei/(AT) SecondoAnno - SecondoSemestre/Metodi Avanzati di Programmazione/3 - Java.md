@@ -1584,7 +1584,28 @@ La classe File è usata anche per:
 - eliminare un file
 - verificare l'oggetto File
 #### I/O con l'utente
-Ogni output visto fino a questo momento non è formattato adeguatamente. Per adeguarci a questa necessità utilizziamo 
+Ogni output visto fino a questo momento non è formattato adeguatamente. Per adeguarci a questa necessità abbiamo bisogno di poter formattare l'output in modo da renderlo comprensibile, così  da poter ottenere le singole informazioni necessarie dall'input di un utente
+
+> [!example] Esempio di input formattato tramite `Scanner`
+> ```Java
+> Scanner s = null;
+> double sum = 0;
+> try{
+> 	s = new Scanner(new BufferedReader(new FileReader("input.txt")));
+> 	while (s.hasNext()){
+> 		if( s.hasNextDouble()){ //ricerchiamo il dato semplice Double
+> 			sum+=s.nextDouble();
+> 		} else s.next();
+> 	}
+> } finally{
+> 	s.close();
+> }
+> System.out.println(sum);
+> ```
+> La classe `Scanner` permette quindi di processare l'input suddividendolo i token e traducendolo rispetto ad un tipo predefinito. I token vengono suddivisi utilizzando i white space.
+> 
+> `new FileReader("input.txt")` prende i caratteri direttamente dal file sul disco,  `new BufferedReader(...)` li accumula in un buffer situato in RAM.
+> 
 ### I/O da linea di comando
 ##### I/O da linea di comando
 La classe System mette a disposizione tre stream collegati al terminale:

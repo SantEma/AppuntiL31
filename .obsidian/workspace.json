@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a README"
+              "title": "Riferimenti a 3 - Java"
             }
           },
           {
@@ -156,21 +156,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di README"
+              "title": "Struttura di 3 - Java"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,7 +184,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5306f1e7ff18e550",
+  "active": "82de0b15ee57eba5",
   "lastOpenFiles": [
     "Senza nome.canvas",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
