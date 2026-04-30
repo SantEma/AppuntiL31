@@ -1611,7 +1611,6 @@ La classe System mette a disposizione tre stream collegati al terminale:
 > 	scanner.close();
 > }
 > ```
-
 #### Data Streams
 I flussi di dati supportano l'I/O binario dei valori di dati primitivi, tra cui le stringhe pure.
 I flussi di dati implementano l'interfaccia **DataInput** o **DataOutput**, tra cui le più utilizzate di queste due interfacce sono proprio **DataInputStream** e **DataOutputStream**.
@@ -1640,7 +1639,7 @@ Ogni scrittura in DataStreams corrisponde esattamente alla lettura corrispondent
 #### Serializzazione degli oggetti
 Se si volesse salvare dei dati su un file che non siano di tipo primitivo, come gli oggetti, DataStream da solo non basta. Dovremmo memorizzare tutte le parti di un oggetto in maniera separata, con una rappresentazione ben precisa così da ricostruire l'informazione correttamente al momento del bisogno. Questo processo prende il nome di **persistenza**.
 
->[!NOTE] Definizione persistenza
+>[!NOTE] Definizione di persistenza
 >La **persistenza** di un oggetto è la capacità dell'oggetto di vivere separatamente dal programma che lo ha generato
 
 Java contiene un meccanismo interno per creare oggetti persistenti, detto **serializzazione**.
@@ -1670,7 +1669,7 @@ Per poter leggere l’oggetto serializzato e ricaricarlo in memoria centrale si 
 >```
 >La serializzazione di un oggetto si occupa di serializzare tutti gli eventuali riferimenti ad esso collegati. Se la classe Car contenesse dei riferimenti (variabili di classe o di istanza) a oggetti di classe Engine, questa verrebbe serializzata automaticamente e diverrebbe parte della serializzazione di Car. La classe Engine dovrà, pertanto, implementare anch’essa l’interfaccia serializable al suo interno.
 
->[!ERROR] Errore comune: 
+>[!ERROR] Errore comune
 >Gli attributi di classe, cioè definiti come static, **non vengono serializzati**. Per poterli salvare occorre provvedere in modo personalizzato.
 
 > [!example] Esempio di serializzazione personalizzata
@@ -1803,7 +1802,6 @@ Tornando all’esempio di contenitore generico, a questo punto è possibile crea
 > }
 > ```
 > Tramite la parametrizzazione, un tentativo di immissione di un dato incoerente nella struttura genera tempestivamente un errore a tempo di compilazione, garantendo la sicurezza (type safety) senza oneri aggiuntivi di casting in fase di estrazione.
-
 #### Interfacce per Generics
 Le Java Generics possono essere anche utilizzate per parametrizzare la dichiarazione di interfacce
 > [!example] Esempio di dichiarazione di interfacce
@@ -1816,7 +1814,6 @@ Le Java Generics possono essere anche utilizzate per parametrizzare la dichiaraz
 > Iterator<T> iterator()
 > ``` 
 > Le classi che implementano tale interfaccia permettono ad un oggetto di essere usato nello statement "foreach".
-
 #### Metodi generici
 Oltre all'astrazione strutturale, il linguaggio permette la definizione di metodi generici, parametrizzando unicamente le dichiarazioni delle specifiche funzioni all'interno di una classe.
 **Un metodo può essere definito generico indipendentemente dalla fatto che la classe sia generica oppure no.** Per di più, se un metodo definito in una classe parametrizzata è statico, tale metodo non accederà al parametro di tipo della classe.
@@ -1867,7 +1864,6 @@ In alcuni casi un riferimento potrebbe essere troppo generico, quindi al fine di
 >     }
 > }
 > ```
-
 ### Identificazione di tipo a run-time
 Java permette di scoprire informazioni sugli oggetti e sulle classi a run-time, basandosi su due approcci:
 - RTTI (Run-time Type Identification, RTTI): si presuppone che le informazioni di tutti i tipi sono accessibili sia in fase di compilazione che di esecuzione
@@ -1922,7 +1918,6 @@ Per i "wrapper" dei tipi primitivi c'è anche un campo standard chiamato **TYPE*
 
 > [!info] Equivalenze di tipo TYPE
 > ![[Pasted image 20260429121813.png]]
-
 ##### Forme di RTTI
 Le forme di RTTI viste finora sono:
 - Il classico cast che usa RTTI per assicurarsi che il cast è corretto e solleva una eccezione ClassCastException se è stato ottenuto un cast non corretto
