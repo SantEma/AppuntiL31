@@ -1343,7 +1343,6 @@ L'interfaccia Map implementa alcuni metodi utili
 - `containsKey(Object key)`, : booleano che restituisce true se la Map contiene la chiave `key`
 - `containsValue(Object value)`: booleano che restituisce true se la Map contiene il valore `value`
 - `putAll(Map<K, V> map)`: inserisce tutti gli elementi di `map`
-
 > [!example] Calcolare le frequenze con una HashMap
 > ```java
 > public class Freq {
@@ -1542,7 +1541,6 @@ Le classi I/O che permettono il prelievo di una stringa e l'inserimento di una s
 #### Buffered I/O
 Il Buffered I/O è il più famoso ed utilizzato, specialmente per lo sviluppo in Java.
 E' molto conveniente poiché le operazioni vengono eseguite **direttamente sul dispositivo di I/O**; questo è possibile poiché le classi di Java (generalmente) sono **unbeffered**.
-
 >[!NOTE] Buffered e Unbeffered
 > - **Unbeffered Stream**: Ogni singola richiesta di lettura o scrittura viene gestita e inviata **direttamente e immediatamente al dispositivo di I/O** (come il disco rigido)
 > - **Buffered Stream**: Utilizza un'area di memoria temporanea e velocissima nella RAM (chiamata buffer)
@@ -1556,7 +1554,6 @@ l confronto tra questi due metodi serve a dimostrare il principio dell'**ottimiz
 - **BufferedReader** e **BufferedWriter**: creano le versioni buffered di un character stream
 
 A livello di codice si creano nel seguente modo: 
-
 > [!example] Esempio di creazione BufferedReader e BufferedWriter
 > ```java 
 > inputStream = new BufferedReader(new FileReader(“pippo.txt")); 
@@ -1587,49 +1584,13 @@ La classe File è usata anche per:
 - eliminare un file
 - verificare l'oggetto File
 #### I/O con l'utente
-Fino ad ora questi output che abbiamo rilasciato nel programma dal file per l'utente non erano formattati adeguatamente. Per rispondere a questa necessità utilizziamo il **format**. Stessa pratica diviene necessaria per quanto riguarda l'input, in maniera tale da ottenere le singole informazioni necessarie e non tutto il file.
-Per processare gli input si utilizza la classe `Scanner`, essa suddivide l'input in **token** e traduce ogni token in un tipo predefinito.
-La suddivisione tra i vari token avviene tramite l'utilizzo dei **white space**.
-> [!example] Esempio di suddivisione di token
-> ```Java
-> Scanner s = null;
-> double sum = 0;
-> try{
-> 	s = new Scanner(new BufferedReader(new FileReader("input.txt")));
-> 	while (s.hasNext()){
-> 		if( s.hasNextDouble()){ //ricerchiamo il dato semplice Double
-> 			sum+=s.nextDouble();
-> 		} else s.next();
-> 	}
-> } finally{
-> 	s.close();
-> }
-> System.out.println(sum);
-> ```
-
-La scomposizione della "Matrioska":
-**1. Il Minatore: `new FileReader("input.txt")`**
-- **Il suo unico lavoro:** Creare il collegamento fisico con il file sul disco rigido e iniziare a estrarre i dati.
-- **Il problema:** Questo è uno stream **unbuffered** (come abbiamo visto precedentemente). Estrae i caratteri uno per volta, direttamente dal disco. Se lo usassimo da solo, sarebbe lentissimo. Non sa cosa siano le parole o i numeri, vede solo una fila di caratteri.
-
-**2. Il Trasportatore: `new BufferedReader(...)`**
-- **Il suo unico lavoro:** Ottimizzare la velocità. Prende in input il lento `FileReader`, aspetta che estragga un bel po' di caratteri, li accumula in un "magazzino" nella RAM (il buffer) e poi li passa al livello successivo tutti in blocco.
-- **Il problema:** È velocissimo, ma è "stupido". Sa leggere intere frasi, ma per lui è solo testo puro. Se nel file c'è scritto "100", per il `BufferedReader` è la parola composta dalle lettere '1', '0', '0', non il numero matematico cento.
-
-**3. L'Interprete: `new Scanner(...)`**
-- **Il suo unico lavoro:** Tradurre e analizzare. Prende il flusso di testo veloce e ottimizzato che gli arriva dal `BufferedReader` e lo "scansiona".
-- **Il vantaggio:** È lui che ti mette a disposizione i metodi comodi come `.nextInt()`, `.nextDouble()` o `.nextLine()`. Riesce a capire gli spazi, ad andare a capo e a convertire il testo nei tipi di dato Java che ti servono.
-#### Perché tutto questo è un vantaggio?
-Se Java avesse un blocco monolitico come `FileScanner`, dovresti riscrivere tutto il codice usando un ipotetico `WebScanner`.
-
-Invece, grazie a questo sistema a matrioska, **cambi solo il pezzo più interno** (il minatore), lasciando intatto il trasportatore e l'interprete. Si sostituisce il `FileReader` con uno stream di rete, ma lo `Scanner` continuerà a funzionare esattamente allo stesso modo nel resto del tuo programma.
+[da finire]
 ### I/O da linea di comando
 ##### I/O da linea di comando
 La classe System mette a disposizione tre stream collegati al terminale:
 - `System.in`: InputStream che legge l'input
 - `System.out`: PrintStream che stampa l'output
 - `System.err`: PrintStream che stampa messaggi di errore
-
 > [!example] Esempio di I/O con l'utente
 > ```Java
 > public static void main(String args[]){
@@ -1654,7 +1615,6 @@ L'esempio **DataStreams** mostra i flussi di dati scrivendo un **set di record d
 - Prezzo (double), 
 - quantità (int), 
 - descrizione (String).
-
 > [!example] Esempio di Datastream
 > ```JAVA
 > static final String dataFile="invoicedata";
@@ -1689,7 +1649,6 @@ La sua realizzazione prevede l'uso di un interfaccia con due classi:
 Ogni oggetto che si vuole serializzare deve implementare l’interfaccia `Serializable`, la quale non contiene metodi e serve soltanto al compilatore per comprendere che un oggetto di quella determinata classe può essere serializzato.
 
 `ObjectInputStream` e `ObjectOutputStream` sono **stream di manipolazione** e devono essere utilizzati congiuntamente a un `OutputStream` e un `InputStream`.
-
 > [!example] Esempio di serializzazione
 > ```Java
 > FileOutputStream outFile = new FileOutputStream("info.dat");
@@ -1761,13 +1720,11 @@ Per questo tipo di richiesta e problematica ci viene in aiuto la parola chiave *
 > In questo caso, durante la serializzazione dell'oggetto che include queste due variabili, la variabile CF, anche se privata, sarà serializzata, mentre la password sarà ignorata nella rappresentazione grazie alla keyword transient.
 ### Generics
 Le Generics in Java vengono introdotte per poter superare il limite imposto dalle interfacce nella generalizzazione (ossia il **polimorfismo per inclusione**)
-
 > [!example] Limitazione delle interfacce in Java
 > È possibile implementare un metodo $m$ che prende in input un oggetto della classe base $A$ come argomento. Tale metodo potrà essere utilizzato su tutte le sottoclassi della classe $A$ (ammesso che $A$ non sia dichiarata `final`). 
 > La limitazione della applicabilità del metodo $m$ ad un albero di ereditarietà con radice $A$ può essere superato con l’utilizzo di un’interfaccia, ma alcune volte anche questo diventa un limite, dovendo ricorrere all'astrazione generica
 
 Le Generics quindi permettono un astrazione maggiore rispetto alle interfacce, creando **classi contenitori** in grado di contenere oggetti omogenei di qualsiasi classe
-
 > [!example] Esempio di Generics (W3Schools)
 > ```java
 > class Box<T> {  
@@ -1800,7 +1757,6 @@ Le Generics quindi permettono un astrazione maggiore rispetto alle interfacce, c
 Uno degli scopi primari delle Java Generics risiede nella capacità di fornire un meccanismo di casting automatico e sicuro al momento dell'istanziazione di un tipo parametrizzato, delegando al compilatore il compito di verificare la consistenza dei tipi rigorosamente a tempo di compilazione (compile-time)
 #### Tuple di Generics
 In alcuni casi è possibile che sia necessario definire una funzione che restituisca non un singolo valore ma una coppia di valori o una tripla, allora si può definire con le Generics delle tuple
-
 > [!example] Esempio di tuple in Generics
 > ```java
 > public class TwoTuple<A,B> {
@@ -1877,7 +1833,6 @@ ArrayList<Integer>.class
 Il compilatore Java adotta la **tecnica dell'erasure**: tutte le direttive e i controlli sui tipi vengono eseguiti ed esauriti a compile-time, per poi essere cancellati durante la generazione del bytecode. Conseguentemente, a tempo di esecuzione, le istanze di collezioni diverse dal punto di vista semantico risultano essere indistinguibili e appartenenti al medesimo tipo base grazie alla tecnica dell'astrazione generica.
 #### Wildcards
 All'interno delle Generics possono essere messi dei tipi parametrici jolly chiamati **wildcard**, che servono ad indebolire i vincoli di tipo
-
 > [!example] Wildcards
 > ```java
 > public class WildcardClassReferences {
@@ -1889,7 +1844,6 @@ All'interno delle Generics possono essere messi dei tipi parametrici jolly chiam
 > ```
 
 In alcuni casi un riferimento potrebbe essere troppo generico, quindi al fine di creare riferimenti specifici è possibile combinare una wildcard con una estensione di una classe
-
 > [!example] Esempio di estensione
 > ``` java
 > public class BoundedClassReferences {
@@ -1909,7 +1863,6 @@ La rappresentazione delle informazioni su un tipo viene realizzato tramite un ti
 Contiene diverse informazioni, tra cui metodi, attributi, modalità di accesso... e durante la compilazione ogni classe che costituisce un programma ha un oggetto Class 
 
 Gli oggetti di Class relativi alle varie classi che compongono un programma non sono caricati tutti in memoria prima di iniziare l’esecuzione, infatti quando in run-time si istanzia una classe, la Java Virtual Machine (JVM), su cui sta girando il programma, prima verifica se l’oggetto Class corrispondente è caricato e in caso negativo la JVM lo carica cercando il file .class con quel nome
-
 > [!example] Esempio di RTTI tradizionale
 > ```java
 > class Candy {
@@ -1951,7 +1904,6 @@ I vantaggi di questa notazione sono:
 
 Il letterale di classe funziona anche con gli array, tipi primitivi (boolea.class) e interfacce
 Per i "wrapper" dei tipi primitivi c'è anche un campo standard chiamato **TYPE**, che produce un riferimento all'oggetto Class per il tipo primitivo associato tale che si hanno le seguenti equivalenze
-
 > [!info] Equivalenze di tipo TYPE
 > ![[Pasted image 20260429121813.png]]
 ##### Forme di RTTI
