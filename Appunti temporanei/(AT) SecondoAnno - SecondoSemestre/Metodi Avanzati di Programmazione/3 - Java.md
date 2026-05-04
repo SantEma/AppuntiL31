@@ -1954,4 +1954,34 @@ Java implementa lo standard JDBC (Java DataBase Connectvity) che è **platform-i
 JDBC incorpora in se stesso tutte le normali operazioni di interfacciamento con un database: connessione, creazione di tabelle, interrogazione e visualizzazione dei risultati
 #### Connessione ad un database
 Per poter aprire una connessione ad un database è necessario ottenere un oggetto di tipo `Connection`, che fornisce tutti i metodi per preparare le query SQL.
-Per ottenere una connessione è necessario caricare il driver che implementa le API JDBC, chiamando il metodo `getConnection()` della classe `DriverManager` con passaggio di 
+Per ottenere una connessione è necessario caricare il driver che implementa le API JDBC, chiamando il metodo `getConnection()` della classe `DriverManager` 
+
+Il metodo `DriverManager.getConnection stabilisce` una connessione ad un database. Questo metodo richiede una database URL, che dipende dal DBMS, per esempio:
+
+> [!example] Esempio di connessione database H2
+> ```
+> jdbc:h2:/home/user/test/db
+> ``` 
+> dove /home/user/test/db è il file su file system che conterrà il DB
+
+Altri parametri come ad esempio username e password possono essere specificati attraverso un oggetto `Properties` passato al metodo `getConnection()` insieme alla URL
+
+> [!example] Esempi di connessione al database
+> ```java
+> //connessione senza parametri 
+> Connection conn = DriverManager.getConnection("jdbc:h2:/home/user/test/db"); //connessione con username e password 
+> Connection conn = DriverManager.getConnection("jdbc:h2:/home/user/test/db","us er","1234"); //connessione con oggetto Properties 
+> Properties dbprops = new Properties(); 
+> dbprops.setProperty("user", "user"); 
+> dbprops.setProperty("password", "1234"); 
+> Connection conn = DriverManager.getConnection("jdbc:h2:/home/user/test/db", dbprops);
+> ```
+#### SQLException
+Quando la JDBC genere un errore durante le interrogazioni di un database solleva un eccezione di tipo **SQLException**, che contiene diverse informazioni:
+- Una descrizione testuale, data dal metodo `getMessage()`
+- `getSQLState()`, restituisce un codice alfanumerico codificato secondo lo standard ISO/ANSI e Open Group (X/Open)
+- `getErrorCode()` restituisce un valore intero che indica un codice di errore specifico del driver che implementa JDBC
+#### Statement
+Le query SQL si eseguono attraverso oggetti di tipo `Statement`, ottenuti tramite l'oggetto `Connection`.
+
+È possibile ottenere anche degli statement preimpostati in cui è possibile sostituire a dei segnaposto inseriti nella query SQL dei valori. Queste query preimpostate sono utili per inserire in maniera corretta all'interno della query dei lettarali applicando le opportune conversioni di tipo
