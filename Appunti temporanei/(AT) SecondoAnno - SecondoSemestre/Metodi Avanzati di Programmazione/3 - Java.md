@@ -1952,6 +1952,8 @@ Java ha la possibilità di sviluppare applicazioni client/server indipendenti da
 Java implementa lo standard JDBC (Java DataBase Connectvity) che è **platform-independent**, e fornisce un driver per poter gestire dinamicamente tutti gli oggetti driver di cui hanno bisogno le interrogazioni a database.
 
 JDBC incorpora in se stesso tutte le normali operazioni di interfacciamento con un database: connessione, creazione di tabelle, interrogazione e visualizzazione dei risultati
+
+Attraverso il driver JDBC si possono effettuare tutte le operazioni disponibili su un DMBS.
 #### Connessione ad un database
 Per poter aprire una connessione ad un database è necessario ottenere un oggetto di tipo `Connection`, che fornisce tutti i metodi per preparare le query SQL.
 Per ottenere una connessione è necessario caricare il driver che implementa le API JDBC, chiamando il metodo `getConnection()` della classe `DriverManager` 
@@ -1985,3 +1987,54 @@ Quando la JDBC genere un errore durante le interrogazioni di un database solleva
 Le query SQL si eseguono attraverso oggetti di tipo `Statement`, ottenuti tramite l'oggetto `Connection`.
 
 È possibile ottenere anche degli statement preimpostati in cui è possibile sostituire a dei segnaposto inseriti nella query SQL dei valori. Queste query preimpostate sono utili per inserire in maniera corretta all'interno della query dei lettarali applicando le opportune conversioni di tipo
+##### Statement di modifica
+Per eseguire le varie operazioni di modifica di un DB (come creazione di tabelle, aggiunta di tuple, modifica di tuple) si usa il metodo `executeUpdate()` definito dall'oggetto `Statement`. Gli statement vanno sempre chiusi tramite `close()`per liberare risorse
+> [!example] Esempio di statement di modifica 
+> ```java
+> public static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS store (artId INT PRIMARY KEY, desc VARCHAR(1024), price DOUBLE, unit INTEGER)";
+> ... 
+> Connection conn = DriverManager.getConnection("jdbc:h2:/home/user/db/store", dbprops); Statement stm = conn.createStatement(); 
+> stm.executeUpdate(CREATE_TABLE); 
+> stm.close(); //chiudere lo statement!!!
+> 
+> stm = conn.createStatement(); 
+> stm.executeUpdate("INSERT INTO store VALUES(1,'pentola',4.5,20)"); 
+> stm.close();
+> ```
+
+> [!example] Esempio di prepared Statement
+> ```java
+> PreparedStatement pstm = conn.prepareStatement("INSERT INTO store VALUES (?, ?, ?, ?)"); // ? è un segnaposto 
+> pstm.setInt(1, 2); //l’indice parte da 1 
+> pstm.setString(2, "piatto"); // i metodi set si occupano di inserire i letterali nella query SQL 
+> pstm.setDouble(3, 1.5); pstm.setInt(4, 40); 
+> pstm.executeUpdate(); 
+> pstm.close();
+> ```
+##### Statement di interrogazione
+Le query di selezione dei dati si effettuano con il metodo `executeQuery("Query")` che è istanziato sempre da `Statement`.
+
+`executeQuery()` restituisce un oggetto di tipo `ResultSet` che permette di navigare nelle tuple restituite (simile ad un iteratore)
+
+> [!example] Esempio di statement di interrogazione
+> ```java
+> Statement stm = conn.createStatement(); 
+> ResultSet rs = stm.executeQuery("SELECT artId, desc FROM store WHERE unit>5"); 
+> while (rs.next()) { 
+> 	System.out.println(rs.getInt(1) + ": " + rs.getString(2)); 
+> } 
+> rs.close(); 
+> stm.close();
+> ```
+> 
+> ```java
+> PreparedStatement pstm = conn.prepareStatement("SELECT artId, desc FROM store WHERE unit > ?"); 
+> pstm.setInt(1, 20); 
+> rs = pstm.executeQuery(); 
+> while (rs.next()) { 
+> 	System.out.println(rs.getInt(1) + ": " + rs.getString(2)); 
+> } 
+> rs.close(); 
+> stm.close();
+> ```
+> È possibile utilizzare anche i PreparedStatement per le SELECT
