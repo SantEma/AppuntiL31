@@ -1945,6 +1945,8 @@ La classe `Class` supporta il concetto di riflessione e c’è una libreria aggi
 
 Questo tipo di oggetti sono creati dalla JVM al run-time per rappresentare il corrispondente membro della classe sconosciuta. 
 
-Quando si usa i 
+Quando si usa il meccanismo di riflessione, la JVM tratta l'oggetto come appartenente ad una classe particolare, per questo deve essere sempre accessibile (localmente e in rete)
+
++
 ### JDBC
 [da finire]
