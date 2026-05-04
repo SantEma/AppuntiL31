@@ -1953,3 +1953,5 @@ Java implementa lo standard JDBC (Java DataBase Connectvity) che è **platform-i
 
 JDBC incorpora in se stesso tutte le normali operazioni di interfacciamento con un database: connessione, creazione di tabelle, interrogazione e visualizzazione dei risultati
 #### Connessione ad un database
+Per poter aprire una connessione ad un database è necessario ottenere un oggetto di tipo `Connection`, che fornisce tutti i metodi per preparare le query SQL.
+Per ottenere una connessione è necessario caricare il driver che implementa le API JDBC, chiamando il metodo `getConnection()` della classe `DriverManager` con passaggio di 
