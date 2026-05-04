@@ -1943,6 +1943,6 @@ Talvolta le informazioni sulla classe dell’oggetto non sono accessibili a temp
 
 La classe `Class` supporta il concetto di riflessione e c’è una libreria aggiuntiva `java.lang.reflect` che contiene delle classi utili allo scopo: Field, Method, Constructor (ognuno dei quali implementa una interfaccia Member).
 
-Questo tipo di oggetti sono creati dalla JVM al run-time per rappresentare il corrispondente membro della classe sconosciuta. Ogni oggetto 
+Questo tipo di oggetti sono creati dalla JVM al run-time per rappresentare il corrispondente membro della classe sconosciuta. La classe `Class` permette di definire
 ### JDBC
 [da finire]
