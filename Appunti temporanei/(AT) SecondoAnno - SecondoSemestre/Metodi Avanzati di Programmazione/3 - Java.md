@@ -1947,3 +1947,9 @@ Questo tipo di oggetti sono creati dalla JVM al run-time per rappresentare il co
 
 Quando si usa il meccanismo di riflessione, la JVM tratta l'oggetto come appartenente ad una classe particolare, per questo deve essere sempre accessibile (localmente e in rete)
 ### JDBC
+Java ha la possibilità di sviluppare applicazioni client/server indipendenti dalla piattaforma, garantita anche per applicazioni che lavorano su basi di dati.
+
+Java implementa lo standard JDBC (Java DataBase Connectvity) che è **platform-independent**, e fornisce un driver per poter gestire dinamicamente tutti gli oggetti driver di cui hanno bisogno le interrogazioni a database.
+
+JDBC incorpora in se stesso tutte le normali operazioni di interfacciamento con un database: connessione, creazione di tabelle, interrogazione e visualizzazione dei risultati
+#### Connessione ad un database
