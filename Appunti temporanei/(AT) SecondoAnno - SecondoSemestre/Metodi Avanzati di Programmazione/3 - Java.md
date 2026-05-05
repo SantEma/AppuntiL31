@@ -2038,3 +2038,7 @@ Le query di selezione dei dati si effettuano con il metodo `executeQuery("Query"
 > stm.close();
 > ```
 > È possibile utilizzare anche i PreparedStatement per le SELECT
+### Programmazione concorrente
+[da finire]
+### Programmazione in rete
+[da finire]
