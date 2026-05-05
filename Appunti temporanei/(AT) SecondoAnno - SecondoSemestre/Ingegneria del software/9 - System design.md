@@ -8,15 +8,17 @@ La progettazione di dettaglio dipende dal paradigma di programmazione usato (per
 Generalmente un sottosistema include le classi, operazioni interne e altri aspetti del sistema che sono strettamente correlati tra i vari sottosistemi.
 L'architettura **evidenzia le decisioni** che avranno un impatto significativo sui lavori successivi.
 ### Rappresentazioni
-L'architettura è rappresentabile sotto diversi stili dell'UML, come ad esempio il **diagramma dei package**:
+L'architettura è rappresentabile sotto diversi stili dell'UML:
+#### Diagramma dei package
+il **diagramma dei package**:
 > [!example] Esempio di diagramma dei package
 > ![[Pasted image 20260502161735.png]]
 > Nell'immagine possiamo notare come elementi di un package (**Services**) richiedono elementi di un altro package che funge da fornitore (**Domain**).
 
+Alternativamente è rappresentabile tramite **diagramma dei componenti**
+> [!example] Esempio di diagramma dei componenti
+> ![[Pasted image 20260502162224.png]]
 
-
-Altrimenti, è rappresentabile tramite **diagramma dei componenti**:
-![[Pasted image 20260502162224.png]]
 Il diagramma dei componenti ci permette di comprendere la modellazione del sistema in termini di **componenti** e **dipendenze tra componenti**.
 Un componente generalmente è un'**interfaccia** pubblica, come un'**API**; una dipendenza è un connettore tra il **componente cliente** e il **componente fornitore**.
 
