@@ -2039,6 +2039,44 @@ Le query di selezione dei dati si effettuano con il metodo `executeQuery("Query"
 > ```
 > È possibile utilizzare anche i PreparedStatement per le SELECT
 ### Programmazione concorrente
-[da finire]
+Un calcolatore moderno è progettato per eseguire molteplici compiti simultaneamente, come la riproduzione musicale, la navigazione sul web o la stesura di un documento in parallelo.
+
+Java mette a disposizione dei programmatori una vasta gamma di classi dedicate alla programmazione concorrente, le quali sono principalmente racchiuse nel pacchetto standard `java.util.concurrent`
+#### Processi e thread
+Anche in presenza di un calcolatore dotato di una singola CPU, il sistema è in grado di simulare l'esecuzione simultanea di più processi attraverso una tecnica denominata **time slicing**, ossia il suddividere il tempo di calcolo complessivo della CPU in finestre temporali, distribuendolo tra i vari processi attivi.
+
+I **processi** rappresentano tipicamente una singola applicazione in esecuzione all'interno del sistema operativo e possono essere composti da **threads**, ossia delle unità di esecuzione meno complesse dei processi.
+#### Runnable e Thread
+In Java, le funzionalità inerenti alla gestione e al ciclo di vita di un singolo flusso di esecuzione sono implementate e fornite dalla classe `Thread`. 
+La creazione di un thread operativo può avvenire seguendo due approcci:
+- **Approccio per classe da zero**
+- **Approccio per estensione di classe**
+> [!example] Esempio di approccio per classe da zero
+> Si va a creare una classe che implementa l’interfaccia `Runnable`: questa interfaccia prevede un singolo metudo run() dove va inserito il codice che deve eseguire il thread
+> ```java
+> public class HelloRunnable implements Runnable { 
+> 	public void run() { 
+> 		System.out.println("Hello from a thread!"); 
+> 		} 
+> 		
+> 	public static void main(String args[]) { 
+> 		(new Thread(new HelloRunnable())).start(); 
+> 	} 
+> }
+> ```
+>
+
+```java
+public class HelloThread extends Thread { 
+	public void run() { 
+		System.out.println("Hello from a thread!"); 
+	} 
+	
+	public static void main(String args[]) { 
+		(new HelloThread()).start(); 
+	} 
+}
+```
 ### Programmazione in rete
+
 [da finire]
