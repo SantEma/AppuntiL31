@@ -2147,9 +2147,37 @@ Quando due thread non sono sincronizzati incorrono due problematiche:
 - **Thread interference**
 - **Memory consistency error**
 La sincronizzazione permette di risolverle ma introduce problemi di **thread contention** quando vogliono utilizzare le stesse
+
+Un metodo sincronizzato può essere chiamato da un solo thread alla volta (e gli altri restano in attesa), garantendo
 ##### Thread interference
 Una **thread interference** avviene quando due operazioni su due thread differenti agiscono sullo stesso dato.
 Essendo operazioni non atomiche è difficile ottenere un risultato prevedibile
+
+> [!example] Esempio di thread interference
+> ```java
+> class Counter {
+>     private int c = 0;
+>     public void increment() {
+>         c++;
+>     }
+>     public void decrement() {
+>         c--;
+>     }
+>     public int value() {
+>         return c;
+>     }
+> }
+> ```
+> 
+> L’operazione `c++ (c--)` non è atomica, poiché
+> 1. Recupera il valore di `c`
+> 2. Incrementa (o decrementa) il valore assegnato
+> 3. Assegna a `c` il nuovo valore
+> 
+> Supponiamo che ci siano due thread, `A` e `B`, il primo richiami la funzione `increment` e il secondo `decrement`:
+> ![[Pasted image 20260506114536.png]]
+> 
+
 
 ### Programmazione in rete
 
