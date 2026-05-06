@@ -2199,15 +2199,17 @@ Si consideri un tipico scenario in cui una variabile inizializzata al valore $0$
 #### Sincronizzazioni delle istruzioni
 È possibile anche sincronizzare soltanto una porzione di istruzioni, utile quando si richiede che soltanto quella porzione venga "velocizzata"
 
-```java
-public void addName(String name) { 
-	synchronized(this) { //in questo caso sincronizziamo solo la modifica di lastName e di nameCount. L’istruzione add non richiede sincronizzazione. Stiamo inserendo un lock sull'oggetto
-		lastName = name;
-		nameCount++; 
-	} 
-	nameList.add(name); 
-}
-``` 
+> [!example] Esempio di sincronizzazione di funzione
+> ```java
+> public void addName(String name) { 
+> 	synchronized(this) { //in questo caso sincronizziamo solo la modifica di lastName e di nameCount. L’istruzione add non richiede sincronizzazione. Stiamo inserendo un lock sull'oggetto
+> 		lastName = name;
+> 		nameCount++; 
+> 	} 
+> 	nameList.add(name); 
+> }
+> ``` 
+
 ### Programmazione in rete
 
 [da finire]
