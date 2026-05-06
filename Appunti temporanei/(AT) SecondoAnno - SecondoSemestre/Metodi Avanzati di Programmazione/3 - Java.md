@@ -2230,5 +2230,8 @@ Esistono fondamentalmente due approcci per risolvere e identificare un indirizzo
 - L'utilizzo del DNS (Domain Name System), ricorrendo a stringhe alfanumeriche come ad esempio $www.di.uniba.it$
 - L'impiego della dot notation, che prevede l'uso di sequenze numeriche come $183.201.181.10$.
 
-In Java, la rappresentazione dell'indirizzo IP, in entrambe le notazioni appena descritte, è affidata a una classe specifica denominata `InetAddress`, la quale è inclusa nel package `java.net`[cite: 1]. Questa classe mette a disposizione del programmatore il metodo statico `InetAddress.getByName()`, il cui scopo è restituire un'istanza di `InetAddress` partendo dal nome dell'host o dal suo indirizzo IP[cite: 1]. A titolo esemplificativo, fornendo al metodo il valore nullo o la stringa testuale associata al localhost, si ottiene il riferimento alla macchina locale, mentre fornendo l'URL di un motore di ricerca, il sistema risolve e restituisce l'indirizzo IP del server remoto associato[cite: 1].
-.
+In Java, la rappresentazione dell'indirizzo IP, in entrambe le notazioni appena descritte, è affidata a una classe specifica denominata `InetAddress`, la quale è inclusa nel package `java.net`. 
+Questa classe mette a disposizione del programmatore il metodo statico `InetAddress.getByName()`, il cui scopo è restituire un'istanza di `InetAddress` partendo dal nome dell'host o dal suo indirizzo IP.
+
+> [!example] Esempio di socket
+> ![[Pasted image 20260506152705.png]]
