@@ -2165,7 +2165,6 @@ Un metodo sincronizzato può essere chiamato da un solo thread alla volta (e gli
 > 	} 
 > }
 > ```
-
 ##### Thread interference
 Una **thread interference** avviene quando due operazioni su due thread differenti agiscono sullo stesso dato.
 Essendo operazioni non atomiche è difficile ottenere un risultato prevedibile
@@ -2194,8 +2193,7 @@ Essendo operazioni non atomiche è difficile ottenere un risultato prevedibile
 > Supponiamo che ci siano due thread, `A` e `B`, il primo richiami la funzione `increment` e il secondo `decrement`:
 > ![[Pasted image 20260506114536.png]]
 > 
-
-
+##### Memory incosistency
 ### Programmazione in rete
 
 [da finire]
