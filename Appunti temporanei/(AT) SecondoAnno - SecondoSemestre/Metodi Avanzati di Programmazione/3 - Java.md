@@ -2134,7 +2134,7 @@ Ogni thread, per essere ben implementato, deve avere le seguenti caratteristiche
 > 	// We've been interrupted return; 
 > 	}
 > ```
-##### 
+##### Unione di esecuzione dei thread
 
 ### Programmazione in rete
 
