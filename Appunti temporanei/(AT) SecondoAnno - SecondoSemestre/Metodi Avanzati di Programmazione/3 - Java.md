@@ -2213,7 +2213,8 @@ Si consideri un tipico scenario in cui una variabile inizializzata al valore $0$
 Ci sono diversi problemi presenti nella programmazione concorrente:
  - **Deadlock**: due o più thread sono bloccati in modo indefinito perché ognuno attende la fine dell’altro
  - **Starvation**: un thread non riesce ad accedere ad alcune risorse perché sono utilizzate avidamente da altri thread
- - **Livelock**: un thread A in genere agisce in risposta di un altro thread B, se B agisce in risposta di un altro thread C allora i thread proseguiranno in maniera discontinua
+ - **Livelock**: un thread `A` in genere agisce in risposta di un altro thread `B`, se `B` agisce in risposta di un altro thread C allora i thread proseguiranno in maniera discontinua
 ### Programmazione in rete
+La programmazione in rete, nota anche come programmazione distribuita, è sempre risultata complessa e particolarmente soggetta ad errori data dalla necessità da parte del programmatore di conoscere tutto il
 
-[da finire]
+Nel linguaggio Java, la programmazione in rete subisce un processo di notevole semplificazione, venendo astratta in modo efficace attraverso l'uso di un set dedicato di class
