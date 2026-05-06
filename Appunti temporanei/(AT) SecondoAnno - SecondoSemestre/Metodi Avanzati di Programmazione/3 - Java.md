@@ -2201,8 +2201,9 @@ Si consideri un tipico scenario in cui una variabile inizializzata al valore $0$
 
 ```java
 public void addName(String name) { 
-	synchronized(this) { 
-	lastName = name; nameCount++; 
+	synchronized(this) { //in questo caso sincronizziamo solo la modifica di lastName e di nameCount. L’istruzione add non richiede sincronizzazione. Stiamo inserendo un lock sull'oggetto
+		lastName = name;
+		nameCount++; 
 	} 
 	nameList.add(name); 
 }
