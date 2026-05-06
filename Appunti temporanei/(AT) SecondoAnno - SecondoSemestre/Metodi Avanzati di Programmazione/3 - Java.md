@@ -2141,6 +2141,8 @@ La chiamata del metodo `join()` mette in pausa il thread corrente fino a quando 
 > [!info] Visualizzazione grafica del join e del ciclo di vita di un thread
 > ![[Pasted image 20260506103832.png]]
 > ![[Pasted image 20260506103843.png]]
+#### Sincronizzazione dei thread
+I thread per poter comunicare e accedere alle stesse risorse hanno bisogno di essere **sincronizzati**
 
 ### Programmazione in rete
 
