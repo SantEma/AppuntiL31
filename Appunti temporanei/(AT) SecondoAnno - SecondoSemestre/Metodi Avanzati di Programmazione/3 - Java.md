@@ -2195,7 +2195,7 @@ Essendo operazioni non atomiche è difficile ottenere un risultato prevedibile
 > 
 ##### Memory incosistency
 Si verifica quando due thread hanno una visione inconsistente di uno stesso dato.
-Si consideri un tipico scenario in cui una variabile inizializzata al valore $0$ sia accessibile simultaneamente a due entità, definite come Thread `A` e Thread `B`. Qualora il Thread `A` procede all'incremento della variabile e, nel medesimo istante temporale, il Thread `B` proceda alla stampa a schermo della stessa, sussiste la concreta possibilità che il Thread `B` restituisca il valore originario di $0$ poiché l'operazione di aggiornamento del Thread `A`, benché avviata, non si è ancora conclusa.
+Si considera un tipico scenario in cui una variabile inizializzata al valore $0$ sia accessibile simultaneamente a due entità, definite come Thread `A` e Thread `B`. Qualora il Thread `A` procede all'incremento della variabile e, nel medesimo istante temporale, il Thread `B` proceda alla stampa a schermo della stessa, sussiste la concreta possibilità che il Thread `B` restituisca il valore originario di $0$ poiché l'operazione di aggiornamento del Thread `A`, benché avviata, non si è ancora conclusa.
 #### Sincronizzazioni delle istruzioni
 È possibile anche sincronizzare soltanto una porzione di istruzioni, utile quando si richiede che soltanto quella porzione venga "velocizzata"
 
@@ -2251,3 +2251,14 @@ Le librerie di Java mettono a disposizione due classi principali basate sugli st
 Creando un socket in Java, si ottengono un InputStream e un OutputStream (o, con appropriate conversioni, un Reader e un Writer) al fine di abilitare la connessione in modo simile a un I/O su stream di oggetti.
 
 Una volta che un client richiede una connessione socket, il `ServerSocket` restituisce (mediante il metodo accept()) un `Socket` corrispondente attraverso il quale la comunicazione può avvenire dal lato server, creando una connessione **Socket-To-Socket**
+
+Durante la fase di inizializzazione, la creazione di un `ServerSocket` richiede esclusivamente l'indicazione di un numero di porta, omettendo l'indirizzo IP poiché esso coincide implicitamente con quello della macchina su cui il server è in esecuzione.
+Al contrario, la creazione di un `Socket` lato client impone la specificazione di entrambi i parametri, in quanto server e client risiedono generalmente su elaboratori distinti. 
+
+
+Il socket generato dalla chiamata `ServerSocket.accept()` incapsulerà automaticamente sia le informazioni del client sia quelle del server. 
+Raggiunto questo punto, si possono invocare i metodi `getInputStream()` e `getOutputStream()` sui rispettivi socket per ricavare gli stream di dati, i quali supportano nativamente l'impiego delle classi di buffering e di formattazione del testo.
+#### Servire più client
+Per consentire al server di servire più client in maniera simultanea, è indispensabile ricorrere al multithreading. 
+Il design pattern di base per affrontare tale casistica prevede l'istanziamento di un singolo `ServerSocket` sul server, seguito dalla chiamata bloccante al metodo `accept()`, che pone il processo in attesa attiva di una connessione. 
+Nel momento in cui una connessione viene stabilita e il metodo `accept()` conclude la sua esecuzione restituendo il socket di comunicazione, quest'ultimo viene immediatamente passato a un nuovo thread appositamente istanziato per servire le richieste di quello specifico client. Nel frattempo, il thread principale del server non si arresta, ma si riavvia in un ciclo perpetuo richiamando nuovamente il metodo `accept()`, mettendosi così in attesa della successiva richiesta di connessione.
