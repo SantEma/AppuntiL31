@@ -2112,26 +2112,30 @@ Ogni thread, per essere ben implementato, deve avere le seguenti caratteristiche
 - Ogni `interrupt()` deve coincidere con la sua terminazione
 - Ogni thread catturi l'eccezione `InterruptedException` e interrompa la sua esecuzione
 
-```java
-for (int i = 0; i < importantInfo.length; i++) {
-    // Pause for 4 seconds
-    try {
-        Thread.sleep(4000);
-    } catch (InterruptedException e) {
-    // We've been interrupted: no more messages.
-    return;
-    }
-    // Print a message 
-    System.out.println(importantInfo[i]);
-}
-```
+> [!example] Esempi di interrupt
+> Riprendendo l’esempio precedente, catturiamo l’eccezione durante lo sleep
+> ```java
+> for (int i = 0; i < importantInfo.length; i++) {
+>     // Pause for 4 seconds
+>     try {
+>         Thread.sleep(4000);
+>     } catch (InterruptedException e) {
+> 	    // We've been interrupted: no more messages.
+> 	    return; // Se interrotto esco dal metodo run
+>     }
+>     // Print a message 
+>     System.out.println(importantInfo[i]);
+> }
+> ```
+> Se non ci sono metodi che generano InterruptedException allora controlliamo periodicamente se qualche altro thread abbia invocato l’interruzione
+> ```java
+> for (int i = 0; i < inputs.length; i++) { //do something 
+> 	if (Thread.interrupted()) { //Restituisce true nel caso di interruzione 
+> 	// We've been interrupted return; 
+> 	}
+> ```
+##### 
 
-```java
-for (int i = 0; i < inputs.length; i++) { //do something 
-	if (Thread.interrupted()) { //Restituisce true nel caso di interruzione 
-	// We've been interrupted return; 
-	}
-```
 ### Programmazione in rete
 
 [da finire]
