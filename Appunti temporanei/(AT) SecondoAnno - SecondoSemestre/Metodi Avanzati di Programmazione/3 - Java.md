@@ -2209,7 +2209,11 @@ Si consideri un tipico scenario in cui una variabile inizializzata al valore $0$
 > 	nameList.add(name); 
 > }
 > ``` 
-
+#### Problemi della programmazione concorrente
+Ci sono diversi problemi presenti nella programmazione concorrente:
+ - **Deadlock**: due o più thread sono bloccati in modo indefinito perché ognuno attende la fine dell’altro
+ - **Starvation**: un thread non riesce ad accedere ad alcune risorse perché sono utilizzate avidamente da altri thread
+ - **Livelock**: un thread A in genere agisce in risposta di un altro thread B, se B agisce in risposta di un altro thread C allora i thread proseguiranno in maniera discontinua
 ### Programmazione in rete
 
 [da finire]
