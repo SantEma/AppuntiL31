@@ -2220,4 +2220,15 @@ La programmazione in rete, nota anche come programmazione distribuita, è sempre
 Nel linguaggio Java, la programmazione in rete subisce una notevole semplificazione, venendo astratta in modo efficace attraverso l'uso di un set dedicato di classi.
 Queste classi gestiscono dei file di lettura e scrittura che non si trovano nella macchina locale ma in una remota, con totale autonomia di come processare un informazione inviata o richiesta.
 
-Il modello di programmazione adottato si fonda sull'incapsulamento (**wrapping**) di una connessione di rete, definita socket, all'interno di un flusso (**stream**) di oggetti
+Il modello di programmazione adottato si fonda sull'incapsulamento (**wrapping**) di una connessione di rete, definita socket, all'interno di un flusso (**stream**) di oggetti. Grazie a questa astrazione è possibile impiegare le medesime invocazioni di metodo utilizzate per gli stream dei file.
+
+Grazie alla natura multipiattaforma di Java, tutte le specificità e i dettagli di basso livello della rete vengono gestiti direttamente dalla Java Virtual Machine (JVM) e dall'installazione locale dell'ambiente Java
+#### Identificazione di una macchina
+Per instaurare una comunicazione efficace con un altro nodo della rete, risulta indispensabile identificare in maniera univoca il destinatario.
+L'identificazione del nodo avviene mediante l'indirizzo IP (Internet Protocol).
+Esistono fondamentalmente due approcci per risolvere e identificare un indirizzo IP: 
+- L'utilizzo del DNS (Domain Name System), ricorrendo a stringhe alfanumeriche come ad esempio $www.di.uniba.it$
+- L'impiego della dot notation, che prevede l'uso di sequenze numeriche come $183.201.181.10$.
+
+In Java, la rappresentazione dell'indirizzo IP, in entrambe le notazioni appena descritte, è affidata a una classe specifica denominata `InetAddress`, la quale è inclusa nel package `java.net`[cite: 1]. Questa classe mette a disposizione del programmatore il metodo statico `InetAddress.getByName()`, il cui scopo è restituire un'istanza di `InetAddress` partendo dal nome dell'host o dal suo indirizzo IP[cite: 1]. A titolo esemplificativo, fornendo al metodo il valore nullo o la stringa testuale associata al localhost, si ottiene il riferimento alla macchina locale, mentre fornendo l'URL di un motore di ricerca, il sistema risolve e restituisce l'indirizzo IP del server remoto associato[cite: 1].
+.
