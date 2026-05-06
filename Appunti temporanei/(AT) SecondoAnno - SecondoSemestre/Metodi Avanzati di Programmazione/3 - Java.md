@@ -2086,9 +2086,26 @@ L’interfaccia `Runnable` è più generica in quanto svincolata dalla classe `T
 Per regolare il ritmo di esecuzione è possibile sospendere il thread corrente invocando il metodo `Thread.sleep()`.
 L'intervallo di tempo può essere espresso in millisecondi o millisecondi+nanosecondi, anche se il calcolo del tempo è dipendente dal sistema operativo e non può essere esatto.
 
-```java
-
-```
+> [!example] Esempio di sleep
+> ```java
+> public class SleepMessages {
+>     public static void main(String args[]) throws InterruptedException { // sleep può generare un’eccezione se il thread viene interrotto da un altro thread durante lo sleep
+>         String importantInfo[] = {
+>             "Info 1",
+>         "Info 2",
+>         "Info 3",
+>         "Info 4"
+>         };
+>         for (int i = 0; i < importantInfo.length; i++) {
+>             //sospendi per 4 secondi (4000 millisecondi)
+>             Thread.sleep(4000);
+>             //Stampa il messaggio
+>         System.out.println(importantInfo[i]);
+>         }
+>     }
+> }
+> ```
+##### Interruzione di un thread
 
 ### Programmazione in rete
 
