@@ -2240,4 +2240,14 @@ Su una macchina singola può ospitare più servizi contemporaneamente, per quest
 
 Quando si imposta un client o un server è necessario scegliere la “porta” (port) sul quale sia il server che il client decidono di connettersi.
 
-Il port non è una locazione fisica su una macchina ma è una astrazione software, tipicamente ogni servizio è associato ad un singolo numero di port su una macchina server
+Il port non è una locazione fisica su una macchina ma è una astrazione software, tipicamente ogni servizio è associato ad un singolo numero di port su una macchina server. Il programma clienti quindi non deve conoscere soltanto l'indirizzo IP, ma anche la porta giusta.
+#### Socket
+All'interno dell'ecosistema Java, la connessione verso una macchina remota viene stabilita attraverso l'utilizzo dei **socket**. Il socket è un astrazione software usata per rappresentare i terminali di connessioni di due macchine
+
+Le librerie di Java mettono a disposizione due classi principali basate sugli stream per la gestione dei socket: 
+- La classe `ServerSocket`, impiegata dal server per rimanere in ascolto delle richieste di connessione in ingresso,  l
+- La classe `Socket`, utilizzata dal client per inizializzare attivamente la connessione
+
+Creando un socket in Java, si ottengono un InputStream e un OutputStream (o, con appropriate conversioni, un Reader e un Writer) al fine di abilitare la connessione in modo simile a un I/O su stream di oggetti.
+
+Una volta che un client richiede una connessione socket, il `ServerSocket` restituisce (mediante il metodo accept()) un `Socket` corrispondente attraverso il quale la comunicazione può avvenire dal lato server, creando una connessione **Socket-To-Socket**
