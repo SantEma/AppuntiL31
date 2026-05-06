@@ -11,14 +11,12 @@
             "id": "5306f1e7ff18e550",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
-                "mode": "source",
-                "source": false
+                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506103832.png"
               },
-              "icon": "lucide-file",
-              "title": "3 - Java"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260506103832"
             }
           }
         ]
@@ -78,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "2413337e7f34b214",
@@ -185,14 +182,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5306f1e7ff18e550",
+  "active": "ab83996f0563bfdd",
   "lastOpenFiles": [
-    "Pasted image 20260506114536.png",
-    "Pasted image 20260506103843.png",
-    "Pasted image 20260506103832.png",
+    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
+    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506114536.png",
+    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506103843.png",
+    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506103832.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/9 - System design.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/10 - OO Design.md",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260502192259.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260502192219.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260502191357.png",
@@ -200,7 +197,6 @@
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260502191048.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260502190659.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260502190529.png",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260502173916.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/8 - Analisi dei requisiti.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/1 - Paradigmi di Programmazione e Astrazione.md",
     "Senza nome.canvas",

@@ -2197,7 +2197,16 @@ Essendo operazioni non atomiche è difficile ottenere un risultato prevedibile
 Si verifica quando due thread hanno una visione inconsistente di uno stesso dato.
 Si consideri un tipico scenario in cui una variabile inizializzata al valore $0$ sia accessibile simultaneamente a due entità, definite come Thread `A` e Thread `B`. Qualora il Thread `A` procede all'incremento della variabile e, nel medesimo istante temporale, il Thread `B` proceda alla stampa a schermo della stessa, sussiste la concreta possibilità che il Thread `B` restituisca il valore originario di $0$ poiché l'operazione di aggiornamento del Thread `A`, benché avviata, non si è ancora conclusa.
 #### Sincronizzazioni delle istruzioni
+È possibile anche sincronizzare soltanto una porzione di istruzioni, utile quando si richiede che soltanto quella porzione venga "velocizzata"
 
+```java
+public void addName(String name) { 
+	synchronized(this) { 
+	lastName = name; nameCount++; 
+	} 
+	nameList.add(name); 
+}
+``` 
 ### Programmazione in rete
 
 [da finire]
