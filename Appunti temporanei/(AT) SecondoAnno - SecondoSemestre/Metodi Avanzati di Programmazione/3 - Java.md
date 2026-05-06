@@ -2142,7 +2142,14 @@ La chiamata del metodo `join()` mette in pausa il thread corrente fino a quando 
 > ![[Pasted image 20260506103832.png]]
 > ![[Pasted image 20260506103843.png]]
 #### Sincronizzazione dei thread
-I thread per poter comunicare e accedere alle stesse risorse hanno bisogno di essere **sincronizzati**
+I thread per poter comunicare e accedere alle stesse risorse hanno bisogno di essere **sincronizzati**.
+Quando due thread non sono sincronizzati incorrono due problematiche:
+- **Thread interference**
+- **Memory consistency error**
+La sincronizzazione permette di risolverle ma introduce problemi di **thread contention** quando vogliono utilizzare le stesse
+##### Thread interference
+Una **thread interference** avviene quando due operazioni su due thread differenti agiscono sullo stesso dato.
+Essendo operazioni non atomiche è difficile ottenere un risultato prevedibile
 
 ### Programmazione in rete
 
