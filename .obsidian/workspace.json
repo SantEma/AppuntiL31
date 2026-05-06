@@ -11,12 +11,14 @@
             "id": "5306f1e7ff18e550",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506103832.png"
+                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/10 - OO Design.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260506103832"
+              "icon": "lucide-file",
+              "title": "10 - OO Design"
             }
           }
         ]
@@ -182,13 +184,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ab83996f0563bfdd",
+  "active": "5306f1e7ff18e550",
   "lastOpenFiles": [
+    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/9 - System design.md",
+    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506103832.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506114536.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506103843.png",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506103832.png",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/9 - System design.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/10 - OO Design.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260502192259.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260502192219.png",
