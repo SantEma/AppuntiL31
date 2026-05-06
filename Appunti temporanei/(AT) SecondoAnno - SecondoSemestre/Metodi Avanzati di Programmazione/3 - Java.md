@@ -2235,3 +2235,4 @@ Questa classe mette a disposizione del programmatore il metodo statico `InetAddr
 
 > [!example] Esempio di socket
 > ![[Pasted image 20260506152705.png]]
+#### Uso del port
