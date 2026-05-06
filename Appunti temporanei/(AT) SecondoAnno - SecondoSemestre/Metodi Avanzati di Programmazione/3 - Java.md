@@ -2217,4 +2217,7 @@ Ci sono diversi problemi presenti nella programmazione concorrente:
 ### Programmazione in rete
 La programmazione in rete, nota anche come programmazione distribuita, è sempre risultata complessa e particolarmente soggetta ad errori data dalla necessità da parte del programmatore di conoscere tutto il
 
-Nel linguaggio Java, la programmazione in rete subisce una notevole semplificazione, venendo astratta in modo efficace attraverso l'uso di un set dedicato di classi
+Nel linguaggio Java, la programmazione in rete subisce una notevole semplificazione, venendo astratta in modo efficace attraverso l'uso di un set dedicato di classi.
+Queste classi gestiscono dei file di lettura e scrittura che non si trovano nella macchina locale ma in una remota, con totale autonomia di come processare un informazione inviata o richiesta.
+
+Il modello di programmazione adottato si fonda sull'incapsulamento (**wrapping**) di una connessione di rete, definita socket, all'interno di un flusso (**stream**) di oggetti
