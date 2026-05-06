@@ -2080,9 +2080,10 @@ La creazione di un thread operativo può avvenire seguendo due approcci:
 > ```
 
 In entrambi i casi è necessario invocare il metodo `start()` di `Thread` per farlo partire.
-L’interfaccia `Runnable` è più generica in quanto svincolata dalla classe `Thread`, il suo utilizzo permette di evitare l'ereditarietà di una classe da `Thread`, così da poter ereditare da altre se necessario
-
-
+L’interfaccia `Runnable` è più generica in quanto svincolata dalla classe `Thread`, il suo utilizzo permette di evitare l'ereditarietà delle varie altre classi da `Thread`, così da poter ereditare da altre se necessario
+#### Controllo di esecuzione
+##### Sospensione di esecuzione
+Per regolare il ritmo di esecuzione è possibile sospendere il thread corrente invocando il metodo `Thread.sleep()`.
 ### Programmazione in rete
 
 [da finire]
