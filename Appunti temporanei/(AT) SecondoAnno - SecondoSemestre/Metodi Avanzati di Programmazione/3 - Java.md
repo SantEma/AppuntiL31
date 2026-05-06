@@ -2139,7 +2139,8 @@ La classe `Thread` include anche il metodo `join()`, utile per la temporizzazion
 La chiamata del metodo `join()` mette in pausa il thread corrente fino a quando il thread sul quale si è chiamato non termina. Come il metodo precedente, `join()` permette di specificare un tempo massimo di atteso e può essere interrotto da un `InterruptedException`
 
 > [!info] Visualizzazione grafica del join e del ciclo di vita di un thread
-> Contents
+> ![[Pasted image 20260506103832.png]]
+> ![[Pasted image 20260506103843.png]]
 
 ### Programmazione in rete
 
