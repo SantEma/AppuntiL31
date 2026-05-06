@@ -2084,6 +2084,7 @@ L’interfaccia `Runnable` è più generica in quanto svincolata dalla classe `T
 #### Controllo di esecuzione
 ##### Sospensione di esecuzione
 Per regolare il ritmo di esecuzione è possibile sospendere il thread corrente invocando il metodo `Thread.sleep()`.
+L'intervallo di tempo può essere espresso in millisecondi o millisecondi+nanosecondi, anche se il calcolo del tempo è dipendente dal sistema operativo e non può essere esatto.
 ### Programmazione in rete
 
 [da finire]
