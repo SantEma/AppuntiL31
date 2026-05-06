@@ -2066,17 +2066,23 @@ La creazione di un thread operativo può avvenire seguendo due approcci:
 > ```
 >
 
-```java
-public class HelloThread extends Thread { 
-	public void run() { 
-		System.out.println("Hello from a thread!"); 
-	} 
-	
-	public static void main(String args[]) { 
-		(new HelloThread()).start(); 
-	} 
-}
-```
+> [!example] Esempio di approccio per estensione di classe
+> ```java
+> public class HelloThread extends Thread { 
+> 	public void run() { 
+> 		System.out.println("Hello from a thread!"); 
+> 	} 
+> 	
+> 	public static void main(String args[]) { 
+> 		(new HelloThread()).start(); 
+> 	} 
+> }
+> ```
+
+In entrambi i casi è necessario invocare il metodo `start()` di `Thread` per farlo partire.
+L’interfaccia `Runnable` è più generica in quanto svincolata dalla classe `Thread`, il suo utilizzo permette di evitare l'ereditarietà di una classe da `Thread`, così da poter ereditare da altre se necessario
+
+
 ### Programmazione in rete
 
 [da finire]
