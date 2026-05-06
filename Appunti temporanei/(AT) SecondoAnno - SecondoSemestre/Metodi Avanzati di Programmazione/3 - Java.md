@@ -2106,8 +2106,8 @@ L'intervallo di tempo può essere espresso in millisecondi o millisecondi+nanose
 > }
 > ```
 ##### Interruzione di un thread
-L'interruzione di un thread in esecuzione può essere forzata invocando il metodo `interrupt`.
-Ogni thread per essere nelle buone convenzioni 
+L'interruzione di un thread in esecuzione può essere forzata invocando il metodo `interrupt()`.
+Ogni thread ,per essere ben implementato, deve avere le seguenti caratteristiche 
 ### Programmazione in rete
 
 [da finire]
