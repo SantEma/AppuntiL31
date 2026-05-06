@@ -2135,6 +2135,7 @@ Ogni thread, per essere ben implementato, deve avere le seguenti caratteristiche
 > 	}
 > ```
 ##### Unione di esecuzione dei thread
+La classe `Thread` include anche il metodo `join()`, utile per la temporizzazione dei stessi thread
 
 ### Programmazione in rete
 
