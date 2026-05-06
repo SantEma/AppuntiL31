@@ -2236,3 +2236,8 @@ Questa classe mette a disposizione del programmatore il metodo statico `InetAddr
 > [!example] Esempio di socket
 > ![[Pasted image 20260506152705.png]]
 #### Uso del port
+Su una macchina singola può ospitare più servizi contemporaneamente, per questo l'indirizzo IP da solo non è sufficiente. 
+
+Quando si imposta un client o un server è necessario scegliere la “porta” (port) sul quale sia il server che il client decidono di connettersi.
+
+Il port non è una locazione fisica su una macchina ma è una astrazione software, tipicamente ogni servizio è associato ad un singolo numero di port su una macchina server
