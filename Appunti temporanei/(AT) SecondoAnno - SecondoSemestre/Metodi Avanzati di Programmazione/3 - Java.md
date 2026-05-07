@@ -2245,16 +2245,15 @@ Il port non è una locazione fisica su una macchina ma è una astrazione softwar
 All'interno dell'ecosistema Java, la connessione verso una macchina remota viene stabilita attraverso l'utilizzo dei **socket**. Il socket è un astrazione software usata per rappresentare i terminali di connessioni di due macchine
 
 Le librerie di Java mettono a disposizione due classi principali basate sugli stream per la gestione dei socket: 
-- La classe `ServerSocket`, impiegata dal server per rimanere in ascolto delle richieste di connessione in ingresso,  l
+- La classe `ServerSocket`, impiegata dal server per rimanere in ascolto delle richieste di connessione in ingresso
 - La classe `Socket`, utilizzata dal client per inizializzare attivamente la connessione
 
-Creando un socket in Java, si ottengono un InputStream e un OutputStream (o, con appropriate conversioni, un Reader e un Writer) al fine di abilitare la connessione in modo simile a un I/O su stream di oggetti.
+Creando un socket in Java, si ottengono un `InputStream` e un `OutputStream` (o, con appropriate conversioni, un Reader e un Writer) al fine di abilitare la connessione in modo simile a un I/O su stream di oggetti.
 
-Una volta che un client richiede una connessione socket, il `ServerSocket` restituisce (mediante il metodo accept()) un `Socket` corrispondente attraverso il quale la comunicazione può avvenire dal lato server, creando una connessione **Socket-To-Socket**
+Una volta che un client richiede una connessione socket, il `ServerSocket` restituisce (mediante il metodo `accept()`) un `Socket` corrispondente attraverso il quale la comunicazione può avvenire dal lato server, creando una connessione **Socket-To-Socket**
 
 Durante la fase di inizializzazione, la creazione di un `ServerSocket` richiede esclusivamente l'indicazione di un numero di porta, omettendo l'indirizzo IP poiché esso coincide implicitamente con quello della macchina su cui il server è in esecuzione.
 Al contrario, la creazione di un `Socket` lato client impone la specificazione di entrambi i parametri, in quanto server e client risiedono generalmente su elaboratori distinti. 
-
 
 Il socket generato dalla chiamata `ServerSocket.accept()` incapsulerà automaticamente sia le informazioni del client sia quelle del server. 
 Raggiunto questo punto, si possono invocare i metodi `getInputStream()` e `getOutputStream()` sui rispettivi socket per ricavare gli stream di dati, i quali supportano nativamente l'impiego delle classi di buffering e di formattazione del testo.
@@ -2262,3 +2261,5 @@ Raggiunto questo punto, si possono invocare i metodi `getInputStream()` e `getOu
 Per consentire al server di servire più client in maniera simultanea, è indispensabile ricorrere al multithreading. 
 Il design pattern di base per affrontare tale casistica prevede l'istanziamento di un singolo `ServerSocket` sul server, seguito dalla chiamata bloccante al metodo `accept()`, che pone il processo in attesa attiva di una connessione. 
 Nel momento in cui una connessione viene stabilita e il metodo `accept()` conclude la sua esecuzione restituendo il socket di comunicazione, quest'ultimo viene immediatamente passato a un nuovo thread appositamente istanziato per servire le richieste di quello specifico client. Nel frattempo, il thread principale del server non si arresta, ma si riavvia in un ciclo perpetuo richiamando nuovamente il metodo `accept()`, mettendosi così in attesa della successiva richiesta di connessione.
+#### Esempi di codice
+Poichè gli esempi di codice sono molto prolissi, rimando direttamente al materiale fornito dal professore sulla sua [pagina Github](https://github.com/pippokill/mapB_2526/tree/main/lab/src/main/java/di/uniba/map/b/lab/rete)
