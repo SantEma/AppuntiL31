@@ -2263,3 +2263,4 @@ Il design pattern di base per affrontare tale casistica prevede l'istanziamento 
 Nel momento in cui una connessione viene stabilita e il metodo `accept()` conclude la sua esecuzione restituendo il socket di comunicazione, quest'ultimo viene immediatamente passato a un nuovo thread appositamente istanziato per servire le richieste di quello specifico client. Nel frattempo, il thread principale del server non si arresta, ma si riavvia in un ciclo perpetuo richiamando nuovamente il metodo `accept()`, mettendosi così in attesa della successiva richiesta di connessione.
 #### Esempi di codice
 Poichè gli esempi di codice sono molto prolissi, rimando direttamente al materiale fornito dal professore sulla sua [pagina Github](https://github.com/pippokill/mapB_2526/tree/main/lab/src/main/java/di/uniba/map/b/lab/rete)
+### Java RESTful
