@@ -2273,7 +2273,7 @@ Comunemente viene definita un’interfaccia uniforme per la condivisione delle r
 - Un insieme vincolato di operazioni ben definite
 - Un insieme vincolato di contenuti
 - Un protocollo che è:
-	- Client-server
-	- Privo di stato (stateless)
-	- Memorizzabile in cache
-	- A livelli
+	- Client-server: I ruoli del client e del server sono ben separati, diventa più facile poter scalare con il tempo e server e client possono essere sostituiti e sviluppati indipendentemente fintanto che l'interfaccia non viene modificata.
+	- Privo di stato (stateless): La comunicazione client–server è vincolata in modo che nessun contesto client venga memorizzato sul server tra le richieste. Ciascuna richiesta dai vari client contiene tutte le informazioni necessarie per richiedere il servizio e lo stato della sessione è contenuto nel clien
+	- Memorizzabile in cache: I client possono mettere in cache le risposte. Queste devono in ogni modo definirsi implicitamente o esplicitamente cacheable o no, in modo da prevenire che i client possano riutilizzare stati vecchi e dati errati.
+	- A livelli: il sistema è realizzato “a strati” (layer). Ciò rende possibile, per esempio, pubblicare le API in un server, memorizzare i dati in un secondo server e gestire l'autenticazione delle richieste in un terzo server.
