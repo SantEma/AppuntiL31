@@ -2266,4 +2266,14 @@ Poichè gli esempi di codice sono molto prolissi, rimando direttamente al materi
 ### Java RESTful
 Il REST (**Representational State Transfer**) è un tipo di architettura software per i sistemi distribuiti, basato sulla trasmissione di dati tramite protocollo HTTP senza ulteriori livelli.
 
-I sistemi REST non prevedono il concetto di sessione (anche chiamati **stateless**) e prevedono una struttura delle URI (Uniform Resource Identifier) ben definita che identifica univocamente una risorsa o un insieme di risorse.
+I sistemi REST non prevedono il concetto di sessione (anche chiamati **stateless**) e prevedono una struttura URI (Uniform Resource Identifier) ben definita, che identifica univocamente una risorsa o un insieme di risorse.
+#### Principi di una REST
+Nella REST, lo stato dell'applicazione e le funzionalità sono divisi in **risorse web**, ognuna di esse unica e indirizzabile usando la sintassi delle URI.
+Comunemente viene definita un’interfaccia uniforme per la condivisione delle risorse che permette il trasferimento di stato tra client e risorse, attraverso:
+- Un insieme vincolato di operazioni ben definite
+- Un insieme vincolato di contenuti
+- Un protocollo che è:
+	- Client-server
+	- Privo di stato (stateless)
+	- Memorizzabile in cache
+	- A livelli
