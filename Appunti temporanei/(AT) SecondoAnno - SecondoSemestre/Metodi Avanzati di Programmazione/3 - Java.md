@@ -2264,3 +2264,6 @@ Nel momento in cui una connessione viene stabilita e il metodo `accept()` conclu
 #### Esempi di codice
 Poichè gli esempi di codice sono molto prolissi, rimando direttamente al materiale fornito dal professore sulla sua [pagina Github](https://github.com/pippokill/mapB_2526/tree/main/lab/src/main/java/di/uniba/map/b/lab/rete)
 ### Java RESTful
+Il REST (**Representational State Transfer**) è un tipo di architettura software per i sistemi distribuiti, basato sulla trasmissione di dati tramite protocollo HTTP senza ulteriori livelli.
+
+I sistemi REST non prevedono il concetto di sessione (anche chiamati **stateless**) e prevedono una struttura delle URI (Uniform Resource Identifier) ben definita che identifica univocamente una risorsa o un insieme di risorse.
