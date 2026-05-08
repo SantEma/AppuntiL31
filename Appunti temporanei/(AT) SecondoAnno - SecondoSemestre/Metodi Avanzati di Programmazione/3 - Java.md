@@ -2277,5 +2277,35 @@ Comunemente viene definita un’interfaccia uniforme per la condivisione delle r
 	- **Privo di stato (stateless):** La comunicazione client–server è vincolata in modo che nessun contesto client venga memorizzato sul server tra le richieste. Ciascuna richiesta dai vari client contiene tutte le informazioni necessarie per richiedere il servizio e lo stato della sessione è contenuto nel client
 	- **Memorizzabile in cache**: I client possono mettere in cache le risposte. Queste devono in ogni modo definirsi implicitamente o esplicitamente cacheable o no, in modo da prevenire che i client possano riutilizzare stati vecchi e dati errati.
 	- **A livelli**: il sistema è realizzato “a strati” (layer). Ciò rende possibile, per esempio, pubblicare le API in un server, memorizzare i dati in un secondo server e gestire l'autenticazione delle richieste in un terzo server.
+#### Risorse
+Una risorsa è una fonte di informazioni alla quale si può accedere attraverso un identificativo univoco (URI). 
+Per utilizzare tali risorse sia il client e il server comunicano attraverso un **protocollo comune** (HTTP) e che sia il serve che il client abbiano un **meccanismo di rappresentazione** (come JSON o XML).
+RESTful contrariamente ad altri protocolli non definisce standard per la rappresentazione o per le modalità di comunicazione.
+##### Rappresentazione dei dati
+Un formato molto utilizzato per lo scambio dei dati è **JavaScript Object Notation (JSON).** Un JSON è racchiuso tra parentesi graffe è può contenere diversi tipi di dati.
 
-#### Risorse in una rest
+> [!example] Esempio di rappresentazione JSON
+> ![[Pasted image 20260508195551.png]]
+##### Definizione dei metodi
+Progettare una API REST prevede la definizione dei **metodi/servizi**. 
+Ogni metodo ha un suo **path**, ossia un identificativo univoco che coincide con la URL da utilizzare per richiedere il metodo tramite protocollo HTTP. Ad ogni metodo deve essere associato anche il relativo verbo HTTP da utilizzare.
+
+Le URL possono avere dei parametri che possono essere utilizzati per scambiare informazioni con il server, ad esempio l’id della risorsa da recuperare.
+
+> [!example] Esempio di risorsa da recuperare tramite URL
+> Supponiamo di avere un metodo per il recupero di un libro da un store:
+> ```HTTP
+> http://store.api.org/book?id=12 
+> http://store.api.org/book/12
+> ```
+> Riprendendo l’esempio precedente il client potrebbe utilizzare uno dei due servizi semplicemente effettuando una richiesta HTTP/GET per ottenere un libro tramite il suo id (es. 12):
+> ```JSON
+>  {
+> 	 "id": 12, 
+> 	 "title": "Alice in Wonderland", 
+> 	 "price": 12.50 
+>  }
+> ```
+
+
+
