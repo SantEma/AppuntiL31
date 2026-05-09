@@ -2306,6 +2306,57 @@ Le URL possono avere dei parametri che possono essere utilizzati per scambiare i
 > 	 "price": 12.50 
 >  }
 > ```
+#### Java e JSON
+Per poter integrare JSON con il linguaggio Java utilizzeremo una libreria di nome **GSON**
+> [!example] Esempio di integrazione con il libro
+> ![[Pasted image 20260509113235.png]]
+> Possiamo vedere come la classe GSON implementi i metodi `toJSON()` per convertire i parametri passati in un file JSON a partire da un oggetto e come possa fare la conversione inversa con `fromJSON()`
+#### JAX-RS
+Jakarta RESTful Web Services, (JAX-RS) è una API di Java che fornisce supporto nella creazione di servizi Web secondo il modello architetturale REST. 
+JAX-RS utilizza le **annotazioni**, per semplificare lo sviluppo e la distribuzione di client e endpoint di servizi Web.
+
+> [!example] Esempio di annotazione
+> ![[Pasted image 20260509113735.png]]
+##### Annotazioni
+Esistono varie annotazioni all'interno di JAX-RS
+- **@Path**: specifica il path all’interno della URL dove sarà disponibile il servizio la cui logica è realizzata all’interno di un metodo. Il path può essere sia a livello di classe sia a livello di metodo
+- **@Produces/@Consumes**: specifica il data type1 che viene prodotto e/o consumato
+- **@GET, @POST, @DELETE...**: specificano il verbo HTTP con il quale sarà richiamato il relativo servizio
+- **@QueryParam**: identifica un parametro che verrà passato tramite parametro della URL
+- **@PathParam**: identifica un parametro che verrà passato tramite path della URL
+
+> [!example] Esempio di annotazioni per metodo
+> ![[Pasted image 20260509123345.png]]![[Pasted image 20260509123400.png]]
+
+> [!example] Esempio libri
+> ![[Pasted image 20260509123426.png]]![[Pasted image 20260509123447.png]]
+> ![[Pasted image 20260509123522.png]]
+
+#### Server HTTP
+Dopo aver creato le classi che forniscono i servizi con le relative annotazioni è necessario avere a disposizione un server HTTP che si occupi di gestire le richieste dai vari client.
+
+Per semplicità utilizzeremo [grizzly](https://eclipse-ee4j.github.io/jersey.github.io/) , che è un server HTTP già incluso in Jersey, un framework REST per Java che permette di realizzare sia client sia server REST.
+> [!example] Esempio di server HTTP con grizzly
+> ![[Pasted image 20260509125217.png]]
+> ![[Pasted image 20260509125231.png]]
+> ![[Pasted image 20260509125240.png]]
+> ![[Pasted image 20260509125250.png]]
+
+#### Client REST
+Dopo aver realizzato i nostri servizi REST e reso disponibile il server HTTP siamo pronti ad accettare le richieste ricevute attraverso il protocollo HTTP
+
+Un client non deve far altro che preparare la richiesta HTTP in base alle specifiche del servizio e inoltrarla utilizzando il protocollo HTTP e il corrispettivo verbo previsto dal servizio. Java mette a disposizione nel suo framework delle classi per gestire le richieste HTTP
+
+> [!example] Esempio di client con Jersey
+> Utilizzando il framework Jersey è semplice inviare delle richieste attraverso l’utilizzo delle classi Client e WebTarget.
+> ![[Pasted image 20260509124924.png]]
+> Il client permette di effettuare le connessioni HTTP in modo semplice. 
+> Il WebTarget memorizza la URL dove sono disponibili i servizi e attraverso i metodi path, queryParam, request permette di costruire la richiesta HTTP.
+> 
+> L’oggetto di tipo Response contiene il risultato della risposta HTTP.
+
+> [!example] Esempio di richiesta PUT con invio di un JSON
+> ![[Pasted image 20260509125103.png]]
 
 
 
