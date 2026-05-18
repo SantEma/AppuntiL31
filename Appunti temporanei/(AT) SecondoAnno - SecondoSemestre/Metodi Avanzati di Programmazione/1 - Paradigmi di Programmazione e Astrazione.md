@@ -26,7 +26,7 @@ Nel senso della macchina di Turing, tutti **i linguaggi di programmazione più c
 
 Per esempio il C è un linguaggio basato sul **paradigma imperativo**
 ### Rapporto Paradigma-Linguaggi
-I linguaggi di programmazione sono dotati di opportuni **costrutti linguistici** che riflettono i modelli concettuali di un paradigma, al fine di facilitare l’espressione di una soluzione definita attraverso i modelli concettuali del paradigma. I linguaggi di programmazione possono supportare **più di un paradigma**.
+I linguaggi di programmazione sono dotati di opportuni **costrutti linguistici** che riflettono i modelli concettuali di un paradigma, al fine di facilitare l’espressione di una soluzione definita attraverso i modelli concettuali dello stesso paradigma. I linguaggi di programmazione possono supportare **più di un paradigma**.
 #### Categorie di paradigmi
 1. Paradigmi che supportano tecniche di programmazione di basso livello (assembly)
 2. Paradigmi che supportano metodi di progettazione di algoritmi (e.g., divide-et-impera, programmazione dinamica)
