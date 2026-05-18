@@ -46,7 +46,9 @@ A questo soluzione è possibile applicare più algoritmi:
 - **Approccio hardware**: utilizzo di istruzioni macchina, tipicamente test-set o swap 
 - **Supporto del sistema operativo**: il sistema operativo mette a disposizione dei costrutti specifici (monitor o semafori) che sono in grado di gestire la mutua esclusione
 
-===Quali delle 3 uso? Sicuramente non quella software, superata da oramai tanto tempo (a meno di casi molto particolari) ===
+> [!question] Quali delle 3 uso?
+>  Sicuramente non quella software, superata da oramai tanto tempo (a meno di casi molto particolari) 
+
 #### Approccio software: Algoritmo di Dekker
 L'algoritmo di Dekker è un metodo progettato per garantire la mutua esclusione tra due processi che devono accedere a una risorsa condivisa, è basato sull'uso di due variabili principali: 
 - Una per indicare l'intenzione di ogni processo di accedere alla risorsa 

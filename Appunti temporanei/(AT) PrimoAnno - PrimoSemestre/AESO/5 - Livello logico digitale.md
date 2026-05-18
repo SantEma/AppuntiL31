@@ -6,7 +6,7 @@ Le tre linee di controllo A,B,C codificano un numero a 3 bit che specifica quale
 Un multiplexer può essere utilizzato per trasformare il byte corrispondente al carattere di un tasto pigiato in una sequenza di bit che attraverso echo può essere inviato ad uno schermo.
 Il contrario del multiplexer è il demultiplexer che indirizza un segnale in ingresso verso una delle otto uscite selezionata in base al segnale di controllo sulle linee A,B,C. Viene utilizzato per trasformare un segnale da seriale a parallelo
 ### Decodificatore
-==domanda tipica da esame==
+**(Generalmente chiesto all'esame)**
 Un decodificatore riceve $n$ valori di input e produce $2^n$ valori di output (senza linee di controllo), il circuito decodificatore abilita una sola delle $2^n$ uscite quando eccitato dalle $n$ entrate, esattamente quella corrispondente all'indirizzo di entrata.
 È un circuito utilizzato per il processing delle istruzioni dell'ISA durante il ciclo di fetch
 ![[Pasted image 20241107124107.png]]

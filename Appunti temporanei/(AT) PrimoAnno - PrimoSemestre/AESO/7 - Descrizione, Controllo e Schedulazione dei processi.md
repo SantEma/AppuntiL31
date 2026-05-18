@@ -99,8 +99,10 @@ In presenza di queste interruzioni il SO svolge delle operazioni in modalità su
 ![[Pasted image 20241220170652.png]]
 Il context-switch time è overhead (tempo non utile all'avanzamento dei processi), il sistema non svolge nessun compito utile all'utente;
 Questo tempo dipende dalla complessità del SO e del suo hardware, dipendendo dalla velocità della memoria, dal numero di registri da copiare e dall’esistenza di istruzioni macchina appropriate.
-==Domanda da esame: 
-Chi fa i primi 4 punti? Il sistema operativo==
+
+> [!question] Domanda da esame
+> Chi fa i primi 4 punti? Il sistema operativo
+
 ## Gestione dei processi
 I processi vengono quasi tutti eseguiti in modalità utente:
 - Dal punto di vista della memoria può accedere solamente allo spazio di indirizzamento di un utente, non può indirizzare aree di memoria di altri processi o appartenenti al sistema operativo
@@ -112,10 +114,11 @@ Alcuni processi avvengono in modalità kernel o controllo (solitamente i process
 - Gestire l'I/O (i buffer e l'allocazione dei canali I/O)
 - Gestire il supporto (interruzioni e compatibilità)
 
-==Ma perché deve essere un processo di un sistema operativo a crearlo e non un utente?
-Perchè accedere alle strutture come quelle del PCB può farlo unicamente il sistema operativo, dallo spazio utente non sono accessibili==
+> [!question] Ma perché deve essere un processo di un sistema operativo a crearlo e non un utente?
+> Perchè accedere alle strutture come quelle del PCB può farlo unicamente il sistema operativo, dallo spazio utente non sono accessibili
 ### Creazione dei processi
-==In che stato ci troviamo? In quello di new==
+> [!question] In che stato ci troviamo? 
+> In quello di new
 
 Per creare un processo bisogna:
 1. Assegnare a un processo un PID unico, aggiornare quindi con una entry la tabella dei processi esistenti.
@@ -186,8 +189,9 @@ Ma tra processi in new e in suspended quale si sceglie da portare in ready? Se u
 **Blocked suspended**:- Il processo è bloccato e sospeso, quindi attende un evento mentre è fuori dalla memoria principale.
 ![[Pasted image 20241128103619.png]]
 Questo rende il modello più realistico, poiché i sistemi operativi spesso spostano processi fuori dalla memoria principale per ottimizzare l'uso delle risorse.
-==Ma perché un processo può andare da ready (quindi pronto) a ready/suspended? 
-Il processo avrà bisogno di più RAM o di una maggiore priorità==
+
+> [!question] Ma perché un processo può andare da ready (quindi pronto) a ready/suspended?
+> Il processo avrà bisogno di più RAM o di una maggiore priorità
 
 Dunque i passaggi di stato sono così definiti:
 1. [[#Creazione dei processi |New]]
@@ -233,7 +237,9 @@ A seconda dei casi lo scheduling può assumere nomi differenti dunque criteri di
 - **SLT**: scheduler di lungo termine
 - **SMT**: scheduler di medio termine
 - **SBT**: scheduler di breve termine
-==Chi determina dove usare uno e dove usarne un altro? Si può risolvere il problema con i diversi algoritmi per decidere quale tra questi utilizzare, per farlo si raggruppano una serie di processi e si testano i vari algoritmi tenendo conto di quale performa meglio==
+
+> [!question] Chi determina dove usare uno e dove usarne un altro?
+>  Si può risolvere il problema con i diversi algoritmi per decidere quale tra questi utilizzare, per farlo si raggruppano una serie di processi e si testano i vari algoritmi tenendo conto di quale performa meglio
 #### Scheduling a lungo termine
 Stabilisce quale processo può essere ammesso all’interno del sistema e quindi passare dallo stato New a quello di Ready (o Ready Suspended).
 Controlla il grado di multiprogrammazione (new ->ready)
@@ -267,7 +273,9 @@ L'SMT viene attivato quando:
 - Si rende disponibile lo spazio in memoria, cioè se non ci sono processi in memoria oppure se dei processi in blocked-suspend/ready-suspend devono essere riportati in memoria;
 - L’arrivo di processi pronti scende al di sotto di una soglia specificata.
 
-==Come fa il sistema di memoria virtuale a capire di quanta memoria ha bisogno il processo di swap-out? Tramite il PCB, poiché quest'ultimo contiene le informazioni sui limiti della memoria allocata, lo stato delle pagine e le richieste di memoria==
+> [!question] Come fa il sistema di memoria virtuale a capire di quanta memoria ha bisogno il processo di swap-out? 
+ > Tramite il PCB, poiché quest'ultimo contiene le informazioni sui limiti della memoria allocata, lo stato delle pagine e le richieste di memoria
+
 #### Scheduling a breve termine (dispatcher)
 Stabilisce quale processo andrà ad impiegare la CPU, ovvero il prossimo processo da eseguire quindi il passaggio da:
 * Ready -> Run
@@ -318,7 +326,9 @@ Per la valutazione delle prestazioni si possono assumere vari tipo di approcci:
 - Minimizzare il turnaround time
 - Minimizzare il tempo di risposta
 La principale motivazione per cui lo scheduling a breve termine viene impiegato è per **massimizzare le prestazioni** del sistema secondo un specifico insieme di obiettivi.
-==Ogni quanto viene eseguito lo scheduling a breve termine? Ogni 5ms== 
+
+> [!question] Ogni quanto viene eseguito lo scheduling a breve termine? 
+> Ogni 5ms 
 #### Valutazione delle prestazioni
 **Tempo di ricircolo** (*Turnaround time*)
 - Tempo trascorso da un processo all'interno del nostro sistema (dal suo avvio alla sua terminazione). Il progettista conosce i passaggi che fa un processo all'interno del nostro sistema quindi è possibile scomporre il tempo del runtime in voci intermedie:
@@ -420,8 +430,10 @@ $$
 RR = \frac {0 + s}s \to \frac{s}{s} = 1
 
 $$
-==Quanto vale *s*? 
-Se è già stato in esecuzione allora abbiamo una statica, se invece è la prima verrà impostato un numero casuale che poi verrà modificato e utilizzato per una seconda esecuzione del processo==
+
+> [!question] Quanto vale $s$? 
+> Se è già stato in esecuzione allora abbiamo una statica, se invece è la prima verrà impostato un numero casuale che poi verrà modificato e utilizzato per una seconda esecuzione del processo
+
 ##### Short Process Next (SPN)
 Quest'algoritmo si basa su Highest Response Ratio Next ma presenta una miglioria, l'algoritmo HRRN richiede la valutazione di $s$,  il problema fuoriesce quando durante l'esecuzione del processo, $s$ viene quasi interamente espletato, questo accade perché il calcolo del Response Ratio viene effettuato solamente una volta e il processo venendo eseguito più volte, si avvicinerà sempre di più al suo termine, dunque si tiene conto del "passato" del processo e non rappresenta il vero tempo di servizio previsto.
 

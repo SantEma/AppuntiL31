@@ -292,8 +292,8 @@ I dati modificati vengono scritti nella memoria principale solo quando il blocco
 
 Nelle architetture moderne ci sono più CPU (con più cache) e la memoria RAM è condivisa, in questo caso viene usata la politica di **Write Through**, vengono aggiornate sia la memoria cache che la RAM con lo svantaggio di creare più traffico sui bus e rallentare il processo di scrittura
 
-==Quale delle due politiche oggi viene utilizzata?== 
-La politica di scrittura più comunemente utilizzata è il write-back, questo perché il write-back tende a ridurre il numero di accessi alla memoria principale, migliorando così le prestazioni complessive del sistema.
+> [!question] Quale delle due politiche oggi viene utilizzata?
+> La politica di scrittura più comunemente utilizzata è il write-back, questo perché il write-back tende a ridurre il numero di accessi alla memoria principale, migliorando così le prestazioni complessive del sistema.
 
 In una CPU esistono diverse cache a livelli:
 - Cache L1-I: contiene solo ed esclusivamente istruzioni
@@ -304,14 +304,13 @@ In una CPU esistono diverse cache a livelli:
 
 3 livelli di cache sono necessari per avere un hit ratio molto elevato, riducendo il miss ratio al 0,001%
 
-==Domanda da esame, cosa si nota se la formula per il calcolo del tempo medio di accesso viene applicata per tutti e 3 i livelli?==
-Quando applichiamo la formula per il calcolo del tempo medio di accesso (Average Memory Access Time, AMAT) a una gerarchia di memoria con tre livelli di cache, emergono alcune osservazioni interessanti:
+> [!question] Domanda da esame, cosa si nota se la formula per il calcolo del tempo medio di accesso viene applicata per tutti e 3 i livelli?
+> Quando applichiamo la formula per il calcolo del tempo medio di accesso (Average Memory Access Time, AMAT) a una gerarchia di memoria con tre livelli di cache, emergono alcune osservazioni interessanti:
 Abbiamo i livelli di cache L1, L2 e L3, ed ogni livello ha un suo tempo di accesso (hit time) e una probabilità di mancare (miss rate). La formula dell’accesso medio tiene conto di questi fattori per calcolare il tempo medio necessario per accedere ai dati.
 La formula si espande in modo da considerare il tempo di accesso di ciascun livello e il miss rate che porta al livello successivo. Ad esempio, se un dato non è presente nella cache L1, viene cercato nella cache L2, e se non è presente nemmeno lì, si passa alla cache L3, e infine alla memoria principale. Questo processo riduce il miss penalty, cioè il tempo perso per accedere ai dati mancanti, perché ogni livello di cache è più veloce della memoria principale.
 Un altro aspetto importante è l’effetto cumulativo dei miss rate. Se la cache L1 ha un alto miss rate, ci saranno più accessi alla cache L2, e così via. Pertanto, migliorare il miss rate della cache L1 può avere un impatto significativo sull’accesso medio complessivo.
 Inoltre, il tempo di accesso (hit time) di ciascun livello di cache è cruciale. Le cache più vicine alla CPU, come la L1, sono molto veloci ma piccole, mentre le cache più lontane, come la L3, sono più lente ma più grandi. Questo bilanciamento tra velocità e dimensione è fondamentale per ottimizzare la gerarchia di memoria.
 In sintesi, la progettazione della gerarchia di cache deve trovare un equilibrio tra ridurre il miss rate e mantenere tempi di accesso rapidi. Questo equilibrio determina l’efficienza complessiva della gerarchia di memoria e il tempo medio di accesso finale.
-
 ## Interruzioni
 Le interruzioni consentono di interrompere la normale elaborazione del processore, con lo scopo di migliorare l'efficienza dell'elaborazione (rispetto ai dispositivi periferici molto più lenti del processore come le stampanti o i processi come un browser) e permettono al modulo di I/O, al termine del comando di quest'ultimo, di segnalare l'evento al processore.
 Esistono due tipologie di interruzioni:
@@ -335,7 +334,9 @@ Se l'interrupt arriva prima dell'istruzione (tra la fine prima istruzione e l'in
 Il ciclo di esecuzione con interruzioni permette al processore di gestire eventi esterni o situazioni eccezionali durante l’esecuzione delle istruzioni. Normalmente, il processore segue un ciclo di esecuzione sequenziale, cioè legge l’istruzione successiva, la decodifica, la esegue e poi passa alla seguente. Tuttavia, con il ciclo di esecuzione interrotto, il processore verifica la presenza di eventuali richieste di interruzione alla fine di ogni ciclo di esecuzione.
 Quando viene rilevata un’interruzione, il processore interrompe l’esecuzione normale e avvia un processo per gestire l'evento segnalato. A questo scopo, salva lo stato corrente (come l'indirizzo dell'istruzione in esecuzione e lo stato del registro di stato del programma) per poter riprendere il lavoro al termine della gestione dell'interruzione.
 ![[Pasted image 20241105095436.png]]
-==Domanda ipotetica ,se si immagina una macchina CISC? Rimane lo stesso==
+> [!question] Domanda ipotetica ,se si immagina una macchina CISC?
+> Rimane lo stesso
+
 #### Elaborazione delle interruzioni
 Una volta rilevata l’interruzione, il processore invia un segnale di riconoscimento (acknowledgement) al dispositivo che ha generato l’interruzione. Questo serve a confermare la ricezione della richiesta. Il sistema operativo contiene il programma specifico per gestire l'interruzione: identifica la causa dell'interruzione, determina quale modulo del sistema operativo la deve gestire e avvia il programma corrispondente. Prima di eseguire il programma di gestione dell’interruzione, il processore salva alcune informazioni cruciali, come il contatore di programma (PC), lo stato del programma (PSW), e i registri che potrebbero essere modificati.
 
@@ -470,8 +471,9 @@ La formattazione di un disco consiste nella preparazione di una struttura di mem
 ##### Partizionamento
 Il partizionamento divide un disco fisico in più sezioni logiche (partizioni), ognuna delle quali può essere formattata e utilizzata indipendentemente. Le partizioni possono avere sistemi di file diversi e vengono gestite dal sistema operativo come unità separate. Questa suddivisione permette, per esempio, di avere una partizione per il sistema operativo e un’altra per i dati, facilitando l’organizzazione e la gestione dei file.
 
-==Cosa significa cancellare un file?==
-Cancellare un file normalmente significa **segnare lo spazio che occupa come disponibile**, senza rimuovere immediatamente i dati dal disco. Il file system elimina il riferimento al file, rendendolo "invisibile" per l'utente e permettendo di riutilizzare quello spazio per nuovi dati. Tuttavia, il contenuto originale del file rimane fisicamente presente sul disco finché non viene sovrascritto da nuovi dati.
+> [!question] Cosa significa cancellare un file?
+> Cancellare un file normalmente significa **segnare lo spazio che occupa come disponibile**, senza rimuovere immediatamente i dati dal disco. Il file system elimina il riferimento al file, rendendolo "invisibile" per l'utente e permettendo di riutilizzare quello spazio per nuovi dati. Tuttavia, il contenuto originale del file rimane fisicamente presente sul disco finché non viene sovrascritto da nuovi dati.
+
 Esistono software di recupero dati, come _drive rescue_, che possono ripristinare file cancellati finché non sono stati sovrascritti. Per eliminare completamente un file, occorre sovrascrivere più volte i dati, rendendoli irrecuperabili.
 ## SSD - Memorie a stato solido
 Gli SSD, o dischi a stato solido, sono dispositivi di memorizzazione che usano una tecnologia diversa dagli hard disk tradizionali: anziché basarsi su dischi magnetici rotanti e testine di lettura, utilizzano **memorie flash**. Questo cambiamento di struttura e tecnologia comporta vantaggi significativi in termini di velocità e affidabilità, ma anche alcune limitazioni:
@@ -555,8 +557,8 @@ Come si vede da questo schema, c'è una differenza tra un clock su una CPU senza
 	</tbody>
 </table>
 
-==Come impatta la pipeline nell'architettura?==
-In un'architettura senza pipeline, ogni istruzione viene completata interamente prima di iniziare quella successiva, come avviene in una macchina di Von Neumann "pura". Questo significa che ogni ciclo di clock è dedicato interamente a una singola istruzione fino alla sua conclusione, risultando in un elevato numero di cicli per completare una serie di istruzioni.
+> [!question] Come impatta la pipeline nell'architettura?
+> In un'architettura senza pipeline, ogni istruzione viene completata interamente prima di iniziare quella successiva, come avviene in una macchina di Von Neumann "pura". Questo significa che ogni ciclo di clock è dedicato interamente a una singola istruzione fino alla sua conclusione, risultando in un elevato numero di cicli per completare una serie di istruzioni.
 
 Con la pipeline, invece, il ciclo di esecuzione viene suddiviso in fasi separate (come fetch, decode, execute, memory access e write-back), ciascuna gestita da unità funzionali dedicate. Questo consente di eseguire contemporaneamente porzioni di diverse istruzioni: mentre una fase della pipeline completa la parte successiva di un'istruzione, un'altra fase può iniziare con l'istruzione successiva. Di conseguenza, una nuova istruzione può avanzare in ogni ciclo di clock, riducendo notevolmente il tempo totale di esecuzione.
 

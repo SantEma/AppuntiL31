@@ -11,12 +11,12 @@ Definire lo spazio di ricerca un problema $P$ significa stabilire un metodo prec
 2. **Funzione di risposta**: questa funzione si occupa dell'estrazione del risultato. Essa ottiene partendo dagli elementi presenti nello spazio di ricerca, le risposte corrispondenti per l'istanza $i$. 
 
 
-## Definizione:
+### Definizione
 Consideriamo un'istanza $i$ di un problema $P$, definito dalla quintupla $P= <I,S,R,S \cup\{\bot\},Q>$ (dove $I$ sono gli input, $S$ le soluzioni, $R$ la relazione tra input e soluzioni, $\bot$ indica nessuna soluzione e $Q$ è il quesito).
 
 Uno spazio di ricerca per l'istanza $i$ del problema $P$ è costituito da tre elementi fondamentali e deve soddisfare due condizioni specifiche. 
 
-#### Elementi costitutivi:
+#### Elementi costitutivi
 Uno spazio di ricerca è composto da:
 **Un insieme $Z_i$​:** È l'insieme di base che contiene tutti i candidati (gli elementi) che esploreremo. A questo insieme sono associate due funzioni essenziali.
 - **La funzione di ammissibilità (a):**
@@ -129,7 +129,7 @@ La determinazione di uno spazio di ricerca per un problema P non è univoca: e
 1. **Non Ridondanza:** Lo spazio di ricerca deve caratterizzare le soluzioni a un'istanza in modo non ridondante. È opportuno selezionare una struttura dati che escluda a priori configurazioni che non possono corrispondere ad alcuna soluzione, riducendo così l'insieme dei candidati da esaminare.
 2. **Significatività Strutturale:** Lo spazio di ricerca non deve limitarsi a una banale riformulazione del problema o della sua relazione caratteristica, né deve occultarne la complessità. Esso deve fornire elementi significativi per la comprensione della struttura del problema e delle sue soluzioni
 
-## Esempio delle n regine 
+## Esempio delle $n$ regine 
 L'obbiettivo e posizionare $i$ regine su un scacchiera di dimensione $i \times i$ in modo tale che nessuna regina possa attaccarne un'altra. 
 
 In una prima analisi, si può definire lo spazio di ricerca in modo intuitivo basandosi sulla rappresentazione visiva della scacchiera.

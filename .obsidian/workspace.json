@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/1 - Paradigmi di Programmazione e Astrazione.md",
+                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 - Paradigmi di Programmazione e Astrazione"
+              "title": "3 - Java"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/1 - Paradigmi di Programmazione e Astrazione.md",
+                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 1 - Paradigmi di Programmazione e Astrazione"
+              "title": "Struttura di 3 - Java"
             }
           }
         ],
@@ -186,25 +186,42 @@
   "active": "5306f1e7ff18e550",
   "lastOpenFiles": [
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/2 - Il paradigma Orientato agli Oggetti.md",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/1.2 - Esercitazione specifiche algebriche.md",
+    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/1 - Algoritmi e Programmi.md",
+    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/3 - Introduzione alla programmazione ad oggetti.md",
+    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/4 - C++.md",
+    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/5 - Complessità Computazionale.md",
+    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/2 - Algebra.md",
+    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/15 - Paradigma generativo.md",
+    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/14 - Paradigma selettivo.md",
+    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/13 - Tecniche algoritmiche spazio di ricerca.md",
+    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/8 - Insiemi.md",
+    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/9 -  Dizionari.md",
+    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/10 - Alberi e Grafi.md",
+    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/7 - Pile e Code.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Programmazione/4 - Flowchart,Trace Table e Pseudocode.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Programmazione/2 - Fasi di costruzione di un programma.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Programmazione/1 - Programmazione e problemi.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Immagini senza senso/Stati dei thread in w.png",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Immagini senza senso/Screenshot_20250117_184301_Nebo.jpg",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Immagini senza senso/{B149EAD7-3C81-4C74-A7C8-DC37CD25AABA}.png",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Immagini senza senso/{3BC5E76E-D634-4BB7-B706-36F92779C0A9}.png",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/12 - File System.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/11 - Gestione della memoria centrale.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/10 - Concorrenza, Stallo e Starvation.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/9 - Concorrenza, Mutua Esclusione e Sincronizzazione OK.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/8 - Thread, SMP e Microkernel.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/7 - Descrizione, Controllo e Schedulazione dei processi.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/6 - Introduzione ai SO.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/5 - Livello logico digitale.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/4 - Organizzazione dei sistemi di calcolo.md",
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/3 - Algebra di Boole.md",
     "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/1.1 - (Slide) Paradigmi di programmazione e astrazione.pdf",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/1 - Paradigmi di Programmazione e Astrazione.md",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
-    "README.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509124924.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509125103.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509125250.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509125240.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509125231.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509125217.png",
-    "().md",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509123345.png",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509123522.png",
-    "Pasted image 20260509123505.png",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509123447.png",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/10 - OO Design.md",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/9 - System design.md",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/8 - Analisi dei requisiti.md",
     "Senza nome.canvas"
   ]
 }

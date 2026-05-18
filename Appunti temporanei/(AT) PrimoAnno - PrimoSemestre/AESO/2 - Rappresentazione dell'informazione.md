@@ -89,7 +89,9 @@ Si possono rappresentare tutti i numeri da $-(2^{n-1})$ a $+(2^{n-1}-1)$
 
 Il metodo di complemento a due quindi rende più facile trattare i numeri negativi senza trattarli separatamente rispetto alla rappresentazione modulo e segno
 
-==(Tipica domanda d'esame: il complemento a 2 ha lo stesso problema del modulo?)==
+> [!question] Domanda da esame
+> Il complemento a 2 ha lo stesso problema del modulo?
+
 ### Addizione e sottrazione binaria
 L'addizione binaria e la sua sottrazione sono elementi che nella macchina vengono trattati nello stesso modo.
 Le possibilità per l'addizione sono 4:
