@@ -258,7 +258,7 @@ Una specifica algebrica è divisa rigidamente in tre componenti:
 
 Un aspetto molto potente delle specifiche algebriche è la semplicità del loro linguaggio, specialmente se confrontato con i normali linguaggi di programmazione procedurale.
 L'intero linguaggio di specifica poggia su sole cinque primitive basilari:    
-1. La composizione funzionale.
+1. La composizione funzionale (indicata con il simbolo $\to$).
 2. La relazione di eguaglianza.
 3. La costante booleana `true`.
 4. La costante booleana `false`.
