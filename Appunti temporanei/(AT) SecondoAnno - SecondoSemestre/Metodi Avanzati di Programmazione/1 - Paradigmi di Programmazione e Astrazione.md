@@ -126,8 +126,8 @@ Il modulo software deve trasformare un input in un output, cioè deve calcolare 
 > 
 > Ma come si specifica la semantica del modulo?
 > Un modo è quello di esprimere, mediante due predicati, la relazione che lega i dati di ingresso ai dati di uscita:
-> - Se il primo predicato (detto precondizione) è vero sui dati di ingresso e se il programma termina su quei dati;
-> - Allora il secondo (detto postcondizione) è vero sui dati di uscita
+> - Se il primo predicato (detto **precondizione**) è vero sui dati di ingresso e se il programma termina su quei dati;
+> - Allora il secondo (detto **postcondizione**) è vero sui dati di uscita
 > 
 > Queste specifiche semantiche sono dette **assiomatiche**
 > ![[Pasted image 20260305112003.png]]
