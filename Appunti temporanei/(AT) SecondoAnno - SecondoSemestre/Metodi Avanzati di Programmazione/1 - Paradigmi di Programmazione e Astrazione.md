@@ -151,7 +151,7 @@ L'astrazione funzionale ha diversi limiti:
 > [!example] Esempio di limite
 > ![[Pasted image 20260305113057.png]]
 
-L’astrazione funzionale non permette quindi di sviluppare soluzioni **invarianti ai cambiamenti nei dati** (sono invarianti solo ai cambiamenti nei processi di trasformazione che operano), rendendo quindi difficoltosa la manutenzione delle soluzioni progettate e quindi inappropriata per lo sviluppo di soluzioni a problemi complessi.
+L’astrazione funzionale non permette quindi di sviluppare soluzioni **invarianti ai cambiamenti nei dati** (sono invarianti solo ai cambiamenti nei processi di trasformazione che operano), rendendo quindi difficoltosa la manutenzione delle soluzioni progettate e inappropriata per lo sviluppo di soluzioni a problemi complessi.
 ### Astrazione dati
 Per poter risolvere il problema precedente si è inventata l'astrazione dati.
 > [!info] Definizione
