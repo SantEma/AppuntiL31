@@ -333,14 +333,14 @@ Le classi astratte sono strumenti per fattorizzare proprietà comuni tra classi 
 Una classe è detta **finale (final, o foglia)**  quando non può essere ulteriormente specializzata, e quindi non può essere modificata. Da queste classi non è possibile ereditare, ed è fatto per ragioni di affidabilità.
 
 La dichiarazione di una classe foglia permette anche la generazione di codice ottimizzato in quanto facilita l’espansione in linea del codice (impossibile nel caso di metodi sovrascribili nelle sottoclassi)
-### Intefacce
+### Interfacce
 Un interfaccia è una collezione di metodi senza implementazione e attributi (ma può contenerne statici).
  
 Una interfaccia è simile a una classe astratta i cui metodi sono tutti astratti e non dispone di attributi.
 > [!info] Rappresentazione UML intefacce
 > ![[Pasted image 20260318113240.png]]
 
-Le interfacce servono a disaccoppiare la definizione delle operazioni dalla loro implementazione. Per poter usare un certo oggetto è sufficiente conoscere la sua interfaccia: non serve conoscere l’implementazione
+Le interfacce servono a disaccoppiare la definizione delle operazioni dalla loro implementazione. Per poter usare un certo oggetto è sufficiente conoscere la sua interfaccia, non serve conoscere l’implementazione
 
 > [!example] Esempio interfaccia
 > ![[Pasted image 20260318114521.png]]
