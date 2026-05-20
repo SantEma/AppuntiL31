@@ -4,8 +4,8 @@ Un difetto fondamentale della programmazione imperativa è che **le variabili gl
 Il rimedio fu ovviamente **l'information hiding**, ossia quello di incapsulare in un modulo ogni variabile globale insieme a un gruppo di operazioni autorizzate ad accedervi, gli altri moduli non possono accedervi direttamente ma indirettamente chiamando queste operazioni. Il loro nome era proprio quello di **oggetti**
 
 In alcuni linguaggi operativi era già possibile definire degli **oggetti**, ma:
-- Il concetto dell'oggetto non fa parte della base del linguaggio, il programmatore deve controllare come venga utilizzati
-- Quando sono introdotti, non sono trattati come **cittadini di prima classe**, ossia non avevano tutte le funzionalità previste dal paradigma
+- Il concetto dell'oggetto non fa parte della base del linguaggio, il programmatore deve controllare come venga utilizzato
+- Quando sono introdotti, non sono trattati come **cittadini di prima classe**, ossia non hanno tutte le funzionalità previste dal paradigma
 ## Paradigma Object Oriented
 Confrontando il paradigma orientato a oggetti rispetto a quello imperativo si può dire che esso costituisce:
 - Una **evoluzione**, in quanto permette agli oggetti di essere cittadini di prima classe
