@@ -261,7 +261,7 @@ Una classe può combinare diversi tipi di ereditarietà
 > In altri termini, **l'istanza di un discendente può essere sostituita all'istanza di un ascendente**
 
 La conseguenza del principio di sostituibilità è che una sottoclasse non può rimuovere o rinunciare a proprietà/metodi della superclasse, altrimenti una istanza della sottoclasse non sarà sostituibile in una situazione in cui si dichiara l’uso di istanze della superclasse. 
-In effetti, preservando la visibilità degli attributi e dei metodi ereditati, così come accade nelle tre forme di ereditarietà viste, si garantisce che gli oggetti della sottoclasse offrano quanto meno gli stessi servizi degli oggetti della superclasse (anche sei servizi potranno essere implementati diversamente, come accade nella variazione funzionale).
+In effetti, preservando la visibilità degli attributi e dei metodi ereditati, così come accade nelle tre forme di ereditarietà viste, si garantisce che gli oggetti della sottoclasse offrano quanto meno gli stessi servizi degli oggetti della superclasse (anche se i servizi potranno essere implementati diversamente, come accade nella variazione funzionale).
 **Pertanto il principio di sostituibilità (o polimorfismo di inclusione) è compatibile con l’ereditarietà per estensione, variazione funzionale e restrizione**
 
 
