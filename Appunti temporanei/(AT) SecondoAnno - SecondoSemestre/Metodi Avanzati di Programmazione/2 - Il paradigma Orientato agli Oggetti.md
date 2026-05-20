@@ -164,11 +164,9 @@ Un oggetto è **attivo** quando può generare thread concorrenti, una classe è 
 In UML vengono rappresentati così
 > [!info] Rappresentazione classe attiva
 > ![[Pasted image 20260316085731.png]]
-
 ### Classi template
 Una **classe template** definisce una famiglia di classi parametrizzate (con parametro di tipo). Non è possibile usare direttamente una classe template. È necessario prima specificare il tipo (operazione di istanziazione). In Java, una classe template corrisponde a una classe generica.
-Queste classi template usano a generalizzare 
-
+Queste classi template usano a generalizzare
 > [!info] Rappresentazione UML
 > ![[Pasted image 20260316085905.png]]
 
@@ -202,13 +200,11 @@ Tale suddivisione, modellata mediante l’utilizzo di stereotipi, permette il pa
 - Dominio
 - Vista
 - Controllo
-
 ### Relazione Istance-of
 Fra un oggetto e una classe sussiste una relazione `instance of` che specifica che un oggetto è una istanza di una classe, in UML sono rappresentate in questa maniera
 
 > [!info] Rappresentazione Istance-of
 > ![[Pasted image 20260316092048.png]]
-
 ### Ereditarietà
 Nella progettazione e programmazione OO una relazione fondamentale è quella esistente fra le classi: **la relazione di ereditarietà** (inheritance).
 Una classe è considerata come un repertorio di conoscenze a partire dal quale è possibile definire altre classi più specifiche, che completano le conoscenze della loro classe madre.
