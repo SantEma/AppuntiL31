@@ -200,7 +200,7 @@ Tale suddivisione, modellata mediante l’utilizzo di stereotipi, permette il pa
 - Dominio
 - Vista
 - Controllo
-### Relazione Istance-of
+### Relazione Instance-of
 Fra un oggetto e una classe sussiste una relazione `instance of` che specifica che un oggetto è una istanza di una classe, in UML sono rappresentate in questa maniera
 
 > [!info] Rappresentazione Istance-of
