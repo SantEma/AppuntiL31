@@ -319,6 +319,11 @@ Quando una caratteristica di una classe, che sia essa un attributo o un metodo, 
 
 > [!example] Esempio di visibilità protetta
 > ![[Pasted image 20260316114456.png]]
+
+
+> [!example] Esempio ufficiale dalla documentazione di Java
+> ![[Pasted image 20260521145822.png]]
+
 ### Classi astratte
 È possibile che esistano classi per le quali non è possibile generare delle istanze (**classi astratte**).
 Una classe astratta può essere una classe non completamente specificata, in particolare non è definito il metodo corrispondente a una operazione.
