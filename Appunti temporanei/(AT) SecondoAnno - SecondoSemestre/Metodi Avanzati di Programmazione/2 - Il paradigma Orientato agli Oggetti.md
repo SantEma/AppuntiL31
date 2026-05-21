@@ -433,7 +433,7 @@ Per gestire la complessità, le classi vengono organizzate in **package**, ossia
 > In genere i package si usano per riunire classi, ma nella notazione UML essi possono includere qualsiasi costrutto UML e possono essere persino eterogenei (ad esempio, possono contenere classi e interfacce).
 > ![[Pasted image 20260422131203.png]]
 
-Un package definisce un namespace (spazio degli identificatori) per i suoi elementi. Questo significa che ogni classe di un package di classi deve avere un nome distinto all’interno del package che la racchiud. Il nome completo  (o qualificato) usa la notazione `::`. 
+Un package definisce un namespace (spazio degli identificatori) per i suoi elementi. Questo significa che ogni classe di un package di classi deve avere un nome distinto all’interno del package che la racchiude. Il nome completo  (o qualificato) usa la notazione `::`. 
 
 I package possono importare elementi altrui per evitare nomi qualificati, ma tale relazione non è transitiva. 
 > [!example] Esempio di relazione non transitiva
