@@ -360,7 +360,7 @@ La relazione di realizzazione si presenta come un valido strumento per scindere 
 
 > [!example] Esempio di relazione di realizzazione
 > ![[Pasted image 20260318113456.png]]
-#### Ereditarietà
+#### Ereditarietà delle interfacce
 **Anche le interfacce possono ereditare da altre interfacce**, poiché non ci sono implementazioni, la relazione di ereditarietà è naturalmente una relazione di generalizzazione “is_a”.
 
 > [!example] Esempio di interfacce
