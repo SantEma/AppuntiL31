@@ -125,7 +125,7 @@ Ad esempio, un metodo pubblico può essere invocato da qualunque punto del codic
 
 Altri livelli di visibilità sono: 
 - **Protetta**: l’elemento è visibile all’interno del package e all’esterno solo ai discendenti della classe di appartenenza
-- **package**: l’elemento è visibile solo agli elementi del package che contiene la classe in cui l’elemento è definito
+- **Package**: l’elemento è visibile solo agli elementi del package che contiene la classe in cui l’elemento è definito
 #### Visibilità degli elementi in UML
 UML consente di specificare i livelli di visibilità di attributi e metodi utilizzando la seguente notazione:
 ![[Pasted image 20260312130406.png]]
