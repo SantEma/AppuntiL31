@@ -515,11 +515,8 @@ L'overloading può interagire con la coercizione: se `+` è definito per due int
 
 Nel paradigma a oggetti si ha overloading anche tra funzioni con lo stesso nome definite in classi non correlate gerarchicamente: la disambiguazione si basa sulla classe dell'istanza su cui viene invocato il metodo.
 
-Nel paradigma a oggetti si ha overloading anche nel caso di funzioni con medesimo nome ma definite in classi non correlate gerarchicament
-
 > [!example] Esempio polimorfismo meno potente
 > ![[Pasted image 20260422183457.png]]
-
 #### Polimorfismo parametrico
 Nel polimorfismo parametrico, una funzione polimorfa ha un parametro di tipo esplicito o implicito, che determina il tipo dell’argomento per ciascuna applicazione della funzione.
 
