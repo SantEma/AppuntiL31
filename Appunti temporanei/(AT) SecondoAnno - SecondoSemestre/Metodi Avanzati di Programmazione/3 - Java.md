@@ -2383,4 +2383,14 @@ Ogni contenitore top-level è associato ad una vista (ovvero gli oggetti effetti
 > Ogni programma SWING deve avere almeno un contenitore top-level (questo contenitore è la radice della gerarchia delle componenti)
 > Per ogni contenitore top level è possibile aggiungere un menu.
 
+Per aggiungere componenti ad un contenitore è necessario usare il metodo `add()`
+> [!example] Esempio di metodo `add()`
+> ```java
+> frame.getContentPane().add(yellowLabel, BorderLayout.CENTER)
+> ```
+> 
+> `getContentPane()` restituisce un oggetto Jcomponent
 
+
+> [!info] Il root Pane
+> Ogni finestra è suddivisa in diversi pannelli
