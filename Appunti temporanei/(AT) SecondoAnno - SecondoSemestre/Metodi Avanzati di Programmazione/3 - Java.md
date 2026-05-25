@@ -2438,3 +2438,6 @@ La visualizzazione degli elementi avviene tramite un renderizzatore di default c
  E’ possibile modificare il render realizzando una classe che implementi:
  - L'interfaccia `ListCellRenderer` per le combo box non editabili, 
  - L'interfaccia `ComboBoxEditor` per quelle editabili
+
+##### List
+La lista è utile per poter visualizzare gli elementi su più righe o colonne in maniera aperta, questa di solito è implementata dalla classe `JList`
