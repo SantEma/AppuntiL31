@@ -328,5 +328,4 @@ Ciò risulta molto utile poiché l’iterazione su collezioni di dati è un comp
 > [!example] Esempio completo di astrazione di controllo
 > ![[Pasted image 20260309112056.png]]
 ## ATTENZIONE
-Alcuni esempi sono stati omessi poichè troppo lunghi, nel caso li si vogliano visionare si possono trovare nel file seguente 
-![[1.1 - (Slide) Paradigmi di programmazione e astrazione.pdf]]
+Alcuni esempi sono stati omessi poichè troppo lunghi, nel caso li si vogliano visionare si possono trovare nel file seguente:
