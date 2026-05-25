@@ -2359,5 +2359,10 @@ Un client non deve far altro che preparare la richiesta HTTP in base alle specif
 > ![[Pasted image 20260509125103.png]]
 ### SWING
 SWING è il framework di Java che permette la realizzazione di interfacce grafiche (GUI).
-Si utilizza con i packages di riferimento `javax.swing, javax.swing.event` 
-[da finire]
+Si utilizza con i packages di riferimento `javax.swing, javax.swing.event`.
+
+Questo pacchetto permette di creare:
+- Finestre, Form, Dialog 
+- Menu, Pulsanti, Check-box, Combo-box 
+- Alberi, Tabelle 
+- Layout, Look&Feel
