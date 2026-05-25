@@ -2440,4 +2440,20 @@ La visualizzazione degli elementi avviene tramite un renderizzatore di default c
  - L'interfaccia `ComboBoxEditor` per quelle editabili
 
 ##### List
-La lista è utile per poter visualizzare gli elementi su più righe o colonne in maniera aperta, questa di solito è implementata dalla classe `JList`
+La lista è utile per poter visualizzare gli elementi su più righe o colonne in maniera aperta. Viene implementata dalla classe `JList` e in genere viene inserita all'interno di uno ScrollPane (contenitore scorrevole).
+
+> [!example] Esempio di lista 
+> ![[Pasted image 20260525151819.png]]
+
+La lista supporta la selezione di un singolo elemento, selezioni multiple libere o selezioni basate su intervalli multipli. La manipolazione formale dei dati della lista, come l'aggiunta o la rimozione di elementi in tempo reale, viene delegata all'oggetto `DefaultListModel` associato, avvalendosi di metodi specifici come `addElement()`, `add()`, `remove()`, e `removeElement()`
+##### Finestre di dialogo
+Le finestre di dialogo sono interfacce temporanee di tipo secondario, utilizzate primariamente per notificare informazioni all'utente, richiedere l'inserimento di determinati valori o far effettuare scelte rapide di esecuzione
+
+La classe predefinita `JOptionPane` offre un'interfaccia per invocare rapidamente finestre standardizzate capaci di visualizzare messaggi o mostrare opzioni preconfigurate (come ad esempio YES, NO e CANCEL)
+
+È possibile creare finestre di dialogo altamente personalizzate estendendo direttamente la classe `JDialog`.
+
+> [!example] Esempio di finestra di dialogo per una persona
+> ![[Pasted image 20260525152019.png]]
+
+Dal punto di vista relazionale, queste finestre dipendono sempre da un componente generatore Frame, ed esse possono inoltre essere dichiarate di tipo modale: in questo particolare stato operativo, l'utente è impossibilitato a interagire con qualsiasi altra finestra dell'applicazione fino a quando il dialogo non viene risolto e chiuso.

@@ -11,14 +11,12 @@
             "id": "5306f1e7ff18e550",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
-                "mode": "source",
-                "source": false
+                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260525150108.png"
               },
-              "icon": "lucide-file",
-              "title": "3 - Java"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260525150108"
             }
           }
         ]
@@ -184,13 +182,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5306f1e7ff18e550",
+  "active": "ab83996f0563bfdd",
   "lastOpenFiles": [
-    "Pasted image 20260525150108.png",
+    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
+    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260525152019.png",
+    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260525151819.png",
+    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260525150108.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/2 - Il paradigma Orientato agli Oggetti.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260525132655.png",
     "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3.1 - (Slide Esempi) Prima Applicazione in Java SWING.pdf",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260525132720.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260525110222.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260525105232.png",
@@ -220,14 +220,11 @@
     "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Programmazione/1 - Programmazione e problemi.md",
     "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Immagini senza senso/Stati dei thread in w.png",
     "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Immagini senza senso/Screenshot_20250117_184301_Nebo.jpg",
-    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Immagini senza senso/{B149EAD7-3C81-4C74-A7C8-DC37CD25AABA}.png",
-    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Immagini senza senso/{3BC5E76E-D634-4BB7-B706-36F92779C0A9}.png",
     "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/12 - File System.md",
     "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/11 - Gestione della memoria centrale.md",
     "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/10 - Concorrenza, Stallo e Starvation.md",
     "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/9 - Concorrenza, Mutua Esclusione e Sincronizzazione OK.md",
     "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/8 - Thread, SMP e Microkernel.md",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509124924.png",
     "Senza nome.canvas"
   ]
 }
