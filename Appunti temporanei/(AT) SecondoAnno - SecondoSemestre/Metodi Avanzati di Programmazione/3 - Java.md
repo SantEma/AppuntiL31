@@ -2372,7 +2372,7 @@ Questo pacchetto permette di creare:
 > - Drag and drop dei componenti
 > - Auto-generazione del codice 
 > - Strumenti per la gestione del layout dei componenti
-> Per trovare degli esempi vi conviene vedere il file [[]]
+> Per trovare degli esempi conviene visionare il file [[3.1 - (Slide Esempi) Prima Applicazione in Java SWING.pdf]]
 #### Contenitori
 Java Swing mette a disposizione tre tipi di contenitori:
 - JFrame
