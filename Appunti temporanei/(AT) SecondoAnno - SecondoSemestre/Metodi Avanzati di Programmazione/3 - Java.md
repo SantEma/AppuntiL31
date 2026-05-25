@@ -2428,3 +2428,6 @@ Per intercettare e gestire attivamente la selezione di un nuovo colore da parte 
 > ![[Pasted image 20260525132720.png]]
 ##### ComboBox
 Il componente Combo Box consente all'utente la selezione di un valore all'interno di una serie di opzioni predefinite ed è gestito dalla classe `JComboBox`.
+Questa componente può essere configurata come non editabile, vincolando la scelta alle sole voci presenti nell'elenco, oppure editabile, permettendo l'inserimento manuale di un valore da parte di un utente
+
+La visualizzazione degli elementi avviene tramite un renderizzatore di default che mostra stringhe o icone, oppure richiama il metodo `toString()` nel caso di altri tipi di oggetti più complessi
