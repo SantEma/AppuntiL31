@@ -2376,5 +2376,11 @@ Java Swing mette a disposizione tre tipi di contenitori:
 - JDialog
 - JApplet
 
-Ogni componente deve far parte di una gerarchia di componenti connessi ad un contenitore radice (chiamato anche top level), ognuno di questi componenti poi può appartenere ad un solo contenitore.
-Ogni contenitore top-level è associato ad una vista (ovvero gli oggetti effettivamente visibili su schermo),
+Ogni componente deve far parte di una gerarchia di componenti connessi ad un contenitore radice (chiamato anche **top level**), ognuno di questi componenti poi può appartenere ad un solo contenitore.
+Ogni contenitore top-level è associato ad una vista (ovvero gli oggetti effettivamente visibili su schermo).
+> [!info] Gerarchia dei componenti 
+> ![[Pasted image 20260525105232.png]]
+> Ogni programma SWING deve avere almeno un contenitore top-level (questo contenitore è la radice della gerarchia delle componenti)
+> Per ogni contenitore top level è possibile aggiungere un menu.
+
+
