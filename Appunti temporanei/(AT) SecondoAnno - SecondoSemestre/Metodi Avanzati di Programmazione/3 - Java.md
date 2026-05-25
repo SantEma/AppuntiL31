@@ -2468,3 +2468,16 @@ I componenti testuali costituiscono la base per permettere all'utente la visuali
  - **Text Controls**: include campi semplici per l'inserimento limitato a una singola riga, come il `JTextField`, il `JPasswordField` (per offuscare i dati sensibili) e il `JFormattedTextField`. Questi componenti controllano piccole quantità di dati e generano eventi di tipo Action alla conclusione dell'inserimento testuale.
  - **Plain Text Areas**: è rappresentata principalmente dal `JTextArea`, ideale per la manipolazione di testi non formattati su più righe e renderizzati utilizzando un unico font a livello globale
  - **Styled Text Areas**: include il `JEditorPane` e il suo derivato avanzato `JTextPane`. Tali componenti, pur richiedendo maggiore sforzo di configurazione, supportano stili multipli di carattere, l'integrazione di componenti, di immagini e permettono di effettuare facilmente la lettura di testo formattato in HTML proveniente direttamente da un URL.
+##### JTextComponent
+L'architettura interna di un `JTextComponent` adotta un approccio strutturato, infatti prevede:
+- Un modello di dati, detto **document**, che gestisce il contenuto
+- Una vista che si occupa della visualizzazione del contenuto
+- Un controller, detto **editor kit**, che legge e scrive il testo e permette le funzionalità di editing
+- Un cursore che permette la navigazione nel contenuto
+
+##### Action
+Nel design dell'interfaccia, capita spesso che la medesima funzionalità (si pensi, a titolo di esempio, all'operazione di copia di un elemento) debba risultare accessibile all'utente da una pluralità di controlli diversi, come una specifica voce di menu, un'icona sulla toolbar o la pressione di una combinazione predefinita di tasti. 
+Al fine di non frammentare la logica di programmazione, è buona pratica di ingegneria del software procedere creando un'unica istanza di `Action` centralizzata da associare a ciascun punto di controllo. 
+La creazione operativa avviene estendendo la classe astratta `AbstractAction` e sovrascrivendo, al suo interno, l'implementazione obbligatoria del metodo `actionPerformed()` affinché contenga la corretta logica applicativa. 
+
+Fare uso di una classe `Action` permette non solo il riuso del codice, ma garantisce di poter uniformare su tutti i controlli le medesime proprietà condivise, come il testo visibile a schermo, le stringhe descrittive destinate al tooltip o le icone associate; consente peraltro di abilitare o disabilitare contemporaneamente e in modo unitario la funzionalità su tutta l'applicazione
