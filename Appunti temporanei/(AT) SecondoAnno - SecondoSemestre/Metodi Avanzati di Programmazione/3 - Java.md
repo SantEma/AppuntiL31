@@ -2274,7 +2274,7 @@ Comunemente viene definita un’interfaccia uniforme per la condivisione delle r
 - Un insieme vincolato di contenuti
 - Un protocollo che è:
 	- **Client-server**: I ruoli del client e del server sono ben separati, diventa più facile poter scalare con il tempo e server e client possono essere sostituiti e sviluppati indipendentemente fintanto che l'interfaccia non viene modificata.
-	- **Privo di stato (stateless):** La comunicazione client–server è vincolata in modo che nessun contesto client venga memorizzato sul server tra le richieste. Ciascuna richiesta dai vari client contiene tutte le informazioni necessarie per richiedere il servizio e lo stato della sessione è contenuto nel client
+	- **Privo di stato (stateless):** La comunicazione client-server è vincolata in modo che nessun contesto client venga memorizzato sul server tra le richieste. Ciascuna richiesta dai vari client contiene tutte le informazioni necessarie per richiedere il servizio e lo stato della sessione è contenuto nel client
 	- **Memorizzabile in cache**: I client possono mettere in cache le risposte. Queste devono in ogni modo definirsi implicitamente o esplicitamente cacheable o no, in modo da prevenire che i client possano riutilizzare stati vecchi e dati errati.
 	- **A livelli**: il sistema è realizzato “a strati” (layer). Ciò rende possibile, per esempio, pubblicare le API in un server, memorizzare i dati in un secondo server e gestire l'autenticazione delle richieste in un terzo server.
 #### Risorse
@@ -2367,8 +2367,11 @@ Questo pacchetto permette di creare:
 - Alberi, Tabelle 
 - Layout, Look&Feel
 
-> [!example] La mia prima applicazione (Netbeans+Swing)
-> Inserire rimando al file
+> [!info] La mia prima applicazione (Netbeans+Swing)
+> NetBeans mette a disposizione degli strumenti che facilitano la creazione delle GUI, che introducono:
+> - Drag and drop dei componenti
+> - Auto-generazione del codice 
+> - Strumenti per la gestione del layout dei componenti
 #### Contenitori
 Java Swing mette a disposizione tre tipi di contenitori:
 - JFrame
@@ -2407,4 +2410,21 @@ JComponent in particolare implementa:
 - Modifica della disposizione degli oggetti (Layout)
 - Dimensione e posizione del componente
 ##### Buttons, CheckBoxes, RadioButtons
+I pulsanti in Swing derivano tutti dalla classe astratta `AbstractButton`. Tra le implementazioni principali troviamo:
+- **JButton**: un classico pulsante 
+- **JCheckBox**: una check box 
+- **JRadioButton**: un singolo pulsante di un gruppo di pulsanti di opzione 
+- **JMenuItem**: una voce di un menu 
+- **JCheckBoxMenuItem**: una voce di un menu che è una check box 
+- **JRadioButtonMenuItem**: una voce di un menu che è un pulsante di opzione 
+- **JToggleButton**: permette di creare un bottone a due stati utilizzando due check box o due radio button
+##### Color Chooser
+La selezione di un colore è implementata attraverso la classe `JColorChooser`, la quale offre diverse modalità di interazione per l'utente finale
+Le informazioni relative al colore selezionato vengono memorizzate all'interno di un modello denominato `ColorSelectionModel()`; ogni istanza di `JColorChooser()` possiede una propria copia isolata di questo modello.
+Per intercettare e gestire attivamente la selezione di un nuovo colore da parte dell'utente, è necessario implementare la specifica interfaccia `ChangeListener()`
+
+> [!example] Esempio di color chooser
+> ![[Pasted image 20260525132655.png]]
+> ![[Pasted image 20260525132720.png]]
+
 

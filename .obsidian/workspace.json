@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "2413337e7f34b214",
@@ -184,8 +185,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ab83996f0563bfdd",
+  "active": "5306f1e7ff18e550",
   "lastOpenFiles": [
+    "Pasted image 20260525132720.png",
+    "Pasted image 20260525132655.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260525110222.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260525105232.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/1.2 - Esercitazione specifiche algebriche.md",
@@ -225,8 +228,6 @@
     "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/AESO/8 - Thread, SMP e Microkernel.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509124924.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509125103.png",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509125250.png",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260509125240.png",
     "Senza nome.canvas"
   ]
 }
