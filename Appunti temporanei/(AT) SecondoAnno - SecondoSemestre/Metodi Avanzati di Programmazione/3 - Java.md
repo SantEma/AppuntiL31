@@ -2366,3 +2366,6 @@ Questo pacchetto permette di creare:
 - Menu, Pulsanti, Check-box, Combo-box 
 - Alberi, Tabelle 
 - Layout, Look&Feel
+
+> [!example] Prima applicazione in 
+> Contents
