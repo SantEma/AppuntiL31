@@ -2394,3 +2394,4 @@ Per aggiungere componenti ad un contenitore è necessario usare il metodo `add()
 
 > [!info] Il root Pane
 > Ogni finestra è suddivisa in diversi pannelli
+> ![[Pasted image 20260525110222.png]]
