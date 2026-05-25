@@ -2367,5 +2367,3 @@ Questo pacchetto permette di creare:
 - Alberi, Tabelle 
 - Layout, Look&Feel
 
-> [!example] Prima applicazione in 
-> Contents
