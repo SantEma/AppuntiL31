@@ -2357,7 +2357,6 @@ Un client non deve far altro che preparare la richiesta HTTP in base alle specif
 
 > [!example] Esempio di richiesta PUT con invio di un JSON
 > ![[Pasted image 20260509125103.png]]
-
 ### SWING
 SWING è il framework di Java che permette la realizzazione di interfacce grafiche (GUI).
 Si utilizza con i packages di riferimento `javax.swing, javax.swing.event` 
