@@ -2369,7 +2369,6 @@ Questo pacchetto permette di creare:
 
 > [!example] La mia prima applicazione (Netbeans+Swing)
 > Inserire rimando al file
-
 #### Contenitori
 Java Swing mette a disposizione tre tipi di contenitori:
 - JFrame
@@ -2391,7 +2390,7 @@ Per aggiungere componenti ad un contenitore è necessario usare il metodo `add()
 > 
 > `getContentPane()` restituisce un oggetto Jcomponent
 
-
 > [!info] Il root Pane
 > Ogni finestra è suddivisa in diversi pannelli
 > ![[Pasted image 20260525110222.png]]
+
