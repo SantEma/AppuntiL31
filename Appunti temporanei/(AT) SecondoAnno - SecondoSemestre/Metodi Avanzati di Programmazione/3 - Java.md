@@ -2433,4 +2433,8 @@ Questa componente può essere configurata come non editabile, vincolando la scel
 > [!example] Esempio di ComboBox editabile
 > ![[Pasted image 20260525150108.png]]
 
-La visualizzazione degli elementi avviene tramite un renderizzatore di default che mostra stringhe o icone, oppure richiama il metodo `toString()` nel caso di altri tipi di oggetti più complessi
+La visualizzazione degli elementi avviene tramite un renderizzatore di default che mostra stringhe o icone, oppure richiama il metodo `toString()` nel caso di altri tipi di oggetti più complessi.
+
+ E’ possibile modificare il render realizzando una classe che implementi:
+ - L'interfaccia `ListCellRenderer` per le combo box non editabili, 
+ - L'interfaccia `ComboBoxEditor` per quelle editabili
