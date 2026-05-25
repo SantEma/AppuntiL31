@@ -2394,3 +2394,17 @@ Per aggiungere componenti ad un contenitore è necessario usare il metodo `add()
 > Ogni finestra è suddivisa in diversi pannelli
 > ![[Pasted image 20260525110222.png]]
 
+#### JComponent
+JComponent è una classe che mette a disposizione un set di metodi per modificare aspetto e comportamento dei componenti.
+Questa eredita da container che a sua volta eredita da Component.
+
+JComponent in particolare implementa:
+- Modifica dell'aspetto del componente (colore, bordo, tipo cursore)
+- Monitoraggio dello stato (gestione di un PopupMenu, cambio nome, non visibile/visibile, abilita/disabilita, modifica del ToolTip)
+- Gestione degli eventi
+- Disegno degli oggetti
+- Gestione della gerarchia degli oggetti (aggiungi, rimuovi)
+- Modifica della disposizione degli oggetti (Layout)
+- Dimensione e posizione del componente
+##### Buttons, CheckBoxes, RadioButtons
+
