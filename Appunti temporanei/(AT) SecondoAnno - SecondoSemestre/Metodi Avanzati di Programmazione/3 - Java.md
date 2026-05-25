@@ -2358,7 +2358,7 @@ Un client non deve far altro che preparare la richiesta HTTP in base alle specif
 > [!example] Esempio di richiesta PUT con invio di un JSON
 > ![[Pasted image 20260509125103.png]]
 ### SWING
-SWING è il framework di Java che permette la realizzazione di interfacce grafiche (GUI).
+SWING è il framework di Java che permette la realizzazione di interfacce grafiche (chiamate anche GUI).
 Si utilizza con i packages di riferimento `javax.swing, javax.swing.event`.
 
 Questo pacchetto permette di creare:
@@ -2397,7 +2397,6 @@ Per aggiungere componenti ad un contenitore è necessario usare il metodo `add()
 > [!info] Il root Pane
 > Ogni finestra è suddivisa in diversi pannelli
 > ![[Pasted image 20260525110222.png]]
-
 #### JComponent
 JComponent è una classe che mette a disposizione un set di metodi per modificare aspetto e comportamento dei componenti.
 Questa eredita da container che a sua volta eredita da Component.
@@ -2427,5 +2426,5 @@ Per intercettare e gestire attivamente la selezione di un nuovo colore da parte 
 > [!example] Esempio di color chooser
 > ![[Pasted image 20260525132655.png]]
 > ![[Pasted image 20260525132720.png]]
-
-
+##### ComboBox
+Il componente Combo Box consente all'utente la selezione di un valore all'interno di una serie di opzioni predefinite ed è gestito dalla classe `JComboBox`.
