@@ -2474,7 +2474,8 @@ L'architettura interna di un `JTextComponent` adotta un approccio strutturato, i
 - Una vista che si occupa della visualizzazione del contenuto
 - Un controller, detto **editor kit**, che legge e scrive il testo e permette le funzionalità di editing
 - Un cursore che permette la navigazione nel contenuto
-
+###### Document
+Il modello dei dati di un TextComponent è il Document (interfaccia Document), che contiene il testo suddiviso in oggetti di tipo Element. 
 ##### Action
 Nel design dell'interfaccia, capita spesso che la medesima funzionalità (si pensi, a titolo di esempio, all'operazione di copia di un elemento) debba risultare accessibile all'utente da una pluralità di controlli diversi, come una specifica voce di menu, un'icona sulla toolbar o la pressione di una combinazione predefinita di tasti. 
 Al fine di non frammentare la logica di programmazione, è buona pratica di ingegneria del software procedere creando un'unica istanza di `Action` centralizzata da associare a ciascun punto di controllo. 
