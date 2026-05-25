@@ -2372,6 +2372,7 @@ Questo pacchetto permette di creare:
 > - Drag and drop dei componenti
 > - Auto-generazione del codice 
 > - Strumenti per la gestione del layout dei componenti
+> 
 > Per trovare degli esempi conviene visionare il file [[3.1 - (Slide Esempi) Prima Applicazione in Java SWING.pdf]]
 #### Contenitori
 Java Swing mette a disposizione tre tipi di contenitori:
@@ -2455,5 +2456,15 @@ La classe predefinita `JOptionPane` offre un'interfaccia per invocare rapidament
 
 > [!example] Esempio di finestra di dialogo per una persona
 > ![[Pasted image 20260525152019.png]]
+> Esempio completo su [[3.2 - (Slide Esempi) Finestra di Dialogo Person.pdf]]
+
+
 
 Dal punto di vista relazionale, queste finestre dipendono sempre da un componente generatore Frame, ed esse possono inoltre essere dichiarate di tipo modale: in questo particolare stato operativo, l'utente è impossibilitato a interagire con qualsiasi altra finestra dell'applicazione fino a quando il dialogo non viene risolto e chiuso.
+#### Componenti per il testo
+I componenti testuali costituiscono la base per permettere all'utente la visualizzazione e la modifica di informazioni sotto forma testuale.
+
+ Dal punto di vista gerarchico, essi derivano tutti dalla classe capostipite `JTextComponent` e si dividono convenzionalmente in tre macrocategorie principali:
+ - **Text Controls**: include campi semplici per l'inserimento limitato a una singola riga, come il `JTextField`, il `JPasswordField` (per offuscare i dati sensibili) e il `JFormattedTextField`. Questi componenti controllano piccole quantità di dati e generano eventi di tipo Action alla conclusione dell'inserimento testuale.
+ - **Plain Text Areas**: è rappresentata principalmente dal `JTextArea`, ideale per la manipolazione di testi non formattati su più righe e renderizzati utilizzando un unico font a livello globale
+ - Styled Text Areas, include il `JEditorPane` e il suo derivato avanzato `JTextPane`. Tali componenti, pur richiedendo maggiore sforzo di configurazione, supportano stili multipli di carattere, l'integrazione di componenti, di immagini e permettono di effettuare facilmente la lettura di testo formattato in HTML proveniente direttamente da un URL[cite: 188]
