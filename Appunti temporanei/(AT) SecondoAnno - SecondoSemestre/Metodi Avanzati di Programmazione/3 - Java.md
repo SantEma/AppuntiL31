@@ -2367,3 +2367,14 @@ Questo pacchetto permette di creare:
 - Alberi, Tabelle 
 - Layout, Look&Feel
 
+> [!example] La mia prima applicazione (Netbeans+Swing)
+> Inserire rimando al file
+
+#### Contenitori
+Java Swing mette a disposizione tre tipi di contenitori:
+- JFrame
+- JDialog
+- JApplet
+
+Ogni componente deve far parte di una gerarchia di componenti connessi ad un contenitore radice (chiamato anche top level), ognuno di questi componenti poi può appartenere ad un solo contenitore.
+Ogni contenitore top-level è associato ad una vista (ovvero gli oggetti effettivamente visibili su schermo),
