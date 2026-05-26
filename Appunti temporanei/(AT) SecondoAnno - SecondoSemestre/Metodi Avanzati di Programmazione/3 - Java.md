@@ -2393,7 +2393,7 @@ Per aggiungere componenti ad un contenitore è necessario usare il metodo `add()
 > frame.getContentPane().add(yellowLabel, BorderLayout.CENTER)
 > ```
 > 
-> `getContentPane()` restituisce un oggetto Jcomponent
+> `getContentPane()` restituisce un oggetto JComponent
 
 > [!info] Il root Pane
 > Ogni finestra è suddivisa in diversi pannelli
@@ -2446,7 +2446,7 @@ La lista è utile per poter visualizzare gli elementi su più righe o colonne in
 > [!example] Esempio di lista 
 > ![[Pasted image 20260525151819.png]]
 
-La lista supporta la selezione di un singolo elemento, selezioni multiple libere o selezioni basate su intervalli multipli. La manipolazione formale dei dati della lista, come l'aggiunta o la rimozione di elementi in tempo reale, viene delegata all'oggetto `DefaultListModel` associato, avvalendosi di metodi specifici come `addElement()`, `add()`, `remove()`, e `removeElement()`
+La lista supporta la selezione di un singolo elemento, selezioni multiple libere o selezioni basate su intervalli multipli. La manipolazione formale dei dati della lista, come l'aggiunta o la rimozione di elementi in tempo reale, viene delegata all'oggetto `DefaultListModel` associato, implementando metodi specifici come `addElement()`, `add()`, `remove()`, e `removeElement()`
 ##### Finestre di dialogo
 Le finestre di dialogo sono interfacce temporanee di tipo secondario, utilizzate primariamente per notificare informazioni all'utente, richiedere l'inserimento di determinati valori o far effettuare scelte rapide di esecuzione
 
@@ -2458,9 +2458,7 @@ La classe predefinita `JOptionPane` offre un'interfaccia per invocare rapidament
 > ![[Pasted image 20260525152019.png]]
 > Esempio completo su [[3.2 - (Slide Esempi) Finestra di Dialogo Person.pdf]]
 
-
-
-Dal punto di vista relazionale, queste finestre dipendono sempre da un componente generatore Frame, ed esse possono inoltre essere dichiarate di tipo modale: in questo particolare stato operativo, l'utente è impossibilitato a interagire con qualsiasi altra finestra dell'applicazione fino a quando il dialogo non viene risolto e chiuso.
+Dal punto di vista relazionale, queste finestre dipendono sempre da un componente generatore Frame, ed esse possono inoltre essere dichiarate di tipo modale: in questo particolare stato, l'utente non può interagire con qualsiasi altra finestra dell'applicazione fino a quando il dialogo non viene risolto e chiuso.
 #### Componenti per il testo
 I componenti testuali costituiscono la base per permettere all'utente la visualizzazione e la modifica di informazioni sotto forma testuale.
 
@@ -2479,7 +2477,8 @@ L'architettura interna di un `JTextComponent` adotta un approccio strutturato, i
 - Un controller, detto **editor kit**, che legge e scrive il testo e permette le funzionalità di editing
 - Un cursore che permette la navigazione nel contenuto
 ###### Document
-Il modello dei dati di un TextComponent è il Document (interfaccia Document), che contiene il testo suddiviso in oggetti di tipo Element. 
+Il modello dei dati di un TextComponent è il Document (interfaccia `Document`), che contiene il testo suddiviso in oggetti di tipo Element e garantiscono il supporto trasparente a tutte le possibili operazioni di editing, come rimozione e aggiunta di stringhe.
+
 [da finire]
 ##### Action
 Nel design dell'interfaccia, capita spesso che la medesima funzionalità (si pensi, a titolo di esempio, all'operazione di copia di un elemento) debba risultare accessibile all'utente da una pluralità di controlli diversi, come una specifica voce di menu, un'icona sulla toolbar o la pressione di una combinazione predefinita di tasti. 
