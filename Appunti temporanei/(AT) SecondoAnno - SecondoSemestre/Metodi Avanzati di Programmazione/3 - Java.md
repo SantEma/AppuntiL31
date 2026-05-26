@@ -2477,7 +2477,15 @@ L'architettura interna di un `JTextComponent` adotta un approccio strutturato, i
 - Un controller, detto **editor kit**, che legge e scrive il testo e permette le funzionalità di editing
 - Un cursore che permette la navigazione nel contenuto
 ###### Document
-Il modello dei dati di un TextComponent è il Document (interfaccia `Document`), che contiene il testo suddiviso in oggetti di tipo Element e garantiscono il supporto trasparente a tutte le possibili operazioni di editing, come rimozione e aggiunta di stringhe.
+Il modello dei dati di un TextComponent è il Document (interfaccia `Document`), che contiene il testo suddiviso in oggetti di tipo `Element`.
+Questo modello di dati ha diverse funzionalità utili:
+- Supporta l'editing dei documenti
+- Può notificare gli eventi di modifica del testo
+- Gestisce oggetti di tipo Position che tracciano delle porzioni di testo anche se vengono modificate
+- Fornisce varie informazioni sul testo
+
+Il `Document` notifica tutti gli oggetti `DocumentListener` registrati (collegati tramite il metodo `addDocumentListener`) a ogni occorrenza di evento di inserimento, rimozione o modifica formale dello stile.
+Il listener `CaretListener` ha la funzione di ricevere tutti gli eventi correlati alle modifiche della posizione o alla selezione attuata dal cursore, e richiede di essere associato direttamente all'oggetto `JTextComponent.
 
 [da finire]
 ##### Action
