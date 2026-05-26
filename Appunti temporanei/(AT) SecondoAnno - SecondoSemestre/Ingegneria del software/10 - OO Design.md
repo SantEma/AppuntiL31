@@ -152,10 +152,10 @@ I principi dell'OO desing sono:
 - Do Not Repeat Yourself **(DRY)**
 - **SOLID method**
 
->[!NOTE] Definizione 
->Ogni elemento di conoscenza deve avere una sola, non ambigua, autorevole rappresentazione all'interno di un sistema
->
-> La definizione ci dice che qualsiasi parte significativa di un metodo dovrebbe essere implementato in unica zona apposita del codice sorgente, evitando **cloni** dati dal **copy-paste** e creando astrazioni in caso ci dovessimo imbattere in ripetizioni del concetto.
+
+Ogni elemento di conoscenza deve avere una sola, non ambigua, autorevole rappresentazione all'interno di un sistema
+
+Qualsiasi parte significativa di un metodo dovrebbe essere implementato in unica zona apposita del codice sorgente, evitando **cloni** dati dal **copy-paste** e creando astrazioni in caso ci dovessimo imbattere in ripetizioni del concetto.
 
 ### SOLID
 ![[Pasted image 20260512115803.png]]
