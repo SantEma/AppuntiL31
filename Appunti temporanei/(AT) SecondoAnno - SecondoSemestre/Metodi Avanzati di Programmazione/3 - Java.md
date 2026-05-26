@@ -2486,8 +2486,6 @@ Questo modello di dati ha diverse funzionalità utili:
 
 Il `Document` notifica tutti gli oggetti `DocumentListener` registrati (collegati tramite il metodo `addDocumentListener`) a ogni occorrenza di evento di inserimento, rimozione o modifica formale dello stile.
 Il listener `CaretListener` ha la funzione di ricevere tutti gli eventi correlati alle modifiche della posizione o alla selezione attuata dal cursore, e richiede di essere associato direttamente all'oggetto `JTextComponent.
-
-[da finire]
 ##### Action
 Nel design dell'interfaccia, capita spesso che la medesima funzionalità (si pensi, a titolo di esempio, all'operazione di copia di un elemento) debba risultare accessibile all'utente da una pluralità di controlli diversi, come una specifica voce di menu, un'icona sulla toolbar o la pressione di una combinazione predefinita di tasti. 
 Al fine di non frammentare la logica di programmazione, è buona pratica di ingegneria del software procedere creando un'unica istanza di `Action` centralizzata da associare a ciascun punto di controllo. 
