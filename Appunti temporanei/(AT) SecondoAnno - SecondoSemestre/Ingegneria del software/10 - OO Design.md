@@ -8,7 +8,6 @@ public class Dialler{
 ```
 Si rappresenta tramite il seguente disegno madre
 ![[Pasted image 20260505102637.png]]
-
 ## Attributi
 Gli attributi generalmente sono **privati** e rappresentano le **proprietà strutturali** degli oggetti di una classe.
 ![[Pasted image 20260505102331.png]]
@@ -152,11 +151,9 @@ I principi dell'OO desing sono:
 - Do Not Repeat Yourself **(DRY)**
 - **SOLID method**
 
-
 Ogni elemento di conoscenza deve avere una sola, non ambigua, autorevole rappresentazione all'interno di un sistema
 
 Qualsiasi parte significativa di un metodo dovrebbe essere implementato in unica zona apposita del codice sorgente, evitando **cloni** dati dal **copy-paste** e creando astrazioni in caso ci dovessimo imbattere in ripetizioni del concetto.
-
 ### SOLID
 ![[Pasted image 20260512115803.png]]
 
