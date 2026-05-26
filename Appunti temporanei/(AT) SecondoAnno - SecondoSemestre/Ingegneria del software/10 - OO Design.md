@@ -76,7 +76,7 @@ Gli oggetti delle **sottoclassi** ereditano le stesse caratteristiche delle **su
 
 Una sottoclasse può definire delle **estensioni**, ovvero caratteristiche aggiuntive e possono eseguire un **overriding**, ossia una modifica dell'implementazioni delle operazioni ereditata. 
 
->[!NOTE] Uso comune
+>[!NOTE] Uso comune dell'overriding
 >Molto spesso l'overriding anche se permesso non è la soluzione migliore e ben vista per risolvere i problemi di modifica delle operazioni per le classi figlie
 
 ![[Pasted image 20260505105648.png]]
@@ -91,7 +91,6 @@ Una classe **realizza** un'interfaccia se è sostituibile a essa, poiché ne imp
 Una classe **richiede** una sua interfaccia se necessita delle sue operazioni per funzionare, si crea una dipendenza da essa e una gerarchia d'ordine.
 
 In UML esistono diversi modi per rappresentare un Interface e chi la richiede:![[Pasted image 20260505110315.png]]
-
 In passato si rappresentava in maniera più semplice tramite la **rappresentazione lollipop**:
 ![[Pasted image 20260505110423.png]]
 o tramite quella **conica**:
@@ -144,7 +143,6 @@ L'attività di OO design serve per valutare altre vie percorribili nella realizz
 Serve specialmente per tenere traccia di cosa si è fatto e rispondere alla domanda: *"cosa si è fatto qui?"*, infatti la **documentazione** è fondamentale in questa fase per portare traccia degli avanzamenti e le modifiche.
 
 Avviene il riuso del **design pattern**, delle librerie e del **framework OO** e su quest'ultimi si applica il principio di OO design per evitare il **debito tecnico**.
-
 ## Principi di OO desing
 I principi dell'OO desing sono:
 - Information hiding
