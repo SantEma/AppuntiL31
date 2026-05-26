@@ -2485,5 +2485,5 @@ Nel design dell'interfaccia, capita spesso che la medesima funzionalità (si pen
 Al fine di non frammentare la logica di programmazione, è buona pratica di ingegneria del software procedere creando un'unica istanza di `Action` centralizzata da associare a ciascun punto di controllo. 
 La creazione operativa avviene estendendo la classe astratta `AbstractAction` e sovrascrivendo, al suo interno, l'implementazione obbligatoria del metodo `actionPerformed()` affinché contenga la corretta logica applicativa. 
 
-Fare uso di una classe `Action` permette non solo il riuso del codice, ma garantisce di poter uniformare su tutti i controlli le medesime proprietà condivise, come il testo visibile a schermo, le stringhe descrittive destinate al tooltip o le icone associate; consente peraltro di abilitare o disabilitare contemporaneamente e in modo unitario la funzionalità su tutta l'applicazionedi
+Fare uso di una classe `Action` permette non solo il riuso del codice, ma garantisce di poter uniformare su tutti i controlli le medesime proprietà condivise, come il testo visibile a schermo, le stringhe descrittive destinate al tooltip o le icone associate; consente peraltro di abilitare o disabilitare contemporaneamente e in modo unitario la funzionalità su tutta l'applicazione.
 
