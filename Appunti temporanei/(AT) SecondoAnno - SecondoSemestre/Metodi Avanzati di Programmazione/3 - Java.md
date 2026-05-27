@@ -2685,7 +2685,6 @@ Qui entrano in gioco nuovi simboli e attori:
 - $X$ è il **generics** che fa riferimento agli oggetti che voglio processare
 - `Iterable<X>` mi permette di iterare l'operazione che voglio eseguire su tutti gli oggetti di tipo $X$
 - $Y$ è il **generics** relativo al risultato della funzione mapper (ovvero della `Function`)
-
 > [!example] Segue l'esempio di due azioni da eseguire su `processElements`
 > Sono due funzioni diverse che utilizzano lo stesso metodo generalizzato precedentemente per cercare il *cognome* e *l'età*.
 > ```JAVA
