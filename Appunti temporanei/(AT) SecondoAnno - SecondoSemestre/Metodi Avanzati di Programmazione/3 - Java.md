@@ -2492,4 +2492,438 @@ Al fine di non frammentare la logica di programmazione, è buona pratica di inge
 La creazione operativa avviene estendendo la classe astratta `AbstractAction` e sovrascrivendo, al suo interno, l'implementazione obbligatoria del metodo `actionPerformed()` affinché contenga la corretta logica applicativa. 
 
 Fare uso di una classe `Action` permette non solo il riuso del codice, ma garantisce di poter uniformare su tutti i controlli le medesime proprietà condivise, come il testo visibile a schermo, le stringhe descrittive destinate al tooltip o le icone associate; consente peraltro di abilitare o disabilitare contemporaneamente e in modo unitario la funzionalità su tutta l'applicazione.
+### Lambda Expressions
+Per comprendere cosa sono e come utilizzare le Lambda expressions utilizziamo un esempio legato all'utilizzo delle **classi anonime**.
 
+Supponiamo di avere la seguente classe che memorizza delle informazioni relative ad una persona:
+```JAVA
+public class Person{
+	public enum Gender{
+		MALE,FEMALE
+	}
+	private String name;
+	private String surname;
+	private int age;
+	private Gender gender;
+	
+	public Person(String name,String surname, int age, Gender gender){
+		this.name=name;
+		this.surnae=surname;
+		this.age=age;
+		this.gender=gender;
+	}
+	public String getName(){
+		return name;
+	}
+	
+	public void setGender(Gender gender){
+		this.gender=gender;
+	}
+	public void printPerson(){
+		System.out.println("Person{" + "name="+name+ ",surname="+surname+ ", age="+age+", gender="+ gender+'}'};
+	}
+}
+```
+
+Un ulteriore modifica utile sarebbe quella di cercare delle persone della classe `Person` che rispettano alcune caratteristiche.
+>[!Example] Vogliamo cercare le persone di una certa età
+>```JAVA
+>public static void printPersonsOlderThan(List<Person> roster, int age){
+>	for (Person p: roster){
+>		if(p.getAge()>=age){
+>			p.printPerson();
+>		}
+>	}
+>}
+>```
+Come si può notare, questo codice non è elegante poiché **fortemente dipendente** dalla classe `Person` e in caso di modifiche dovremmo modificare tutta la classe `Person` stessa.
+
+Un'altra soluzione sarebbe quella di eseguire una ricerca come funzione ma anche in questo caso il metodo sarebbe legato all'attributo `age` che è memorizzato in `Person` e non è generico poiché possiamo filtrare solo tramite l'attributo età.
+
+Possiamo definire un interfaccia `CheckPerson` che ha un unico metodo che verifica se una istanza sia valida o meno:
+```JAVA
+public interface CheckPerson{
+	boolean test(Person p);
+}
+
+// metodo che esegue questa interfaccia per vedere se una persona rispetta i criteri definiti nell'implementazione del metodo test
+public static void printPerson(List<Person> roster,CheckPerson tester){
+	for(Person p: roster){
+		if(tester.test(p)){
+			p.printPerson();
+		}
+	}
+}
+```
+Creato ciò, andiamo ad implementare l'interfaccia `CheckPerson`:
+```JAVA
+public class CheckPersonEligibleForSelectiveService implements CheckPerson{
+	@Override
+	public boolean test(Person p){
+		return p.getGender()==Person.Gender.MALE
+			&& p.getAge()>=18
+			&& p.getAge()<=25;
+	}
+}
+```
+questa nuova classe sarà utilizzata per creare una nuova istanza del suo tipo: `new CheckPersonEligibleForSelectiveService()` e passiamo l'istanza al metodo `printPerson`.
+#### Ricerca classe anonima
+>[!NOTE] Definizione di classe anonima
+>Una classe **anonima** viene definita tale poiché è priva di un nome essendo dichiarata e contemporaneamente istanziata.
+>La classe anonima può essere definita nel corpo di un metodo e sono spesso utilizzate con SWING per creare le **ActionListener**.
+
+Si costruisce nel seguente modo:
+```JAVA
+//use of an anonymous class
+printPerson(person, new CheckPerson(){
+	@Override
+	public boolean test(Person p){
+		return p.getGender()==Person.Gender.MALE && p.getAge()>=18 && p.getAge()<=25;
+	}
+});
+```
+##### Interfacce funzionali
+L'interfaccia `CheckPerson` usata prima è in verità un'**interfaccia funzionale**, essa differisce da un'interfaccia classica poiché:
+- contiene solo un metodo astratto senza metodi statici al suo interno
+- è **priva di nome** avendo solo un metodo astratto che sarà intrisicamente implementato
+
+Quindi un'alternativa all'uso di una classe anonima è la possibilità di usare una **lamba expression**.
+#### Espressione lambda
+Usando nuovamente l'esempio precedente vediamo come inserire l'espressione:
+```JAVA
+public static void printPersonWithPredicate(List<Person> roster,Predicate<Person> tester){
+	for (Person p: roster){
+		if(tester.test(p)){
+			p.printPerson();
+		}
+	}
+}
+```
+La voce **`Predicate<T>`** è un **interfaccia funzionale** definita in *java.util.function* ed esegue la stessa funzione che eseguiva precedentemente `CheckPerson`, ma essendo **generica** e avendo solo il suo stesso metodo: `boolean test(T t)` non è necessario specificare il suo nome e può essere utilizzata in un'espressione lambda nel seguente modo:
+![[Pasted image 20260507125539.png]]
+#### Sintassi di Lambda
+L'espressione lambda è composta:
+- da una **lista di parametri formali** separati da virgole e racchiusi tra parentesi tonde.
+- il token $\to$ 
+- un **corpo** che contiene una singola espressione o un blocco di istruzioni. Il blocco di istruzioni è racchiuso nelle parentesi graffe {}, se il blocco di istruzioni contiene un’invocazione ad un metodo che non restituisce nessun valore (void) si possono omettere le parentesi.
+
+>[!WARNING] Nota bene
+>È possibile omettere il tipo di dati dei parametri in un'espressione lambda. Inoltre, è possibile omettere le parentesi se esiste un solo parametro
+
+> [!example] Visualizziamo il seguente esempio con più parametri
+> ```JAVA
+> public class Calculator{
+> 	interface IntergerMath{
+> 		int operation(int a,int b);
+> 	}
+> 	
+> 	public int operateBinary(int a,int b,IntegerMath op){
+> 		return op.operation(a,b);
+> 	}
+> 	
+> 	public static void main(Strng...args){
+> 		Calculator myApp=new Calculator();
+> 		IntegerMath addition=(a,b) -> a+b; //parametro formale con lamba
+> 		IntegerMath subtraction=(a,b) -> a-b; //parametro formale con lamba
+> 		System.out.println("40+2= "+myApp.operateBinary(40,2,addition));
+> 		System.out.println("20-10= "+myApp.operateBinary(20,10,subtraction));
+> 	}
+> }
+> ```
+#### Perché usare le lambda expressions?
+Le lambda expressions sono un ottimo esempio di **programmazione funzionale**:
+- Privo di **side-effect**
+- Flusso di esecuzione a valutazione di funzioni
+
+**Programmazione funzionale**:
+- La programmazione funzionale si concentra sulla **definizione di funzioni** contrariamente, i paradigmi procedurali e imperativi prediligono la specifica di una sequenza di comandi da eseguire e i valori vengono calcolati cambiando lo stato del programma attraverso l’operazione di assegnazione.
+- La programmazione funzionale basa le sue radici nel **lambda calcolo**, ossia un **calcolo basato sulle funzioni**, composto da un linguaggio formale utilizzato per esprimere le funzioni e un sistema di riscrittura per stabilire come i termini possano essere ridotti e semplificati.
+#### Consumer
+Riprendendo il metodo `printPersonWithPredicate`. Il metodo è ancora più **generalizzabile**, attuando una generalizzazione sull'**operazione** da applicare alle istanze per cui `test` da `true`.
+
+Per farlo utilizziamo `Consumer<T>`. Questa interfaccia è definita in java.util.funciton, il suo funzionamento è identico a `printPerson`. L'unico metodo di `Consumer` è `void accept(T t)`
+
+Se volessimo effettuare un operazione su un'istanza prima di *consumarla* necessitiamo dell'interfaccia **`function`**.
+##### Function
+Anche quest'interfaccia è definita in java.util.function ed è dichiarata nel seguente modo: `Function<T,R>`. Questa interfaccia esegue un'operazione sull'istanza $T$ restituendo un'istanza $R$.
+
+Anche `Function` ha un unico metodo, il quale è `R apply(T t)`
+```JAVA
+//Function<T, R> è una funzione predefinita che agisce come R apply(T t)
+//Aplly permette di eseguire un azione in T restituendo R
+public static void processPersonWithFunction(List<Person> roster,Predicate<Person> tester,Function<Person,String> mapper, Consumer<String>block){ 
+	//mapper trasforma un oggetto in un altro
+	for(Person p:roster){
+		if(tester.test(p)){
+			String data=mapper.apply(p);
+			block.accept(data);
+		}
+	}
+}
+
+processPersonWithFunction(persons,
+	 p->p.getGender()==Person.Gender.MALE && p.getAge()>=18 && p.getAge()<=25,
+	 p->p.getSurname(), //Function
+	 surname->System.out.println(surname) //Consumer
+);
+```
+#### Visibilità delle variabili
+Un'espressione lambda non aggiunge un nuovo livello di **scope**, infatti sono definite **lexically scoped** e si comportano di fatto come le classi anonime, quindi accedendo alle variabili definite nello scopo locale nel quale è scritta l'espressione lambda.
+#### Generics nelle Lambda Expression
+Il metodo `checkPersonWithFunction` è possibile renderlo ancora più **generico** così da poterlo applicare a qualsiasi tipo di classe, senza essere così vincolato da `Person` e contemporaneamente è generico anche per il tipo restituito dall'implementazione di `Function`
+```JAVA
+public static <X,Y> void processElements(Iterable<X> source,Predicate<X> tester,    Function<X,Y>mapper,Consumer<Y>block){
+	for(X p:source){
+		if(tester.test(p)){
+			Y data=mapper.apply(p);
+			block.accept(data);
+		}
+	}
+}
+```
+Qui entrano in gioco nuovi simboli e attori:
+- $X$ è il **generics** che fa riferimento agli oggetti che voglio processare
+- `Iterable<X>` mi permette di iterare l'operazione che voglio eseguire su tutti gli oggetti di tipo $X$
+- $Y$ è il **generics** relativo al risultato della funzione mapper (ovvero della `Function`)
+
+> [!example] Segue l'esempio di due azioni da eseguire su `processElements`
+> Sono due funzioni diverse che utilizzano lo stesso metodo generalizzato precedentemente per cercare il *cognome* e *l'età*.
+> ```JAVA
+> processElements(persons,
+> 	 p->p.getGender()==Person.Gender.MALE && p.getAge()>=18 && p.getAge()<=25,
+> 	 p->p.getSurname(), //Function
+> 	 surname->System.out.println(surname) //Consumer
+> );
+> 
+> processElements(persons,
+> 	 p->p.getGender()==Person.Gender.MALE && p.getAge()>=18 && p.getAge()<=25,
+> 	 p->p.getAge(), //Function
+> 	 age->System.out.println(age) //Consumer
+> );
+> ```
+> 
+
+Nel dettaglio il metodo `processElements` lavora in questo modo:
+* **Ottiene** una sorgente di oggetti da un iteratore. Nell’esempio gli oggetti sono di tipo `Person` e la sorgente è una `List` che implementa l’interfaccia `Iterable`
+* **Filtra** gli oggetti in base all’oggetto `Predicate`. Nel nostro caso definito dall’espressione lambda che controlla il **genere e l’età**
+* **Mappa** tutti gli oggetti filtrati su un altro valore definito da `Function`. In questo caso un’altra espressione lambda che restituisce il **cognome**
+* **Esegue** un’azione sull’oggetto mappato definita dall’oggetto `Consumer`. In questo caso stampa una stringa che è il cognome dell’oggetto restituito da `Function`
+
+Quello che esegue il metodo `ProcessElements` è ottenibile attraverso l'uso degli **stream** e delle **operazioni aggregate**.
+```JAVA
+//processElements viene rimpiazzato con un pipline applicata su uno stream
+person
+	.stream()
+	.filter(p->p.getGender()==Person.Gender.MALE
+	&& p.getAge()>=18
+	&& p.getAge()<=25)
+	.map(p->getSurname())
+	.forEach(surname->System.out.println(surname));
+```
+Le seguenti operazioni: `.map`,`.filter` e `forEach` sono **operazioni aggregate** che processano gli elementi a partire da uno **stream**.
+##### Pipeline e stream
+>[!NOTE] Stream
+>Uno **stream** è una **sequenza di elementi** che differisce dalla **collection** poiché non è una struttura dati che può contenere elementi.
+>Lo stream preleva i valori da una **sorgente** attraverso una **pipeline** (una sorgente può essere una collection stessa).
+
+>[!NOTE] Pipeline
+>In Java una **Pipeline** è una **sequenza di operazioni** (come quelle viste precedentemente), dove generalmente i **parametri** di queste operazioni sono **lambda expression** e quindi facilmente personalizzabili.
+
+Andando ad analizzare nel dettaglio lo stream dell'esempio precedente si hanno due operazioni:
+- `filter` che filtra gli oggetti
+- `forEach` che esegue le operazioni su tutti gli elementi dello stream
+
+In questo caso la pipeline di questo stream se la volessimo analizzare senza la sua aggregazione sarebbe:
+```JAVA
+for(Person p:roster){
+	if(p.getGender()==Person.Sex.MALE){
+		System.out.println(p.getName());
+	}
+}
+```
+
+Concettualmente possiamo suddividere la composizione di una pipeline in:
+- **Sorgente**, che potrebbe essere una collection, un array, un canale di I/O, ecc...
+- Zero o più **operazioni intermedie**, un esempio di operazione intermedia è `filter`. Ogni operazione intermedia genera un nuovo `stream`
+- **Operazione terminale**. L'opzione terminale è una conclusione della pipeline che produce un **risultato finale** che non è più uno stream. 
+  In allegato il link della Javadoc con la lista delle operazioni terminali: https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html
+##### Funzioni generatrici
+`Stream` ha un metodo **`generate`** che permette di generare uno stream all'infinito di valori la cui generazione è dipesa dal parametro di tipo `Supplier`: `generate(Supplier<T> s)`
+
+L'interfaccia di `Supplier` possiede solamente un metodo `get` che restituisce un valore $T$.
+
+L’altro metodo di `Stream` che genera valori è `iterate` che genera valori infiniti a partire da un seed al quale viene applicato iterativamente una funzione `f`: `seed, f(seed), f(f(seed), ecc...`
+>[!Example] Esempio di funzione generatrice
+>Crea uno stream infinito di numeri random nell’intervallo $[0, 1)$, filtra i primi $100$ maggiori o uguali a $0.5$ e li stampa.
+>```JAVA
+>DoubleStream.generate(()->Math.random())
+>	.filter(p->p>=0.5)
+>	.limit(100)
+>	.forEach(p->System.out.println(p));
+>```
+
+In questo caso troviamo la generazione con `generate(()->Math.random())`. La funzione `Supplier` è definita attraverso un’espressione **lambda** senza parametri, `()`, che esegue un’istruzione che genera un double, in questo caso il metodo statico random di `Math`.
+>[!Example] Esempio di funzione generatrice
+>Genera $100$ numeri random nell’intervallo $[0, 1)$, filtra quelli maggiori a $0.5$ e conta quanti sono. Il risultato finale viene stampato.
+>```JAVA
+>System.out.println(DoubleStream.generate(()->Math.random())
+>	.limit(100)
+>	.filter(p->p>0.5)
+>	.count());
+>```
+#### Reduction
+Le operazione come `avg` e `count` (vista nell'esempio precedente) sono dette **riduzioni**.
+Queste restituiscono un unico valore combinando gli oggetti presenti nello stream ma possono esistere anche alcuni tipi di riduzioni che restituiscono una collection e non un singolo valore.
+
+>[!Example] Esempi di operazioni di riduzione che restituiscono un singolo valore:
+> `average`, `sum`, `min`, `max` e `count`
+
+Oltre alle operazioni di riduzione predefinite è possibile definirne di **nuove utilizzando i metodi di Stream**:`reduce` e `collect`.
+##### Stream reduce
+Analizziamo un codice in cui si vuole calcolare la somma di tutte l'età presenti utilizzando la riduzione `sum`:
+```JAVA
+Integer totalAge=persons
+	.stream()
+	.mapToInt(p->p.getAge())
+	.sum();
+System.out.println(totalAge);
+```
+Questa funzione può essere esattamente modificata con `reduce` al posto di `sum`:
+```JAVA
+totalAge=persons
+	.stream()
+	.mapToInt(p->p.getAge())
+	.reduce(0, (a,b)->a+b);
+System.out.println(totalAge);
+```
+
+Analizziamo nel dettaglio cosa è successo. In primis si nota chiaramente che `reduce` riceve in input due parametri:
+- **identify**: questo valore (nel nostro caso $0$) è il valore da restituire in caso lo stream fosse vuoto e da dove inizierà la sua esecuzione il metodo `reduce` all'interno dello Stream.
+- **accumulator**: la funzione accumulatore accetta **due parametri dello stesso tipo e restituisce un risultato**. In questo esempio, la funzione accumulatore è un'espressione lambda che aggiunge due valori Integer(`a`,`b`) e restituisce un valore Integer ($a+b$). I due parametri della funzione accumulatore sono: il **risultato parziale della riduzione** (in questo esempio, la somma di tutti gli interi elaborati finora) e **l'elemento successivo dello stream** (in questo esempio, un numero intero, l’età).
+##### Stream collect
+`Collect` risolve il problema generato da `reduce`. Se ricordiamo infatti, la programmazione funzionale è priva di **side-effect**, ma con l'esempio precedente abbiamo sempre un effetto secondario, ossia la restituzione di un nuovo valore.
+
+Nel caso precedente il nuovo valore è di tipo Integer quindi non abbiamo grossi problemi di performance, ma se la funzione reduce lavorasse con **oggetti più complessi**, ad esempio Collection, ogni volta che viene chiamata creerebbe una nuova Collection.
+In questi casi è opportuno utilizzare il metodo `collect` che effettua un **update dell’oggetto** che si sta ottenendo dalla riduzione dello stream.
+
+>[!Warning] Prestare attenzione all'utilizzo
+>Da quello che si è detto si evince che `collect` sovrascrive il valore preesistente estrapolato dallo stream, contrariamente da `reduce` che in casi lievi lavora creando nuovi dati.
+
+l metodo collect accetta **tre parametri**: 
+1. **supplier**: è il costruttore dell’oggetto che verrà restituito dal metodo `collect` e che si presuppone venga modificato durante l’operazione di riduzione 
+2. **accumulator**: questa funzione serve ad inglobare il valore attuale dello stream nell’oggetto che verrà restituito 
+3. **combiner**: questa funzione combina due contenitori di risultati e unisce il loro contenuto
+
+>[!example] Costruiamo qualcosa di complesso per visualizzare un ottimo esempio.
+> Supponiamo di voler implementare l’operatore terminale che calcola la media attraverso il metodo `collect`. Abbiamo bisogno di definire una classe `Average` che manterrà la somma corrente e il numero totale degli elementi esaminati nello stream. Questa classe verrà poi utilizzata nel metodo `collect`
+> ```JAVA
+> public class Average implements IntConsumer{
+> 	private int sum=0;
+> 	private int count=0;
+> 	
+> 	public double average(){
+> 		return count>0?((double)sum) / count:0
+> 	}
+> 	
+> 	@Override
+> 	public void accept(int value){
+> 		sum+=value;
+> 		count++;
+> 	}
+> 	
+> 	public void combine(Average other){
+> 		sum+=other.sum;
+> 		count+=other.count;
+> 	}
+> }
+> ```
+
+La classe `Averager` implementa l’interfaccia `IntConsumer` che prevede il solo metodo `accept` che verrà utilizzato come **accumulator**. Il **costruttore** sarà il metodo utilizzato come **supplier**, invece il metodo `combine` come **combiner**.
+Il costruttore ci restituirà il risultato finale.
+
+La sua implementazione in un codice è la seguente:
+```JAVA
+Averager avgAgeC=persons
+	.stream()
+	.map(p->p.getAge())
+	.collect(Averager::new, Averager::accept, Averager::combine);
+System.out.println(avgAgeC.average());
+```
+Come possiamo notare c'è un nuovo **operatore**($::$) in questa implementazione, chiamato **method reference operator**. Questo nuovo operatore si comporta come alle espressioni lambda che invocano direttamente il metodo, ma è più immediato poiché basato solo sul **nome del metodo**.
+
+In breve, con questo operatore stiamo andando ad utilizzare i metodi di una classe facendo riferimento direttamente con il nome di quest'ultima.
+
+Se volessimo estendere quella sezione avremmo dovuto scrivere:
+`.collect(()->new Averager(),(a,b)->a.accept(b),(a,b)->a.combine(b));`
+##### Group By
+Il collector `groupingBy` permette di raggruppare gli oggetti all'interno di uno stream in base a una specifica **funzione di classificazione**. L'operazione restituisce tipicamente una `Map`.
+> [!example] Esempio base di Group By Nell'esempio seguente filtriamo tutte le persone con età maggiore a 17 e le raggruppiamo in base al genere.
+> 
+> ```JAVA
+> Map<Person.Gender, List<Person>> collect = persons
+> 	.stream()
+> 	.filter(p -> p.getAge() > 17)
+> 	.collect(Collectors.groupingBy(Person::getGender));
+> ```
+
+Esiste anche un'implementazione di `groupingBy` che accetta **due parametri**: il primo è la funzione di classificazione, mentre il secondo è chiamato **downstream collector**, ovvero un ulteriore collector che viene applicato al risultato del raggruppamento.
+> [!example] Esempio di Group by con downstream collector (`mapping`) 
+> Il Collector `mapping` utilizzato come downstream produce una `List` dove il tipo degli elementi dipende dalla funzione passata come primo argomento. 
+> In questo caso raggruppiamo per genere e inseriamo nella lista **solo il nome**.
+> 
+> ```JAVA
+> Map<Person.Gender, List<String>> namesByGender = persons
+> 	.stream()
+> 	.collect(
+> 		Collectors.groupingBy(
+> 			Person::getGender,
+> 			Collectors.mapping(
+> 				Person::getName,
+> 				Collectors.toList()
+> 			)
+> 		)
+> 	);
+> ```
+
+> [!example] Esempio di Group by con downstream collector (`reducing`) 
+> In questo caso il downstream collector è un'operazione di **riduzione**. 
+> Nell'esempio si effettua la somma delle età raggruppandole per genere.
+> 
+> ```JAVA
+> Map<Person.Gender, Integer> totalAgeByGender = persons
+> 	.stream()
+> 	.collect(
+> 		Collectors.groupingBy(
+> 			Person::getGender,
+> 			Collectors.reducing(
+> 				0,
+> 				Person::getAge,
+> 				Integer::sum
+> 			)
+> 		)
+> 	);
+> ```
+##### Esecuzione parallela
+Le operazioni sugli stream possono essere eseguite in parallelo (sfruttando il multithreading e l'esecuzione concorrente) semplicemente sostituendo il metodo `.stream()` con **`.parallelStream()`**.
+> [!example] Esempio di calcolo della media in esecuzione parallela
+> ```java
+> double average = persons
+> 	.parallelStream()
+> 	.filter(p -> p.getGender() == Person.Gender.MALE)
+> 	.mapToInt(Person::getAge)
+> 	.average()
+> 	.getAsDouble();
+> ```
+
+> [!example] Esempio di raggruppamento concorrente 
+> ```JAVA
+> ConcurrentMap<Person.Gender, List<Person>> byGender = persons
+> 	.parallelStream()
+> 	.collect(
+> 		Collectors.groupingByConcurrent(Person::getGender)
+> 	);
+> ```
+
+Per i raggruppamenti paralleli si utilizza il collector specifico `groupingByConcurrent`, che restituisce una `ConcurrentMap`.
+> [!NOTE] Come usarle e quando?
+> Quando c'è bisogno di passare l'implementazione di un'interfaccia a singolo metodo, la soluzione non sono le classi anonime ma le **lambda expression** stesse.
