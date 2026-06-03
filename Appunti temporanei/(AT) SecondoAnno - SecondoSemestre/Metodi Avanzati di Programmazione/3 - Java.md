@@ -67,7 +67,9 @@ Le variabili in Java ricoprono il ruolo fondamentale di **descrivere lo stato di
 Nel linguaggio esistono diverse categorie di variabili: 
 - Le variabili delle istanze (non statiche), in cui ogni singolo oggetto conserva il suo stato in modo indipendente; 
 - Le variabili delle classi (statiche), che risultano condivise e identiche per tutte le istanze di una specifica classe; 
-- Le variabili locali, che vengono utilizzate e risultano accessibili esclusivamente all'interno del metodo in cui sono dichiarate; 
+- Le variabili locali, che vengono utilizzate e risultano accessibili esclusivamente all'interno del mseeing so many people connect emotionally with these sounds has genuinely changed my life.
+seeing so many people connect emotionally with these sounds has genuinely changed my life.
+etodo in cui sono dichiarate; 
 - I parametri, che rappresentano i valori passati al momento della chiamata di un metodo 
 
 Per quanto riguarda i nomi identificativi, il linguaggio impone che siano case-sensitive, che inizino rigorosamente con una lettera o con il simbolo \$ e che possano contenere numeri al loro interno, avendo preferibilmente delle nomenclature autoesplicative.
