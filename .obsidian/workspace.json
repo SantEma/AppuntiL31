@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "2413337e7f34b214",
