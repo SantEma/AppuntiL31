@@ -179,7 +179,9 @@ x *= 2; è equivalente a x = x * 2;
 ```
 L'operatore `+` può essere utilizzato per concatenare le stringhe:
 ```java
-String a=‘’Hello ‘’; String b=‘’ world!’’; String msg = a + b; (‘’Hello world!’’)
+String a=‘’Hello ‘’; 
+String b=‘’ world!’’; 
+String msg = a + b; (‘’Hello world!’’)
 ```
 ### Operatori unari
 > [!info] Tabella deglio operatori unari
