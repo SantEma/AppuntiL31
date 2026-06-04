@@ -360,7 +360,7 @@ Lo statement continue  salta la corrente iterazione per passare a quella success
 
 Spesso viene attivato da un costrutto condizionale, come in questo caso
 ### return
-L'istruzione return viene adoperata per terminare in modo definitivo l'esecuzione di un metodo corrente.k
+L'istruzione return viene adoperata per terminare in modo definitivo l'esecuzione di un metodo corrente.
 A seconda del metodo, può essere usata in modo autonomo e senza restituire alcun valore, oppure restituendo un valore specifico tramite una variabile
 ## Classi
 ### Dichiarazione di una classe
