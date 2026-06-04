@@ -107,7 +107,7 @@ I letterali in virgola mobile seguono una logica simile: sono considerati di tip
 > double d2=1.3454e2 //Notazione scientifica
 > ```
 ### Letterali caratteri e Stringhe (character e String)
-i character possono contenere qualunque carattere Unicode a 16-bit racchiuso tra singoli apici, mentre le stringhe impiegano i doppi apici.
+I character possono contenere qualunque carattere Unicode a 16-bit racchiuso tra singoli apici, mentre le stringhe impiegano i doppi apici.
 > [!example] Esempio di letterali caratteri e stringhe
 > ```java
 > Per char vale questo -> 'c'
