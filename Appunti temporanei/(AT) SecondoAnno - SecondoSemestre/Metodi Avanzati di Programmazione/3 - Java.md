@@ -1960,7 +1960,7 @@ Attraverso il driver JDBC si possono effettuare tutte le operazioni disponibili 
 Per poter aprire una connessione ad un database è necessario ottenere un oggetto di tipo `Connection`, che fornisce tutti i metodi per preparare le query SQL.
 Per ottenere una connessione è necessario caricare il driver che implementa le API JDBC, chiamando il metodo `getConnection()` della classe `DriverManager` 
 
-Il metodo `DriverManager.getConnection stabilisce` una connessione ad un database. Questo metodo richiede una database URL, che dipende dal DBMS, per esempio:
+Il metodo `DriverManager.getConnection` stabilisce una connessione ad un database. Questo metodo richiede una database URL, che dipende dal DBMS, per esempio:
 
 > [!example] Esempio di connessione database H2
 > ```
