@@ -604,7 +604,7 @@ Tutte le sottoclassi possono riscrivere determinati comportamenti per adattarli 
 > Se qui andassi a richiamare il metodo specificando un oggetto di di tipo B e metodo printMe, otterei come output "Io sono B", poichè ho fatto overriding del metodo precedente
 #### Accesso alla superclasse da una sottoclasse
 Per interagire esplicitamente con gli elementi della superclasse, Java mette a disposizione dello sviluppatore la parola chiave `super`, questa quando viene utilizzata permette:
-- Di invocare direttamente i costruttori della classe padre, utilizzando `super()` senza parametri o `super(lista parametri)` con argomenti specifici, \
+- Di invocare direttamente i costruttori della classe padre, utilizzando `super()` senza parametri o `super(lista parametri)` con argomenti specifici
 - Di richiamare i metodi originali della superclasse tramite la sintassi `super.methodSuper(...)
 
 > [!example] Esempio di accesso alla superclasse da una sottoclasse
