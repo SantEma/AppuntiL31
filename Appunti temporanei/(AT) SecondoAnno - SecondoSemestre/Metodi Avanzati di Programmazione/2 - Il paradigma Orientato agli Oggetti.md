@@ -119,8 +119,8 @@ Gli stereotipi sono previsti dall'UML e sono rappresentati con le parentesi ango
 ### Visibilità delle classi
 Gli attributi e i metodi di una classe possono avere diversi livelli di **visibilità**.
 Un elemento (attributo o metodo) ha
- - **Visibilità pubblica** quando può essere visto (utilizzato, invocato) da altre classi.
-- Visibilità privata quando può essere visto solo dalla classe di appartenenza
+- **Visibilità pubblica** quando può essere visto (utilizzato, invocato) da altre classi.
+- **Visibilità privata** quando può essere visto solo dalla classe di appartenenza
 Ad esempio, un metodo pubblico può essere invocato da qualunque punto del codice (purché la classe sia ‘importata’ in qualche modo), mentre un metodo privato può essere invocato solo da altri metodi della stessa classe
 
 Altri livelli di visibilità sono: 
