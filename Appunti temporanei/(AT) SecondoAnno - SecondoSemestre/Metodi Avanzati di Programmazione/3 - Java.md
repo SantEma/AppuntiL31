@@ -227,7 +227,6 @@ Un'espressione in Java è un costrutto fondamentale composto tipicamente da **va
 La caratteristica essenziale di un'espressione è che, una volta valutata, restituisce sempre un singolo risultato.
 Il tipo di questo risultato non è universale, ma dipende strettamente dai tipi delle variabili coinvolte, dagli operatori utilizzati e, naturalmente, dai valori restituiti dagli eventuali metodi chiamati.
 Per gestire priorità complesse, le parentesi possono essere utilizzate liberamente per definire e forzare un preciso ordine di valutazione degli operatori.
-
 ### Blocchi
 I blocchi sono gruppi di istruzioni racchiusi tra parentesi graffe
 > [!example] Esempio di blocco di codice
@@ -243,7 +242,6 @@ I blocchi sono gruppi di istruzioni racchiusi tra parentesi graffe
 > } 
 > // Fine secondo blocco
 > ``` 
-
 ### Statement
 Uno **statement** rappresenta una **singola istruzione esecutiva** e la sua sintassi richiede tassativamente che termini sempre con il carattere punto e virgola (;).
 All'interno del linguaggio si possono individuare quattro tipologie principali di statement:
@@ -385,7 +383,7 @@ A livello sintattico, la dichiarazione di una classe inizia specificando la sua 
 > ```
 
 Durante questa fase è anche possibile indicare da quale superclasse essa erediti, utilizzando la parola chiave **extends**, e definire se implementa una o più interfacce tramite la parola chiave **implements** (le vedremo successivamente).
-Il livello di visibilità, che può essere public, private o protected, determina come e da chi la classe può essere vista e utilizzata all'interno del progetto
+Il livello di visibilità, che può essere **public, private o protected**, determina come e da chi la classe può essere vista e utilizzata all'interno del progetto
 ### Variabili all'interno
 All'interno di una classe possiamo trovare diverse tipologie di variabili:
 - **I field, o attributi**, sono variabili che definiscono lo stato dell'oggetto e risultano visibili in tutta la classe
@@ -711,7 +709,6 @@ Per le funzioni trigonometriche di base e inverse troviamo altri metodi come:
 - `double toDegrees(double d),` e `toRadians(double d)` converte l’argomento in gradi o radianti
 Come argomento per ogni metodo viene passato un double che rappresenta l’angolo espresso in radianti
 
-
 Per generare numeri casuali nell'intervallo 0 - 1 si usa `Math.random()`, il cui risultato può essere scalato moltiplicandolo per un intero. Nel caso si voglia generare una serie più articolata di numeri casuali è consigliato l'utilizzo della classe dedicata `java.util.Random`
 ### Stringhe
 La classe `String` rappresenta sequenze testuali ed è caratterizzata dalla sua immutabilità, ossia il valore dell'istanza non può in alcun modo essere alterato una volta portato a compimento il suo processo di creazione.
@@ -762,7 +759,6 @@ La classe presenta diversi metodi:
 >     }
 > }
 > ```
-
 ##### Conversione da numeri a stringhe
 La conversione da un formato stringa verso effettivi valori numerici è operabile utilizzando i metodi di parsing specifici implementati per ogni tipo primitivo:
 ```java
@@ -808,7 +804,6 @@ La classe lavora con una lunghezza variabile che consente l'aggiunta o la modifi
 > 	}
 > }
 > ```
-
 #### Espressioni regolari
 Un'**espressione regolare** rappresenta a livello logico una parola capace di denotare un linguaggio regolare, utile per verificare se una data stringa sia o meno conforme alle regole di quel linguaggio.
 > [!info] Diverse espressioni regolari nel linguaggio Java
@@ -829,7 +824,6 @@ Partendo da un pattern già compilato, è possibile generare un oggetto derivato
 > Matcher m = p.matcher("aaaaab"); 
 > boolean b = m.matches();
 > ``` 
-
 ##### Classe Matcher
 La classe `Matcher` esegue le operazioni di matching su una sequenza di caratteri in funzione dell’espressione regolare compilata
 
@@ -1203,7 +1197,6 @@ La classe `Collections` (da non confondere con quella classica `Collection`) met
 >     }
 > }
 > ```
-
 ##### SortedSet
 > [!info] Visione veloce di SortedSet
 > ![[Pasted image 20260414175335.png]]
@@ -1539,7 +1532,6 @@ Le classi I/O che permettono il prelievo di una stringa e l'inserimento di una s
 > 	}
 > }
 > ```
-
 #### Buffered I/O
 Il Buffered I/O è il più famoso ed utilizzato, specialmente per lo sviluppo in Java.
 E' molto conveniente poiché le operazioni vengono eseguite **direttamente sul dispositivo di I/O**; questo è possibile poiché le classi di Java (generalmente) sono **unbeffered**.
