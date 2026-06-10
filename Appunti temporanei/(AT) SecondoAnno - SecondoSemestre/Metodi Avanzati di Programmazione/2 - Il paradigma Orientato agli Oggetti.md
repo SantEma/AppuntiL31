@@ -377,12 +377,10 @@ Questo modello serve per realizzare il meccanismo di **riflessione**, che permet
 - Scoprire il nome degli attributi `(getFields)`
 Questi appartengono rispettivamente alle classi Method e Field. Class, Method, e Field sono sottoclassi di Object come tutte le classi.
 Questo è utile, poichè la JVM non sa ovviamente quali sono le istanze, quindi a run-time le scopre e le utilizza.
-
 > [!info] Rappresentazione UML delle metaclassi 
 > ![[Pasted image 20260421211830.png]]
 ### Aggregazione di oggetti
 L'ereditarietà non è sempre lo strumento adatto per costruire oggetti, infatti spesso un oggetto è ottenuto **aggregando** altri oggetti
-
 > [!example] Esempio di aggregazione
 > Definire una classe `Automobile` tramite ereditarietà multipla da `Motore` o `Ruota` è un errore concettuale, poiché l'ereditarietà fonde i comportamenti anziché comporli. Un'automobile è composta da parti, ma il suo comportamento non è la semplice unione di quello dei componenti. Inoltre, l'ereditarietà di implementazione non permetterebbe di gestire correttamente la molteplicità, come nel caso delle quattro ruote di un'auto.
 > ![[Pasted image 20260422130424.png]]
@@ -396,7 +394,6 @@ L'uso dell'aggregazione viene suggerito nelle seguenti situazioni:
 Si possono stabilire legami con più istanze di una classe che descrive un componente (per esempio, più ruote). La relazione che si stabilisce in questo modo fra le classi è detta di aggregazione o composizione (o relazione “has_a”).
 
 L'aggregazione è un'associazione debole, se l'intero viene distrutto, le parti possono sopravvivere, mentre la composizione è un associazione forte che implica una dipendenza esistenziale: le parti nascono e muoiono con il contenitore e non possono essere condivise con altri oggetti.
-
 > [!example] Esempio di composizione
 > ![[Pasted image 20260422130237.png]]
 > La composizione viene indicata con un rombo pieno in UML
@@ -406,10 +403,8 @@ La scelta tra queste due relazioni non è sempre immediata. Se consideriamo una 
 - Nell'aggregazione, l'accesso richiede l'invocazione di metodi sui componenti. In generale, l'aggregazione si usa quando servono i servizi di una classe ma non la sua interfaccia, mentre l'ereditarietà permette di riutilizzare codice polimorfo pre-esistente.
 
 Il meccanismo di aggregazione/composizione è generalmente usato quando si vogliono utilizzare i servizi di una classe predefinita ma non la sua interfaccia. L’ereditarietà di implementazione, qualora non dovesse essere permessa da un linguaggio di programmazione, potrebbe essere resa da una relazione di aggregazione/composizione.
-
 ### Organizzazione in Package 
 Per gestire la complessità, le classi vengono organizzate in **package**, ossia un meccanismo generale per organizzare le classi in gruppi
-
 > [!example] Rappresentazione UML dei package
 > ![[Pasted image 20260422131059.png]]
 > In genere i package si usano per riunire classi, ma nella notazione UML essi possono includere qualsiasi costrutto UML e possono essere persino eterogenei (ad esempio, possono contenere classi e interfacce).
@@ -423,14 +418,12 @@ I package possono importare elementi altrui per evitare nomi qualificati, ma tal
 
 
 I package possono essere innestati senza alcun limite di profondità
-
 > [!example] Esempio di package innestato
 > ![[Pasted image 20260422132147.png]]
 
 Si può anche specificare la visibilità degli elementi di un package:
 - Public (+) sono visibili ad altri elementi del package stesso, a uno dei package innestati o a package che li importano.
 - Private (-) non sono visibili all’esterno del package
-
 > [!example]  Esempio di package pubblico e privato
 > ![[Pasted image 20260422180239.png]]
 
@@ -438,7 +431,6 @@ Si può anche specificare la visibilità degli elementi di un package:
 Le **classi interne** (inner class) sono dichiarate dentro una classe ospite e possono essere private. 
 Esse possono accedere a tutti i membri della classe ospitante, mentre l'inverso è limitato alla parte pubblica. 
 Un'istanza della inner class non può esistere senza l'oggetto ospitante e non può contenere campi statici.
-
 > [!warning] Attenzione
 > In Java, una classe top level non può mai essere privata
 
@@ -458,7 +450,6 @@ La coercizione è il meccanismo di conversione implicita operata da un compilato
 > [!example] Esempio di coercizione generale
 > ![[Pasted image 20260422181141.png]]
 
-
 > [!example] Esempio di coercizione in Java (unboxing e autounboxing)
 > ```java
 >int i;
@@ -475,7 +466,6 @@ Le coercizioni possono essere stabilite staticamente al compile-time (inserendol
 La coercizione è la forma di polimorfismo più semplice, infatti essa opera a un livello semantico, cioè cambiando la rappresentazione del dato
 ##### Overloading
 Si ha il polimorfismo per **overloading** quando lo stesso identificatore è usato per metodi differenti, disambiguati dal contesto o dal tipo degli argomenti
-
 > [!example] Esempio di overloading su un operatore
 > ```java
 > // Overloading dell'operatore +
@@ -496,7 +486,6 @@ Si ha il polimorfismo per **overloading** quando lo stesso identificatore è usa
 L'overloading può interagire con la coercizione: se `+` è definito per due interi e per due reali, espressioni miste come `3 + 4.0` non causano errori di tipo grazie alla combinazione dei due meccanismi.
 
 Nel paradigma a oggetti si ha overloading anche tra funzioni con lo stesso nome definite in classi non correlate gerarchicamente: la disambiguazione si basa sulla classe dell'istanza su cui viene invocato il metodo.
-
 > [!example] Esempio polimorfismo meno potente
 > ![[Pasted image 20260422183457.png]]
 #### Polimorfismo parametrico
