@@ -189,7 +189,6 @@ Al fine di rendere il sistema altamente riutilizzabile, il lavoro di individuazi
 3. Fornire ad ogni classe gli attributi e le operazioni di cui ha bisogno per eseguire tali responsabilità
 
 L’individuazione delle classi dipende dunque sia dalla realtà che si vuole modellare, sia dalla necessità di individuare il giusto bilanciamento dei compiti da assegnare, al fine di rendere il sistema software altamente mantenibile e riutilizzabile
-
 ### Stereotipi di classi
 Alcune metodologie suggeriscono l’individuazione e la classificazione delle classi secondo i seguenti gruppi:
 - Classi entità: servono per la modellazione di dati
@@ -245,12 +244,10 @@ In Smalltalk e Java, un metodo definito in una (sotto-)classe può invocare una 
 Nell’ereditarietà per variazione funzionale, la visibilità (pubblica, protetta, privata, package) degli attributi e delle operazioni ereditate dalla superclasse non è modificata, inoltre la variazione funzionale attiene solo le operazioni di accesso e trasformazione di una classe, non andando a modificare i costruttori della superclasse originaria.
 #### Per restrizione
 Nella ereditarietà per restrizione, le istanze di una sottoclasse soddisfano vincoli che non sono necessariamente soddisfatti da istanze della superclasse.
-
 > [!example] Esempio per restrizione
 > ![[Pasted image 20260316100703.png]]
 #### Combinazioni di ereditarietà
 Una classe può combinare diversi tipi di ereditarietà
-
 > [!example] Esempio di ereditarietà combinata
 > ![[Pasted image 20260316102445.png]]
 > Contents
@@ -264,7 +261,6 @@ La conseguenza del principio di sostituibilità è che una sottoclasse non può 
 In effetti, preservando la visibilità degli attributi e dei metodi ereditati, così come accade nelle tre forme di ereditarietà viste, si garantisce che gli oggetti della sottoclasse offrano quanto meno gli stessi servizi degli oggetti della superclasse (anche se i servizi potranno essere implementati diversamente, come accade nella variazione funzionale).
 **Pertanto il principio di sostituibilità (o polimorfismo di inclusione) è compatibile con l’ereditarietà per estensione, variazione funzionale e restrizione**
 
-
 > [!warning] Cosa dice quindi il principio di sostituibilità?
 > L'oggetto di una sottoclasse può essere usato come se fosse un istanza della superclasse
 
@@ -272,7 +268,6 @@ Nelle varie ereditarietà, la relazione di ereditarietà fra classi corrisponde 
 Ci sarebbe un tipo di ereditarietà che non rispetta questo principio
 ##### Ereditarietà di implementazione
 In questa ereditarietà, la sottoclasse utilizza il codice della superclasse (definizioni di attributi e metodi) per implementare l’astrazione associata.
-
 > [!example] Esempio di ereditarietà di implementazione
 > ![[Pasted image 20260316101828.png]]
 > ![[Pasted image 20260316101835.png]]
@@ -281,7 +276,6 @@ Pertanto **l’ereditarietà di implementazione comporta la modifica alla visibi
 Questo tipo di ereditarietà è supportata su alcuni linguaggi di programmazione come C++ o Ada-95.
 
 In UML l’ereditarietà di implementazione è indicata utilizzando lo stesso simbolo della generalizzazione, ma specificando a fianco lo stereotipo <<implementation\>>.
-
 > [!example] Rappresentazione UML
 > ![[Pasted image 20260316102110.png]]
 
@@ -301,7 +295,6 @@ Il grafo di ereditarietà per una specifica classe si presenta come una catena l
 Quando il sistema deve determinare da quale classe venga ereditato un certo metodo (poniamo un metodo $m$), la risoluzione del problema è molto lineare. Il procedimento prevede prima la determinazione della catena degli antenati della classe e, successivamente, la ricerca della prima occorrenza della definizione o ridefinizione del metodo $m$, partendo dall'estremità inferiore della catena
 #### Ereditarietà multipla
 Quando una classe ha più superclassi si parla di **ereditarietà multipla (multiple inheritance)**
-
 > [!example] Esempio di ereditarietà multipla
 > ![[Pasted image 20260316113956.png]]
 
@@ -316,19 +309,15 @@ Per cercare di gestire queste situazioni esistono dei criteri euristici:
 La relazione di ereditarietà nel paradigma orientato agli oggetti introduce un livello di visibilità specifico e intermedio tra quello pubblico e quello privato, denominato **visibilità protetta (protected)**
 
 Quando una caratteristica di una classe, che sia essa un attributo o un metodo, viene dichiarata con visibilità protetta, diviene accessibile non solo all'interno della classe stessa e a tutte le altre classi appartenenti al medesimo package, ma anche a tutte le sue classi discendenti
-
 > [!example] Esempio di visibilità protetta
 > ![[Pasted image 20260316114456.png]]
 
-
 > [!example] Esempio ufficiale dalla documentazione di Java
 > ![[Pasted image 20260521145822.png]]
-
 ### Classi astratte
 È possibile che esistano classi per le quali non è possibile generare delle istanze (**classi astratte**).
 Una classe astratta può essere una classe non completamente specificata, in particolare non è definito il metodo corrispondente a una operazione.
 Le classi astratte non possono essere richiamate e non vi si potrà mai creare oggetti a partire da queste ultime.
-
 > [!example] Esempio di classe astratta
 > ![[Pasted image 20260318111431.png]]
 > ![[Pasted image 20260318111826.png]]
@@ -346,36 +335,29 @@ Una interfaccia è simile a una classe astratta i cui metodi sono tutti astratti
 > ![[Pasted image 20260318113240.png]]
 
 Le interfacce servono a disaccoppiare la definizione delle operazioni dalla loro implementazione. Per poter usare un certo oggetto è sufficiente conoscere la sua interfaccia, non serve conoscere l’implementazione
-
 > [!example] Esempio interfaccia
 > ![[Pasted image 20260318114521.png]]
-
 #### Relazione di realizzazione
 Una o più classi possono realizzare/implementare le operazioni indicate in una interfaccia. La relazione che si stabilisce fra una interfaccia e una classe che la implementa è detta **relazione di realizzazione**. In UML è indicata con una freccia tratteggiata
-
 > [!info] Rappresentazione UML relazione di realizzazione
 > ![[Pasted image 20260318113356.png]]
 
 La relazione di realizzazione si presenta come un valido strumento per scindere la specifica di un “contratto” (cosa una classe deve implementare) e la sua implementazione (come si rendono i servizi del contratto)
-
 > [!example] Esempio di relazione di realizzazione
 > ![[Pasted image 20260318113456.png]]
 #### Ereditarietà delle interfacce
 **Anche le interfacce possono ereditare da altre interfacce**, poiché non ci sono implementazioni, la relazione di ereditarietà è naturalmente una relazione di generalizzazione “is_a”.
-
 > [!example] Esempio di interfacce
 ![[Pasted image 20260318114653.png]]
 
 Poiché non si considerano le implementazioni delle operazioni, l’ereditarietà multipla su interfacce non pone problemi di conflitto di realizzazione, per questo alcuni linguaggi di programmazione, come Java, permettono l’ereditarietà singola sulle classi (in quanto specificano anche le implementazioni) mentre permettono l’ereditarietà multipla sulle interfacce. Questo distingue le classi astratte dalle interfacce.
 #### Relazione di più interfacce
 Poiché non possono sorgere problemi di conflitto di realizzazione, è permesso a una classe di realizzare più interfacce, per di più non correlate da una relazione di generalizzazione.
-
 > [!example] Esempio di relazione di più interfacce
 > ![[Pasted image 20260318114814.png]]
 > In questo modo tutto il codice che utilizza Candidate e Employee può essere utilizzato su oggetti di classe Person.
 #### Realizzazioni multiple di una interfaccia
 Più classi possono implementare la stessa interfaccia, è il caso una interfaccia definita per dati astratti molto utilizzati nello sviluppo del software, come pile, code, liste, alberi e grafi, per i quali sono possibili molteplici realizzazioni
-
 > [!example] Esempio di realizzazione multiple di una interfaccia
 > ![[Pasted image 20260318114924.png]]
 ### Meta-classi
