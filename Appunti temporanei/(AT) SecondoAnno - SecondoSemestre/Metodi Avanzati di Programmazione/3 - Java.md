@@ -2325,7 +2325,6 @@ Esistono varie annotazioni all'interno di JAX-RS
 > [!example] Esempio libri
 > ![[Pasted image 20260509123426.png]]![[Pasted image 20260509123447.png]]
 > ![[Pasted image 20260509123522.png]]
-
 #### Server HTTP
 Dopo aver creato le classi che forniscono i servizi con le relative annotazioni è necessario avere a disposizione un server HTTP che si occupi di gestire le richieste dai vari client.
 
@@ -2335,7 +2334,6 @@ Per semplicità utilizzeremo [grizzly](https://eclipse-ee4j.github.io/jersey.git
 > ![[Pasted image 20260509125231.png]]
 > ![[Pasted image 20260509125240.png]]
 > ![[Pasted image 20260509125250.png]]
-
 #### Client REST
 Dopo aver realizzato i nostri servizi REST e reso disponibile il server HTTP siamo pronti ad accettare le richieste ricevute attraverso il protocollo HTTP
 
@@ -2351,141 +2349,6 @@ Un client non deve far altro che preparare la richiesta HTTP in base alle specif
 
 > [!example] Esempio di richiesta PUT con invio di un JSON
 > ![[Pasted image 20260509125103.png]]
-### SWING
-SWING è il framework di Java che permette la realizzazione di interfacce grafiche (chiamate anche GUI).
-Si utilizza con i packages di riferimento `javax.swing, javax.swing.event`.
-
-Questo pacchetto permette di creare:
-- Finestre, Form, Dialog 
-- Menu, Pulsanti, Check-box, Combo-box 
-- Alberi, Tabelle 
-- Layout, Look&Feel
-
-> [!info] La mia prima applicazione (Netbeans+Swing)
-> NetBeans mette a disposizione degli strumenti che facilitano la creazione delle GUI, che introducono:
-> - Drag and drop dei componenti
-> - Auto-generazione del codice 
-> - Strumenti per la gestione del layout dei componenti
-> 
-> Per trovare degli esempi conviene visionare il file [[3.1 - (Slide Esempi) Prima Applicazione in Java SWING.pdf]]
-#### Contenitori
-Java Swing mette a disposizione tre tipi di contenitori:
-- JFrame
-- JDialog
-- JApplet
-
-Ogni componente deve far parte di una gerarchia di componenti connessi ad un contenitore radice (chiamato anche **top level**), ognuno di questi componenti poi può appartenere ad un solo contenitore.
-Ogni contenitore top-level è associato ad una vista (ovvero gli oggetti effettivamente visibili su schermo).
-> [!info] Gerarchia dei componenti 
-> ![[Pasted image 20260525105232.png]]
-> Ogni programma SWING deve avere almeno un contenitore top-level (questo contenitore è la radice della gerarchia delle componenti)
-> Per ogni contenitore top level è possibile aggiungere un menu.
-
-Per aggiungere componenti ad un contenitore è necessario usare il metodo `add()`
-> [!example] Esempio di metodo `add()`
-> ```java
-> frame.getContentPane().add(yellowLabel, BorderLayout.CENTER)
-> ```
-> 
-> `getContentPane()` restituisce un oggetto JComponent
-
-> [!info] Il root Pane
-> Ogni finestra è suddivisa in diversi pannelli
-> ![[Pasted image 20260525110222.png]]
-#### JComponent
-JComponent è una classe che mette a disposizione un set di metodi per modificare aspetto e comportamento dei componenti.
-Questa eredita da container che a sua volta eredita da Component.
-
-JComponent in particolare implementa:
-- Modifica dell'aspetto del componente (colore, bordo, tipo cursore)
-- Monitoraggio dello stato (gestione di un PopupMenu, cambio nome, non visibile/visibile, abilita/disabilita, modifica del ToolTip)
-- Gestione degli eventi
-- Disegno degli oggetti
-- Gestione della gerarchia degli oggetti (aggiungi, rimuovi)
-- Modifica della disposizione degli oggetti (Layout)
-- Dimensione e posizione del componente
-##### Buttons, CheckBoxes, RadioButtons
-I pulsanti in Swing derivano tutti dalla classe astratta `AbstractButton`. Tra le implementazioni principali troviamo:
-- **JButton**: un classico pulsante 
-- **JCheckBox**: una check box 
-- **JRadioButton**: un singolo pulsante di un gruppo di pulsanti di opzione 
-- **JMenuItem**: una voce di un menu 
-- **JCheckBoxMenuItem**: una voce di un menu che è una check box 
-- **JRadioButtonMenuItem**: una voce di un menu che è un pulsante di opzione 
-- **JToggleButton**: permette di creare un bottone a due stati utilizzando due check box o due radio button
-##### Color Chooser
-La selezione di un colore è implementata attraverso la classe `JColorChooser`, la quale offre diverse modalità di interazione per l'utente finale
-Le informazioni relative al colore selezionato vengono memorizzate all'interno di un modello denominato `ColorSelectionModel()`; ogni istanza di `JColorChooser()` possiede una propria copia isolata di questo modello.
-Per intercettare e gestire attivamente la selezione di un nuovo colore da parte dell'utente, è necessario implementare la specifica interfaccia `ChangeListener()`
-
-> [!example] Esempio di color chooser
-> ![[Pasted image 20260525132655.png]]
-> ![[Pasted image 20260525132720.png]]
-##### ComboBox
-Il componente Combo Box consente all'utente la selezione di un valore all'interno di una serie di opzioni predefinite ed è gestito dalla classe `JComboBox`.
-Questa componente può essere configurata come non editabile, vincolando la scelta alle sole voci presenti nell'elenco, oppure editabile, permettendo l'inserimento manuale di un valore da parte di un utente
-
-> [!example] Esempio di ComboBox editabile
-> ![[Pasted image 20260525150108.png]]
-
-La visualizzazione degli elementi avviene tramite un renderizzatore di default che mostra stringhe o icone, oppure richiama il metodo `toString()` nel caso di altri tipi di oggetti più complessi.
-
- E’ possibile modificare il render realizzando una classe che implementi:
- - L'interfaccia `ListCellRenderer` per le combo box non editabili, 
- - L'interfaccia `ComboBoxEditor` per quelle editabili
-
-##### List
-La lista è utile per poter visualizzare gli elementi su più righe o colonne in maniera aperta. Viene implementata dalla classe `JList` e in genere viene inserita all'interno di uno ScrollPane (contenitore scorrevole).
-
-> [!example] Esempio di lista 
-> ![[Pasted image 20260525151819.png]]
-
-La lista supporta la selezione di un singolo elemento, selezioni multiple libere o selezioni basate su intervalli multipli. La manipolazione formale dei dati della lista, come l'aggiunta o la rimozione di elementi in tempo reale, viene delegata all'oggetto `DefaultListModel` associato, implementando metodi specifici come `addElement()`, `add()`, `remove()`, e `removeElement()`
-##### Finestre di dialogo
-Le finestre di dialogo sono interfacce temporanee di tipo secondario, utilizzate primariamente per notificare informazioni all'utente, richiedere l'inserimento di determinati valori o far effettuare scelte rapide di esecuzione
-
-La classe predefinita `JOptionPane` offre un'interfaccia per invocare rapidamente finestre standardizzate capaci di visualizzare messaggi o mostrare opzioni preconfigurate (come ad esempio YES, NO e CANCEL)
-
-È possibile creare finestre di dialogo altamente personalizzate estendendo direttamente la classe `JDialog`.
-
-> [!example] Esempio di finestra di dialogo per una persona
-> ![[Pasted image 20260525152019.png]]
-> Esempio completo su [[3.2 - (Slide Esempi) Finestra di Dialogo Person.pdf]]
-
-Dal punto di vista relazionale, queste finestre dipendono sempre da un componente generatore Frame, ed esse possono inoltre essere dichiarate di tipo modale: in questo particolare stato, l'utente non può interagire con qualsiasi altra finestra dell'applicazione fino a quando il dialogo non viene risolto e chiuso.
-#### Componenti per il testo
-I componenti testuali costituiscono la base per permettere all'utente la visualizzazione e la modifica di informazioni sotto forma testuale.
-
- Dal punto di vista gerarchico, essi derivano tutti dalla classe capostipite `JTextComponent` e si dividono convenzionalmente in tre macrocategorie principali:
- - **Text Controls**: include campi semplici per l'inserimento limitato a una singola riga, come il `JTextField`, il `JPasswordField` (per offuscare i dati sensibili) e il `JFormattedTextField`. Questi componenti controllano piccole quantità di dati e generano eventi di tipo Action alla conclusione dell'inserimento testuale.
- - **Plain Text Areas**: è rappresentata principalmente dal `JTextArea`, ideale per la manipolazione di testi non formattati su più righe e renderizzati utilizzando un unico font a livello globale
- - **Styled Text Areas**: include il `JEditorPane` e il suo derivato avanzato `JTextPane`. Tali componenti, pur richiedendo maggiore sforzo di configurazione, supportano stili multipli di carattere, l'integrazione di componenti, di immagini e permettono di effettuare facilmente la lettura di testo formattato in HTML proveniente direttamente da un URL.
-
-> [!example] Dove trovare gli esempi per questo sotto capitolo
-> Li si può ritrovare nelle slide prese dal professore [[3.3 - (Slide Esempi) Esempi di componenti per il testo.pdf]]
-
-##### JTextComponent
-L'architettura interna di un `JTextComponent` adotta un approccio strutturato, infatti prevede:
-- Un modello di dati, detto **document**, che gestisce il contenuto
-- Una vista che si occupa della visualizzazione del contenuto
-- Un controller, detto **editor kit**, che legge e scrive il testo e permette le funzionalità di editing
-- Un cursore che permette la navigazione nel contenuto
-###### Document
-Il modello dei dati di un TextComponent è il Document (interfaccia `Document`), che contiene il testo suddiviso in oggetti di tipo `Element`.
-Questo modello di dati ha diverse funzionalità utili:
-- Supporta l'editing dei documenti
-- Può notificare gli eventi di modifica del testo
-- Gestisce oggetti di tipo Position che tracciano delle porzioni di testo anche se vengono modificate
-- Fornisce varie informazioni sul testo
-
-Il `Document` notifica tutti gli oggetti `DocumentListener` registrati (collegati tramite il metodo `addDocumentListener`) a ogni occorrenza di evento di inserimento, rimozione o modifica formale dello stile.
-Il listener `CaretListener` ha la funzione di ricevere tutti gli eventi correlati alle modifiche della posizione o alla selezione attuata dal cursore, e richiede di essere associato direttamente all'oggetto `JTextComponent.
-##### Action
-Nel design dell'interfaccia, capita spesso che la medesima funzionalità (si pensi, a titolo di esempio, all'operazione di copia di un elemento) debba risultare accessibile all'utente da una pluralità di controlli diversi, come una specifica voce di menu, un'icona sulla toolbar o la pressione di una combinazione predefinita di tasti. 
-Al fine di non frammentare la logica di programmazione, è buona pratica di ingegneria del software procedere creando un'unica istanza di `Action` centralizzata da associare a ciascun punto di controllo. 
-La creazione operativa avviene estendendo la classe astratta `AbstractAction` e sovrascrivendo, al suo interno, l'implementazione obbligatoria del metodo `actionPerformed()` affinché contenga la corretta logica applicativa. 
-
-Fare uso di una classe `Action` permette non solo il riuso del codice, ma garantisce di poter uniformare su tutti i controlli le medesime proprietà condivise, come il testo visibile a schermo, le stringhe descrittive destinate al tooltip o le icone associate; consente peraltro di abilitare o disabilitare contemporaneamente e in modo unitario la funzionalità su tutta l'applicazione.
 ### Lambda Expressions
 Per comprendere cosa sono e come utilizzare le Lambda expressions utilizziamo un esempio legato all'utilizzo delle **classi anonime**.
 
@@ -2593,7 +2456,7 @@ public static void printPersonWithPredicate(List<Person> roster,Predicate<Person
 	}
 }
 ```
-La voce **`Predicate<T>`** è un **interfaccia funzionale** definita in *java.util.function* ed esegue la stessa funzione che eseguiva precedentemente `CheckPerson`, ma essendo **generica** e avendo solo il suo stesso metodo: `boolean test(T t)` non è necessario specificare il suo nome e può essere utilizzata in un'espressione lambda nel seguente modo:
+La voce **`Predicate<T>`** è un **interfaccia funzionale** definita in `java.util.function` ed esegue la stessa funzione che eseguiva precedentemente `CheckPerson`, ma essendo **generica** e avendo solo il suo stesso metodo: `boolean test(T t)` non è necessario specificare il suo nome e può essere utilizzata in un'espressione lambda nel seguente modo:
 ![[Pasted image 20260507125539.png]]
 #### Sintassi di Lambda
 L'espressione lambda è composta:
@@ -2633,11 +2496,11 @@ Le lambda expressions sono un ottimo esempio di **programmazione funzionale**:
 - La programmazione funzionale si concentra sulla **definizione di funzioni** contrariamente, i paradigmi procedurali e imperativi prediligono la specifica di una sequenza di comandi da eseguire e i valori vengono calcolati cambiando lo stato del programma attraverso l’operazione di assegnazione.
 - La programmazione funzionale basa le sue radici nel **lambda calcolo**, ossia un **calcolo basato sulle funzioni**, composto da un linguaggio formale utilizzato per esprimere le funzioni e un sistema di riscrittura per stabilire come i termini possano essere ridotti e semplificati.
 #### Consumer
-Riprendendo il metodo `printPersonWithPredicate`. Il metodo è ancora più **generalizzabile**, attuando una generalizzazione sull'**operazione** da applicare alle istanze per cui `test` da `true`.
+Riprendendo il metodo `printPersonWithPredicate`, questo è ancora più **generalizzabile**, attuando una generalizzazione sull'**operazione** da applicare alle istanze per cui `test` da `true`.
 
-Per farlo utilizziamo `Consumer<T>`. Questa interfaccia è definita in java.util.funciton, il suo funzionamento è identico a `printPerson`. L'unico metodo di `Consumer` è `void accept(T t)`
+Per farlo utilizziamo `Consumer<T>`. Questa interfaccia è definita in java.util.funciton e il suo funzionamento è identico a `printPerson`. L'unico metodo di `Consumer` è `void accept(T t)`
 
-Se volessimo effettuare un operazione su un'istanza prima di *consumarla* necessitiamo dell'interfaccia **`function`**.
+Se volessimo effettuare un operazione su un'istanza prima di consumarla necessitiamo dell'interfaccia `function`.
 ##### Function
 Anche quest'interfaccia è definita in java.util.function ed è dichiarata nel seguente modo: `Function<T,R>`. Questa interfaccia esegue un'operazione sull'istanza $T$ restituendo un'istanza $R$.
 
@@ -2800,7 +2663,7 @@ Nel caso precedente il nuovo valore è di tipo Integer quindi non abbiamo grossi
 In questi casi è opportuno utilizzare il metodo `collect` che effettua un **update dell’oggetto** che si sta ottenendo dalla riduzione dello stream.
 
 >[!Warning] Prestare attenzione all'utilizzo
->Da quello che si è detto si evince che `collect` sovrascrive il valore preesistente estrapolato dallo stream, contrariamente da `reduce` che in casi lievi lavora creando nuovi dati.
+>Da quello che si è detto si evince che `collect` sovrascrive il valore pre-esistente estrapolato dallo stream, contrariamente da `reduce` che in casi lievi lavora creando nuovi dati.
 
 l metodo collect accetta **tre parametri**: 
 1. **supplier**: è il costruttore dell’oggetto che verrà restituito dal metodo `collect` e che si presuppone venga modificato durante l’operazione di riduzione 
@@ -2920,3 +2783,138 @@ Le operazioni sugli stream possono essere eseguite in parallelo (sfruttando il m
 Per i raggruppamenti paralleli si utilizza il collector specifico `groupingByConcurrent`, che restituisce una `ConcurrentMap`.
 > [!NOTE] Come usarle e quando?
 > Quando c'è bisogno di passare l'implementazione di un'interfaccia a singolo metodo, la soluzione non sono le classi anonime ma le **lambda expression** stesse.
+### SWING
+SWING è il framework di Java che permette la realizzazione di interfacce grafiche (chiamate anche GUI).
+Si utilizza con i packages di riferimento `javax.swing, javax.swing.event`.
+
+Questo pacchetto permette di creare:
+- Finestre, Form, Dialog 
+- Menu, Pulsanti, Check-box, Combo-box 
+- Alberi, Tabelle 
+- Layout, Look&Feel
+
+> [!info] La mia prima applicazione (Netbeans+Swing)
+> NetBeans mette a disposizione degli strumenti che facilitano la creazione delle GUI, che introducono:
+> - Drag and drop dei componenti
+> - Auto-generazione del codice 
+> - Strumenti per la gestione del layout dei componenti
+> 
+> Per trovare degli esempi conviene visionare il file [[3.1 - (Slide Esempi) Prima Applicazione in Java SWING.pdf]]
+#### Contenitori
+Java Swing mette a disposizione tre tipi di contenitori:
+- JFrame
+- JDialog
+- JApplet
+
+Ogni componente deve far parte di una gerarchia di componenti connessi ad un contenitore radice (chiamato anche **top level**), ognuno di questi componenti poi può appartenere ad un solo contenitore.
+Ogni contenitore top-level è associato ad una vista (ovvero gli oggetti effettivamente visibili su schermo).
+> [!info] Gerarchia dei componenti 
+> ![[Pasted image 20260525105232.png]]
+> Ogni programma SWING deve avere almeno un contenitore top-level (questo contenitore è la radice della gerarchia delle componenti)
+> Per ogni contenitore top level è possibile aggiungere un menu.
+
+Per aggiungere componenti ad un contenitore è necessario usare il metodo `add()`
+> [!example] Esempio di metodo `add()`
+> ```java
+> frame.getContentPane().add(yellowLabel, BorderLayout.CENTER)
+> ```
+> 
+> `getContentPane()` restituisce un oggetto JComponent
+
+> [!info] Il root Pane
+> Ogni finestra è suddivisa in diversi pannelli
+> ![[Pasted image 20260525110222.png]]
+#### JComponent
+JComponent è una classe che mette a disposizione un set di metodi per modificare aspetto e comportamento dei componenti.
+Questa eredita da container che a sua volta eredita da Component.
+
+JComponent in particolare implementa:
+- Modifica dell'aspetto del componente (colore, bordo, tipo cursore)
+- Monitoraggio dello stato (gestione di un PopupMenu, cambio nome, non visibile/visibile, abilita/disabilita, modifica del ToolTip)
+- Gestione degli eventi
+- Disegno degli oggetti
+- Gestione della gerarchia degli oggetti (aggiungi, rimuovi)
+- Modifica della disposizione degli oggetti (Layout)
+- Dimensione e posizione del componente
+##### Buttons, CheckBoxes, RadioButtons
+I pulsanti in Swing derivano tutti dalla classe astratta `AbstractButton`. Tra le implementazioni principali troviamo:
+- **JButton**: un classico pulsante 
+- **JCheckBox**: una check box 
+- **JRadioButton**: un singolo pulsante di un gruppo di pulsanti di opzione 
+- **JMenuItem**: una voce di un menu 
+- **JCheckBoxMenuItem**: una voce di un menu che è una check box 
+- **JRadioButtonMenuItem**: una voce di un menu che è un pulsante di opzione 
+- **JToggleButton**: permette di creare un bottone a due stati utilizzando due check box o due radio button
+##### Color Chooser
+La selezione di un colore è implementata attraverso la classe `JColorChooser`, la quale offre diverse modalità di interazione per l'utente finale
+Le informazioni relative al colore selezionato vengono memorizzate all'interno di un modello denominato `ColorSelectionModel()`; ogni istanza di `JColorChooser()` possiede una propria copia isolata di questo modello.
+Per intercettare e gestire attivamente la selezione di un nuovo colore da parte dell'utente, è necessario implementare la specifica interfaccia `ChangeListener()`
+
+> [!example] Esempio di color chooser
+> ![[Pasted image 20260525132655.png]]
+> ![[Pasted image 20260525132720.png]]
+##### ComboBox
+Il componente Combo Box consente all'utente la selezione di un valore all'interno di una serie di opzioni predefinite ed è gestito dalla classe `JComboBox`.
+Questa componente può essere configurata come non editabile, vincolando la scelta alle sole voci presenti nell'elenco, oppure editabile, permettendo l'inserimento manuale di un valore da parte di un utente
+
+> [!example] Esempio di ComboBox editabile
+> ![[Pasted image 20260525150108.png]]
+
+La visualizzazione degli elementi avviene tramite un renderizzatore di default che mostra stringhe o icone, oppure richiama il metodo `toString()` nel caso di altri tipi di oggetti più complessi.
+
+ E’ possibile modificare il render realizzando una classe che implementi:
+ - L'interfaccia `ListCellRenderer` per le combo box non editabili, 
+ - L'interfaccia `ComboBoxEditor` per quelle editabili
+
+##### List
+La lista è utile per poter visualizzare gli elementi su più righe o colonne in maniera aperta. Viene implementata dalla classe `JList` e in genere viene inserita all'interno di uno ScrollPane (contenitore scorrevole).
+
+> [!example] Esempio di lista 
+> ![[Pasted image 20260525151819.png]]
+
+La lista supporta la selezione di un singolo elemento, selezioni multiple libere o selezioni basate su intervalli multipli. La manipolazione formale dei dati della lista, come l'aggiunta o la rimozione di elementi in tempo reale, viene delegata all'oggetto `DefaultListModel` associato, implementando metodi specifici come `addElement()`, `add()`, `remove()`, e `removeElement()`
+##### Finestre di dialogo
+Le finestre di dialogo sono interfacce temporanee di tipo secondario, utilizzate primariamente per notificare informazioni all'utente, richiedere l'inserimento di determinati valori o far effettuare scelte rapide di esecuzione
+
+La classe predefinita `JOptionPane` offre un'interfaccia per invocare rapidamente finestre standardizzate capaci di visualizzare messaggi o mostrare opzioni preconfigurate (come ad esempio YES, NO e CANCEL)
+
+È possibile creare finestre di dialogo altamente personalizzate estendendo direttamente la classe `JDialog`.
+
+> [!example] Esempio di finestra di dialogo per una persona
+> ![[Pasted image 20260525152019.png]]
+> Esempio completo su [[3.2 - (Slide Esempi) Finestra di Dialogo Person.pdf]]
+
+Dal punto di vista relazionale, queste finestre dipendono sempre da un componente generatore Frame, ed esse possono inoltre essere dichiarate di tipo modale: in questo particolare stato, l'utente non può interagire con qualsiasi altra finestra dell'applicazione fino a quando il dialogo non viene risolto e chiuso.
+#### Componenti per il testo
+I componenti testuali costituiscono la base per permettere all'utente la visualizzazione e la modifica di informazioni sotto forma testuale.
+
+ Dal punto di vista gerarchico, essi derivano tutti dalla classe capostipite `JTextComponent` e si dividono convenzionalmente in tre macrocategorie principali:
+ - **Text Controls**: include campi semplici per l'inserimento limitato a una singola riga, come il `JTextField`, il `JPasswordField` (per offuscare i dati sensibili) e il `JFormattedTextField`. Questi componenti controllano piccole quantità di dati e generano eventi di tipo Action alla conclusione dell'inserimento testuale.
+ - **Plain Text Areas**: è rappresentata principalmente dal `JTextArea`, ideale per la manipolazione di testi non formattati su più righe e renderizzati utilizzando un unico font a livello globale
+ - **Styled Text Areas**: include il `JEditorPane` e il suo derivato avanzato `JTextPane`. Tali componenti, pur richiedendo maggiore sforzo di configurazione, supportano stili multipli di carattere, l'integrazione di componenti, di immagini e permettono di effettuare facilmente la lettura di testo formattato in HTML proveniente direttamente da un URL.
+
+> [!example] Dove trovare gli esempi per questo sotto capitolo
+> Li si può ritrovare nelle slide prese dal professore [[3.3 - (Slide Esempi) Esempi di componenti per il testo.pdf]]
+
+##### JTextComponent
+L'architettura interna di un `JTextComponent` adotta un approccio strutturato, infatti prevede:
+- Un modello di dati, detto **document**, che gestisce il contenuto
+- Una vista che si occupa della visualizzazione del contenuto
+- Un controller, detto **editor kit**, che legge e scrive il testo e permette le funzionalità di editing
+- Un cursore che permette la navigazione nel contenuto
+###### Document
+Il modello dei dati di un TextComponent è il Document (interfaccia `Document`), che contiene il testo suddiviso in oggetti di tipo `Element`.
+Questo modello di dati ha diverse funzionalità utili:
+- Supporta l'editing dei documenti
+- Può notificare gli eventi di modifica del testo
+- Gestisce oggetti di tipo Position che tracciano delle porzioni di testo anche se vengono modificate
+- Fornisce varie informazioni sul testo
+
+Il `Document` notifica tutti gli oggetti `DocumentListener` registrati (collegati tramite il metodo `addDocumentListener`) a ogni occorrenza di evento di inserimento, rimozione o modifica formale dello stile.
+Il listener `CaretListener` ha la funzione di ricevere tutti gli eventi correlati alle modifiche della posizione o alla selezione attuata dal cursore, e richiede di essere associato direttamente all'oggetto `JTextComponent.
+##### Action
+Nel design dell'interfaccia, capita spesso che la medesima funzionalità (si pensi, a titolo di esempio, all'operazione di copia di un elemento) debba risultare accessibile all'utente da una pluralità di controlli diversi, come una specifica voce di menu, un'icona sulla toolbar o la pressione di una combinazione predefinita di tasti. 
+Al fine di non frammentare la logica di programmazione, è buona pratica di ingegneria del software procedere creando un'unica istanza di `Action` centralizzata da associare a ciascun punto di controllo. 
+La creazione operativa avviene estendendo la classe astratta `AbstractAction` e sovrascrivendo, al suo interno, l'implementazione obbligatoria del metodo `actionPerformed()` affinché contenga la corretta logica applicativa. 
+
+Fare uso di una classe `Action` permette non solo il riuso del codice, ma garantisce di poter uniformare su tutti i controlli le medesime proprietà condivise, come il testo visibile a schermo, le stringhe descrittive destinate al tooltip o le icone associate; consente peraltro di abilitare o disabilitare contemporaneamente e in modo unitario la funzionalità su tutta l'applicazione.
