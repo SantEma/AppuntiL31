@@ -390,7 +390,7 @@ Per le classi (insieme ad attributi e metodi, come si vedrà tra poco) esistono 
 - **protected**: Accessibile soltanto dallo stesso package e sottoclassi
 - **private**: Accessibile soltanto dalla classe madre
 
-Java, nel caso non venisse specificato nessuno di questi 3, prende 
+Java, nel caso non venisse specificato nessuno di questi 3, prende come default **protected**
 ### Variabili all'interno
 All'interno di una classe possiamo trovare diverse tipologie di variabili:
 - **I field, o attributi**, sono variabili che definiscono lo stato dell'oggetto e risultano visibili in tutta la classe
