@@ -384,6 +384,13 @@ A livello sintattico, la dichiarazione di una classe inizia specificando la sua 
 
 Durante questa fase è anche possibile indicare da quale superclasse essa erediti, utilizzando la parola chiave **extends**, e definire se implementa una o più interfacce tramite la parola chiave **implements** (le vedremo successivamente).
 Il livello di visibilità, che può essere **public, private o protected**, determina come e da chi la classe può essere vista e utilizzata all'interno del progetto
+#### Livello di visibilità
+Per le classi (insieme ad attributi e metodi, come si vedrà tra poco) esistono 3 livelli di visibilità importanti:
+- **public**: Accessibile all'interno di tutto il programma indistintamente
+- **protected**: Accessibile soltanto dallo stesso package e sottoclassi
+- **private**: Accessibile soltanto dalla classe madre
+
+Java, nel caso non venisse specificato nessuno di questi 3, prende 
 ### Variabili all'interno
 All'interno di una classe possiamo trovare diverse tipologie di variabili:
 - **I field, o attributi**, sono variabili che definiscono lo stato dell'oggetto e risultano visibili in tutta la classe
