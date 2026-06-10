@@ -71,7 +71,7 @@ Nel linguaggio esistono diverse categorie di variabili:
 - I parametri, che rappresentano i valori passati al momento della chiamata di un metodo 
 
 Per quanto riguarda i nomi identificativi, il linguaggio impone che siano case-sensitive, che inizino rigorosamente con una lettera o con il simbolo \$ e che possano contenere numeri al loro interno, avendo preferibilmente delle nomenclature autoesplicative.
-Le convenzioni comunemente accettate prevedono che 
+Le convenzioni comunemente accettate prevedono che:
 - Le costanti e le variabili statiche debbano essere scritte interamente a lettere maiuscole, 
 - Per i nomi composti da più parole si adotta lo stile in cui la prima lettera di ogni nuova parola successiva alla prima viene scritta in maiuscolo.
 ## Tipi di dato primitivi
@@ -2669,7 +2669,7 @@ processPersonWithFunction(persons,
 	 surname->System.out.println(surname) //Consumer
 );
 ```
-#### Visibilità delle variabili
+#### Visibilità delle variabili nelle espressioni Lambda
 Un'espressione lambda non aggiunge un nuovo livello di **scope**, infatti sono definite **lexically scoped** e si comportano di fatto come le classi anonime, quindi accedendo alle variabili definite nello scopo locale nel quale è scritta l'espressione lambda.
 #### Generics nelle Lambda Expression
 Il metodo `checkPersonWithFunction` è possibile renderlo ancora più **generico** così da poterlo applicare a qualsiasi tipo di classe, senza essere così vincolato da `Person` e contemporaneamente è generico anche per il tipo restituito dall'implementazione di `Function`
