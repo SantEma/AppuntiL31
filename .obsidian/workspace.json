@@ -193,8 +193,7 @@
       "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
       "command-palette:Apri riquadro comandi": false,
-      "bases:Crea nuova Base": false,
-      "obsidian-git:Open Git source control": false
+      "bases:Crea nuova Base": false
     }
   },
   "active": "d479e44bab306e16",
