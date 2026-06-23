@@ -13,28 +13,13 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Ingegneria del software/9 - System design.pdf"
+                "file": "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3.3 - (Slide Esempi) Esempi di componenti per il testo.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "9 - System design"
-            }
-          },
-          {
-            "id": "d479e44bab306e16",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3 - Java"
+              "title": "3.3 - (Slide Esempi) Esempi di componenti per il testo"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -188,19 +173,25 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
       "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
       "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
       "command-palette:Apri riquadro comandi": false,
-      "bases:Crea nuova Base": false
+      "bases:Crea nuova Base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d479e44bab306e16",
+  "active": "ab83996f0563bfdd",
   "lastOpenFiles": [
-    "q",
+    "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Calcolo Numerico/EsameCovino/COVINO ESAME DOMANDE.pdf",
+    "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Calcolo Numerico/EsameCovino",
+    "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Calcolo N.md",
+    "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Senza nome/Senza nome",
+    "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Calcolo Numerico",
     "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Ingegneria del software/9 - System design.pdf",
+    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
+    "q",
     "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Ingegneria del software/10 - OO Design.pdf",
     "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Ingegneria del software/11 - Manutenzione.pdf",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/1 - Introduzione all'ingegneria del software.md",
@@ -216,17 +207,12 @@
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/_TOC_.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260505102331.png",
     "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Ingegneria del software/12 - Testing.pdf",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/2 - Il paradigma Orientato agli Oggetti.md",
     "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/1.1 - (Slide Esempi) Paradigmi di programmazione e astrazione.pdf",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/1 - Paradigmi di Programmazione e Astrazione.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/1.2 - Esercitazione specifiche algebriche.md",
     "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3.1 - (Slide Esempi) Prima Applicazione in Java SWING.pdf",
-    "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.pdf",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260507125539.png",
-    "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Ingegneria del software/8 - Analisi dei requisiti.pdf",
-    "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Ingegneria del software/7 - UML.pdf",
-    "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Ingegneria del software/6 - Automazione dello sviluppo e del rilascio.pdf",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260512115803.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506175505.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506175454.png",
@@ -244,7 +230,6 @@
     "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/15 - Paradigma generativo.md",
     "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/14 - Paradigma selettivo.md",
     "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/13 - Tecniche algoritmiche spazio di ricerca.md",
-    "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/8 - Insiemi.md",
     "Senza nome.canvas"
   ]
 }
