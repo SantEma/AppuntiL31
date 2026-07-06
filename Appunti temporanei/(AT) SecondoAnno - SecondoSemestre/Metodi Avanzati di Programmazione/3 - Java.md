@@ -2590,7 +2590,7 @@ Le seguenti operazioni: `.map`,`.filter` e `forEach` sono **operazioni aggregate
 >Lo stream preleva i valori da una **sorgente** attraverso una **pipeline** (una sorgente può essere una collection stessa).
 
 >[!NOTE] Pipeline
->In Java una **Pipeline** è una **sequenza di operazioni** (come quelle viste precedentemente), dove generalmente i **parametri** di queste operazioni sono **lambda expression** e quindi facilmente personalizzabili.
+>In Java una **pipeline** è una **sequenza di operazioni** (come quelle viste precedentemente), dove generalmente i **parametri** di queste operazioni sono **lambda expression** e quindi facilmente personalizzabili.
 
 Andando ad analizzare nel dettaglio lo stream dell'esempio precedente si hanno due operazioni:
 - `filter` che filtra gli oggetti
