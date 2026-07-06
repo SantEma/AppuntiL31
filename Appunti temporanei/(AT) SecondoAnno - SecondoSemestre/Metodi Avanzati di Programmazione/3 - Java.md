@@ -1442,8 +1442,7 @@ I metodi possono dichiarare il tipo di eccezione che si potrebbe verificare al s
 Il throw generalmente si usa per imporre regole rigide (come dei parametri importanti non validi, file non trovati, connessioni perse) in modo da interrompere il flusso di esecuzione.
 Una guida interessante con esempi ancora più chiari la trovate [qui](https://rollbar.com/guides/java/how-to-throw-exceptions-in-java/)
 ### I/O Stream
-Un flusso I/O rappresenta una sorgente di input o una destinazione di output e sono di vario tipo come
-file su disco, array di memoria...
+Un flusso I/O rappresenta una sorgente di input o una destinazione di output e sono di vario tipo come file su disco, array di memoria...
 
 Gli **stream** supportano molti tipi diversi di dati, dai byte semplici agli oggetti. Alcuni flussi si occupano di **trasmettere dati**, mentre altri **li manipolano**. Indipendentemente da come funzionano, tutti i flussi presentano **una sequenza di dati.**
 #### Byte stream
