@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
+                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/1 - Paradigmi di Programmazione e Astrazione.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3 - Java"
+              "title": "1 - Paradigmi di Programmazione e Astrazione"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
+                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/1 - Paradigmi di Programmazione e Astrazione.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 3 - Java"
+              "title": "Struttura di 1 - Paradigmi di Programmazione e Astrazione"
             }
           }
         ],
@@ -185,11 +185,12 @@
   },
   "active": "5306f1e7ff18e550",
   "lastOpenFiles": [
+    "README.md",
+    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/3 - SCRUM.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/2 - Processi software e sviluppo agile.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Ingegneria del software/1 - Introduzione all'ingegneria del software.md",
     "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3.1 - (Slide Esempi) Prima Applicazione in Java SWING.pdf",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/2 - Il paradigma Orientato agli Oggetti.md",
     "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3.3 - (Slide Esempi) Esempi di componenti per il testo.pdf",
     "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Calcolo Numerico/EsameCovino/COVINO ESAME DOMANDE.pdf",
@@ -221,7 +222,6 @@
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506174802.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506174539.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506174435.png",
-    "README.md",
     "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/1 - Algoritmi e Programmi.md",
     "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/3 - Introduzione alla programmazione ad oggetti.md",
     "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/4 - C++.md",
