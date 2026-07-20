@@ -426,14 +426,12 @@ Si può anche specificare la visibilità degli elementi di un package:
 - Private (-) non sono visibili all’esterno del package
 > [!example]  Esempio di package pubblico e privato
 > ![[Pasted image 20260422180239.png]]
-
 ### Classi interne
 Le **classi interne** (inner class) sono dichiarate dentro una classe ospite e possono essere private. 
 Esse possono accedere a tutti i membri della classe ospitante, mentre l'inverso è limitato alla parte pubblica. 
 Un'istanza della inner class non può esistere senza l'oggetto ospitante e non può contenere campi statici.
 > [!warning] Attenzione
 > In Java, una classe top level non può mai essere privata
-
 ### Il polimorfismo 
 Il poliformismo permette di associare diverse realizzazioni (o morfismi) a un'unica operazione
 Il concetto di polimorfismo è stato definito informalmente da Christopher Strachey in due tipi principali:
@@ -446,7 +444,6 @@ Il polimorfismo per inclusione e parametrico sono classificati come due sottocat
 #### Polimorfismo ad-hoc
 ##### La coercizione
 La coercizione è il meccanismo di conversione implicita operata da un compilatore per applicare un operatore definito per oggetti di tipo T1 anche a oggetti di tipo T2.
-
 > [!example] Esempio di coercizione generale
 > ![[Pasted image 20260422181141.png]]
 
@@ -459,7 +456,6 @@ La coercizione è il meccanismo di conversione implicita operata da un compilato
 >i = j;  // unboxing: Integer - int
 >j = i;  // autoboxing: int - Integer
 >```
-
 
 Le coercizioni possono essere stabilite staticamente al compile-time (inserendole automaticamente fra gli argomenti e le funzioni al momento della compilazione) oppure determinate dinamicamente a run-time.
 
