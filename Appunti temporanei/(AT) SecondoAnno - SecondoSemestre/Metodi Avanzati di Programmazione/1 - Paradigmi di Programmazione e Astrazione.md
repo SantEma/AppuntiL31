@@ -189,6 +189,7 @@ La combinazione del **principio dell’astrazione dati con la tecnica dell’inc
 > ![[Pasted image 20260305114849.png]]
 > ![[Pasted image 20260307112433.png]]
 
+
 #### Astrazione dati vs Astrazione funzionale
 L’astrazione dati **ricalca ed estende** quella funzionale.
 Attualmente la possibilità di effettuare astrazioni di dati è considerata importante almeno quanto quella di definire nuovi operatori con astrazioni funzionali, l'esperienza ha infatti dimostrato che la scelta delle strutture di dati è il primo passo sostanziale per un buon risultato dell’attività di programmazione.
