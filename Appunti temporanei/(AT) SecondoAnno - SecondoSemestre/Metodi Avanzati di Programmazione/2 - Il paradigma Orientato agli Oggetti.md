@@ -14,7 +14,7 @@ Confrontando il paradigma orientato a oggetti rispetto a quello imperativo si pu
 I linguaggi di programmazione si classificano in:
 - **Object-based**: supportano la nozione di oggetto (come il linguaggio Modula-2), qui non sono ancora trattati come cittadini di prima classe
 - **Class-based**: supportano la nozione di oggetto e classe (come il linguaggio Ada-83)
-- **Object-oriented**: supportano la nozione di oggetto, classe, ereditarietà (Smalltalk, C++, Java, …)
+- **Object-oriented**: supportano la nozione di oggetto, classe, ereditarietà (Smalltalk, C++, Java, $\dots$)
 > [!info] Domanda di esame: Quali sono le caratteristiche di un linguaggio ad oggetti?
 > Quelli che supportano nozioni di oggetto, classe e ereditarietà
 ## Gli oggetti
