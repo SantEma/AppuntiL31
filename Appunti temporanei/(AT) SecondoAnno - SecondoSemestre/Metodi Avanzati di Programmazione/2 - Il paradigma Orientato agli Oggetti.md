@@ -114,7 +114,7 @@ Estendiamo la visione di classi con la specifica di attributi e metodi:
 ![[Pasted image 20260312125338.png]]
 I diversi livelli di dettaglio consentono a chi progetta/modella di attribuire maggiore o minore importanza a determinati fattori a seconda della vista del sistema che si sta considerando
 #### Stereotipi
-Gli stereotipi sono dei tipici meccanismi di estendibilità di UML,  essi estendono il vocabolario di UML, permettendo di creare nuovi blocchi per la costruzione dei modelli, derivandoli da blocchi già esistenti ma rendendoli specifici per il particolare dominio.
+Gli stereotipi sono dei tipici meccanismi di estendibilità di UML, essi estendono il vocabolario di UML, permettendo di creare nuovi blocchi per la costruzione dei modelli, derivandoli da blocchi già esistenti ma rendendoli specifici per il particolare dominio.
 Gli stereotipi sono previsti dall'UML e sono rappresentati con le parentesi angolari «»
 ### Visibilità delle classi
 Gli attributi e i metodi di una classe possono avere diversi livelli di **visibilità**.
