@@ -11,12 +11,14 @@
             "id": "5306f1e7ff18e550",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Immagini senza senso/Pasted image 20241122093015.png"
+                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20241122093015"
+              "icon": "lucide-file",
+              "title": "3 - Java"
             }
           }
         ]
@@ -154,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Immagini senza senso/Pasted image 20241122093015.png",
+                "file": "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/3 - Java.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Pasted image 20241122093015"
+              "title": "Struttura di 3 - Java"
             }
           }
         ],
@@ -183,6 +185,7 @@
   },
   "active": "5306f1e7ff18e550",
   "lastOpenFiles": [
+    "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Immagini senza senso/Pasted image 20241122093015.png",
     "Appunti temporanei/(AT) PrimoAnno - PrimoSemestre/Immagini senza senso/{3BC5E76E-D634-4BB7-B706-36F92779C0A9}.png",
     "Appunti definitivi/(AD) SecondoAnno - SecondoSemestre/Ingegneria del software/12 - Testing.pdf",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/Metodi Avanzati di Programmazione/2 - Il paradigma Orientato agli Oggetti.md",
@@ -220,7 +223,6 @@
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506175111.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506174802.png",
     "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506174539.png",
-    "Appunti temporanei/(AT) SecondoAnno - SecondoSemestre/ImmaginInutili/Pasted image 20260506174435.png",
     "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/1 - Algoritmi e Programmi.md",
     "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/3 - Introduzione alla programmazione ad oggetti.md",
     "Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ASD/4 - C++.md",
