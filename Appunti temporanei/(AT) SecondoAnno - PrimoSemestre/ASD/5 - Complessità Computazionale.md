@@ -52,7 +52,7 @@ Siccome abbiamo delle memorie grandissime a basso costo, **studieremo la comples
 
 Riguardo ai costi:
 - Il costo è pari a 1 per i dati di tipo semplice.
-- Per un array di $n$ elementi, il costo è dato da $n \times \text{dimensioni di un elemento}$.
+- Per un array di $n$ elementi, il costo è dato da $n \times$ ***dimensioni di un elemento***.
 - Il costo di un record è determinato dalla somma dei costi delle sue singole componenti.
 
 Esempio: L'algoritmo
@@ -89,8 +89,8 @@ costo test cond + costo S1 //se cond
 costo test cond + costo S2 //se ¬ cond
 ```
 Per una struttura if cond then **S1** else **S2**, il costo dipende dal risultato della condizione:
-- Se **cond** è vera, il costo è $costo test cond+costo S1$.
-- Se **cond** è falsa, il costo è $costo test cond+costo S2$. Il costo del test della condizione è 1 (dato che è un confronto), e i costi di S1 e S2 dipendono dalle istruzioni che contengono.
+- Se **cond** è vera, il costo è ***costo test cond*** $+$ $costoS1$.
+- Se **cond** è falsa, il costo è ***costo test cond*** $+$ $costoS2$. Il costo del test della condizione è 1 (dato che è un confronto), e i costi di S1 e S2 dipendono dalle istruzioni che contengono.
 
 - **Costo di un'istruzione di ciclo (while):**
   _while **cond** do $S1$ è dato da:_
@@ -104,7 +104,7 @@ costo test cond + (costo test cond + costo S1) * k //[se il ciclo è ripetuto k 
   (costo test cond + costo S1) * k //[se il ciclo è ripetuto k volte]
   ```
   Per una struttura repeat S1 until cond, il costo è dato da:
-  - $(costo test cond+costo S1)×k$ dove k è il numero di volte che il ciclo viene ripetuto. In questo caso, il test della condizione avviene alla fine di ogni iterazione, il costo totale è la somma dei costi di S1 e del test, ripetuti k volte.
+  - (costo test cond+costo S1)×k dove k è il numero di volte che il ciclo viene ripetuto. In questo caso, il test della condizione avviene alla fine di ogni iterazione, il costo totale è la somma dei costi di S1 e del test, ripetuti k volte.
 
 - **Costo di una istruzione for:**
 ```c++
@@ -115,7 +115,7 @@ costo test cond + (costo test cond + costo S1) * k //[se il ciclo è ripetuto k 
 ```
   Il costo iniziale fisso è 2: 1 per $i = 1$ e 1 per la prima valutazione della condizione while fuori dal ciclo (che avviene prima di entrare nel ciclo).
   Per ogni iterazione del ciclo, il costo è dato dal costo di $S1+2$(da i=i+1)$+1$(da condizione di test). Moltiplicando questo costo per il numero di iterazioni k, otteniamo la parte variabile.
-  Quindi, il costo totale è: $2+(costo\ di\ S1+2+1)×k$  che si semplifica in:$2+(costo\ di \ S1+3)×k$
+  Quindi, il costo totale è: $2+(\text{costo di }S1+2+1)\times k$  che si semplifica in: $2+(\text{costo di } S1+3)\times k$
 
 ### Complessità e configurazioni
 La complessità di un algoritmo non può sempre essere definita da una singola funzione, poiché il tempo di esecuzione, a parità di dimensione dei dati, può variare in base alla specifica configurazione dei dati. 
@@ -132,7 +132,7 @@ $f_{pess}=f_{ott}=f_{med}$ per l'algoritmo del Min di n elementi
 ### Ricerca lineare
 La ricerca lineare in un array è un metodo semplice per trovare un elemento specifico k in un array non ordinato. 
 L'algoritmo scorre tutto l'array dall'inizio alla fine, confrontando ogni elemento fino a trovare una corrispondenza o fino ad esaurire gli elementi.
-![[Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ImmaginInutili/Pasted image 20251028132838.png]]
+![[Immagini/Pasted image 20251028132838.png]]
 **Parametri di input e output**:
   - $t$: Array di riferimento (contiene gli elementi da cercare, ognuno con un campo chiave)
   - $k$: valore della chiave da cercare (tipicamente un intero o una stringa)
@@ -178,7 +178,9 @@ Due funzioni come $(3 + n)$ e $(100n + 3027)$ sono considerate equivalenti dal p
 L’eliminazione di costanti e termini minori semplifica notevolmente l’analisi, rendendo più agevole la valutazione e il confronto tra algoritmi, mantenendo comunque risultati affidabili per valori validi per $n$ che tende ad infinito. Lo **studio asintotico** fornisce dunque un criterio oggettivo e coerente per confrontare l’efficienza di due algoritmi diversi.
 
 **Esempio** $A_{1}:f_1(n) = 3n^2 - 4n + 2 \quad \text{e} \quad A_{2}:f_2(n) = 2n + 3$
-![[Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ImmaginInutili/Pasted image 20251028144100.png]]
+
+![[Pasted image 20251028144100.png]]
+
 Per piccoli valori di n (ad esempio $n=1,2$), si osserva che $f_1(n) < f_2(n)$, quindi in questa fase l’algoritmo $A_1$ risulta più efficiente.
 Tuttavia, al crescere di $n$ (per $n = 3, 4$ e oltre), la funzione $f_1(n)$ supera $f_2(n)$; ciò significa che, per input di dimensione maggiore, $A_2$ diventa l’algoritmo più efficiente poiché ha un costo di crescita inferiore. In generale, per $n > 2$, vale infatti $f_1(n) > f_2(n)$.
 
@@ -222,7 +224,7 @@ Attraverso lo studio della complessità asintotica è possibile suddividere gli 
 Gli algoritmi con complessità costante sono più efficienti di quelli con complessità logaritmica che a loro volta sono più efficienti di quelli con complessità lineare e così via.
 $O (1) < O (logn) < O (n) < O (nlogn) < O (n^2) < O (n^3) < O (a^n)$
 
-![[Appunti temporanei/(AT) SecondoAnno - PrimoSemestre/ImmaginInutili/Pasted image 20251028170213.png]]
+![[Pasted image 20251028170213.png]]
 
 ## Algoritmi polinomiali vs. esponenziali
 La distinzione di maggiore interesse in teoria della complessità è fra:

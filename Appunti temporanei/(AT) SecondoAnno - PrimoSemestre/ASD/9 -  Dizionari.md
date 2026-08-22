@@ -186,6 +186,7 @@ Il design della funzione hash ci permette di minimizzare le collisioni, poiché 
 ***Esempi per comprendere meglio***:
 ![[funzione1_hash_chiuso.png]]
 ![[Pasted image 20251208180804.png]]
+
 ##### Scansione Interna per la risoluzione della collisioni con l'hash chiuso
 Come abbiamo precedentemente visto nell'hash chiuso tutti gli elementi sono presenti in unico vettore principale e se una posizione è occupata bisogna cercarne un'altra secondo una sequenza deterministica $f_{i}$. Le strategie di scansione per determinare questa sequenza sono:
 - **Scansione Lineare**: le celle vengono controllate sequenzialmente: $f_{i}=(h(k)+h\cdot i)(mod\ m)$, dove $h=1$ principalmente.

@@ -43,7 +43,6 @@ L'esecuzione di una procedura ricorsiva prevede il **salvataggio dei dati** su c
 Quando la chiamata interna termina, il suo stato viene rimosso dalla pila (pop), e i dati della chiamata precedente vengono "ripristinati** (top/pop), permettendole di continuare da dove si era interrotta l'esecuzione esterna.
 
 Se si studia il meccanismo appena descritto si nota come le chiamate ricorsive vengano *annidate* una dentro l'altra; la più **recente** è sempre la **prima a terminare**, questo non è altro che il funzionamento del **LIFO**, ovvero una pila in tutto e per tutto.
-
 Grazie a questa struttura possiamo sempre trasformare un programma ricorsivo in uno **iterativo**. I programmi ricorsivi, come sappiamo, sono ottimi per problemi di rango $n$ poiché permettono in termini di avere soluzioni al problema di rango inferiore a $n$, è definibile una soluzione per assioma sul problema di rango minimo (che va da 0 a 1).
 
 Un esempio pratico è l'**aspirale di Fibonacci**.
@@ -239,7 +238,6 @@ Questo codice è complesso, ma simula la ricorsione:
     - Se la pila non è vuota, estrae l'ultimo stato (`stato = leggipila(s)`, `fuoripila(s)`) .
     - Ripristina tutte le variabili (`n = stato.numerodischi`, ecc.).
     - Usa un `case` per saltare all'etichetta di ritorno salvata (`goto 2` o `goto 3`)
-
 ### Valutazione di un'espressione postfissa
 Calcolare un'espressione aritmetica complessa, come $$5*(((9+8)*(4*6))+7)$$
 non è banale perché richiede di **memorizzare i risultati intermedi** (ad esempio, `9+8` deve essere calcolato e "messo da parte" prima di essere moltiplicato).
@@ -247,8 +245,7 @@ non è banale perché richiede di **memorizzare i risultati intermedi** (ad es
 - **Lo Strumento:** Una **Pila** (Stack) è il meccanismo ideale per gestire questa memoria temporanea, grazie alla sua natura LIFO.
 - **La Semplificazione (Notazione Postfissa):** Invece di valutare la complessa notazione "infissa" (dove l'operatore sta _tra_ gli operandi), la slide introduce un problema più semplice: valutare un'espressione in **forma postfissa** (o "notazione polacca inversa").
 	- **Definizione di Postfissa:** In questa notazione, ogni operatore appare _dopo_ i suoi due argomenti.
-    - Esempio: `(9 + 8)` diventa `9 8 +`.
-    
+    - Esempio: `(9 + 8)` diventa `9 8 +`. 
 ### Conversione di un'espressione infissa in postfissa
 Ma come otteniamo l'espressione postfissa?
 È possibile **usare una Pila anche per convertire** un'espressione da infissa (con parentesi) a postfissa.
@@ -328,7 +325,6 @@ Data una coda $q$ di interi, creare una nuova coda $q_{1}$ che contenga solo
  3. Leggi l'elemento `e` dalla testa di `q`.
  4. Se `e > 0`, mettilo in coda su `q1`.
  5. Togli l'elemento da `q` (`fuoricoda(q)`).
-
 ```c++
 estrai (coda q per riferimento, coda q1 per riferimento)
 	creacoda(q1)
